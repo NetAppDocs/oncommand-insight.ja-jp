@@ -1,0 +1,22 @@
+---
+permalink: install-windows/verifying-the-rau-service.html 
+sidebar: sidebar 
+keywords:  
+summary: Remote Acquisition Unit（RAU\）のインストールが完了すると、OnCommand Insight RAUサービスをMicrosoft Windowsサービス環境で使用できるようになります。 
+---
+= Remote Acquisition Unitサービスを確認しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remote Acquisition Unit（RAU）のインストールが完了すると、OnCommand Insight RAUサービスをMicrosoft Windowsサービス環境で使用できるようになります。
+
+
+
+== 手順
+
+. RAUがWindowsサービスに追加されたことを確認するには、Windowsの[スタート]メニューを開き、*[コントロールパネル]*>*[管理ツール]*>*[サービス]*を選択します。
+. リストから*「OnCommand Insight Acq - OnCommand Insight's Remote Acquisition Unit（RAU）」*を探します。
+

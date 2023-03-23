@@ -1,0 +1,16 @@
+---
+permalink: dwh/what-to-do-with-failing-historical-build-points.html 
+sidebar: sidebar 
+keywords:  
+summary: '[Skip history build failures]オプションを有効にすると、失敗したビルドをすべて省略して履歴からビルドできます。' 
+---
+= 失敗した履歴ビルドポイントの処理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[Skip history build failures]オプションを有効にすると、失敗したビルドをすべて省略して履歴からビルドできます。
+
+これを行うと、履歴からのビルドが続行されます。このオプションを有効にすると、ビルドが失敗した場合、Data Warehouseではビルドが続行され、失敗したビルドは無視されます。この場合、スキップされたビルドのデータポイントは履歴データにありません。このオプションを有効にしない場合にビルドが失敗すると、以降のジョブはすべて中止されます。

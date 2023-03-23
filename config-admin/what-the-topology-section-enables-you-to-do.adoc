@@ -1,0 +1,31 @@
+---
+permalink: config-admin/what-the-topology-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: '[Topology]セクションでは、ネットワーク内のアセットの相互接続状況を確認したり、関連するアセットに関する情報を表示したりできます。' 
+---
+= [Topology]セクションを使用します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[Topology]セクションでは、ネットワーク内のアセットの相互接続状況を確認したり、関連するアセットに関する情報を表示したりできます。
+
+
+
+== 手順
+
+. OnCommand Insight Web UIにログインします。
+. 次のいずれかの方法でアセットページを検索します。
++
+** Insightのツールバーで、をクリックします image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]をクリックし、アセットの名前を入力して、リストからアセットを選択します。
+** [Dashboards]*をクリックし、*[Assets Dashboard]*を選択してアセット名をクリックします。アセットページが表示されます。[Topology]セクションはアセットページの右上にあります。
+
+
++
+アセットのトポロジがセクションに収まらない場合は、*クリックリンクをクリックしてトポロジ*ハイパーリンクを表示します。
+
+. ベースアセットに関連するアセットの詳細を確認するには、トポロジで関連するアセットにカーソルを合わせ、名前をクリックします。アセットページが表示されます。
+

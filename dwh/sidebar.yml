@@ -1,0 +1,153 @@
+---
+section: dwh
+title: Data Warehouseの管理
+entries:
+- title: OnCommand Insight データウェアハウスへようこそ
+  url: "/dwh/welcome-to-data-warehouse.html"
+  entries:
+  - title: Data Warehouseの機能
+    url: "/dwh/data-warehouse-features.html"
+  - title: Data Warehouseのコンポーネント
+    url: "/dwh/data-warehouse-components.html"
+    entries:
+    - title: Data Warehouseポータルを使用して実行できる操作
+      url: "/dwh/oncommand-insight-data-warehouse-portal.html"
+    - title: Data Warehouseのソフトウェアコンポーネント
+      url: "/dwh/data-warehouse-software-components.html"
+  - title: Data Warehouseのプロセス
+    url: "/dwh/data-warehouse-processes.html"
+  - title: Data Warehouseでのデータの抽出方法
+    url: "/dwh/how-data-warehouse-extracts-data.html"
+  - title: ETLの頻度と日付データ
+    url: "/dwh/etl-frequency.html"
+  - title: Data Warehouseでの履歴データの保持方法
+    url: "/dwh/historical-data-retention-in-data-warehouse.html"
+    entries:
+    - title: データ保持、ETL、および期間
+      url: "/dwh/data-retention-and-time-periods.html"
+- title: Data Warehouseでの作業の開始
+  url: "/dwh/getting-started-with-data-warehouse.html"
+  entries:
+  - title: Data Warehouseポータルにアクセスします
+    url: "/dwh/accessing-the-data-warehouse-portal.html"
+  - title: Data WarehouseおよびReportingのユーザアカウントの管理
+    url: "/dwh/managing-data-warehouse-and-reporting-user-accounts.html"
+    entries:
+    - title: Data WarehouseポータルおよびReportingポータルへのアクセス
+      url: "/dwh/accessing-the-data-warehouse-and-reporting.html"
+    - title: Reportingユーザのロール
+      url: "/dwh/reporting-user-roles.html"
+    - title: Reportingユーザを追加しています
+      url: "/dwh/adding-a-reporting-user.html"
+    - title: ユーザアカウントの管理
+      url: "/dwh/managing-user-accounts.html"
+    - title: レポート用にLDAPを設定しています
+      url: "/dwh/configuring-reporting-ldap.html"
+  - title: Data WarehouseとOnCommand Insight サーバの接続
+    url: "/dwh/connecting-data-warehouse-to-oncommand-insight-servers.html"
+  - title: Data Warehouseデータベースの履歴からのビルドの概要
+    url: "/dwh/data-warehouse-database-build-from-history-overview.html"
+    entries:
+    - title: Data Warehouseデータベースを履歴からビルドするジョブを追加する
+      url: "/dwh/adding-a-build-from-history-job.html"
+    - title: 履歴からビルドジョブをキャンセルしています
+      url: "/dwh/canceling-a-build-from-history-job.html"
+  - title: Data Warehouseデータベースをバックアップしています
+    url: "/dwh/backing-up-the-data-warehouse-database.html"
+  - title: カスタムレポートおよびレポートアーティファクトのバックアップ
+    url: "/dwh/backing-up-custom-reports-and-report-artifacts.html"
+  - title: Data Warehouseデータベースをリストアしています
+    url: "/dwh/restoring-the-data-warehouse-database.html"
+  - title: レポートにマルチテナンシーを設定しています
+    url: "/dwh/setting-up-multiple-tenancy-in-reporting.html"
+    entries:
+    - title: ユーザアカウントの設定
+      url: "/dwh/configuring-user-accounts.html"
+    - title: ビジネスエンティティへのユーザの割り当て
+      url: "/dwh/assigning-users-to-business-entities.html"
+  - title: セットアップの問題のトラブルシューティング
+    url: "/dwh/troubleshooting-setup-issues.html"
+    entries:
+    - title: アノテーションが表示されない理由
+      url: "/dwh/why-i-cannot-see-my-annotations.html"
+      entries:
+      - title: Data Warehouseのアノテーションを強制的に更新します
+        url: "/dwh/forcing-an-update-of-annotations-for-data-warehouse.html"
+      - title: Data Warehouseの手動ビルドを生成します
+        url: "/dwh/generating-a-manual-data-warehouse-build.html"
+      - title: Data Warehouseへのユーザ定義アノテーションのインポート
+        url: "/dwh/importing-user-defined-annotations-into-data-warehouse.html"
+    - title: 失敗した履歴ビルドポイントの処理
+      url: "/dwh/what-to-do-with-failing-historical-build-points.html"
+- title: Data Warehouseを使用して実行できる管理タスク
+  url: "/dwh/administrative-tasks-you-can-perform-using-data-warehouse.html"
+  entries:
+  - title: ジョブの管理
+    url: "/dwh/managing-jobs.html"
+  - title: Data Warehouseの健常性を監視しています
+    url: "/dwh/monitoring-data-warehouse-health.html"
+  - title: 日次ビルドのスケジュール設定
+    url: "/dwh/scheduling-daily-builds.html"
+  - title: 週次スケジュールの設定
+    url: "/dwh/configuring-a-weekly-schedule.html"
+  - title: 日次バックアップのスケジュール設定
+    url: "/dwh/scheduling-daily-backups.html"
+  - title: Data Warehouseでのカスタムスクリプトの実行
+    url: "/dwh/running-external-scripts-in-data-warehouse.html"
+  - title: アノテーションを使用して実行できる操作
+    url: "/dwh/annotations.html"
+    entries:
+    - title: OnCommand Insight でアノテーションを準備しています
+      url: "/dwh/preparing-annotations-in-oncommand-insight.html"
+    - title: Data Warehouseへのユーザ定義アノテーションのインポート
+      url: "/dwh/importing-user-defined-annotations-into-data-warehouse.html"
+    - title: "[Jobs]リストでのアノテーションジョブの表示"
+      url: "/dwh/viewing-the-annotations-job-in-the-jobs-list.html"
+    - title: データベーススキーマでのアノテーションの変更の表示
+      url: "/dwh/seeing-the-annotation-changes-in-the-database-schema.html"
+  - title: Eメール通知の設定
+    url: "/dwh/setting-email-notifications.html"
+  - title: Reportingポータルへのアクセス
+    url: "/dwh/accessing-the-reporting-portal.html"
+  - title: Data Warehouseデータベーススキーマのドキュメントの表示
+    url: "/dwh/viewing-the-data-warehouse-documentation.html"
+  - title: Data Warehouseデータベーススキーマの表示
+    url: "/dwh/viewing-the-data-warehouse-database-schema.html"
+  - title: システム情報の表示
+    url: "/dwh/editing-the-site-name-and-viewing-system-information.html"
+  - title: 詳細オプション
+    url: "/dwh/advanced-options.html"
+    entries:
+    - title: 失敗したビルドをスキップします
+      url: "/dwh/skipping-failed-builds.html"
+    - title: Data WarehouseデータベースまたはReportingサーバをリセットしています
+      url: "/dwh/resetting-the-data-warehouse-database.html"
+    - title: 6.3より前のバージョンのレポートのリストアとアップグレード
+      url: "/dwh/restoring-and-upgrading-reports-for-versions-prior-to-6-3.html"
+    - title: コマンドラインインターフェイスを使用したMySQLへのアクセス
+      url: "/dwh/accessing-mysql-using-the-command-line-interface-valid.html"
+    - title: Data Warehouseのトラブルシューティング
+      url: "/dwh/troubleshooting-data-warehouse.html"
+      entries:
+      - title: ASUPを使用した問題 の解決
+        url: "/dwh/issue-resolution-with-autosupport-asup.html"
+        entries:
+        - title: ASUPの自動送信を無効にしています
+          url: "/dwh/configuring-your-asup-processing.html"
+        - title: Data Warehouseデータベースのバックアップを含む
+          url: "/dwh/including-the-data-warehouse-database.html"
+        - title: InsightのログをASUPに送信しています
+          url: "/dwh/sending-oncommand-insight-logs-to-asup.html"
+      - title: OnCommand Insight ログの表示
+        url: "/dwh/viewing-oncommand-insight-logs.html"
+      - title: 複数サーバシャーシの統合に関する問題
+        url: "/dwh/multiple-server-chassis-consolidation-issues.html"
+        entries:
+        - title: ホストとアダプタの統合に関する問題の表示
+          url: "/dwh/viewing-hosts-and-adapters-consolidation-issues.html"
+        - title: ストレージアレイの統合に関する問題の表示
+          url: "/dwh/viewing-storage-arrays-consolidation-issues.html"
+        - title: スイッチの統合に関する問題の表示
+          url: "/dwh/viewing-switches-consolidation-issues.html"
+      - title: 複数サーバのアノテーションの統合に関する問題の解決
+        url: "/dwh/resolving-multiple-server-annotation-consolidation-issues.html"

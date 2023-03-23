@@ -1,0 +1,30 @@
+---
+permalink: dwh/administrative-tasks-you-can-perform-using-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Data WarehouseはWebベースのユーザインターフェイスです。OnCommand Insight Data Warehouseでデータを設定およびトラブルシューティングしたり、OnCommand Insight からデータを取得するスケジュールを設定したりできます。 
+---
+= Data Warehouseを使用して実行できる管理タスク
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Data WarehouseはWebベースのユーザインターフェイスです。OnCommand Insight Data Warehouseでデータを設定およびトラブルシューティングしたり、OnCommand Insight からデータを取得するスケジュールを設定したりできます。
+
+Data Warehouseポータルでは、次の管理タスクを実行できます。
+
+* 現在のジョブまたは実行中のクエリのステータスを確認します
+* アノテーションを管理します
+* E メール通知を設定
+* カスタムレポートにアクセスして作成します
+* Data Warehouseのドキュメントとデータベーススキーマを確認します
+* サイト名を編集します
+* Data Warehouseのバージョンとアップグレード履歴を確認します
+* Data Warehouseデータを履歴からビルドします
+* Data Warehouseデータベースをリセットします
+* Data Warehouseデータベースをバックアップおよびリストアします
+* Data Warehouseの問題のトラブルシューティングとOnCommand Insight のログの確認
+* ユーザアカウントを管理する
+

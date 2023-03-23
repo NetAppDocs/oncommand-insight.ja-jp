@@ -1,0 +1,14 @@
+---
+permalink: config-admin/assigning-annotations-to-assets-using-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 定義した条件に基づいてアセットにアノテーションを自動的に割り当てるには、アノテーションルールを設定します。OnCommand Insight は、これらのルールに基づいてアセットにアノテーションを割り当てます。Insightには、デフォルトのアノテーションルールも2つ用意されています。必要に応じて変更したり、不要な場合は削除したりできます。 
+---
+= アノテーションルールを使用してアセットにアノテーションを割り当てる
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+定義した条件に基づいてアセットにアノテーションを自動的に割り当てるには、アノテーションルールを設定します。OnCommand Insight は、これらのルールに基づいてアセットにアノテーションを割り当てます。Insightには、デフォルトのアノテーションルールも2つ用意されています。必要に応じて変更したり、不要な場合は削除したりできます。

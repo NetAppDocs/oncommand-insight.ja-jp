@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-data-warehouse-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseデータベーススキーマの情報を確認できます。 
+---
+= Data Warehouseデータベーススキーマのドキュメントの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseデータベーススキーマの情報を確認できます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. Data Warehouseツールバーで、をクリックします image:../media/oci-7-help-icon-gif.gif[""] をクリックし、*[スキーマ]*を選択します。
+

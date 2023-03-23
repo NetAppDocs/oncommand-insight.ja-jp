@@ -1,0 +1,26 @@
+---
+permalink: install-windows/planning-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 導入を成功させるには、OnCommand Insight をインストールする前に特定のシステム要素を考慮する必要があります。 
+---
+= 導入を計画します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+導入を成功させるには、OnCommand Insight をインストールする前に特定のシステム要素を考慮する必要があります。
+
+
+
+== このタスクについて
+
+Insightの導入計画では、次のシステム要素を考慮する必要があります。
+
+* Insightアーキテクチャ
+* 監視するネットワークコンポーネント
+* Insightのインストールの前提条件とサーバ要件
+* Insight Webブラウザの要件
+

@@ -1,0 +1,68 @@
+---
+permalink: reporting/accessing-the-oncommand-insight-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight のレポートポータルには、Webブラウザ、Data Warehouse、またはInsightサーバから直接アクセスできます。Reportingポータルを使用して、事前定義済みのレポートにアクセスしたり、Data Warehouseのデータを使用して独自のレポートを作成したりできます。 
+---
+= OnCommand Insight Reportingポータルへのアクセス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight のレポートポータルには、Webブラウザ、Data Warehouse、またはInsightサーバから直接アクセスできます。Reportingポータルを使用して、事前定義済みのレポートにアクセスしたり、Data Warehouseのデータを使用して独自のレポートを作成したりできます。
+
+
+
+== WebブラウザからReportingポータルにアクセスします
+
+
+
+=== 手順
+
+. Web ブラウザを開きます。
+. 次のURLを入力します。 `+https://server-name:9300/bi+`
++
+9300は、インストール時に指定されたデフォルトポートです。別のポートが指定されている場合は、ポートを変更する必要があります。
+
+. ユーザー名とパスワードを入力し、* OK *をクリックします。
+
+
+
+
+== Insight ServerからReportingポータルにアクセスする
+
+
+
+=== 手順
+
+. Web ブラウザを開きます。
+. 次のURLを入力してInsight Serverにアクセスします。 `+https://server-name+`
+. ユーザー名とパスワードを入力し、* OK *をクリックします。
+. Insightのツールバーで、をクリックします image:../media/oci-reporting-portal-icon.gif[""]。
+. 表示されるログインページで、ユーザー名とパスワードを入力し、* OK *をクリックします。
+
+
+
+
+== Data WarehouseからReportingポータルにアクセスする
+
+
+
+=== 手順
+
+. Web ブラウザを開きます。
+. 次のURLを入力してData Warehouseにアクセスします。 `+https://server-name/dwh+`
+. ユーザー名とパスワードを入力し、* OK *をクリックします。
+. Data Warehouseツールバーで、をクリックします image:../media/oci-reporting-portal-icon.gif[""]。
+. 表示されるログインページで、ユーザー名とパスワードを入力し、* OK *をクリックします。
+
+
+
+
+=== 結果
+
+IBM Cognos Analyticsのようこそページが表示されます。これは、OnCommand Insight Reportingポータルのデフォルトのランディングページです。
+
+image::../media/cognos-welcome.gif[Cognosようこそ]

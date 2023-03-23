@@ -1,0 +1,79 @@
+---
+permalink: config-admin/ibm-cleversafe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: このデータソースは、IBM Cleversafeのインベントリとパフォーマンスのデータを収集します。 
+---
+= IBM Cleversafeデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このデータソースは、IBM Cleversafeのインベントリとパフォーマンスのデータを収集します。
+
+
+
+== 要件
+
+このデータソースの設定に関する要件は次のとおりです。
+
+* マネージャのIPアドレスまたはホスト名
+* 同じのユーザ名とパスワード
+* ポート 9440
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+Cleversafeマネージャのホスト名またはIPアドレス
+ a| 
+CleverSafeデバイスのホストIPアドレス
+
+
+
+ a| 
+ユーザ名
+ a| 
+Cleversafeへのログインに使用する名前
+
+
+
+ a| 
+パスワード
+ a| 
+Cleversafeへのログインに使用するパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+デフォルトは 60 分です
+
+
+
+ a| 
+HTTP接続タイムアウト）
+ a| 
+デフォルトは60秒です
+
+|===

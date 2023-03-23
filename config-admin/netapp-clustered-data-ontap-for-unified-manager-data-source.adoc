@@ -1,0 +1,80 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: このデータソースは、Unified Manager\（UM\）6.0以上のデータベースからONTAP 8.1.xのデータを収集します。Insightは、このデータソースを使用して、UMに設定されて入力されたすべてのクラスタを検出します。効率化のため、Insightではクラスタ自体に対してZAPIは呼び出されません。このデータソースではパフォーマンスはサポートされていません。 
+---
+= NetApp clustered Data ONTAP for Unified Managerデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このデータソースは、Unified Manager（UM）6.0以降のデータベースからONTAP 8.1.xのデータを収集します。Insightは、このデータソースを使用して、UMに設定されて入力されたすべてのクラスタを検出します。効率化のため、Insightではクラスタ自体に対してZAPIは呼び出されません。このデータソースではパフォーマンスはサポートされていません。
+
+
+
+== 設定
+
+[NOTE]
+====
+このデータコレクタは、OnCommand Insight 7.3.11以降では使用できなくなりました。
+
+====
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+Unified ManagerのIP
+ a| 
+Unified ManagerのIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+Unified Managerのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+Unified Managerのパスワード
+
+
+
+ a| 
+ポート
+ a| 
+Unified Managerとの通信に使用するポート（デフォルトは3306）
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+Inventory Poll Interval (min) Interval
+ a| 
+インベントリポーリングの間隔（デフォルトは15分）
+
+
+
+ a| 
+クラスタを除外します
+ a| 
+対象から除外するクラスタのIPをカンマで区切ったリスト
+
+|===

@@ -1,0 +1,30 @@
+---
+permalink: install-linux/migrating-from-windows-to-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 既存のWindowsがインストールされている環境でInsightをLinuxで使用するには、移行を実行する必要があります。この手順 は、Insight ServerコンポーネントとData Warehouseコンポーネントの両方で実行する必要があります。 
+---
+= WindowsからLinuxへの移行
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存のWindowsがインストールされている環境でInsightをLinuxで使用するには、移行を実行する必要があります。この手順 は、Insight ServerコンポーネントとData Warehouseコンポーネントの両方で実行する必要があります。
+
+
+
+== 手順
+
+. 現在インストールされているInsightをサーバにバックアップします。
++
+OnCommand Insight データベースのバックアップ方法については、OCI構成および管理ガイド_を参照してください。
+
+. Insight for Linuxをインストールします。
+. 以前のバージョンのデータベースをリストアします。
++
+OnCommand Insight データベースのリストア方法については、OCI構成および管理ガイド_を参照してください。
+
+. 以前のバージョンのInsight for Windowsをアンインストールします。
+

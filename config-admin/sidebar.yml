@@ -1,0 +1,732 @@
+---
+section: config-admin
+title: 構成と管理
+entries:
+- title: Insightをセットアップしています
+  url: "/config-admin/setting-up-insight.html"
+  entries:
+  - title: Web UIへのアクセス
+    url: "/config-admin/opening-insight.html"
+  - title: Insightのライセンスをインストールします
+    url: "/config-admin/installing-your-insight-licenses.html"
+    entries:
+    - title: OnCommand Insight ライセンス
+      url: "/config-admin/oncommand-insight-licenses.html"
+  - title: ユーザアカウントの設定と管理
+    url: "/config-admin/setting-up-and-managing-user-accounts.html"
+    entries:
+    - title: Insightのユーザロール
+      url: "/config-admin/insight-user-roles.html"
+    - title: LDAP用のInsightの設定
+      url: "/config-admin/configuring-insight-for-ldap-s.html"
+      entries:
+      - title: LDAPを使用したユーザ定義の設定
+        url: "/config-admin/configuring-user-definitions-using-ldap.html"
+    - title: ユーザパスワードの変更
+      url: "/config-admin/changing-user-passwords.html"
+    - title: ユーザー定義の編集
+      url: "/config-admin/editing-a-user-definition.html"
+    - title: ユーザアカウントの削除
+      url: "/config-admin/deleting-a-user-account.html"
+    - title: シングルサインオン（SSO）の設定
+      url: "/config-admin/configuring-sso.html"
+  - title: ログイン警告メッセージの設定
+    url: "/config-admin/configuring-a-login-warning-message.html"
+  - title: Insightセキュリティ
+    url: "/config-admin/security-management.html"
+    entries:
+    - title: Insight Serverでセキュリティを管理する
+      url: "/config-admin/managing-security-on-the-insight-server.html"
+    - title: Local Acquisition Unit上のセキュリティの管理
+      url: "/config-admin/managing-security-on-the-local-acquisition-unit.html"
+    - title: RAUでのセキュリティの管理
+      url: "/config-admin/managing-security-on-an-rau.html"
+    - title: Data Warehouseでセキュリティを管理する
+      url: "/config-admin/managing-security-on-the-data-warehouse.html"
+    - title: OnCommand Insight の内部ユーザのパスワードを変更しています
+      url: "/config-admin/changing-oncommand-insight-internal-user-passwords.html"
+      entries:
+      - title: Server Connection Configuration UIを使用して「inventory」パスワードと「dwh_internal」パスワードを変更します
+        url: "/config-admin/changing-passwords-in-the-server-connection-configuration-ui.html"
+      - title: ODBC Administrationツールを使用したDWHパスワードの変更
+        url: "/config-admin/changing-the-dwh-password-using-the-odbc-administration-tool.html"
+  - title: スマートカードおよび証明書によるログインのサポート
+    url: "/config-admin/certificate-login-support.html"
+    entries:
+    - title: スマートカードおよび証明書によるログイン用にホストを設定しています
+      url: "/config-admin/host-configuration-for-smart-card-and-certificate-login.html"
+    - title: スマートカードおよび証明書によるログインをサポートするようにクライアントを設定しています
+      url: "/config-admin/client-configuration-for-smart-card-and-certificate-login.html"
+    - title: LinuxサーバでのCACの有効化
+      url: "/config-admin/cac-configuration-for-linux.html"
+    - title: Data Warehouseでスマートカードおよび証明書によるログインを設定しています
+      url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+    - title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.5~7.3.9）
+      url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+    - title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.10以降）
+      url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+    - title: CognosおよびDWH用のCA署名SSL証明書のインポート（Insight 7.3.5から7.3.9）
+      url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+    - title: CognosおよびDWHのCA署名SSL証明書のインポート（Insight 7.3.10以降）
+      url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+  - title: Data Warehouseでスマートカードおよび証明書によるログインを設定しています
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+  - title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.5~7.3.9）
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+  - title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.10以降）
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+  - title: CognosおよびDWH用のCA署名SSL証明書のインポート（Insight 7.3.5から7.3.9）
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+  - title: CognosおよびDWHのCA署名SSL証明書のインポート（Insight 7.3.10以降）
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+  - title: SSL証明書のインポート
+    url: "/config-admin/importing-an-ssl-certificate.html"
+  - title: Insightデータベースの週次バックアップの設定
+    url: "/config-admin/setting-up-weekly-backups-for-your-oci-database.html"
+    entries:
+    - title: バックアップに含まれるもの
+      url: "/config-admin/what-s-included-in-the-backup.html"
+  - title: パフォーマンスデータのアーカイブ
+    url: "/config-admin/performance-data-archiving.html"
+    entries:
+    - title: パフォーマンスアーカイブの有効化
+      url: "/config-admin/enabling-performance-archive.html"
+    - title: パフォーマンスアーカイブをロードしています
+      url: "/config-admin/loading-performance-archive.html"
+  - title: Eメールを設定しています
+    url: "/config-admin/configuring-your-email.html"
+    entries:
+    - title: Eメール設定の前提条件
+      url: "/config-admin/email-configuration-prerequisites.html"
+    - title: Insight用のEメールを設定しています
+      url: "/config-admin/configuring-your-email-for-insight.html"
+  - title: SNMP通知の設定
+    url: "/config-admin/configuring-snmp-notifications.html"
+  - title: syslogファシリティのイネーブル化
+    url: "/config-admin/enabling-the-syslog-facility.html"
+    entries:
+    - title: Insightのsyslogの内容
+      url: "/config-admin/insight-syslog-contents.html"
+  - title: パフォーマンスと品質管理の違反通知の設定
+    url: "/config-admin/configuring-performance-and-assurance-violation-notifications.html"
+  - title: システムレベルのイベント通知の設定
+    url: "/config-admin/configuring-system-level-event-notifications.html"
+  - title: ASUPの処理を設定しています
+    url: "/config-admin/configuring-your-asup-processing.html"
+    entries:
+    - title: AutoSupport （ASUP）パッケージの内容
+      url: "/config-admin/what-s-included-in-the-autosupport-package.html"
+  - title: アプリケーションの定義
+    url: "/config-admin/defining-applications.html"
+    entries:
+    - title: アセットへのアプリケーションの割り当て
+      url: "/config-admin/assigning-applications-to-assets.html"
+    - title: アプリケーションの編集
+      url: "/config-admin/editing-applications.html"
+    - title: アプリケーションの削除
+      url: "/config-admin/deleting-an-application.html"
+  - title: OnCommand Insight の異常検出の仕組み
+    url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
+    entries:
+    - title: 異常検出用のアプリケーションの設定
+      url: "/config-admin/configuring-anomaly-detection-for-applications.html"
+    - title: "[Anomalies]セクションを使用します"
+      url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+    - title: 異常検出の監視ステータス
+      url: "/config-admin/anomaly-detection-monitoring-status.html"
+    - title: アプリケーションパフォーマンスポリシーを作成します
+      url: "/config-admin/creating-an-application-performance-policy.html"
+  - title: ビジネスエンティティ階層
+    url: "/config-admin/your-business-entities-hierarchy.html"
+    entries:
+    - title: ビジネスエンティティ階層の設計
+      url: "/config-admin/designing-your-business-entities-hierarchy.html"
+    - title: ビジネスエンティティを作成しています
+      url: "/config-admin/setting-up-business-entities.html"
+    - title: アセットへのビジネスエンティティの割り当て
+      url: "/config-admin/assigning-business-entities-to-assets.html"
+    - title: 複数のアセットに対するビジネスエンティティの割り当てまたは削除
+      url: "/config-admin/adding-or-removing-business-entities-from-multiple-assets.html"
+  - title: アノテーションの定義
+    url: "/config-admin/defining-annotations.html"
+    entries:
+    - title: アノテーションを使用した環境の監視
+      url: "/config-admin/using-annotations-to-monitor-your-environment.html"
+      entries:
+      - title: アノテーションタイプの管理
+        url: "/config-admin/managing-annotation-types.html"
+        entries:
+        - title: デフォルトのアノテーションタイプ
+          url: "/config-admin/predefined-annotation-types.html"
+        - title: アノテーションの割り当て方法
+          url: "/config-admin/how-annotations-are-assigned.html"
+        - title: アノテーションにコストを関連付ける
+          url: "/config-admin/associating-costs-with-annotations.html"
+      - title: カスタムアノテーションの作成
+        url: "/config-admin/creating-custom-annotations.html"
+        entries:
+        - title: アセットへのアノテーションの手動割り当て
+          url: "/config-admin/manually-assigning-annotations-to-assets.html"
+        - title: アノテーションの変更
+          url: "/config-admin/modifying-annotations.html"
+        - title: アノテーションを削除する
+          url: "/config-admin/deleting-annotations.html"
+      - title: アノテーションルールを使用してアセットにアノテーションを割り当てる
+        url: "/config-admin/assigning-annotations-to-assets-using-annotation-rules.html"
+        entries:
+        - title: デフォルトのストレージアノテーションルール
+          url: "/config-admin/default-storage-annotation-settings.html"
+        - title: アノテーションルールの作成
+          url: "/config-admin/configuring-annotation-rules-for-automatic-assignment.html"
+        - title: アノテーションルールの優先順位を設定します
+          url: "/config-admin/setting-annotation-rule-precedence.html"
+        - title: アノテーションルールの変更
+          url: "/config-admin/modifying-annotation-rules.html"
+        - title: アノテーションルールを削除する
+          url: "/config-admin/deleting-annotation-rules.html"
+      - title: アノテーション値のインポート
+        url: "/config-admin/importing-annotation-values.html"
+      - title: クエリを使用して複数のアセットにアノテーションを割り当てる
+        url: "/config-admin/assigning-annotations-using-a-query.html"
+  - title: アセットを照会しています
+    url: "/config-admin/using-queries.html"
+    entries:
+    - title: クエリやダッシュボードで使用されるアセット
+      url: "/config-admin/assets-used-in-queries-and-dashboards.html"
+    - title: クエリを作成しています
+      url: "/config-admin/creating-a-query.html"
+    - title: クエリを表示する
+      url: "/config-admin/viewing-queries.html"
+    - title: クエリ結果を .csv ファイルにエクスポートしています
+      url: "/config-admin/exporting-query-results-to-a-csv-file.html"
+    - title: クエリの変更
+      url: "/config-admin/modifying-queries.html"
+    - title: クエリの削除
+      url: "/config-admin/deleting-queries.html"
+    - title: アセットに対する複数のアプリケーションの割り当てと削除
+      url: "/config-admin/editing-or-removing-applications-in-bulk.html"
+    - title: アセットの複数のアノテーションの編集または削除
+      url: "/config-admin/editing-or-removing-annotations-from-assets-in-bulk.html"
+    - title: テーブル値をコピーしています
+      url: "/config-admin/copying-table-values.html"
+  - title: パフォーマンスポリシーの管理
+    url: "/config-admin/performance-policy-management.html"
+    entries:
+    - title: パフォーマンスポリシーの作成
+      url: "/config-admin/creating-performance-policies.html"
+    - title: パフォーマンスポリシーの評価順序
+      url: "/config-admin/performance-policy-precedence.html"
+      entries:
+      - title: パフォーマンスポリシーの優先順位の変更
+        url: "/config-admin/configuring-performance-policy-precedence.html"
+    - title: パフォーマンスポリシーの編集
+      url: "/config-admin/modifying-performance-policies.html"
+    - title: パフォーマンスポリシーを削除しています
+      url: "/config-admin/deleting-performance-policies.html"
+  - title: ユーザーデータのインポートとエクスポート
+    url: "/config-admin/importing-and-exporting-user-data.html"
+- title: Insightセキュリティ
+  url: "/config-admin/security-management.html"
+  entries:
+  - title: Insight Serverでセキュリティを管理する
+    url: "/config-admin/managing-security-on-the-insight-server.html"
+  - title: Local Acquisition Unit上のセキュリティの管理
+    url: "/config-admin/managing-security-on-the-local-acquisition-unit.html"
+  - title: RAUでのセキュリティの管理
+    url: "/config-admin/managing-security-on-an-rau.html"
+  - title: Data Warehouseでセキュリティを管理する
+    url: "/config-admin/managing-security-on-the-data-warehouse.html"
+  - title: OnCommand Insight の内部ユーザのパスワードを変更しています
+    url: "/config-admin/changing-oncommand-insight-internal-user-passwords.html"
+    entries:
+    - title: Server Connection Configuration UIを使用して「inventory」パスワードと「dwh_internal」パスワードを変更します
+      url: "/config-admin/changing-passwords-in-the-server-connection-configuration-ui.html"
+    - title: ODBC Administrationツールを使用したDWHパスワードの変更
+      url: "/config-admin/changing-the-dwh-password-using-the-odbc-administration-tool.html"
+- title: スマートカードおよび証明書によるログインのサポート
+  url: "/config-admin/certificate-login-support.html"
+  entries:
+  - title: スマートカードおよび証明書によるログイン用にホストを設定しています
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login.html"
+  - title: スマートカードおよび証明書によるログインをサポートするようにクライアントを設定しています
+    url: "/config-admin/client-configuration-for-smart-card-and-certificate-login.html"
+  - title: LinuxサーバでのCACの有効化
+    url: "/config-admin/cac-configuration-for-linux.html"
+  - title: Data Warehouseでスマートカードおよび証明書によるログインを設定しています
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+  - title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.5~7.3.9）
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+  - title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.10以降）
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+  - title: CognosおよびDWH用のCA署名SSL証明書のインポート（Insight 7.3.5から7.3.9）
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+  - title: CognosおよびDWHのCA署名SSL証明書のインポート（Insight 7.3.10以降）
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+- title: Data Warehouseでスマートカードおよび証明書によるログインを設定しています
+  url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+- title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.5~7.3.9）
+  url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+- title: スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.10以降）
+  url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+- title: CognosおよびDWH用のCA署名SSL証明書のインポート（Insight 7.3.5から7.3.9）
+  url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+- title: CognosおよびDWHのCA署名SSL証明書のインポート（Insight 7.3.10以降）
+  url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+- title: SSL証明書のインポート
+  url: "/config-admin/importing-an-ssl-certificate.html"
+- title: OnCommand Insight の異常検出の仕組み
+  url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
+  entries:
+  - title: 異常検出用のアプリケーションの設定
+    url: "/config-admin/configuring-anomaly-detection-for-applications.html"
+  - title: "[Anomalies]セクションを使用します"
+    url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+  - title: 異常検出の監視ステータス
+    url: "/config-admin/anomaly-detection-monitoring-status.html"
+  - title: アプリケーションパフォーマンスポリシーを作成します
+    url: "/config-admin/creating-an-application-performance-policy.html"
+- title: ビジネスエンティティ階層
+  url: "/config-admin/your-business-entities-hierarchy.html"
+  entries:
+  - title: ビジネスエンティティ階層の設計
+    url: "/config-admin/designing-your-business-entities-hierarchy.html"
+  - title: ビジネスエンティティを作成しています
+    url: "/config-admin/setting-up-business-entities.html"
+  - title: アセットへのビジネスエンティティの割り当て
+    url: "/config-admin/assigning-business-entities-to-assets.html"
+  - title: 複数のアセットに対するビジネスエンティティの割り当てまたは削除
+    url: "/config-admin/adding-or-removing-business-entities-from-multiple-assets.html"
+- title: アノテーションの定義
+  url: "/config-admin/defining-annotations.html"
+  entries:
+  - title: アノテーションを使用した環境の監視
+    url: "/config-admin/using-annotations-to-monitor-your-environment.html"
+    entries:
+    - title: アノテーションタイプの管理
+      url: "/config-admin/managing-annotation-types.html"
+      entries:
+      - title: デフォルトのアノテーションタイプ
+        url: "/config-admin/predefined-annotation-types.html"
+      - title: アノテーションの割り当て方法
+        url: "/config-admin/how-annotations-are-assigned.html"
+      - title: アノテーションにコストを関連付ける
+        url: "/config-admin/associating-costs-with-annotations.html"
+    - title: カスタムアノテーションの作成
+      url: "/config-admin/creating-custom-annotations.html"
+      entries:
+      - title: アセットへのアノテーションの手動割り当て
+        url: "/config-admin/manually-assigning-annotations-to-assets.html"
+      - title: アノテーションの変更
+        url: "/config-admin/modifying-annotations.html"
+      - title: アノテーションを削除する
+        url: "/config-admin/deleting-annotations.html"
+    - title: アノテーションルールを使用してアセットにアノテーションを割り当てる
+      url: "/config-admin/assigning-annotations-to-assets-using-annotation-rules.html"
+      entries:
+      - title: デフォルトのストレージアノテーションルール
+        url: "/config-admin/default-storage-annotation-settings.html"
+      - title: アノテーションルールの作成
+        url: "/config-admin/configuring-annotation-rules-for-automatic-assignment.html"
+      - title: アノテーションルールの優先順位を設定します
+        url: "/config-admin/setting-annotation-rule-precedence.html"
+      - title: アノテーションルールの変更
+        url: "/config-admin/modifying-annotation-rules.html"
+      - title: アノテーションルールを削除する
+        url: "/config-admin/deleting-annotation-rules.html"
+    - title: アノテーション値のインポート
+      url: "/config-admin/importing-annotation-values.html"
+    - title: クエリを使用して複数のアセットにアノテーションを割り当てる
+      url: "/config-admin/assigning-annotations-using-a-query.html"
+- title: アセットを照会しています
+  url: "/config-admin/using-queries.html"
+  entries:
+  - title: クエリやダッシュボードで使用されるアセット
+    url: "/config-admin/assets-used-in-queries-and-dashboards.html"
+  - title: クエリを作成しています
+    url: "/config-admin/creating-a-query.html"
+  - title: クエリを表示する
+    url: "/config-admin/viewing-queries.html"
+  - title: クエリ結果を .csv ファイルにエクスポートしています
+    url: "/config-admin/exporting-query-results-to-a-csv-file.html"
+  - title: クエリの変更
+    url: "/config-admin/modifying-queries.html"
+  - title: クエリの削除
+    url: "/config-admin/deleting-queries.html"
+  - title: アセットに対する複数のアプリケーションの割り当てと削除
+    url: "/config-admin/editing-or-removing-applications-in-bulk.html"
+  - title: アセットの複数のアノテーションの編集または削除
+    url: "/config-admin/editing-or-removing-annotations-from-assets-in-bulk.html"
+  - title: テーブル値をコピーしています
+    url: "/config-admin/copying-table-values.html"
+- title: Insightデータソース管理
+  url: "/config-admin/insight-data-source-management.html"
+  entries:
+  - title: Insightでデータソースを設定します
+    url: "/config-admin/setting-up-your-data-sources-in-insight.html"
+    entries:
+    - title: データソースのサポート情報
+      url: "/config-admin/data-source-support-information.html"
+    - title: データソースを追加しています
+      url: "/config-admin/adding-data-sources.html"
+      entries:
+      - title: スプレッドシートからデータソースをインポートする
+        url: "/config-admin/importing-data-sources-from-a-spreadsheet.html"
+      - title: パッチによる新しいデータソースの追加
+        url: "/config-admin/adding-a-new-data-source-patch-us26313-fr.html"
+    - title: データソースのクローニング
+      url: "/config-admin/cloning-a-data-source.html"
+    - title: データソースの設定をテストします
+      url: "/config-admin/testing-the-data-source-configuration.html"
+  - title: ベンダー別のデータソースリファレンス
+    url: "/config-admin/vendor-specific-data-source-reference.html"
+    entries:
+    - title: 3PAR InServデータソース
+      url: "/config-admin/3par-inserv-firmware-ssh-data-source.html"
+    - title: Amazon AWS EC2データソース
+      url: "/config-admin/amazon-aws-ec2-data-source.html"
+    - title: Brocade Enterprise Fabric Connectivity Managerデータソース
+      url: "/config-admin/brocade-efcm-9-5-to-9-7-data-sources.html"
+    - title: Brocade FC Switchデータソース
+      url: "/config-admin/brocade-fc-switch-firmware-ssh-data-source.html"
+    - title: Brocade Sphereon/Intrepid Switchデータソース
+      url: "/config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html"
+    - title: Cisco FC Switch Firmware（SNMP）データソース
+      url: "/config-admin/cisco-fc-switch-firmware-snmp-data-source.html"
+    - title: EMC Celerraデータソース
+      url: "/config-admin/emc-celerra-ssh-data-source.html"
+    - title: EMC CLARiX（NaviCLI）データソース
+      url: "/config-admin/emc-clariion-navicli-data-source.html"
+    - title: EMC Data Domainデータソース
+      url: "/config-admin/emc-datadomain-data-source.html"
+    - title: EMC ECC StorageScopeデータソース
+      url: "/config-admin/generic-emc-ecc-storagescope-data-source.html"
+    - title: Dell EMC ECSデータソース
+      url: "/config-admin/dell-emc-ecs-data-source.html"
+    - title: EMC Isilonデータソース
+      url: "/config-admin/emc-isilon-ssh-data-source.html"
+    - title: Dell EMC PowerStoreデータソース
+      url: "/config-admin/dell-emc-powerstore-data-source.html"
+    - title: EMC RecoverPointデータソース
+      url: "/config-admin/emc-recoverpoint-data-source.html"
+    - title: EMC Solutions EnablerとSMI-S Performanceデータソース
+      url: "/config-admin/emc-solutions-enabler-cli-with-smi-s-performance.html"
+    - title: EMC VNXデータソース
+      url: "/config-admin/emc-vnx-ssh-data-source.html"
+    - title: EMC VNXeデータソース
+      url: "/config-admin/emc-vnxe-data-source.html"
+    - title: EMC VPLEXデータソース
+      url: "/config-admin/emc-vplex-cli-data-source.html"
+    - title: EMC XtremIOデータソース
+      url: "/config-admin/emc-xtremeio-data-source.html"
+    - title: Fujitsu Eternusデータソース
+      url: "/config-admin/fujitsu-eternus-data-source.html"
+    - title: Hitachi Content Platform（HCP）データソース
+      url: "/config-admin/hitachi-content-platform-hcp-data-source.html"
+    - title: HDS HiCommand Device Managerデータソース
+      url: "/config-admin/hds-hicommand-devicemanager-data-source.html"
+      entries:
+      - title: HDSストレージ
+        url: "/config-admin/hds-landing-page-terminology-storage.html"
+      - title: HITACHI Storage Poolの略
+        url: "/config-admin/hds-landing-page-terminology-storage-pool.html"
+      - title: HDSストレージノード
+        url: "/config-admin/hds-landing-page-terminology-storage-node.html"
+    - title: HDS NAS（HNAS）データソース
+      url: "/config-admin/hds-hnas-data-source.html"
+    - title: HP CommandView AEデータソース
+      url: "/config-admin/hp-commandview-ae-data-source.html"
+    - title: HP EVA Storageデータソース
+      url: "/config-admin/hp-eva-storage-sssu-data-source.html"
+    - title: HPE Nimbleデータソース
+      url: "/config-admin/hpe-nimble-data-source.html"
+    - title: Huawei OceanStorデータソース
+      url: "/config-admin/huawei-oceanstor-data-source.html"
+    - title: IBM Cleversafeデータソース
+      url: "/config-admin/ibm-cleversafe-data-source.html"
+    - title: IBM DSデータソース
+      url: "/config-admin/ibm-ds-cli-data-source.html"
+    - title: IBM PowerVMデータソース
+      url: "/config-admin/ibm-powervm-ssh-data-source.html"
+    - title: IBM SVCデータソース
+      url: "/config-admin/ibm-svc-ssh-data-source.html"
+    - title: IBM Tivoli Monitoringデータソース
+      url: "/config-admin/ibm-tivoli-monitoring-data-source.html"
+    - title: IBM TotalStorage DS4000データソース
+      url: "/config-admin/ibm-totalstorage-ds4000-data-source.html"
+    - title: IBM XIVデータソース
+      url: "/config-admin/ibm-xiv-cli-data-source.html"
+    - title: Infinidat InfiniBoxデータソース
+      url: "/config-admin/infinidat-infinibox-http-data-source.html"
+    - title: Microsoft Azure computeデータソース
+      url: "/config-admin/microsoft-azure-compute-data-source.html"
+    - title: Azure NetApp Files データソース
+      url: "/config-admin/microsoft-azure-netapp-files-data-source.html"
+    - title: Microsoft Hyper-Vデータソース
+      url: "/config-admin/microsoft-hyper-v-wmi-data-source.html"
+    - title: NetApp clustered Data ONTAP データソース
+      url: "/config-admin/netapp-clustered-data-ontap-data-source.html"
+      entries:
+      - title: clustered Data ONTAP ストレージ
+        url: "/config-admin/cdot-landing-page-terminology-storage.html"
+      - title: clustered Data ONTAP ストレージプール
+        url: "/config-admin/cdot-landing-page-terminology-storage-pool.html"
+      - title: clustered Data ONTAP ストレージノード
+        url: "/config-admin/cdot-landing-page-terminology-storage-node.html"
+    - title: NetApp clustered Data ONTAP for Unified Managerデータソース
+      url: "/config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html"
+    - title: NetApp Data ONTAP 7-Modeデータソース
+      url: "/config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html"
+    - title: NetApp E-Seriesデータソース
+      url: "/config-admin/netapp-e-series-data-source.html"
+      entries:
+      - title: Eシリーズストレージ
+        url: "/config-admin/e-series-landing-page-terminology-storage.html"
+      - title: Eシリーズストレージプール
+        url: "/config-admin/e-series-landing-page-terminology-storage-pool.html"
+      - title: Eシリーズストレージノード
+        url: "/config-admin/e-series-landing-page-terminology-storage-node.html"
+    - title: NetApp Host and VM File Systemsデータソース
+      url: "/config-admin/netapp-host-and-vm-filesystems-data-source.html"
+    - title: NetApp SolidFire データソース
+      url: "/config-admin/netapp-solidfire-data-source.html"
+    - title: NetApp StorageGRID データソース
+      url: "/config-admin/netapp-storagegrid-data-source.html"
+    - title: OpenStackデータソース
+      url: "/config-admin/openstack-data-source.html"
+    - title: Oracle ZFSデータソース
+      url: "/config-admin/oracle-zfs-data-source.html"
+    - title: Pure Storage FlashArrayデータソース
+      url: "/config-admin/pure-storage-flasharray-http-data-source.html"
+    - title: QLogic FC Switchデータソース
+      url: "/config-admin/qlogic-fc-switch-snmp-data-source.html"
+    - title: Red Hat（RHEV）データソース
+      url: "/config-admin/red-hat-rhev-data-source.html"
+    - title: Violin Flash Memory Arrayデータソース
+      url: "/config-admin/violin-memory-data-source.html"
+    - title: VMware vSphereデータソース
+      url: "/config-admin/vmware-vsphere-web-services-data-source.html"
+  - title: データソースのクレデンシャルの変更
+    url: "/config-admin/changing-data-source-credentials.html"
+  - title: データ収集の問題を引き起こす変更
+    url: "/config-admin/changes-causing-data-collection-problems.html"
+  - title: 1つのデータソースの詳細を確認します
+    url: "/config-admin/examining-one-data-source-in-detail.html"
+  - title: データソースの問題を調査しています
+    url: "/config-admin/researching-a-failed-data-source.html"
+  - title: データソースのポーリングの制御
+    url: "/config-admin/controlling-data-source-polling.html"
+  - title: データソース情報の編集
+    url: "/config-admin/editing-data-source-information.html"
+  - title: 複数のデータソースの情報を編集する
+    url: "/config-admin/editing-multiple-data-sources.html"
+  - title: データソースタグをアノテーションにマッピングする
+    url: "/config-admin/mapping-data-source-tags-to-annotations.html"
+  - title: データソースの削除
+    url: "/config-admin/deleting-a-data-source-from-the-monitoring-environment.html"
+  - title: データソースパッチとは
+    url: "/config-admin/data-source-patches.html"
+    entries:
+    - title: データソースパッチの適用
+      url: "/config-admin/applying-a-data-source-patch.html"
+    - title: あるタイプのデータソースにパッチをインストールする
+      url: "/config-admin/installing-a-patch-on-all-data-sources-of-one-type.html"
+    - title: パッチの管理
+      url: "/config-admin/managing-patches.html"
+    - title: データソースパッチをコミットしています
+      url: "/config-admin/committing-a-data-source-patch.html"
+    - title: データソースパッチをロールバックします
+      url: "/config-admin/rolling-back-a-data-source-patch.html"
+- title: デバイス解決
+  url: "/config-admin/device-resolution.html"
+  entries:
+  - title: 作業を開始する前に
+    url: "/config-admin/before-you-begin.html"
+  - title: 環境に応じたデバイス解決ルールの計画
+    url: "/config-admin/creating-rules-for-your-environment.html"
+  - title: デバイス解決ルールを作成しています
+    url: "/config-admin/creating-device-resolution-rules.html"
+    entries:
+    - title: 自動デバイス解決の更新を開始しています
+      url: "/config-admin/starting-a-automatic-device-resolution-update.html"
+    - title: ルールに基づく手動識別
+      url: "/config-admin/rule-assisted-manual-identification.html"
+  - title: ファイバチャネルデバイスの解決
+    url: "/config-admin/device-resolution-fc-identify.html"
+    entries:
+    - title: ファイバチャネルデバイスを手動で追加する
+      url: "/config-admin/adding-fc-devices-manually.html"
+    - title: CSVファイルからのファイバチャネルデバイス識別情報のインポート
+      url: "/config-admin/importing-fc-identification-from-a-csv-file.html"
+    - title: ファイバチャネルデバイスの識別情報をCSVファイルにエクスポートしています
+      url: "/config-admin/exporting-fc-identification-to-a-csv-file.html"
+  - title: IP デバイスの解決
+    url: "/config-admin/device-resolution-ip-identify.html"
+    entries:
+    - title: IP デバイスを手動で追加する
+      url: "/config-admin/adding-ip-devices-manually.html"
+    - title: CSVファイルからのIPデバイス識別情報のインポート
+      url: "/config-admin/importing-ip-identification-from-a-csv-file.html"
+    - title: CSVファイルへのIPデバイス識別情報のエクスポート
+      url: "/config-admin/exporting-ip-identification-to-a-csv-file.html"
+  - title: "[ 環境設定 ] タブでオプションを設定します"
+    url: "/config-admin/using-options-in-the-preferences-tab.html"
+  - title: 正規表現の例
+    url: "/config-admin/regular-expression-examples.html"
+- title: Insightのメンテナンス
+  url: "/config-admin/maintaining-insight.html"
+  entries:
+  - title: Insightの管理
+    url: "/config-admin/managing-insight.html"
+  - title: OnCommand Insight システムヘルスを監視しています
+    url: "/config-admin/monitoring-oncommand-insight-system-health.html"
+  - title: 非アクティブなデバイスの削除
+    url: "/config-admin/deleting-inactive-devices.html"
+  - title: システムおよびユーザアクティビティの監査
+    url: "/config-admin/auditing-system-and-user-activities.html"
+  - title: ネットワーク内の違反を監視します
+    url: "/config-admin/opening-the-violations-dashboard.html"
+  - title: Acquisition Unitのステータス
+    url: "/config-admin/acquisition-unit-status.html"
+  - title: Insightデータベースをリストアしています
+    url: "/config-admin/restoring-the-insight-database.html"
+  - title: 期限切れライセンスを更新しています
+    url: "/config-admin/updating-expired-licenses.html"
+    entries:
+    - title: ライセンスが準拠しなくなりました
+      url: "/config-admin/licenses-no-longer-compliant.html"
+    - title: Insightの旧バージョンのライセンスの交換
+      url: "/config-admin/replacing-licenses-for-older-insight-versions.html"
+  - title: サービスパックの適用
+    url: "/config-admin/applying-a-service-pack.html"
+  - title: 特別なトラブルシューティングレポートの準備
+    url: "/config-admin/preparing-a-special-troubleshooting-report.html"
+    entries:
+    - title: OnCommand Insight データベースを手動でバックアップします
+      url: "/config-admin/manually-backing-up-the-oci-database.html"
+    - title: サポート用のログのバンドル
+      url: "/config-admin/bundling-logs-for-support.html"
+    - title: ネットアップサポートに情報を送信しています
+      url: "/config-admin/sending-information-to-netapp-support.html"
+    - title: サポートへの転送用にデータをスクラビングしています
+      url: "/config-admin/scrubbing-data-for-transfer-to-support-webui.html"
+  - title: 高度なトラブルシューティング
+    url: "/config-admin/advanced-troubleshooting.html"
+    entries:
+    - title: 動的なデータを無視する時間数を設定します
+      url: "/config-admin/configuring-the-number-of-hours-to-ignore-dynamic-data.html"
+    - title: カスタマーサポート用のログを生成しています
+      url: "/config-admin/generating-logs-for-customer-support.html"
+    - title: システム情報の表示
+      url: "/config-admin/displaying-system-information.html"
+    - title: インストールされているOnCommand Insight コンポーネントの一覧表示
+      url: "/config-admin/listing-installed-oncommand-insight-packages.html"
+    - title: データベースオブジェクトの数を計算します
+      url: "/config-admin/calculating-the-number-of-database-objects.html"
+    - title: OnCommand Insight サーバを再起動しています
+      url: "/config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html"
+    - title: 移行オプションを使用してMySQLデータを移動しています
+      url: "/config-admin/moving-mysql-data-using-the-migrate-option.html"
+      entries:
+      - title: コマンドラインを使用してMySQLデータを移動しています
+        url: "/config-admin/moving-mysql-data-using-the-command-line.html"
+    - title: アノテーションの更新を強制します
+      url: "/config-admin/forcing-annotation-updates.html"
+    - title: クライアント設定の構成
+      url: "/config-admin/configuring-client-settings.html"
+    - title: サーバリソースのステータスを確認しています
+      url: "/config-admin/checking-the-status-of-server-resources.html"
+    - title: ゴーストデータソースの検索
+      url: "/config-admin/finding-ghost-data-sources.html"
+    - title: 見つからないディスクモデルを追加しています
+      url: "/config-admin/adding-a-missing-disk-model.html"
+      entries:
+      - title: 新しいディスクモデルの必要な情報の参照
+        url: "/config-admin/locating-required-information-for-new-disk-model.html"
+        entries:
+        - title: new_disk_models.txtファイルの内容
+          url: "/config-admin/content-of-the-new-disk-models-txt-file.html"
+- title: 環境の監視
+  url: "/config-admin/monitoring-your-environment.html"
+  entries:
+  - title: アセットページのデータ
+    url: "/config-admin/asset-pages.html"
+    entries:
+    - title: アセットページのタイプ
+      url: "/config-admin/types-of-asset-pages.html"
+    - title: 環境内で特定のアセットを検索しています
+      url: "/config-admin/searching-your-environment-for-specific-assets.html"
+      entries:
+      - title: 高度な検索技術
+        url: "/config-admin/advanced-asset-search-techniques-new.html"
+    - title: 表示されるデータの時間範囲の変更
+      url: "/config-admin/changing-the-time-segment-of-the-data-displayed.html"
+    - title: データソースのデータ収集ステータスの確認
+      url: "/config-admin/determining-data-source-acquisition-status.html"
+    - title: アセットページのセクション
+      url: "/config-admin/asset-page-sections.html"
+      entries:
+      - title: まとめ
+        url: "/config-admin/summary.html"
+        entries:
+        - title: "[Summary]セクションを使用します"
+          url: "/config-admin/what-the-summary-section-enables-you-to-do.html"
+      - title: トポロジ
+        url: "/config-admin/topology.html"
+        entries:
+        - title: "[Topology]セクションを使用します"
+          url: "/config-admin/what-the-topology-section-enables-you-to-do.html"
+      - title: ユーザデータ
+        url: "/config-admin/user-data.html"
+        entries:
+        - title: User Data セクションを使用してアプリケーションを割り当てまたは変更する
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html"
+        - title: "[User Data]セクションを使用してビジネスエンティティを割り当てまたは変更する"
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html"
+        - title: User Data セクションを使用して、注釈を割り当てまたは変更する
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html"
+      - title: 異常だ
+        url: "/config-admin/anomalies.html"
+        entries:
+        - title: "[Anomalies]セクションを使用します"
+          url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+      - title: エキスパートビュー
+        url: "/config-admin/expert-view.html"
+        entries:
+        - title: エキスパートビューの指標の定義
+          url: "/config-admin/metric-definitions.html"
+        - title: "[ エキスパートビュー（ Expert View ） ] セクションの使用"
+          url: "/config-admin/what-the-expert-view-section-enables-you-to-do.html"
+      - title: 関連資産
+        url: "/config-admin/related-assets.html"
+        entries:
+        - title: "[Related Assets]セクションを使用します"
+          url: "/config-admin/what-the-related-assets-sections-enable-you-to-do.html"
+      - title: 違反
+        url: "/config-admin/violations.html"
+        entries:
+        - title: "[Violations]セクションの使用"
+          url: "/config-admin/what-the-violations-section-enables-you-to-do.html"
+      - title: カスタマイズ可能なアセットページ
+        url: "/config-admin/additional-data.html"
+        entries:
+        - title: "「$this」変数について説明します"
+          url: "/config-admin/understanding-this-variables.html"
+  - title: ネットワークリソースの分散
+    url: "/config-admin/balancing-network-resources.html"
+  - title: ネットワークパフォーマンスの確認
+    url: "/config-admin/examining-network-performance.html"
+    entries:
+    - title: PCパフォーマンスの低下を分析しています
+      url: "/config-admin/analyzing-slow-pc-performance.html"
+    - title: 関連するリソースを分析しています
+      url: "/config-admin/analyzing-correlated-resources.html"
+  - title: ファイバチャネル環境の監視
+    url: "/config-admin/monitoring-fabric-inventory-and-performance.html"
+  - title: Time-To-Live （ TTL ）とデータのダウンサンプリング
+    url: "/config-admin/time-to-live-ttl-and-downsampling.html"
+  - title: インベントリ履歴の削除
+    url: "/config-admin/pruning-of-inventory-history.html"
+  - title: VMのNASパス
+    url: "/config-admin/nas-path-for-vms.html"
+  - title: 時系列としての容量
+    url: "/config-admin/capacity-as-time-series.html"

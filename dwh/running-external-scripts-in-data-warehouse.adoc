@@ -1,0 +1,42 @@
+---
+permalink: dwh/running-external-scripts-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseでは、カスタマイズしたデータをData Warehouseで準備するカスタムスクリプトを実行するジョブを作成できます。 
+---
+= Data Warehouseでのカスタムスクリプトの実行
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseでは、カスタマイズしたデータをData Warehouseで準備するカスタムスクリプトを実行するジョブを作成できます。
+
+
+
+== 作業を開始する前に
+
+カスタムスクリプトがData Warehouseのアップグレード時に削除されないようにするには、カスタムスクリプトをSANscreen ディレクトリに保存しないでください。
+
+
+
+== このタスクについて
+
+ジョブで指定できるスクリプトは1つだけです。1つのスクリプトから複数のスクリプトとコマンドを実行できます。
+
+
+
+== 手順
+
+. Data Warehouseで、*[DWH Admin]*>*[Schedule]*を選択します。
+. [Script enabled]*チェックボックスを選択します。
+. [* Script Location*（スクリプトの場所）]テキストボックスにスクリプト名の絶対パスを入力します。
+. [ 保存（ Save ） ] をクリックします。
+
+
+
+
+== 結果
+
+Data Warehouseジョブエンジンは、「カスタムスクリプト」ジョブを実行するタスクをスケジュールします。このジョブは、他のバックグラウンドプロセスとの競合を避けるために、ETLのあとに実行されるようにスケジュールされます。ジョブは「履歴からビルド」操作では実行されません。

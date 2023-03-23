@@ -1,0 +1,55 @@
+---
+permalink: install-linux/installing-oncommand-insight-data-warehouse-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: インストールは自己完結型で、OnCommand Insight Data Warehouse（DWH\）の実行と運用に必要な要素が含まれています。 
+---
+= OnCommand Insight Data Warehouseをインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールは自己完結型で、OnCommand Insight Data Warehouse（DWH）の実行と運用に必要な要素が含まれています。
+
+
+
+== 作業を開始する前に
+
+インストールの前提条件をすべて満たしておく必要があります。
+
+
+
+== このタスクについて
+
+Data WarehouseにはCognosのレポート機能があります。InsightをLinuxサーバにインストールする場合は、Data WarehouseをWindowsサーバにインストールする場合にのみ、これらの機能を使用できます。WindowsへのData WarehouseのインストールおよびCognosのレポート機能については、_ OnCommand Insight インストールガイド（Microsoft Windows_）を参照してください。
+
+
+
+== 手順
+
+. sudo権限があるアカウントでData Warehouseサーバにログインします。
+. インストールファイルが保存されているサーバー上のディレクトリに移動し、次のコマンドを入力します。
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+インストールファイルのバージョン番号を確認してください。バージョン番号は、コマンドに表示されているものとは異なる場合があります。
+
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-install.sh` インストールを開始する前に：
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. インストールスクリプトを実行します。
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. ライセンス契約を読み、同意して、画面の指示に従います。
+
+
+
+
+== 結果
+
+すべてのプロンプトを回答 にすると、インストールが開始されます。所要時間は約10分です（インストールされているアプリケーションによって異なります）。

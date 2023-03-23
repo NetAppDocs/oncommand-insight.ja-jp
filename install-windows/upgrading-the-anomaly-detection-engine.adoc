@@ -1,0 +1,39 @@
+---
+permalink: install-windows/upgrading-the-anomaly-detection-engine.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight バージョン7.3.9以降では、異常検出ソフトウェアのインラインアップグレードを実行できます。インラインアップグレードでは、異常検出データと異常スコアが保持されます。 
+---
+= 異常検出エンジンをアップグレードしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight バージョン7.3.9以降では、異常検出ソフトウェアのインラインアップグレードを実行できます。インラインアップグレードでは、異常検出データと異常スコアが保持されます。
+
+
+
+== 作業を開始する前に
+
+* システムでOnCommand Insight 7.3.7以降が実行されている必要があります。
+* 異常検出エンジンをアップグレードする前に、OnCommand Insight サーバをアップグレードすることを推奨します。
+
+
+
+
+== このタスクについて
+
+アップグレードするには、次の手順を実行します。
+
+
+
+== 手順
+
+. インストーラが格納されているディレクトリに移動します。 `cd oci-prelert-<version>-linux-x86_64`
+. 異常検出アップグレードソフトウェアをインストールします。 `sudo ./oci-prelert-install.sh`
++
+異常検出ソフトウェアがOnCommand Insight サーバに登録されました。
+
+

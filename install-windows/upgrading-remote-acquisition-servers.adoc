@@ -1,0 +1,53 @@
+---
+permalink: install-windows/upgrading-remote-acquisition-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: 必要な準備作業がすべて完了したら、Remote Acquisition Unitサーバにログインし、インストールパッケージを実行してアップグレードを完了できます。このタスクは、環境内のすべてのRemote Acquisition Unitサーバで実行する必要があります。 
+---
+= Remote Acquisition Unitサーバをアップグレードします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要な準備作業がすべて完了したら、Remote Acquisition Unitサーバにログインし、インストールパッケージを実行してアップグレードを完了できます。このタスクは、環境内のすべてのRemote Acquisition Unitサーバで実行する必要があります。
+
+
+
+== 作業を開始する前に
+
+* OnCommand Insight をアップグレードしておく必要があります。
+* OnCommand Insight インストールパッケージは、サーバ上に配置する必要があります。
+
+
+
+
+== 手順
+
+. Windowsのローカル管理者権限を持つアカウントでRemote Acquisition Unitサーバにログインします。
+. Insightのインストールパッケージを探します (`RAU-x64-version_number-build_number.msi`）Windowsエクスプローラを使用してダブルクリックします。
++
+OnCommand Insight セットアップウィザードが表示されます。
+
+. 生成されたエラーが表示されないように、インストールウィザードの進行状況ウィンドウを画面の中央から離れた場所に移動します。
+. セットアップウィザードの指示に従います。
++
+デフォルトはすべて選択したままにすることを推奨します。
+
+
+
+
+
+== 完了後
+
+* アップグレードが成功したか、エラーが発生したかを確認するには、次の場所にあるアップグレードログを確認します。 `<install directory>\SANscreen\bin\log`。
+* を使用します `securityadmin` 保存されたセキュリティを復元するためのツール
++
+設定詳細については、OnCommand Insight でsecurityadminを検索してください
+
++
+ドキュメントセンター： http://docs.netapp.com/oci-73/index.jsp[]
+
+* ブラウザのキャッシュと履歴をクリアして、サーバーから最新のデータを受信していることを確認します。
+

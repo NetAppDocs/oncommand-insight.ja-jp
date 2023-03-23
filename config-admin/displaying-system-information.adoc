@@ -1,0 +1,27 @@
+---
+permalink: config-admin/displaying-system-information.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight サーバが導入されているシステムに関するMicrosoft WindowsのIP設定情報を表示できます。 
+---
+= システム情報の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight サーバが導入されているシステムに関するMicrosoft WindowsのIP設定情報を表示できます。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックし、*[Troubleshooting]*を選択します。
+. ページ下部の[その他のタスク]領域で、*[高度なトラブルシューティング]*リンクをクリックします。
+. [高度なトラブルシューティング]ページで、*[レポート]*タブをクリックします。
+. [システム情報]*をクリックします。
++
+WindowsのIP設定には、ホスト名、DNS、IPアドレス、サブネットマスク、OS情報などの情報が含まれます。 メモリ、ブートデバイス、および接続名。
+
+

@@ -1,0 +1,14 @@
+---
+permalink: config-admin/monitoring-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightを使用すると、環境の問題を防止し、潜在的な問題を迅速にトラブルシューティングできます。 
+---
+= 環境の監視
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightを使用すると、環境の問題を防止し、潜在的な問題を迅速にトラブルシューティングできます。

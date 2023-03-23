@@ -1,0 +1,22 @@
+---
+permalink: dwh/managing-data-warehouse-and-reporting-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Reportingツールのユーザアカウント、ユーザ認証、およびユーザ許可は、Data Warehouse\（DWH\）で定義および管理されます。ユーザと管理者は、これらの設定に基づいて、使用可能なOnCommand Insight レポートの一部またはすべてにアクセスできます。 
+---
+= Data WarehouseおよびReportingのユーザアカウントの管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight のレポート作成ツールのユーザアカウント、ユーザ認証、およびユーザ許可は、Data Warehouse（DWH）で定義および管理されます。ユーザと管理者は、これらの設定に基づいて、使用可能なOnCommand Insight レポートの一部またはすべてにアクセスできます。
+
+Data Warehouseのユーザ管理にアクセスするには、システム管理者の権限を持つアカウントが必要です。これには、次のもの
+
+* Data Warehouseのすべての管理機能
+* すべてのユーザアカウントの設定とメンテナンス
+* データベースへの読み取りアクセス権
+* ETLでのコネクタのセットアップ、Data Warehouseジョブのスケジュール設定、データベースのリセット、ロールの割り当てと変更、ユーザアカウントの追加と削除を行う機能
+

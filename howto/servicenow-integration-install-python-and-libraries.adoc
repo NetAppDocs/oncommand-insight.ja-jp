@@ -1,0 +1,52 @@
+---
+permalink: howto/servicenow-integration-install-python-and-libraries.html 
+sidebar: sidebar 
+keywords:  
+summary: Pythonは、Insight Serverにインストールすることも、スタンドアロンのホストやVMにインストールすることもできます。 
+---
+= Pythonとライブラリをインストールします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pythonは、Insight Serverにインストールすることも、スタンドアロンのホストやVMにインストールすることもできます。
+
+
+
+== 手順
+
+. VMまたはホストに、Python 3.6以降をダウンロードします。
+. カスタムインストールを選択し、次のオプションを選択します。これらは、コネクタスクリプトを適切に操作するために必要なものであるか、または強くお勧めします。
++
+** すべてのユーザーのランチャーをインストールします
+** パスにPythonを追加します
+** install pip (Pythonが他のパッケージをインストールできるようにする)
+** TK/Tclとアイドルを取り付けます
+** Pythonテストスイートをインストールします
+** すべてのユーザーにPYランチャーをインストールします
+** ファイルをPythonに関連付けます
+** インストールされているアプリケーションのショートカットを作成します
+** 環境変数にPythonを追加します
+** 標準ライブラリを事前コンパイルします
+
+
+. Pythonがインストールされたら、Pythonライブラリ「`re quests`」と「`psnow`」をインストールします。次のコマンドを実行します。 `python -m pip install requests pysnow`
++
+*注：*このコマンドは、プロキシ環境で動作している場合に失敗することがあります。この問題 を回避するには、各Pythonライブラリを手動でダウンロードし、インストール要求を1つずつ正しい順序で実行する必要があります。
+
++
+コマンドはいくつかのファイルをインストールします。
+
+. Pythonライブラリが正しくインストールされていることを確認します。次のいずれかの方法でPythonを起動します。
++
+** cmdプロンプトを開き、と入力します `python`
+** Windowsの場合は、*[スタート]*を開き、*[Python]*>*[Python-python.exe]<version> *を選択します
+
+
+. Pythonプロンプトで、と入力します `modules`
++
+Pythonは、モジュールのリストを収集している間、しばらく待つように要求し、それが表示されます。
+
+

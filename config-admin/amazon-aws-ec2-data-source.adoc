@@ -1,0 +1,188 @@
+---
+permalink: config-admin/amazon-aws-ec2-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight は、このデータソースを使用して、Amazon AWS EC2のインベントリとパフォーマンスを検出します。 
+---
+= Amazon AWS EC2データソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight は、このデータソースを使用して、Amazon AWS EC2のインベントリとパフォーマンスを検出します。
+
+
+
+== 前提条件
+
+Amazon EC2 デバイスからデータを収集するには、次の情報が必要です。
+
+* IAMアクセスキーIDが必要です
+* Amazon EC2クラウドアカウントのシークレットアクセスキーが必要です
+* 「組織のリスト」権限が必要です
+* ポート433 HTTPS
+* EC2 インスタンスは、仮想マシンまたは（自然に）ホストとしてレポートできます。EBS ボリュームは、 VM で使用されている仮想ディスクと、仮想ディスクの容量を提供するデータストアの両方として報告できます。
+
+
+アクセスキーは、アクセスキー ID （ AKIAIOSFODNN7EXAMPLE など）とシークレットアクセスキー（ wJalrXUtil/K7MDENG/bPxRfiCYEXAMPLEKEY など）で構成されます。Amanzon EC2 SDK、REST、またはQuery API操作を使用する場合は、アクセスキーを使用して、EC@に行うプログラム要求に署名します。これらのキーは、 Amazon の契約に付属しています。
+
+
+
+== このデータソースの設定方法
+
+Amazon AWS EC2データソースを設定するには、AWSアカウントのAWS IAM Access Key IDとSecret Access Keyが必要です。
+
+次の表に従って、データソースのフィールドに入力します。
+
+
+
+== 構成：
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+AWS リージョン
+ a| 
+AWS リージョンを選択します
+
+
+
+ a| 
+IAM ロール
+ a| 
+AWS の AU で取得した場合にのみ使用します。IAMロールの詳細については、以下を参照してください。
+
+
+
+ a| 
+AWS IAM Access Key ID
+ a| 
+AWS IAM Access Key ID を入力します。IAM ロールを使用しない場合は必須です。
+
+
+
+ a| 
+AWS IAM Secret Access Key の略
+ a| 
+AWS IAM Secret Access Key を入力します。IAM ロールを使用しない場合は必須です。
+
+
+
+ a| 
+AWSからAPI要求の料金が請求されることは理解しています
+ a| 
+Insightのポーリングによって作成されたAPI要求に対してAWSから課金されることを理解しているかどうかを確認するには、このチェックボックスをオンにします
+
+|===
+
+
+== 高度な設定：
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+追加リージョンを含める
+ a| 
+ポーリングに含める追加領域を指定します。
+
+
+
+ a| 
+クロスアカウントロール
+ a| 
+異なる AWS アカウントのリソースにアクセスするためのロール。
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+HTTP接続およびソケットタイムアウト（秒）
+ a| 
+HTTP接続タイムアウト（デフォルトは300秒）
+
+
+
+ a| 
+AWSタグを含める
+ a| 
+InsightのアノテーションでAWSタグがサポートされるようにするには、このオプションをオンにします
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは1、800秒）
+
+|===
+
+
+== AWSタグをInsightのアノテーションにマッピングする
+
+AWS EC2データソースには、AWSで設定されているタグを使用してInsightのアノテーションを入力するオプションがあります。アノテーションにはAWSのタグとまったく同じ名前を付ける必要があります。Insightでは、常に同じ名前のテキストタイプのアノテーションが入力され、他のタイプ（数値、ブール値など）のアノテーションが入力されるように「最善の試み」が行われます。アノテーションのタイプが異なるためにデータソースにデータを入力できない場合は、アノテーションを削除してテキストタイプとして再作成する必要があります。
+
+AWSでは大文字と小文字が区別され、Insightでは大文字と小文字が区別されないことに注意してください。そのため、Insightで「OWNER」という名前のアノテーションを作成し、AWSで「OWNER」、「OWNER」、「OWNER」という名前のタグを作成すると、AWSで使用されている「OWNER」のすべてのバリエーションがInsightの「OWNER」アノテーションにマッピングされます。
+
+関連情報：
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["IAMユーザのアクセスキーの管理"]
+
+
+
+== 追加リージョンを含める
+
+AWS Data Collector * Advanced Configuration * セクションでは、 * Include extra regions * フィールドを設定して、カンマまたはセミコロンで区切って追加のリージョンを含めることができます。デフォルトでは、このフィールドは * _us-.*_* に設定されており、これによってすべての US AWS リージョンで収集されます。on_all_regions を収集するには、このフィールドを *_.*_* に設定します。
+
+「 * include extra regions * 」フィールドが空の場合、「 * Configuration * 」セクションの指定に従って、「 * AWS Region * 」フィールドに指定されたアセットについてデータコレクタが収集されます。
+
+
+
+== * AWS Child Accountsから収集*
+
+Insightでは、1つのAWSデータコレクタ内でのAWSの子アカウントの収集がサポートされます。この収集の設定は、 AWS 環境で実行されます。
+
+* プライマリアカウントIDが子アカウントからEC2の詳細にアクセスできるように、各子アカウントにAWSロールを設定する必要があります。
+* 各子アカウントには、ロール名が同じ文字列として設定されている必要があります
+* このロール名の文字列をInsight AWS Data Collector * Advanced Configuration *セクションの* Cross Account Role *フィールドに入力します。
+
+
+ベストプラクティス：AWSの事前定義されたAmazonEC2ReadOnlyAccessポリシーをECSプライマリアカウントに割り当てることを強く推奨します。また、AWSを照会するには、データソースで構成されているユーザに少なくとも事前定義された__AWSOrganizationsReadOnlyAccess__policyが割り当てられている必要があります。
+
+InsightがAWSの子アカウントから収集できるように環境を設定する方法については、次の資料を参照してください。
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html["チュートリアル： IAM ロールを使用した AWS アカウント間でのアクセスの委譲"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html["AWS のセットアップ：自分が所有している別の AWS アカウントで IAM ユーザにアクセスを付与する"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["IAM ユーザに権限を委任するためのロールを作成する"]
+
+
+
+== IAM ロール
+
+_IAM Role_securityを使用する場合は、作成または指定するロールに、リソースへのアクセスに必要な適切な権限があることを確認する必要があります。
+
+たとえば、 _InstanceEc2ReadOnly_ という名前の IAM ロールを作成した場合は、この IAM ロールのすべての EC2 リソースに読み取り専用リストアクセス権限を付与するようにポリシーを設定する必要があります。また、このロールがアカウント間でロールを引き受けることができるように、 STS （セキュリティトークンサービス）アクセスを許可する必要があります。
+
+IAM ロールを作成したら、新しい EC2 インスタンスまたは既存の EC2 インスタンスを作成するときに IAM ロールを接続できます。
+
+IAM ロール _InstanceEc2ReadOnly_ を EC2 インスタンスに接続すると、インスタンスメタデータから IAM ロール名で一時的なクレデンシャルを取得し、この EC2 インスタンスで実行されているすべてのアプリケーションから AWS リソースにアクセスできるようになります。
+
+
+NOTE: IAMロールは、Acquisition UnitがAWSインスタンスで実行されている場合にのみ使用できます。

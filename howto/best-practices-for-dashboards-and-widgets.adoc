@@ -1,0 +1,14 @@
+---
+permalink: howto/best-practices-for-dashboards-and-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: ここでは、ダッシュボードとウィジェットを最大限に活用するためのヒントやコツを紹介します。 
+---
+= ダッシュボードとウィジェットのベストプラクティス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ここでは、ダッシュボードとウィジェットを最大限に活用するためのヒントやコツを紹介します。

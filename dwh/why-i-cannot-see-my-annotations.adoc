@@ -1,0 +1,16 @@
+---
+permalink: dwh/why-i-cannot-see-my-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseでアノテーションが表示されない場合は、アノテーションを強制的に更新してからData Warehouseのビルドを開始する必要があります。 
+---
+= アノテーションが表示されない理由
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseでアノテーションが表示されない場合は、アノテーションを強制的に更新してからData Warehouseのビルドを開始する必要があります。
+
+アノテーションが欠落していると、Data Warehouseへのデータのインポート方法とレポートへのデータの表示方法に影響します。たとえば、アノテーション「階層」を使用できない場合、Data Warehouseのレポートでストレージシステムを階層別にグループ化することはできません。

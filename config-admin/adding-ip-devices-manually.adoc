@@ -1,0 +1,34 @@
+---
+permalink: config-admin/adding-ip-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: '[IP Identify]画面の手動追加機能を使用して、IPデバイスをOnCommand Insight に手動で追加できます。' 
+---
+= IP デバイスを手動で追加する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[IP Identify]画面の手動追加機能を使用して、IPデバイスをOnCommand Insight に手動で追加できます。
+
+
+
+== 手順
+
+. Insight Web UIにログインします。
+. [管理]*>*[デバイス解決]*をクリックします
+. [IP Identify]*タブをクリックします。
+. 追加ボタンをクリックします。
++
+Add Device ダイアログが表示されます
+
+. アドレス、 IP アドレス、および一意のデバイス名を入力します。
+
+
+
+
+== 結果
+
+入力したデバイスが[IP Identify]タブのデバイスのリストに追加されます。

@@ -1,0 +1,16 @@
+---
+permalink: install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: カスタムのCognos設定（デフォルト以外のSMTP Eメール設定など）は、Data Warehouseのアップグレード時に自動的にバックアップされません。カスタム設定を手動で記録し、アップグレード後にリストアする必要があります。 
+---
+= Data Warehouseのアップグレード時にカスタムのCognos設定を保持
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カスタムのCognos設定（デフォルト以外のSMTP Eメール設定など）は、Data Warehouseのアップグレード時に自動的にバックアップされません。カスタム設定を手動で記録し、アップグレード後にリストアする必要があります。
+
+Data Warehouseをアップグレードする前に、保持するカスタムのCognos設定を含むチェックリストを準備し、システムをアップグレードする前にそのリストを確認します。アップグレードの完了後、値を手動でリストアして元の構成の設定に戻すことができます。

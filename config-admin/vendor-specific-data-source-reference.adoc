@@ -1,0 +1,16 @@
+---
+permalink: config-admin/vendor-specific-data-source-reference.html 
+sidebar: sidebar 
+keywords:  
+summary: 構成の詳細は、追加するデータソースのベンダーとモデルによって異なります。 
+---
+= ベンダー別のデータソースリファレンス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+構成の詳細は、追加するデータソースのベンダーとモデルによって異なります。
+
+このセクションには、ベンダーのデータソースでInsightの高度な設定手順（特別な要件や固有のコマンドなど）が必要な場合の情報が記載されています。

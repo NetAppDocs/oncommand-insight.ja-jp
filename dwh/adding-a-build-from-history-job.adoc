@@ -1,0 +1,62 @@
+---
+permalink: dwh/adding-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseデータベースは、OnCommand Insight サーバに保持されている履歴データを使用して構築できます。これにより、予測レポートを実行できます。 
+---
+= Data Warehouseデータベースを履歴からビルドするジョブを追加する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseデータベースは、OnCommand Insight サーバに保持されている履歴データを使用して構築できます。これにより、予測レポートを実行できます。
+
+
+
+== 作業を開始する前に
+
+OnCommand Insight サーバでアノテーションを更新し、Data Warehouseのアノテーション情報を強制的に更新しておく必要があります。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[履歴からビルド]*をクリックします。
++
+image::../media/oci-dwh-admin-buildfromhistory-gif.gif[履歴からビルド]
+
+. [*Configure*] をクリックします。
++
+image::../media/oci-dwh-admin-buildfromhistory-configure-gif.gif[[履歴からビルド]を設定します]
+
+. 開始時刻と終了時刻を入力します。
++
+これらの日付を選択できるカレンダーを表示するには、月名の近くにある下向き矢印をクリックします。
+
++
+時刻の形式は、Data Warehouseサーバのロケールによって異なります。
+
++
+開始時刻と終了時刻は、Data Warehouseが接続されているすべてのOnCommand Insight サーバに格納されている履歴の範囲内である必要があります（Data Warehouseポータルの[Connectors]オプションで設定）。デフォルトの開始時刻と終了時刻は、最大有効期間を反映します。Data Warehouseのビルドジョブは、指定した時間に自動的に実行されます。
+
++
+[NOTE]
+====
+「4年間毎日」のように非現実的なスケジュールを設定すると、ビルドサイクルは1460回になり、完了までに10日かかる場合があります。
+
+====
+. 間隔を選択します。
++
+毎月または毎週の間隔を選択すると、[日]フィールドが表示されます。[Monthly]を選択した場合は、[Day]が日付になります。[Weekly]を選択した場合、[Day]は日曜日から土曜日になります。
+
+. ビルドを実行する時間を選択します。
+. オプションをデフォルト設定に戻すには、*[リセット]*をクリックします。
+. [ 保存（ Save ） ] をクリックします。
+. [履歴からビルド]*ページで、スケジュールによる自動ビルド以外でビルドを実行するには、*[実行]*をクリックします。
++
+[Target Time]列には、このエントリが作成された時刻が表示されます。[ステータス]列には、ビルドが完了したか失敗したかが表示されます。
+
+

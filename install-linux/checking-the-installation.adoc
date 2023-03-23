@@ -1,0 +1,18 @@
+---
+permalink: install-linux/checking-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: インストールが完了すると、/opt/netapp/ociにインストールディレクトリが作成されます。サポートされているブラウザでInsightを開くと、インストールされているかどうかを確認できます。Insightのログファイルを確認することもできます。 
+---
+= インストールを確認しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールが完了すると、インストールディレクトリはにあります `/opt/netapp/oci`。サポートされているブラウザでInsightを開くと、インストールされているかどうかを確認できます。Insightのログファイルを確認することもできます。
+
+Insightを初めて開いたときに、ライセンスのセットアップページが開きます。ライセンス情報を入力したら、データソースを設定する必要があります。データソース定義の入力、およびOnCommand Insight のユーザと通知の設定については、_ Configuration and Administration Guide _を参照してください。
+
+インストール時に問題が発生した場合は、テクニカルサポートに連絡して、必要な情報を提供してください。

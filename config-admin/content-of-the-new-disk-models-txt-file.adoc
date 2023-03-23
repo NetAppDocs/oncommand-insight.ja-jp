@@ -1,0 +1,40 @@
+---
+permalink: config-admin/content-of-the-new-disk-models-txt-file.html 
+sidebar: sidebar 
+keywords:  
+summary: new_disk_models.txtファイルには、必須フィールドとオプションフィールドがあります。フィールドはカンマで区切られているため、フィールド内でカンマを使用しないでください。 
+---
+= new_disk_models.txtファイルの内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+。 `new_disk_models.txt` ファイルには必須フィールドとオプションフィールドがあります。フィールドはカンマで区切られているため、フィールド内にカンマを使用しないでください。
+
+シーク時間、転送速度、および追加情報を除くすべてのフィールドが必須です。該当する場合は、ベンダー/モデルのWebサイトのリンクを[additional_info]フィールドに含めます。
+
+テキストエディタを使用して、追加する新しいディスクモデルごとに、次の情報をこの順序でカンマで区切って入力します。
+
+. *キー*：モデル番号を使用します（必須）
+. *ベンダー*:名前(必須)
+. *モデル番号*：完全な番号（通常は「キー」と同じ値）（必須）
+. *ディスクのrpm *：例：10000または15000（必須）
+. *サイズ*：容量（GB）（必須）
+. *インターフェイスタイプ*：ATA、SATA、FC、SAS、FATA、 SSD、その他（必須）
+. *シーク時間*：ミリ秒（オプション）
+. *潜在的な転送速度*：潜在的な転送速度（MB/秒）。ディスク自体の最大転送速度。（オプション）
+. *インターフェイスの転送速度*：ホストとの間の転送速度（MB/秒）（オプション）。
+. *追加情報*：キャプチャする任意の追加情報 。仕様が掲載されているベンダーのページへのリンクを入力して参照することを推奨します（オプション）。
+
+
+オプションのフィールドを空白のままにする場合は、必ずカンマを含めてください。
+
+例（スペースなしで1行に1つずつ）：
+
+`+ST373405,Seagate,ST373405,10000,73,FC,5.3,64,160,http://www.seagate.com/staticfiles/support/disc/manuals/enterprise/cheetah/73(LP)/100109943e.pdf+`
+
+`SLR5B-M400SS,HITACHI,SLR5B-M400SS,1000000,400,SSD,,,,`
+
+`+X477_THARX04TA07,TOSHIBA,X477_THARX04TA07,7200,4000,SATA,9.5,,,https://storage.toshiba.eu/export/sites/toshiba-sdd/media/products/datasheets/MG03ACAxxxY.pdf+`

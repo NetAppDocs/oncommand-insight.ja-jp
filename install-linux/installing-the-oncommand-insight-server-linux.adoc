@@ -1,0 +1,50 @@
+---
+permalink: install-linux/installing-the-oncommand-insight-server-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight サーバは、コマンドラインを使用してインストールします。 
+---
+= OnCommand Insight サーバをインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight サーバは、コマンドラインを使用してインストールします。
+
+
+
+== 作業を開始する前に
+
+インストールの前提条件をすべて満たしておく必要があります。
+
+
+
+== 手順
+
+. sudo権限があるアカウントでInsight Serverにログインします。
+. インストールファイルが保存されているサーバー上のディレクトリに移動し、次のコマンドを入力します。
++
+`unzip oci-<version>-linux-x86_64.zip`
+
++
+インストールファイルのバージョン番号を確認してください。バージョン番号は、コマンドに表示されているものとは異なる場合があります。
+
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-install.sh` ：
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh --help`
+
+. インストールスクリプトを実行します。
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh`
+
+. ライセンス契約を読み、同意して、画面の指示に従います。
+. Insightの消費ライセンスモデルを使用している場合は、使用状況の情報をネットアップに送信することを有効にする必要があります。入力するコマンド `Y` をクリックします。
+
+
+
+
+== 結果
+
+すべてのプロンプトを回答 にすると、インストールが開始されます。所要時間は約10分です（インストールされているアプリケーションによって異なります）。

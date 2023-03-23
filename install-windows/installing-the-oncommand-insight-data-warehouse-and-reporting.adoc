@@ -1,0 +1,79 @@
+---
+permalink: install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: インストールは自己完結型で、OnCommand Insight Data Warehouse（DWH\）およびReportingユーティリティの実行と運用に必要な要素が含まれています。 
+---
+= OnCommand Insight Data WarehouseおよびReportingをインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールは自己完結型で、OnCommand Insight Data Warehouse（DWH）およびReportingユーティリティの実行と運用に必要な要素が含まれています。
+
+
+
+== 作業を開始する前に
+
+インストールまたはアップグレードを行う前に、以下の点に注意してください。
+
+* アップグレードする場合は、DWHをバックアップします。
+* Reportingを使用してOnCommand Insight Data Warehouseをインストールするには、local__administrator__権限が必要です。
+* Windows Modules Installerサービスが有効になっていることを確認します(自動または手動)。
+* C:ドライブ以外にインストールする場合は、短いファイル名を有効にする必要があります。有効になっていない場合は、インストーラによって有効になります。
+* DB2コンポーネントの場合、DB2 Userには_DOMAIN_USERまたは_LOCAL_USERを指定できます。
++
+** DB2ユーザがA_DOMAIN_USERの場合は、次の情報が必要です。
++
+*** DB2ユーザを作成しておく必要があります。また、ユーザ名とパスワードを確認しておく必要があります
+*** DWHとReportingをインストールするユーザは、DB2ユーザを照会できる必要があります。これを検証するには、次のコマンドを使用します。
++
+**** `net user <db2 user name> /domain`
+
+
+
+
+** DB2ユーザがA_LOCAL_USERの場合は、次の情報が必要です。
++
+*** DB2 Userとして実行するユーザのユーザ名とパスワード。このユーザが存在しない場合は、インストールによって作成されます。
+
+
+** 注
+
+
+
+
+[]
+====
+DB2ユーザ名およびWindowsログイン名には次の制限があります。*有効な文字は次のとおりです。'A'～'Z'；'A'～'z'；'0'～'9'；'#'；'@'; '_'；'！'；'（'；'）'；'｛'； '｝'、'-'、および'。*特殊文字'！'；'（'；'）'；'｛'；'｝'； 「-」、および「。」 ユーザ名にはすべて大文字を使用する必要があります。*文字列の最初の文字は、アルファベット、@、#、または$である必要があります。数字または文字列_SYS_、_DBM_、または_IBM_を使用することはできません。128バイトを超えることはできません。*ユーザー、管理者、ゲスト、パブリック、ローカル、またはSQL予約語は使用できません。
+
+====
+* DB2ユーザを、インストールを実行するユーザと同じにすることはできません。
+
+
+
+
+== 手順
+
+. 管理者権限があるアカウントでData Warehouseサーバにログインします。
+. Data WarehouseとReporting.zipファイルをダウンロードし、インストールフォルダにファイルを展開します。
+. <download location> \OCI_DWH_installer\_フォルダに移動し、_install_oci_dwh.bat_scriptを実行します。
++
+[NOTE]
+====
+OnCommand Insight 7.3.10以降では、DWH / Reportingを適切にインストールするためのスクリプトを実行する必要があります。.msiインストール実行ファイルを実行しないでください。
+
+====
+. DB2ドメインを入力するか、Enterキーを押してローカル・ドメインを入力します。
+. DB2ユーザー名を入力します。ユーザー名の制限については、上記を参照してください。
+. DB2ユーザのパスワードを入力します。プロンプトが表示されたら、パスワードを再入力します。
+. DB2コンポーネントのインストールパスを入力するか、デフォルトの場合はEnterキーを押します。
+. 入力した情報が表示されます。すべての設定を慎重に確認してください。Enterキーを押してインストールを開始します。
+. プロンプトが表示されたら、WindowsがDB2のインストールを続行できるようにします。
+. DB2のインストールに続いて、DWHのインストールウィザードが実行されます。指示に従って、DWHとReportingをインストールします。
++
+Data WarehouseとReportingのインストールが完了するまでに最大1時間かかることがあります。
+
+

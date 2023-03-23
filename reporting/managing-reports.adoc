@@ -1,0 +1,16 @@
+---
+permalink: reporting/managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: '各レポートについて、[Actions]列の[More]リンクを選択し、レポートのプロパティの設定、レポートのスケジュール設定、レポートのEメール送信など、すべてのレポート処理にアクセスできます。管理者は、他のユーザよりも多くの管理オプションを使用できます。' 
+---
+= レポートの管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+各レポートについて、[Actions]列の[* More *]リンクを選択し、レポートのプロパティの設定、レポートのスケジュール設定、レポートのEメール送信など、すべてのレポート処理にアクセスできます。管理者は、他のユーザよりも多くの管理オプションを使用できます。
+
+管理者は、OnCommand Insight ロールに応じて他のレポートユーザの権限を設定できます。

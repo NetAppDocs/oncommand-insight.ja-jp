@@ -1,0 +1,45 @@
+---
+permalink: howto/configuring-servicenow-for-integration.html 
+sidebar: sidebar 
+keywords:  
+summary: ServiceNowとInsightを統合するには、いくつかのセットアップタスクが必要です。 
+---
+= 統合のためにServiceNowを設定しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ServiceNowとInsightを統合するには、いくつかのセットアップタスクが必要です。
+
+
+
+== このタスクについて
+
+ServiceNowとInsightを統合する場合は、次のタスクを実行する必要があります。
+
+ServiceNow側：
+
+* ロールの昇格
+* アップデートセットをインストールします
+* ユーザを設定します
+
+
+Insight側：
+
+* ServiceNowユーザを追加します
+
+
+Pythonコネクタ側：
+
+* Pythonをインストールします
+* 追加のライブラリをインストールします
+* コネクタを初期化します
+* config.iniファイルを編集します
+* コネクタをテストします
+* コネクタを同期化します
+* 毎日のタスク実行のスケジュールを設定します
+
+
+各項目については、以降のセクションで詳しく説明します。

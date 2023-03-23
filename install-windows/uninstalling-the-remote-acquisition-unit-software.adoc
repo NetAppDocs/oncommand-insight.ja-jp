@@ -1,0 +1,24 @@
+---
+permalink: install-windows/uninstalling-the-remote-acquisition-unit-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Remote Acquisition Unitソフトウェアを新しいバージョンにアップグレードする前に、既存のバージョンをアンインストールする必要があります。このタスクは、環境内のすべてのRemote Acquisition Unitサーバで実行する必要があります。 
+---
+= Remote Acquisition Unitソフトウェアをアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remote Acquisition Unitソフトウェアを新しいバージョンにアップグレードする前に、既存のバージョンをアンインストールする必要があります。このタスクは、環境内のすべてのRemote Acquisition Unitサーバで実行する必要があります。
+
+
+
+== 手順
+
+. Remote Acquisition Unitサーバにログインします。
+. サーバ上のすべてのOnCommand Insight ウィンドウが閉じていることを確認します。
+. コントロールパネルから*プログラムのアンインストール*機能を開き、削除するOnCommand Insight Remote Acquisition Unitプログラムを選択します。
+. [アンインストール]*をクリックし、画面の指示に従います。
+

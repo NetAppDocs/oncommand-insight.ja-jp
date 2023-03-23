@@ -1,0 +1,27 @@
+---
+permalink: config-admin/sending-information-to-netapp-support.html 
+sidebar: sidebar 
+keywords:  
+summary: ネットアップの自動サポート（ASUP\）機能は、トラブルシューティング情報をネットアップのカスタマーサポートチームに直接送信します。特別なレポートを強制的に送信できます。 
+---
+= ネットアップサポートに情報を送信しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ネットアップの自動サポート（ASUP）機能は、トラブルシューティング情報をネットアップのカスタマーサポートチームに直接送信します。特別なレポートを強制的に送信できます。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックします。
+. [設定]*をクリックします。
+. [Backup/ASUP]*タブをクリックします。
+. [データの送信/収集]領域で*[ASUPを今すぐ送信]*をクリックして、ログ、記録、バックアップをネットアップサポートに送信します。
++
+image::../media/oci-7-backup-restore-gif.gif[バックアップとリストアのページ]
+
+

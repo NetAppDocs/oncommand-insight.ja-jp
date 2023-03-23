@@ -1,0 +1,30 @@
+---
+permalink: dwh/sending-oncommand-insight-logs-to-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: 'ASUPのログをテクニカルサポートに送信して、トラブルシューティングの支援を受けることができます。Data WarehouseのASUPは自動的に実行されるように設定されます。Data Warehouseポータルでは、自動送信プロセスを無効にしたり、Data Warehouseデータベースのバックアップを含めるように指定したり、ASUPへの転送を開始したりできます。ASUPレポートを要求すると、Data Warehouseポータルの[Jobs]ページにレポート要求がジョブとして表示されます。' 
+---
+= InsightのログをASUPに送信しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASUPのログをテクニカルサポートに送信して、トラブルシューティングの支援を受けることができます。Data WarehouseのASUPは自動的に実行されるように設定されます。Data Warehouseポータルでは、自動送信プロセスを無効にしたり、Data Warehouseデータベースのバックアップを含めるように指定したり、ASUPへの転送を開始したりできます。ASUPレポートを要求すると、Data Warehouseポータルの[Jobs]ページにレポート要求がジョブとして表示されます。
+
+
+
+== このタスクについて
+
+ジョブは、他のジョブの処理と同様に、ジョブキューによって管理されます。保留状態または実行中のASUPジョブがすでにある場合は、ジョブキューに保留中の要求または実行中の要求が含まれているためにASUPレポート要求をジョブ要求に追加できないことを示すエラーメッセージが表示されます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*トラブルシューティング*をクリックします。
+. トラブルシューティング*ページの* OnCommand Insight ASUP *セクションで、*[DWHトラブルシューティングレポートのダウンロード]*をクリックしてトラブルシューティングレポートを取得します。
+. Data Warehouseポータル*の[Connectors]ページで最初のコネクタとしてリストされているOnCommand Insight サーバにレポートを送信するには、*[Send Now]*をクリックします。
+

@@ -1,0 +1,80 @@
+---
+permalink: install-windows/replacing-a-certificate-after-upgrading.html 
+sidebar: sidebar 
+keywords:  
+summary: アップグレード後にOnCommand Insight Web UIを開くと、証明書に関する警告が表示されます。この警告メッセージは、アップグレード後に有効な自己署名証明書を使用できない場合に表示されます。警告メッセージが表示されないようにするには、有効な自己署名証明書をインストールして元の証明書を置き換えます。 
+---
+= OnCommand Insight のアップグレード後の証明書の置き換え
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アップグレード後にOnCommand Insight Web UIを開くと、証明書に関する警告が表示されます。この警告メッセージは、アップグレード後に有効な自己署名証明書を使用できない場合に表示されます。警告メッセージが表示されないようにするには、有効な自己署名証明書をインストールして元の証明書を置き換えます。
+
+
+
+== 作業を開始する前に
+
+システムが暗号化の最小ビットレベル（1024ビット）を満たしている必要があります。
+
+
+
+== このタスクについて
+
+証明書の警告は、システムのユーザビリティには影響しません。メッセージプロンプトでリスクを把握したことを示すと、Insightの使用に進みます。
+
+
+
+== 手順
+
+. キーストアの内容を表示します。 `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+パスワードの入力を求められたら、と入力します `changeit`。
+
++
+キーストアには少なくとも1つの証明書が必要です。 `ssl certificate`。
+
+. を削除します `ssl certificate`： `keytool -delete -alias ssl certificate -keystore c:\ProgramFiles\SANscreen\wildfly\standalone\configuration\server.keystore`
+. 新しいキーを生成します。 `keytool -genkey -alias OCI.hostname.com -keyalg RSA -keysize 2048 -keystore "c:\ProgramFiles\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. 名と姓の入力を求められたら、使用するFully Qualified Domain Name（FQDN；完全修飾ドメイン名）を入力します。
+.. 組織および組織構造に関する次の情報を入力します。
++
+*** Country：ISOの2文字の国の略語（USなど）
+*** State or Province：組織の本社がある都道府県の名前（例：Massachusetts）
+*** Locality：組織の本社がある市区町村の名前（例：Waltham）
+*** Organizational name：ドメイン名を所有する組織の名前（例：NetApp）
+*** Organizational unit name：証明書を使用する部門またはグループの名前（Supportなど）
+*** Domain Name/Common Name：サーバのDNSルックアップに使用されるFQDN（例：www.example.com）。システムから次のような情報が返されます。 `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. 入力するコマンド `Yes` Common Name（CN；共通名）がFQDNになっている場合。
+.. キーのパスワードの入力を求められたら、パスワードを入力するか、Enterキーを押して既存のキーストアパスワードを使用します。
+
+
+. 証明書要求ファイルを生成します。 `keytool -certreq -alias localhost -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+。 `c:\localhost.csr` fileは、新しく生成される証明書要求ファイルです。
+
+. を送信します `c:\localhost.csr` 承認のためにCertification Authority（CA；認証局）にファイルを送信します。
++
+証明書要求ファイルが承認されたら、で証明書を返す必要があります `.der` の形式で入力しファイルがとして返される場合と返されない場合があります `.der` ファイル。デフォルトのファイル形式はです `.cer` Microsoft CAサービスの場合。
+
+. 承認済み証明書をインポートします。 `keytool -importcert -alias localhost -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. パスワードの入力を求められたら、キーストアのパスワードを入力します。
++
+次のメッセージが表示されます。 `Certificate reply was installed in keystore`
+
+
+
+. SANscreen サーバサービスを再起動します。
+
+
+
+
+== 結果
+
+Webブラウザで証明書の警告が報告されなくなりました。

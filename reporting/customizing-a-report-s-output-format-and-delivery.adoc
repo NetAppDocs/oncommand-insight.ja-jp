@@ -1,0 +1,37 @@
+---
+permalink: reporting/customizing-a-report-s-output-format-and-delivery.html 
+sidebar: sidebar 
+keywords:  
+summary: レポートの形式と配信方法をカスタマイズできます。 
+---
+= レポートの出力形式と配信方法をカスタマイズする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+レポートの形式と配信方法をカスタマイズできます。
+
+
+
+== 手順
+
+. OnCommand Insight レポートポータルを開き、カスタマイズするレポートを選択して*[...]*をクリックします。
++
+image::../media/run-report.gif[レポートを実行します]
+
+. [プロパティ]*>*[スケジュール]*をクリックします
++
+image::../media/email-report.gif[レポートをEメールで送信]
+
+. 次のオプションを設定できます。
++
+** *レポートを実行するスケジュール*。
+** *形式*レポート出力。
+** *配信*レポートを印刷、保存、または電子メールで送信します。
+** *言語*レポートが配信される言語を定義します。
+
+
+. [* 作成 *] をクリックして、選択した内容を使用してレポートを作成します。
+

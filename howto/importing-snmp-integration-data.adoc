@@ -1,0 +1,50 @@
+---
+permalink: howto/importing-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: SNMP統合パックをOnCommand Insight にインポートするには、Web UIを使用します。統合パックは、ZIPファイルに含まれるintegration.json構成ファイルに定義されている「integrationPackName」の値で識別されます。 
+---
+= SNMP統合パックのインポート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SNMP統合パックをOnCommand Insight にインポートするには、Web UIを使用します。統合パックは、で定義されている「integrationPackName」の値で識別されます `integration.json` ZIPファイルに含まれている構成ファイル。
+
+
+
+== 作業を開始する前に
+
+OnCommand Insight サーバにインポートする統合パックを含む適切な形式のZIPファイルを作成しておく必要があります。
+
+
+
+== このタスクについて
+
+SNMP統合パックをInsight Serverにインポートするには、次の手順を実行します。
+
+
+
+== 手順
+
+. * Admin *>* Setup *>* SNMP Integration *をクリックします
++
+[Import SNMP package]画面が表示されます。 image:../media/oci-import-snmp.gif[""]
+
+. [ファイルの選択]*をクリックして、SNMPパッケージを含むローカルファイルを選択します。
++
+選択したファイルが[ファイル]ボックスに表示されます。
+
++
+[NOTE]
+====
+同じ名前の既存の統合パックは上書きされます。
+
+====
+. [インポート]*をクリックします
++
+ファイルがInsight Serverにインポートされます。
+
+

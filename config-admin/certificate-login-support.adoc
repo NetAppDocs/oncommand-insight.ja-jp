@@ -1,0 +1,36 @@
+---
+permalink: config-admin/certificate-login-support.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight では、Insightサーバにログインするユーザの認証にスマートカード\（CAC\）と証明書を使用できます。これらの機能を有効にするには、システムを設定する必要があります。 
+---
+= スマートカードおよび証明書によるログインのサポート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight では、Insightサーバにログインするユーザの認証にスマートカード（CAC）と証明書を使用できます。これらの機能を有効にするには、システムを設定する必要があります。
+
+CACと証明書をサポートするようにシステムを設定した後、OnCommand Insight の新しいセッションに移動すると、ブラウザにネイティブダイアログが表示され、選択する個人証明書のリストが表示されます。これらの証明書は、OnCommand Insight サーバによって信頼されたCAによって発行された個人証明書のセットに基づいてフィルタリングされます。ほとんどの場合、単一の選択があります。既定では、選択肢が1つしかない場合、Internet Explorerはこのダイアログをスキップします。
+
+Javaクライアントの場合は、発行者に関係なく、すべての個人証明書を含むカスタムダイアログが表示されます。
+
+[NOTE]
+====
+CACユーザの場合、スマートカードには複数の証明書が含まれており、信頼されたCAに一致できる証明書は1つだけです。のCAC証明書 `identification` を使用する必要があります。
+
+====
+[NOTE]
+====
+CACおよび証明書に関する最新の手順については、次の技術情報アーティクル（サポートへのログインが必要）を参照してください。
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["OnCommand Insight のCommon Access Card（CAC;共通アクセスカード）認証を設定する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["OnCommand Insight Data WarehouseのCommon Access Card（CAC；共通アクセスカード）認証の設定方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["認証局（CA）の署名付き証明書を作成し、OnComand InsightおよびOnCommand Insight Data Warehouse 7.3.xにインポートする方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["WindowsホストにインストールされているOnCommand Insight 7.3.X内で自己署名証明書を作成する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cognos認証局（CA）署名証明書をOnCommand DataWarehouse 7.3.3以降にインポートする方法"]
+
+
+====

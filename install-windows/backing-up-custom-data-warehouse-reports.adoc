@@ -1,0 +1,27 @@
+---
+permalink: install-windows/backing-up-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 作成したカスタムレポートの.xmlソースファイルがない場合は、それらのレポートをアップグレード前にバックアップしておく必要があります。その後、Data Warehouseサーバ以外のサーバにコピーします。 
+---
+= Data Warehouseカスタムレポートをバックアップしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カスタムレポートを作成し、がない場合 `.xml` ソースファイルの場合は、アップグレード前にこれらのレポートをバックアップする必要があります。その後、Data Warehouseサーバ以外のサーバにコピーします。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://fqdn/dwh+`。
+. Data Warehouseツールバーで、をクリックします image:../media/oci-reporting-portal-icon.gif[""] をクリックしてReporting Portalを開き、ログインします。
+. [ファイル]*>[開く]*を選択します。
+. レポートが格納されているフォルダを選択し、レポートを選択して*[開く]*をクリックします。
+. [ツール]*>*[レポートをクリップボードにコピー]*を選択します。
+. テキストエディタを開き、レポートの内容を貼り付けて、という名前でファイルを保存します `report_name.txt`、ここで `report _name` は、レポートの名前です。
+. Data Warehouseサーバとは別のサーバにレポートを保存します。
+

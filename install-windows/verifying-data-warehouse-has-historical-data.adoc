@@ -1,0 +1,25 @@
+---
+permalink: install-windows/verifying-data-warehouse-has-historical-data.html 
+sidebar: sidebar 
+keywords:  
+summary: カスタムレポートをリストアしたら、カスタムレポートを表示して、Data Warehouseが履歴データを収集していることを確認する必要があります。 
+---
+= Data Warehouseに履歴データがあることを確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カスタムレポートをリストアしたら、カスタムレポートを表示して、Data Warehouseが履歴データを収集していることを確認する必要があります。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://fqdn/dwh+`。
+. Data Warehouseツールバーで、をクリックします image:../media/oci-reporting-portal-icon.gif[""] をクリックしてInsight Reportingポータルを開き、ログインします。
+. カスタムレポートが格納されているフォルダ（[Custom Reports]など）を開きます。
+. をクリックします image:../media/run-with-options.gif[""] をクリックして、このレポートの出力形式オプションを開きます。
+. 必要なオプションを選択し、*[実行]*をクリックしてストレージ、コンピューティング、スイッチの履歴データが入力されていることを確認します。
+

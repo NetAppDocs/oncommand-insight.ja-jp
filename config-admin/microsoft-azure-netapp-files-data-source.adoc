@@ -1,0 +1,87 @@
+---
+permalink: config-admin/microsoft-azure-netapp-files-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: このデータソースは、Azure NetApp Files （ANF）のインベントリとパフォーマンスのデータを取得します。 
+---
+= Azure NetApp Files データソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このデータソースは、Azure NetApp Files （ANF）のインベントリとパフォーマンスのデータを取得します。
+
+
+
+== 要件
+
+このデータソースの設定に関する要件は次のとおりです。
+
+* ポート要件： 443 HTTPS
+* Azure Management Rest IP （ management.azure.com ）
+* Azureサービスプリンシパルアプリケーション（クライアント）ID（ユーザアカウント）
+* Azure Service Principal認証キー（ユーザパスワード）
+* Cloud Insights 検出用の Azure アカウントを設定する必要があります。
++
+アカウントを適切に設定し、アプリケーションを Azure に登録すると、 Cloud Insights で Azure インスタンスを検出するために必要なクレデンシャルが付与されます。次のリンクでは、検出用のアカウントを設定する方法について説明します。
+
++
+https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+Azureサービスプリンシパルアプリケーション（クライアント）ID
+ a| 
+Azure へのサインイン ID
+
+
+
+ a| 
+Azure テナント ID
+ a| 
+Azure テナント ID
+
+
+
+ a| 
+Azure サービスプリンシパルの認証キー
+ a| 
+ログイン認証キー
+
+
+
+ a| 
+Microsoft が API リクエストを請求することを理解しています
+ a| 
+これをチェックして、 Insight のポーリングで作成された API 要求を Microsoft から課金することを理解していることを確認します。
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+デフォルトは 60 分です
+
+|===

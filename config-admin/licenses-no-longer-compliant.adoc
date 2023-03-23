@@ -1,0 +1,18 @@
+---
+permalink: config-admin/licenses-no-longer-compliant.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Insightの[Licenses]ページに「Not Compliant」というメッセージが表示された場合、Insightで管理している容量は会社でライセンスされている容量を超えています。' 
+---
+= ライセンスが準拠しなくなりました
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightの[Licenses]ページに「Not Compliant」というメッセージが表示された場合、Insightで管理している容量は会社でライセンスされている容量を超えています。
+
+「Not Compliant」メッセージは、Insightで現在管理しているテラバイト数よりも支払い済みの容量が少ないことを示します。非準拠のメッセージの横に、管理対象のテラバイト数とライセンスされたテラバイト数の差が表示されます。
+
+Insightシステムの動作には影響しませんが、ネットアップの担当者に連絡してライセンスの適用範囲を広げ、適切なライセンスを更新する必要があります。

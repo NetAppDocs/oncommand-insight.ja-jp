@@ -1,0 +1,42 @@
+---
+permalink: config-admin/configuring-a-login-warning-message.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight を使用すると、管理者はユーザーのログイン時に表示されるカスタムテキストメッセージを設定できます。 
+---
+= ログイン警告メッセージの設定
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight を使用すると、管理者はユーザーのログイン時に表示されるカスタムテキストメッセージを設定できます。
+
+
+
+== 手順
+
+. OnCommand Insight サーバでメッセージを設定するには、次の手順を実行します。
++
+.. メニュー[Admin][Troubleshooting]>[Advanced Troubleshooting]>[Advanced Settings]に移動します
+.. テキスト領域にログインメッセージを入力します。
+.. [Client displays login warning message]*チェックボックスをクリックします。
+.. [ 保存（ Save ） ] をクリックします。
++
+このメッセージは、すべてのユーザのログイン時に表示されます。
+
+
+
+. Data Warehouse（DWH）およびReporting（Cognos）でメッセージを設定するには、次の手順を実行します。
++
+.. [システム情報]*に移動し、*[ログイン警告]*タブをクリックします。
+.. テキスト領域にログインメッセージを入力します。
+.. [ 保存（ Save ） ] をクリックします。
++
+このメッセージは、DWHおよびCognos Reportingにすべてのユーザがログインすると表示されます。
+
+
+
+

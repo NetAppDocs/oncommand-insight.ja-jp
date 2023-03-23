@@ -1,0 +1,20 @@
+---
+permalink: config-admin/data-source-support-information.html 
+sidebar: sidebar 
+keywords:  
+summary: 設定計画の一環として、環境内のデバイスをInsightで監視できることを確認する必要があります。そのためには、データソースサポートマトリックスでオペレーティングシステム、特定のデバイス、プロトコルの詳細を確認できます。一部のデータソースは、オペレーティングシステムによっては使用できない場合があります。 
+---
+= データソースのサポート情報
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定計画の一環として、環境内のデバイスをInsightで監視できることを確認する必要があります。そのためには、データソースサポートマトリックスでオペレーティングシステム、特定のデバイス、プロトコルの詳細を確認できます。一部のデータソースは、オペレーティングシステムによっては使用できない場合があります。
+
+
+
+== データソースサポートマトリックスの最新バージョンの場所
+
+OnCommand Insight データソースサポートマトリックスは、サービスパックのリリースごとに更新されます。ドキュメントの最新バージョンについては、を参照してください https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["NetApp Support Site"]。。

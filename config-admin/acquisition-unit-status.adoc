@@ -1,0 +1,29 @@
+---
+permalink: config-admin/acquisition-unit-status.html 
+sidebar: sidebar 
+keywords:  
+summary: '[Acquisition Unit]画面には、ステータスやエラーなど、すべてのAcquisition Unitが表示されます。' 
+---
+= Acquisition Unitのステータス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[Acquisition Unit]画面には、ステータスやエラーなど、すべてのAcquisition Unitが表示されます。
+
+サーバに接続されているInsight Acquisition Unitのステータスは、* Admin *>* Acquisition Units *の表に表示されます。この表には、各Acquisition Unitについて次の情報が表示されます。
+
+* * 名前 *
+* * IP *
+* * Status *はAcquisition Unitの動作ステータスです。
+* ** Last Reported ** Acquisition Unitに接続されたデータソースが最後に報告された時刻が表示されます。
+* *Note*には、AUに関連するユーザー入力のメモが表示されます。
+
+
+リスト内のAcquisition Unitに問題がある場合は、[Status]フィールドに問題に関する簡単な情報を示す赤い丸が表示されます。Acquisition Unitの問題はデータ収集に影響する可能性があるため、調査する必要があります。
+
+Acquisition Unitを再起動するには、Acquisition Unitにカーソルを合わせ、表示される[_Restart Acquisition Unit_]ボタンをクリックします。
+
+テキストメモを追加するには、Acquisition Unitにカーソルを合わせ、表示された_Add Note_ボタン をクリックします。最後に入力したメモのみが表示されます。

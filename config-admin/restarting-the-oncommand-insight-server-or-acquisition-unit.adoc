@@ -1,0 +1,33 @@
+---
+permalink: config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight サーバを再起動するときは、ページを更新し、OnCommand Insight ポータルに再度ログインします。 
+---
+= OnCommand Insight サーバを再起動しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight サーバを再起動するときは、ページを更新し、OnCommand Insight ポータルに再度ログインします。
+
+
+
+== このタスクについて
+
+[NOTE]
+====
+どちらのオプションも、ネットアップカスタマーサポートから要求があった場合にのみ使用してください。再起動する前に確認は行われません。
+
+====
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックし、*[Troubleshooting]*を選択します。
+. ページ下部の[その他のタスク]領域で、*[高度なトラブルシューティング]*リンクをクリックします。
+. 次のページの[詳細設定]メニューで、*[アクション]*タブをクリックします。
+. [サーバーの再起動]*をクリックします。
+

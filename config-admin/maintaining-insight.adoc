@@ -1,0 +1,23 @@
+---
+permalink: config-admin/maintaining-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightを初めて導入し、システムを新規にセットアップする場合でも、システムを以前から運用していた場合でも、Insightとネットワークの円滑な運用を維持するための措置を講じる必要があります。メンテナンスの重要な概念は、通常はネットワークの変更にInsightで対応する必要があるということです。 
+---
+= Insightのメンテナンス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightを初めて導入し、システムを新規にセットアップする場合でも、システムを以前から運用していた場合でも、Insightとネットワークの円滑な運用を維持するための措置を講じる必要があります。メンテナンスの重要な概念は、通常はネットワークの変更にInsightで対応する必要があるということです。
+
+最も一般的なメンテナンスタスクは次のとおりです。
+
+* Insightのバックアップの保持
+* 期限切れのInsightライセンスを更新しています
+* データソースパッチの調整
+* すべてのAcquisition UnitでInsightのバージョンを更新しています
+* 削除したデータソースをInsightから削除しています
+

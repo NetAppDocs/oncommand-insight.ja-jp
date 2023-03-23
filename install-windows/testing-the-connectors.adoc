@@ -1,0 +1,36 @@
+---
+permalink: install-windows/testing-the-connectors.html 
+sidebar: sidebar 
+keywords:  
+summary: アップグレードの完了後、コネクタをテストして、OnCommand Insight データウェアハウスからOnCommand Insight サーバへの接続が確立されていることを確認します。 
+---
+= コネクタをテストします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アップグレードの完了後、コネクタをテストして、OnCommand Insight データウェアハウスからOnCommand Insight サーバへの接続が確立されていることを確認します。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://fqdn/dwh+`。
+. 左側のナビゲーションペインで、*[コネクタ]*をクリックします。
+. 最初のコネクタを選択します。
++
+[Edit Connector]ページが表示されます。
+
+. [ * テスト * ] をクリックします。
+. テストに成功した場合は、*[閉じる]*をクリックします。失敗した場合は、Insight Serverの名前を*[名前]*フィールドに、IPアドレスを*[ホスト]*フィールドに入力し、*[テスト]*をクリックします。
+. Data WarehouseとInsight Serverの接続が確立されたら、*[保存]*をクリックします。
++
+接続に失敗した場合は、接続設定をチェックし、Insight Serverに問題がないことを確認してください。
+
+. [ * テスト * ] をクリックします。
++
+Data Warehouseで接続がテストされます。
+
+

@@ -1,0 +1,195 @@
+---
+permalink: config-admin/openstack-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OpenStack \（REST API / KVM\）データソースは、OpenStackハードウェアインスタンスに関する情報を収集します。このデータソースは、すべてのOpenStackインスタンスのインベントリデータと、オプションでVMのパフォーマンスデータを収集します。 
+---
+= OpenStackデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OpenStack（REST API / KVM）データソースは、OpenStackハードウェアインスタンスに関する情報を収集します。このデータソースは、すべてのOpenStackインスタンスのインベントリデータと、オプションでVMのパフォーマンスデータを収集します。
+
+
+
+== 要件
+
+OpenStackデータソースを設定するための要件を次に示します。
+
+* OpenStack コントローラの IP アドレス
+* OpenStack管理者ロールのクレデンシャルとLinux KVMハイパーバイザーへのsudoアクセスを推奨します。
++
+[NOTE]
+====
+adminアカウントまたはadminと同等の権限を使用していない場合でも、データソースからデータを取得できます。管理者以外のロールを持つユーザがAPIを呼び出すことができるように、ポリシー構成ファイル（etc/nova/policy.jsonなど）を変更する必要があります。
+
+====
++
+** "os_compute_api：os-availability-zone：detail"：""
+** "os_compute_api：os-hypervisors"：""
+** os_compute_api：servers：detail：get_all_tenants "：""
+
+
+* パフォーマンスを収集するには、OpenStack Ceilometerモジュールをインストールして設定する必要があります。Ceilometerの設定は、を編集して行います `nova.conf` ファイルをハイパーバイザーごとに作成し、各ハイパーバイザーでNova Computeサービスを再起動します。オプション名は、 OpenStack の各リリースで変更されています。
++
+** Icehouse のあるホテル
+** Juno 社
+** キロ
+** リバティー
+** 三鷹
+** ニュートン
+** 八幡市
+
+
+* CPU統計の場合、コンピュートノードの/etc/Nova/Nova.confで「compute_monitors=ComputeDriverCPUMonitor」をオンにする必要があります。
+* ポート要件
++
+** HTTP は 5000 、 Keystone サービスは 13000 、 HTTPS は 13000 です
+** KVM SSH の場合は 22
+** Nova Compute Service の場合は 8774
+** Cinder ブロックサービスの場合は 8776
+** Ceilometer パフォーマンスサービス用 8777
+** Glance Image Serviceの場合は9292
++
+[NOTE]
+====
+ポートは特定のサービスにバインドされ、大規模な環境ではコントローラまたは別のホストでサービスを実行できます。
+
+====
+
+
+
+
+
+
+== 設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+OpenStack Controller の IP アドレス
+ a| 
+OpenStack Controller の IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+OpenStack 管理者
+ a| 
+OpenStack 管理者のユーザ名
+
+
+
+ a| 
+OpenStack パスワード
+ a| 
+OpenStack 管理に使用するパスワード
+
+
+
+ a| 
+OpenStack 管理者のテナント
+ a| 
+OpenStack 管理者のテナント
+
+
+
+ a| 
+KVM sudo ユーザー
+ a| 
+KVM Sudo ユーザー名
+
+
+
+ a| 
+クレデンシャルタイプを指定するには、「 Password 」または「 OpenSSH Key File 」を選択してください
+ a| 
+SSH経由でデバイスに接続するために使用するクレデンシャルタイプ
+
+
+
+ a| 
+Inventory Private Key への完全パス
+ a| 
+Inventory Private Key への完全パス
+
+
+
+ a| 
+KVM sudo パスワード
+ a| 
+KVM sudo パスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+SSH を使用してハイパーバイザーのインベントリ検出を有効にし
+ a| 
+SSH を使用してハイパーバイザーインベントリの検出を有効にする場合は、このチェックボックス
+
+
+
+ a| 
+OpenStack 管理 URL のポート
+ a| 
+OpenStack 管理 URL のポート
+
+
+
+ a| 
+HTTPS を使用する
+ a| 
+セキュア HTTP を使用する場合に選択します
+
+
+
+ a| 
+HTTP 接続タイムアウト（秒）
+ a| 
+HTTP接続のタイムアウト（デフォルトは300秒）
+
+
+
+ a| 
+SSH ポート
+ a| 
+SSH に使用するポート
+
+
+
+ a| 
+SSHプロセス待機タイムアウト（秒）
+ a| 
+SSHプロセスのタイムアウト（デフォルトは30秒）
+
+
+
+ a| 
+SSH プロセスの再試行回数
+ a| 
+インベントリの再試行回数
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは20分）
+
+|===

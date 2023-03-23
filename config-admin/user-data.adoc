@@ -1,0 +1,18 @@
+---
+permalink: config-admin/user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'アセットページの[User Data]セクションには、ユーザが定義したアプリケーション、ビジネスエンティティ、アノテーションなどのデータが表示されます。' 
+---
+= ユーザデータ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アセットページの[User Data]セクションには、ユーザが定義したアプリケーション、ビジネスエンティティ、アノテーションなどのデータが表示されます。
+
+仮想マシンのアセットページの[User Data]セクションにアプリケーション、ビジネスエンティティ、およびアノテーションが割り当てられている場合の表示例を次に示します。
+
+image::../media/user-data-section.bmp[ユーザーデータセクション]

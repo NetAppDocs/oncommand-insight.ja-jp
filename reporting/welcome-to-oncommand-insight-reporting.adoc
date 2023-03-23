@@ -1,0 +1,26 @@
+---
+permalink: reporting/welcome-to-oncommand-insight-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Reportingは、事前定義済みのレポートを表示したり、カスタムレポートを作成したりできるビジネスインテリジェンスツールです。OnCommand Insight のレポート機能を使用すると、Data Warehouse\（DWH\）データからレポートが生成されます。 
+---
+= OnCommand Insight Reportingへようこそ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Reportingは、事前定義済みのレポートを表示したり、カスタムレポートを作成したりできるビジネスインテリジェンスツールです。OnCommand Insight のレポート機能を使用すると、Data Warehouse（DWH）データからレポートが生成されます。
+
+OnCommand Insight Reportingでは、次のタスクを実行できます。
+
+* 事前定義済みのレポートを実行します
+* カスタムレポートを作成する
+* レポートの形式と配信方法をカスタマイズする
+* レポートが自動的に実行されるようにスケジュールを設定する
+* レポートを E メールで送信
+* データのしきい値を色で表します
+
+
+事前定義済みのレポートは、標準のOnCommand Insight レポートです。このガイドでは、すべての製品ライセンスで使用できる事前定義済みレポートについて説明します。

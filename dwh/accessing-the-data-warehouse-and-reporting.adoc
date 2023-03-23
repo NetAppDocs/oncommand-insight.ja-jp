@@ -1,0 +1,22 @@
+---
+permalink: dwh/accessing-the-data-warehouse-and-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseポータルでは、管理オプションにアクセスできます。Data WarehouseポータルからReportingポータルにアクセスすることもできます。 
+---
+= Data WarehouseポータルおよびReportingポータルへのアクセス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseポータルでは、管理オプションにアクセスできます。Data WarehouseポータルからReportingポータルにアクセスすることもできます。
+
+
+
+== 手順
+
+. Data Warehouseポータルに管理者としてログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. Data Warehouseツールバーで、をクリックします image:../media/oci-reporting-portal-icon.gif[""] をクリックしてReportingポータルを開きます。
+

@@ -1,0 +1,39 @@
+---
+permalink: dwh/resolving-multiple-server-annotation-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Data Warehouseの[Troubleshooting]ビューの[Annotation Consolidation]ビューには、使用可能なすべてのアノテーションタイプとそれらを適用できるオブジェクトタイプを含むテーブルが表示されます。' 
+---
+= 複数サーバのアノテーションの統合に関する問題の解決
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseの[Troubleshooting]ビューの[Annotation Consolidation]ビューには、使用可能なすべてのアノテーションタイプとそれらを適用できるオブジェクトタイプを含むテーブルが表示されます。
+
+
+
+== このタスクについて
+
+アノテーション値の統合は、アノテーションタイプの値に基づいて行われます。ストレージアレイには、それぞれ異なるコネクタから取得される2つの階層値があります。したがって、一方のコネクタにgoldという名前でティアが定義され、もう一方のコネクタでgoldyという名前でティアが定義されている場合、この情報はData Warehouseに2つの個別のティアとして表示されます。
+
+一部のアノテーションタイプでは同じオブジェクトに複数のアノテーション値を割り当てることができるため、Data Warehouseではオブジェクト（「host」など）に複数のアノテーション値を割り当てることができます（「data center 1」と「data center 2」を同じホストに割り当てることもできます）。
+
+ボリュームのティアアノテーションは、一般的なアノテーションテーブルとは多少異なります。環境内には大量のボリュームが存在する可能性があり、それらをすべてData Warehouseに表示すると、情報のユーザビリティに影響する可能性があります。そのため、[Annotations Consolidation]ビューには、複数のティア値が割り当てられているボリュームと、そのボリュームを含むストレージのみが表示されます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*トラブルシューティング*をクリックします。
+. [Annotation Consolidation]*セクションで、オブジェクトの行の*[Show]*をクリックします。
++
+Data_Centerのアノテーションの例を次に示します。
+
++
+image::../media/oci-dwh-troubleshooting-annotations-gif.gif[アノテーションの統合に関するトラブルシューティング]
+
+

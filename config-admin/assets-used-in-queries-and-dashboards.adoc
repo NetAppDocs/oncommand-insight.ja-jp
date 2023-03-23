@@ -1,0 +1,42 @@
+---
+permalink: config-admin/assets-used-in-queries-and-dashboards.html 
+sidebar: sidebar 
+keywords: queryable,Data Store,objects,custom landing page 
+summary: Insightのクエリとダッシュボードウィジェットは、さまざまなアセットタイプで使用できます 
+---
+= クエリやダッシュボードで使用されるアセット
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightのクエリとダッシュボードウィジェットは、さまざまなアセットタイプで使用できます
+
+クエリ、ダッシュボードウィジェット、およびカスタムアセットページで使用できるアセットタイプは次のとおりです。フィルタ、式、表示に使用できるフィールドとカウンタは、アセットのタイプによって異なります。すべてのアセットをすべてのウィジェットタイプで使用できるわけではありません。
+
+* アプリケーション
+* データストア
+* ディスク
+* ファブリック
+* 汎用デバイス
+* ホスト
+* 内部ボリューム
+* iSCSI セッション
+* iSCSI ネットワークポータル
+* パス
+* ポート
+* qtree
+* クォータ
+* 共有
+* ストレージ
+* ストレージノード
+* ストレージプール
+* スイッチ
+* テープ
+* VMDK です
+* 仮想マシン
+* ボリューム
+* ゾーン
+* ゾーンメンバー
+

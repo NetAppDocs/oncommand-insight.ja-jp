@@ -1,0 +1,20 @@
+---
+permalink: install-windows/back-up-the-security-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight環境でデフォルト以外のセキュリティ設定を使用している場合は、セキュリティ設定をバックアップし、新しいソフトウェアのインストール後にセキュリティ設定をリストアする必要があります。セキュリティ設定は、Data Warehouseデータベースのバックアップをリストアする前にリストアする必要があります。 
+---
+= セキュリティ設定をバックアップしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight環境でデフォルト以外のセキュリティ設定を使用している場合は、セキュリティ設定をバックアップし、新しいソフトウェアのインストール後にセキュリティ設定をリストアする必要があります。セキュリティ設定は、Data Warehouseデータベースのバックアップをリストアする前にリストアする必要があります。
+
+
+
+== このタスクについて
+
+を使用します `securityadmin` 構成のバックアップを作成し、保存されている構成を復元するツール。詳細については、を検索してください `securityadmin` OnCommand Insight ドキュメントセンター： http://docs.netapp.com/oci-73/index.jsp[]

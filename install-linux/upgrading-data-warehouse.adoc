@@ -1,0 +1,38 @@
+---
+permalink: install-linux/upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight Serverソフトウェアをアップグレードしたら、Data Warehouseソフトウェアをアップグレードする必要があります。 
+---
+= Data Warehouseソフトウェアをアップグレードしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight Serverソフトウェアをアップグレードしたら、Data Warehouseソフトウェアをアップグレードする必要があります。
+
+
+
+== 手順
+
+. sudo権限があるアカウントでData Warehouse（DWH）サーバにログインします。
+. NetApp Support Site からInsight DWHソフトウェアをダウンロードします。
+. ダウンロードディレクトリに移動し、次のコマンドを入力します。
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+インストールファイルのバージョン番号が正しいことを確認します。
+
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-install.sh` ：
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. インストールスクリプトを実行します。
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. ライセンス契約に同意し、画面の指示に従います。
+

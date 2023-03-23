@@ -1,0 +1,35 @@
+---
+permalink: install-linux/uninstalling-mariadb.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight またはData Warehouseをインストールする前に、InsightサーバまたはData WarehouseサーバでMariaDBをアンインストールする必要があります。アンインストールしないと、インストールを続行できません。MySQLはMariaDBと互換性がありません。MariaDBを削除せずにどちらかのサーバにインストールしようとすると、MariaDBをアンインストールするように指示するエラーメッセージが表示されてインストールが終了します。 
+---
+= MariaDBをアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight またはData Warehouseをインストールする前に、InsightサーバまたはData WarehouseサーバでMariaDBをアンインストールする必要があります。アンインストールしないと、インストールを続行できません。MySQLはMariaDBと互換性がありません。MariaDBを削除せずにどちらかのサーバにインストールしようとすると、MariaDBをアンインストールするように指示するエラーメッセージが表示されてインストールが終了します。
+
+
+
+== 作業を開始する前に
+
+sudo権限が必要です。
+
+
+
+== 手順
+
+. Insight Serverにログインします。
+. MariaDBコンポーネントのリストを取得します。
++
+`rpm -qa | grep mariadb`
+
+. サーバにインストールされているMariaDBコンポーネントごとに、次のコマンドを入力します。
++
+`yum remove component_name`
+
+

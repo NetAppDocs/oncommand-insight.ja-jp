@@ -1,0 +1,26 @@
+---
+permalink: reporting/enabling-security-headers.html 
+sidebar: sidebar 
+keywords:  
+summary: HTTPヘッダーを設定すると、Cognos Analytics Webアプリケーションの全体的なセキュリティを強化できます。 
+---
+= セキュリティヘッダーの有効化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HTTPヘッダーを設定すると、Cognos Analytics Webアプリケーションの全体的なセキュリティを強化できます。
+
+応答ヘッダーを追加するには：
+
+* Cognos Analytics UIにログインし、*[Manage]>[Configuration]>[System]>[Advanced Settings]*に移動します
+* 次のキー/値を追加して適用します。
++
+** キー： `BIHeaderFilter.responseHeaders`
+** 値： `[{"name":"X-FRAME-OPTIONS","value":"SAMEORIGIN"},{"name":"X-XSS-Protection","value":"1"},{"name":"X-Content-Type-Options","value":"nosniff"}]`
+
+
+* ヘッダーを有効にするには、ブラウザをリフレッシュしてください。
+

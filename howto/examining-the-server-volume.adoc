@@ -1,0 +1,18 @@
+---
+permalink: howto/examining-the-server-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: ボリュームのランディングページには、関連するアセットと同じIOPSの急上昇が表示されます。 
+---
+= ボリュームを確認しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームのランディングページには、関連するアセットと同じIOPSの急上昇が表示されます。
+
+image::../media/server-vol-lp.gif[サーバボリュームLP]
+
+[Resources]セクションに、Travel BookingアプリケーションのVMが表示されます。VMのリンクをクリックすると、VMのランディングページが表示されます。

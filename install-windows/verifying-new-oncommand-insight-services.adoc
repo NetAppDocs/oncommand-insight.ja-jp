@@ -1,0 +1,43 @@
+---
+permalink: install-windows/verifying-new-oncommand-insight-services.html 
+sidebar: sidebar 
+keywords:  
+summary: インストールが完了したら、サーバでInsightコンポーネントのサービスが動作していることを確認する必要があります。 
+---
+= 新しいInsightサービスを確認しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールが完了したら、サーバでInsightコンポーネントのサービスが動作していることを確認する必要があります。
+
+
+
+== 手順
+
+. 現在動作しているサービスのリストを表示するには、次の手順を実行します。
++
+.. [スタート]ボタンをクリックします。
+.. [ ファイル名を指定して実行 ] をクリック
+.. 次のように入力します。
++
+`cmd`
+
+.. Enter キーを押します。
+.. [コマンドプロンプト]ウィンドウで次のように入力します。
++
+`net start`
+
+
+
+. 次のInsightサービスがリストに表示されているかどうかを確認します。
++
+** * SANscreen サーバ*
+** * SANscreen Acq*（取得プロセス）
+** * MySQL *（Insight SQLデータベース）
+** * Elasticsearch *（Insightデータ用のデータストア）これらのサービスがリストに表示されない場合は、テクニカルサポートにお問い合わせください。
+
+
+

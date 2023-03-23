@@ -1,0 +1,14 @@
+---
+permalink: dwh/troubleshooting-setup-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: アノテーション、ビルド、レポートには、セットアップ時に発生する可能性のある一般的な問題がいくつかあります。これらの問題をトラブルシューティングするには、概説されている手順に従います。 
+---
+= セットアップの問題のトラブルシューティング
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アノテーション、ビルド、レポートには、セットアップ時に発生する可能性のある一般的な問題がいくつかあります。これらの問題をトラブルシューティングするには、概説されている手順に従います。

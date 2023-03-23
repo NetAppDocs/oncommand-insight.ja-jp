@@ -1,0 +1,35 @@
+---
+permalink: dwh/monitoring-data-warehouse-health.html 
+sidebar: sidebar 
+keywords: suppress 
+summary: 'Data Warehouse\（DWH\）には、DWHの状態に関する情報を表示するヘルスモニタが含まれています。DWHの[Connectors]ページと[Jobs]ページにアラームメッセージが表示されるほか、接続されているInsightサーバにも送信され、[Admin]>[Health]ページに表示されます。' 
+---
+= Data Warehouseの健常性を監視しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouse（DWH）には、DWHの状態に関する情報を表示するヘルスモニタが含まれています。DWHの*[コネクタ]*ページと*[ジョブ]*ページにアラームメッセージが表示されるほか、接続されているInsightサーバに送信され、*[管理]*>*[ヘルス]*ページに表示されます。
+
+DWHでは10分ごとに指標が収集され、次の状況でアラームが表示されます。
+
+* Insightサーバへの接続が停止しています
+* ディスク利用率が90%を超えています
+* レポート（Cognos）サービスが停止しています
+* クエリは、いずれかのテーブルに対して長時間ロックを保持しています
+* メンテナンスジョブが無効になっている
+* 自動バックアップは無効になっています
+* セキュリティリスク：デフォルトの暗号化キーが検出されました
+
+
+Data Warehouseでのヘルスモニタの警告は、最大30日間停止できます。
+
+Eメール通知を有効にすると、これらのイベントもEメールで報告されます。電子メールには添付ファイルが含まれていないことに注意してください。
+
+これらのイベントはに記録されます `dwh_troubleshoot.log` 次の場所にあるファイル：
+
+* Windows の場合 `<install dir>\SANscreen\Wildfly\Standalone\Logs`
+* Linux ： `/var/log/netapp/oci/wildfly/`
+

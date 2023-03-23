@@ -1,0 +1,14 @@
+---
+permalink: howto/your-corporate-structure-setting-up-business-entities-and-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 企業構造の要素を理解することで、資産の使用状況を追跡し、コストを報告することができます。 
+---
+= 企業構造：ビジネスエンティティとアプリケーションの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+企業構造の要素を理解することで、資産の使用状況を追跡し、コストを報告することができます。

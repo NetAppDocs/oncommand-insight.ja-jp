@@ -1,0 +1,33 @@
+---
+permalink: dwh/forcing-an-update-of-annotations-for-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight からData Warehouseへのアノテーションの更新を開始できます。 
+---
+= Data Warehouseのアノテーションを強制的に更新します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight からData Warehouseへのアノテーションの更新を開始できます。
+
+
+
+== このタスクについて
+
+アノテーションは、次の2つのオプションのいずれかを使用して更新できます。
+
+* 削除されたオブジェクトを含める：削除されたホスト、ストレージアレイ、スイッチなど、すでに存在しなくなったデバイスに関するデータが含まれます。これは、履歴データポイントを使用してData Warehouseデータをビルドする場合に必要です。
+* 削除されたオブジェクトを含めない：削除されたオブジェクトを除外する場合は、このオプションを選択します。
+
+
+
+
+== 手順
+
+. OnCommand Insight ポータルに管理者としてログインします `+https://hostname+`、ここで `hostname` は、OnCommand Insight がインストールされているシステムの名前です。
+. [管理]*>*[トラブルシューティング]*をクリックします。ページの下部にある*[高度なトラブルシューティング]*をクリックします。
+. [アクション]*タブで、*[DWHアノテーションの更新（削除を含む）]*をクリックします。
+

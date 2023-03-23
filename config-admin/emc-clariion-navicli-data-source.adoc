@@ -1,0 +1,183 @@
+---
+permalink: config-admin/emc-clariion-navicli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: このデータソースを設定する前に、ターゲットデバイスとInsight ServerにEMC Navisphere CLIがインストールされていることを確認してください。Navisphere CLIのバージョンは、コントローラのファームウェアのバージョンと一致している必要があります。パフォーマンスデータを収集するには、統計ログをオンにする必要があります。 
+---
+= EMC CLARiX（NaviCLI）データソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このデータソースを設定する前に、ターゲットデバイスとInsight ServerにEMC Navisphere CLIがインストールされていることを確認してください。Navisphere CLIのバージョンは、コントローラのファームウェアのバージョンと一致している必要があります。パフォーマンスデータを収集するには、統計ログをオンにする必要があります。
+
+
+
+== Navisphereコマンド・ライン・インタフェースの構文
+
+[listing]
+----
+naviseccli.exe -h <IP address> -user <user> -password <password> -scope
+<scope,use 0 for global scope> -port <use 443 by default> command
+----
+
+
+== 用語集
+
+OnCommand Insight では、EMC CLARiXデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ディスク
+ a| 
+ディスク
+
+
+
+ a| 
+ストレージ
+ a| 
+ストレージ
+
+
+
+ a| 
+ストレージプロセッサ
+ a| 
+ストレージノード
+
+
+
+ a| 
+シンプール、RAIDグループ
+ a| 
+ストレージプール
+
+
+
+ a| 
+LUN
+ a| 
+ボリューム
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+* 各CLARiXストレージ・プロセッサのIPアドレス
+* CLARiXアレイに対する読み取り専用のNavisphereユーザー名とパスワード
+* NavicliがInsight Server / RAUにインストールされている必要があります
+* アクセスの検証：上記のユーザ名とパスワードを使用して、Insight Serverから各アレイに対してNaviCLIを実行します。
+* Navicliのバージョンは'アレイ上の最新のFLAREコードに対応している必要があります
+* パフォーマンスのためには、統計ログをオンにする必要があります。
+* ポート要件： 80 、 443
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+CLARiXストレージ
+ a| 
+CLARiXストレージのIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+CLARiXストレージ・デバイスへのログインに使用する名前
+
+
+
+ a| 
+パスワード
+ a| 
+CLARiXストレージ・デバイスへのログインに使用するパスワード
+
+
+
+ a| 
+CLIのnavicli.exeパスまたはnaviseccli.exeパスへのパス
+ a| 
+への完全パス `navicli.exe` または `naviseccli.exe` 実行ファイル
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリのポーリング間隔（デフォルトは 40 分）
+
+
+
+ a| 
+Secure Clientの使用（naviseccli）
+ a| 
+セキュア・クライアントを使用する場合に選択（navseccli）
+
+
+
+ a| 
+適用範囲
+ a| 
+セキュアなクライアントの範囲デフォルトは Global です。
+
+
+
+ a| 
+CLARiX CLIポート
+ a| 
+CLARiX CLIに使用するポート
+
+
+
+ a| 
+インベントリ外部プロセスタイムアウト（秒）
+ a| 
+外部プロセスのタイムアウト（デフォルトは1、800秒）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 300 秒）
+
+
+
+ a| 
+パフォーマンス外部プロセスのタイムアウト（秒）
+ a| 
+外部プロセスのタイムアウト（デフォルトは1、800秒）
+
+|===

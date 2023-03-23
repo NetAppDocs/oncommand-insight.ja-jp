@@ -1,0 +1,87 @@
+---
+permalink: config-admin/host-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: スマートカード（CAC\）および証明書によるログインをサポートするには、OnCommand Insight ホストの設定を変更する必要があります。 
+---
+= スマートカードおよび証明書によるログイン用にホストを設定しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スマートカード（CAC）および証明書によるログインをサポートするには、OnCommand Insight ホストの設定を変更する必要があります。
+
+
+
+== 作業を開始する前に
+
+* システムでLDAPが有効になっている必要があります。
+* LDAP `User principal account name` 属性は、ユーザのIDを含むLDAPフィールドと一致する必要があります。
+
+
+[NOTE]
+====
+CACおよび証明書に関する最新の手順については、次の技術情報アーティクル（サポートへのログインが必要）を参照してください。
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["OnCommand Insight のCommon Access Card（CAC;共通アクセスカード）認証を設定する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["OnCommand Insight Data WarehouseのCommon Access Card（CAC；共通アクセスカード）認証の設定方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["認証局（CA）の署名付き証明書を作成し、OnComand InsightおよびOnCommand Insight Data Warehouse 7.3.xにインポートする方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["WindowsホストにインストールされているOnCommand Insight 7.3.X内で自己署名証明書を作成する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cognos認証局（CA）署名証明書をOnCommand DataWarehouse 7.3.3以降にインポートする方法"]
+
+
+====
+
+
+== 手順
+
+. を使用します `regedit` でレジストリ値を変更するユーティリティ `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun2.0\SANscreen Server\Parameters\Java`：
++
+.. jvm_optionを変更します `DclientAuth=false` 終了： `DclientAuth=true.`
+
+
+. キーストアファイルをバックアップします。 `C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. コマンドプロンプトを開き、を指定します `Run as administrator`
+. 自己生成証明書を削除します。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -delete -alias "ssl certificate" -keystore C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. 新しい証明書を生成します。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -genkey -alias "alias_name" -keyalg RSA -sigalg SHA1withRSA -keysize 2048 -validity 365 -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -dname "CN=commonName,OU=orgUnit,O=orgName,L=localityNameI,S=stateName,C=countryName"`
+. 証明書署名要求（CSR）を生成します。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -certreq -sigalg SHA1withRSA -alias "alias_name" -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file C:\temp\server.csr"`
+. 手順6でCSRが返されたら、証明書をインポートし、Base-64形式でエクスポートしてに保存します `"C:\temp" named servername.cer`。
+. キーストアから証明書を抽出します。``C:\Program Files\SANscreen\java64\bin\keytool.exe -v -importkeystore -srckeystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -srcalias "alias_name" -destkeystore "C:\temp\file.p12" -deststoretype PKCS12``
+. p12ファイルから秘密鍵を抽出します。 `openssl pkcs12 -in "C:\temp\file.p12" -out "C:\temp\servername.private.pem"`
+. 手順7でエクスポートしたBase-64証明書を秘密鍵とマージします。 `openssl pkcs12 -export -in "<folder>\<certificate>.cer" -inkey "C:\temp\servername.private.pem" -out "C:\temp\servername.new.p12" -name "servername.abc.123.yyy.zzz"`
+. マージした証明書をキーストアにインポートします。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -destkeystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -srckeystore "C:\temp\servername.new.p12" -srcstoretype PKCS12 -alias "alias_name"`
+. ルート証明書をインポートします。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file "C:\<root_certificate>.cer" -trustcacerts -alias "alias_name"`
+. ルート証明書をserver.trustoreにインポートします。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore" -file "C:\<email_certificate>.cer" -trustcacerts -alias "alias_name"`
+. 中間証明書をインポートします。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore "C:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore" -file "C:\<intermediate_certificate>.cer" -trustcacerts -alias "alias_name"`
++
+すべての中間証明書について、この手順を繰り返します。
+
+. この例と一致するようにLDAPでドメインを指定します。
+. OnCommand Insight サーバで、を実行します `wildfly/standalone/configuration/standalone-full.xml` でverify-clientを「requested」に更新して、ファイルを変更する必要があります ``/subsystem=undertow/server=default-server/https-listener=default-https``CACを有効にします。該当するコマンドを実行します。
++
+|===
+
+
+| OS | スクリプト 
+
+
+ a| 
+Windows の場合
+ a| 
+<install dir> を参照してくださいenableCACforRemoteEJB.bat
+
+
+
+ a| 
+Linux の場合
+ a| 
+/opt/netapp/oci/wildfly/bin/enableCACforRemoteEJB.sh
+
+|===
++
+スクリプトの実行後、wildflyサーバのリロードが完了するまで待ってから、次の手順に進みます。
+
+. サーバを再起動します。
+

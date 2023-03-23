@@ -1,0 +1,14 @@
+---
+permalink: config-admin/configuring-your-email.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Serverで登録したレポートをEメールで配信したり、トラブルシューティング用のサポート情報をネットアップテクニカルサポートに転送したりできるように、EメールシステムにアクセスするようにOnCommand Insight を設定する必要があります。 
+---
+= Eメールを設定しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Serverで登録したレポートをEメールで配信したり、トラブルシューティング用のサポート情報をネットアップテクニカルサポートに転送したりできるように、EメールシステムにアクセスするようにOnCommand Insight を設定する必要があります。

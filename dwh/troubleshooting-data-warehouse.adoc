@@ -1,0 +1,24 @@
+---
+permalink: dwh/troubleshooting-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseのトラブルシューティングに関連するさまざまなタスクを実行できます。 
+---
+= Data Warehouseのトラブルシューティング
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseのトラブルシューティングに関連するさまざまなタスクを実行できます。
+
+* OnCommand Insight ASUPを使用する。
+* OnCommand Insight ログを表示します。
+* アップグレードとビジネスエンティティに関連する問題を解決する。
+* 複数のOnCommand Insight サーバの統合に関連する問題を解決します。
+
+
+複数のOnCommand Insight サーバを同じData Warehouseデータベースに統合できます。多くの設定では、複数のコネクタから同じオブジェクトが報告される場合があります（つまり、同じスイッチが2つのOnCommand Insight インスタンスに存在する場合）。このような場合、Data Warehouseは複数のオブジェクトを1つに統合します（プライマリコネクタが選択され、オブジェクトのデータはそのコネクタからのみ取得されます）。
+
+ストレージ管理者は、[Troubleshooting]ページを使用して、統合の問題に関連する問題を解決できます。

@@ -1,0 +1,132 @@
+---
+permalink: config-admin/importing-an-ssl-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: SSL証明書を追加して強化された認証と暗号化を有効にすると、OnCommand Insight 環境のセキュリティを強化できます。 
+---
+= SSL証明書のインポート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SSL証明書を追加して強化された認証と暗号化を有効にすると、OnCommand Insight 環境のセキュリティを強化できます。
+
+
+
+== 作業を開始する前に
+
+システムが最小必要ビットレベル（1024ビット）を満たしていることを確認する必要があります。
+
+
+
+== このタスクについて
+
+[NOTE]
+====
+この手順 を実行する前に、既存のをバックアップしておく必要があります `server.keystore` をクリックし、バックアップに名前を付けます `server.keystore.old`。の破損または損傷 `server.keystore` ファイルを使用すると、Insight Serverの再起動後にInsight Serverが動作しなくなることがあります。バックアップを作成した場合、問題が発生したときに古いファイルに戻すことができます。
+
+====
+
+
+== 手順
+
+. 元のキーストアファイルのコピーを作成します。 `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
+. キーストアの内容を表示します。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. パスワードの入力を求められたら、と入力します `changeit`。
+
+
++
+キーストアの内容が表示されます。キーストアには少なくとも1つの証明書が必要です。 `"ssl certificate"`。
+
+. を削除します `"ssl certificate"`： `keytool -delete -alias "ssl certificate" -keystore c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. 新しいキーを生成します。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -genkey -alias "ssl certificate" -keyalg RSA -keysize 2048 -validity 365 -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. 名と姓の入力を求められたら、使用するFully Qualified Domain Name（FQDN；完全修飾ドメイン名）を入力します。
+.. 組織および組織構造に関する次の情報を入力します。
++
+*** Country：ISOの2文字の国の略語（USなど）
+*** State or Province：組織の本社がある都道府県の名前（例：Massachusetts）
+*** Locality：組織の本社がある市区町村の名前（例：Waltham）
+*** Organizational name：ドメイン名を所有する組織の名前（例：NetApp）
+*** Organizational unit name：証明書を使用する部門またはグループの名前（Supportなど）
+*** Domain Name/Common Name：サーバのDNSルックアップに使用されるFQDN（例：www.example.com）。システムから次のような情報が返されます。 `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. 入力するコマンド `Yes` Common Name（CN；共通名）がFQDNになっている場合。
+.. キーのパスワードの入力を求められたら、パスワードを入力するか、Enterキーを押して既存のキーストアパスワードを使用します。
+
+
+. 証明書要求ファイルを生成します。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -certreq -alias "ssl certificate" -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+。 `c:\localhost.csr` fileは、新しく生成される証明書要求ファイルです。
+
+. を送信します `c:\localhost.csr` を承認のためにCertificate Authority（CA；認証局）に送信します。
++
+証明書要求ファイルが承認されたら、で証明書を返す必要があります `.der` の形式で入力しファイルがとして返される場合と返されない場合があります `.der` ファイル。デフォルトのファイル形式はです `.cer` Microsoft CAサービスの場合。
+
++
+ほとんどの組織のCAは、ルートCAを含む信頼チェーンモデルを使用しています。ルートCAは、多くの場合オフラインです。中間CAと呼ばれる少数の子CAの証明書にのみ署名しています。
+
++
+公開鍵（証明書）は、信頼チェーン全体（OnCommand Insight サーバの証明書に署名したCAの証明書、およびその署名CAから組織のルートCAまでのすべての証明書）を取得する必要があります。
+
++
+組織によっては、署名要求を送信すると、次のいずれかが送信される場合があります。
+
++
+** 署名済み証明書と信頼チェーン内のすべてのパブリック証明書を含むPKCS12ファイル
+** A `.zip` 個 々 のファイル（署名済み証明書を含む）および信頼チェーン内のすべてのパブリック証明書を含むファイル
+** 署名済み証明書のみ
++
+パブリック証明書を入手する必要があります。
+
+
+
+. server.keystoreの承認済み証明書をインポートします。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. プロンプトが表示されたら、キーストアのパスワードを入力します。
++
+次のメッセージが表示されます。 `Certificate reply was installed in keystore`
+
+
+
+. server.trustoreの承認済み証明書をインポートします。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore"`
++
+.. プロンプトが表示されたら、trustoreパスワードを入力します。
++
+次のメッセージが表示されます。 `Certificate reply was installed in trustore`
+
+
+
+. を編集します `SANscreen\wildfly\standalone\configuration\standalone-full.xml` ファイル：
++
+次のエイリアス文字列を置き換えます。 `alias="cbc-oci-02.muccbc.hq.netapp.com"`。例：
+
++
+`<keystore path="server.keystore" relative-to="jboss.server.config.dir" keystore-password="${VAULT::HttpsRealm::keystore_password::1}" alias="cbc-oci-02.muccbc.hq.netapp.com" key-password="${VAULT::HttpsRealm::key_password::1}"/>`
+
+. SANscreen サーバサービスを再起動します。
++
+Insightが起動したら、鍵のアイコンをクリックして、システムにインストールされている証明書を表示できます。
+
++
+「Issued To」の情報が「Issued By」の情報と一致する証明書が表示された場合、まだ自己署名証明書がインストールされています。Insightのインストーラで生成される自己署名証明書の有効期限は100年です。
+
++
+この手順 でデジタル証明書に関する警告が削除されることを保証することはできません。ネットアップでは、エンドユーザのワークステーションの設定方法を制御できません。次のシナリオを検討してください。
+
++
+** Microsoft Internet ExplorerとGoogle Chromeは、どちらもWindowsでMicrosoftのネイティブ証明書機能を使用します。
++
+つまり、Active Directory管理者が組織のCA証明書をエンドユーザーの証明書トラスストアにプッシュすると、OnCommand Insight の自己署名証明書が内部CAインフラストラクチャによって署名された証明書に置き換えられたときに、これらのブラウザのユーザーに証明書の警告が表示されなくなります。
+
+** JavaおよびMozilla Firefoxには独自の証明書ストアがあります。
++
+システム管理者がアプリケーションの信頼された証明書ストアにCA証明書を自動で取り込んでいない場合は、自己署名証明書が置き換えられても、信頼されていない証明書が原因で、Insight JavaクライアントまたはFirefoxブラウザで証明書に関する警告が引き続き生成されることがあります。組織の証明書チェーンをtrustoreにインストールすることは、追加の要件です。
+
+
+
+

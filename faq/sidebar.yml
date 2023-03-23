@@ -1,0 +1,22 @@
+---
+section: faq
+title: よく寄せられる質問
+entries:
+- title: 一般的な質問
+  url: "/faq/faq-general-insight-questions.html"
+- title: OnCommand Insight ライセンス
+  url: "/faq/faq-insight-licensing.html"
+- title: 構成とサポートされているデバイス
+  url: "/faq/faq-configuration-and-supported-devices.html"
+- title: 拡張性と使いやすさ
+  url: "/faq/faq-scale-and-ease-of-use.html"
+- title: パフォーマンスのトラブルシューティング
+  url: "/faq/faq-performance-troubleshooting.html"
+- title: 環境の管理
+  url: "/faq/faq-environment-management.html"
+- title: Insightを他のツールと統合する
+  url: "/faq/faq-integrating-insight-and-third-party-tools.html"
+- title: Data ONTAP ストレージのIOPS
+  url: "/faq/oci-faq-netapp-storage-iops.html"
+- title: 異常検出
+  url: "/faq/faq-anomaly-detection.html"

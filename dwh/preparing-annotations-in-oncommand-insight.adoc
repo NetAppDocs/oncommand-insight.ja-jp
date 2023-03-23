@@ -1,0 +1,23 @@
+---
+permalink: dwh/preparing-annotations-in-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: アノテーションをData Warehouseにインポートする前に、OnCommand Insight でアノテーションを準備しておく必要があります。 
+---
+= OnCommand Insight でアノテーションを準備しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アノテーションをData Warehouseにインポートする前に、OnCommand Insight でアノテーションを準備しておく必要があります。
+
+
+
+== 手順
+
+. OnCommand Insight ポータルに管理者としてログインします `+https://hostname+`、ここで `hostname` は、OnCommand Insight がインストールされているシステムの名前です。
+. [管理]*>*[トラブルシューティング]*をクリックします。ページの下部にある*[高度なトラブルシューティング]*をクリックします。
+. [アクション]*タブで、*[DWHアノテーションの更新（削除を含む）]*をクリックします。
+

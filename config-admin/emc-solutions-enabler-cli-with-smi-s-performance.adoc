@@ -1,0 +1,252 @@
+---
+permalink: config-admin/emc-solutions-enabler-cli-with-smi-s-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight は"Solutions Enabler symcliコマンドを環境内の既存のSolutions Enablerサーバと組み合わせて使用して"Symmetrixストレージ・アレイを検出します既存のSolutions Enablerサーバは、ゲートキーパーボリュームへのアクセスを通じてSymmetrixストレージアレイに接続されています。このデバイスにアクセスするには、管理者権限が必要です。' 
+---
+= EMC Solutions EnablerとSMI-S Performanceデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight は'Solutions Enablerを使用してSymmetrixストレージ・アレイを検出します `symcli` コマンドを環境内の既存のSolutions Enablerサーバと組み合わせて使用既存のSolutions Enablerサーバは、ゲートキーパーボリュームへのアクセスを通じてSymmetrixストレージアレイに接続されています。このデバイスにアクセスするには、管理者権限が必要です。
+
+
+
+== 用語集
+
+OnCommand Insight では、EMC Solutions Enablerデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ディスク
+ a| 
+ディスク
+
+
+
+ a| 
+ディスクグループ
+ a| 
+ディスクグループ
+
+
+
+ a| 
+ストレージアレイ
+ a| 
+ストレージ
+
+
+
+ a| 
+ディレクター
+ a| 
+ストレージノード
+
+
+
+ a| 
+デバイスプール、 Storage Resource Pool （ SRP ；ストレージリソースプール）
+ a| 
+ストレージプール
+
+
+
+ a| 
+デバイス、TDEV
+ a| 
+ボリューム
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+このデータソースを設定する前に、OnCommand Insight サーバから既存のSolutions Enablerサーバのポート2707へのTCP接続が確立されていることを確認する必要があります。OnCommand Insight は'サーバからの'symcfg list''の出力に示されているように'このサーバに対してローカルであるすべてのSymmetrixアレイを検出します
+
+* EMC Solutions Enabler（CLI）とSMI-Sプロバイダアプリケーションがインストールされていて、Solutions Enablerサーバで実行されているバージョンと同じかそれよりも前のバージョンである必要があります。
+* 適切に設定されている `+{installdir}\EMC\SYMAPI\config\netcnfg+` ファイルは必須です。このファイルでは、 Solutions Enabler サーバのサービス名とアクセス方法（ SECURE / NOSECURE / ANY ）を定義します。
+* ストレージノードレベルで読み取り / 書き込みレイテンシが必要な場合、 SMI-S プロバイダは Unisphere for VMAX アプリケーションの実行中のインスタンスと通信する必要があります。
+* Solutions Enabler （ SE ）サーバに対する管理者権限が必要です
+* SE ソフトウェアに対する読み取り専用のユーザ名とパスワード
+* Solutions Enabler サーバ 6.5X の要件：
++
+** SMIS-S V1.2用のSMI-Sプロバイダ3.3.1がインストールされています
+** インストール後、を実行します `\Program Files\EMC\SYMCLI\bin>stordaemon start storsrvd`
+
+
+* Unisphere for VMAXアプリケーションが実行され、SMI-S Providerインストールによって管理されるSymmetrix VMAXストレージアレイの統計情報を収集している必要があります
+* アクセスの検証：SMI-Sプロバイダが実行されていることを確認します。 `telnet <se_server\> 5988`
+
+
+
+
+== 設定
+
+[NOTE]
+====
+SMI-Sユーザ認証が有効になっていない場合、OnCommand Insight データソースのデフォルト値は無視されます。
+
+====
+Symmetrixアレイでsymauthが有効になっていると、OnCommand Insight がそれらのアレイを検出できなくなる可能性があります。OnCommand Insight による取得は、Solutions Enablerサーバと通信するOnCommand Insight / Remote Acquisition Unitサーバ上で、システムユーザとして実行されます。hostname\systemにsymauth権限がない場合、OnCommand Insight はアレイを検出できません。
+
+EMC Solutions Enabler Symmetrix CLIデータソースには、シンプロビジョニングおよびSymmetrix Remote Data Facility（SRDF）のデバイス構成のサポートが含まれています。
+
+ファイバチャネルおよびスイッチのパフォーマンスパッケージの定義が提供されます。
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+サービス名
+ a| 
+netcnfgファイルで指定されたサービス名
+
+
+
+ a| 
+CLI の完全パス
+ a| 
+Symmetrix CLIの完全パス
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリのポーリング間隔（デフォルトは 40 分）
+
+
+
+ a| 
+「除外」または「含める」を選択してリストを指定します
+ a| 
+以下のリストにあるアレイをデータの収集時に対象に含めるか除外するかを指定します
+
+
+
+ a| 
+インベントリ除外デバイス
+ a| 
+対象に含めるか除外するデバイスの ID をカンマで区切ったリスト
+
+
+
+ a| 
+接続のキャッシュ
+ a| 
+接続のキャッシュ方法を選択：
+
+* localは、OnCommand Insight 取得サービスがSolutions Enablerサーバ上で実行されていることを意味します。サーバは検出対象のSymmetrixアレイにファイバチャネルで接続され、ゲートキーパーボリュームにアクセスできます。このオプションは、一部の Remote Acquisition Unit （ RAU ）構成で使用されます。
+* REMOTE_CACHEDはデフォルトであり、ほとんどの場合に使用する必要があります。このオプションでは、 NETCNFG ファイルの設定に基づいて、 IP を使用して Solutions Enabler サーバに接続します。サーバは検出対象の Symmetrix アレイにファイバチャネルで接続されていて、ゲートキーパーボリュームにアクセスできる必要があります。
+* remote_cachedオプションでCLIコマンドが失敗する場合は、remoteオプションを使用します。データ収集プロセスが遅くなることに注意してください（数時間から場合によっては数日かかることがあります）。検出対象の Symmetrix アレイにファイバチャネルで接続された Solutions Enabler サーバへの IP 接続には、引き続き NETCNFG ファイルの設定が使用されます。
+
+
+[NOTE]
+====
+この設定では、「symcfg list」の出力でremoteとしてリストされている配列に対するOnCommand Insight の動作は変更されません。OnCommand Insight は、このコマンドでローカルと表示されたデバイス上のデータのみを収集します。
+
+====
+
+
+ a| 
+CLIタイムアウト（秒）
+ a| 
+CLIプロセスのタイムアウト（デフォルトは7200秒）
+
+
+
+ a| 
+SMI-SホストIP
+ a| 
+SMI-SプロバイダホストのIPアドレス
+
+
+
+ a| 
+SMI-Sポート
+ a| 
+SMI-Sプロバイダホストが使用するポート
+
+
+
+ a| 
+プロトコル
+ a| 
+SMI-S プロバイダへの接続に使用するプロトコル
+
+
+
+ a| 
+SMI-Sネームスペース
+ a| 
+SMI-Sプロバイダが使用するように設定されている相互運用ネームスペース
+
+
+
+ a| 
+SMI-S ユーザー名
+ a| 
+SMI-S プロバイダホストのユーザ名
+
+
+
+ a| 
+SMI-S のパスワード
+ a| 
+SMI-S プロバイダホストのユーザ名
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 1000 秒）
+
+
+
+ a| 
+パフォーマンスフィルタタイプ
+ a| 
+下のリストに表示されたアレイをパフォーマンスデータの収集時に対象に含めるか除外するかを指定します
+
+
+
+ a| 
+パフォーマンスフィルタのデバイスリスト
+ a| 
+対象に含めるか除外するデバイスの ID をカンマで区切ったリスト
+
+
+
+ a| 
+RPOポーリング間隔（秒）
+ a| 
+RPOポーリングの間隔（デフォルトは300秒）
+
+|===

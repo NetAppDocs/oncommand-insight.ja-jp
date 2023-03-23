@@ -1,0 +1,14 @@
+---
+permalink: howto/finding-assets-querying.html 
+sidebar: sidebar 
+keywords:  
+summary: 強力なクエリを使用して、環境内のアセットを簡単に検索して表示できます。 
+---
+= アセットの検索：クエリ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+強力なクエリを使用して、環境内のアセットを簡単に検索して表示できます。

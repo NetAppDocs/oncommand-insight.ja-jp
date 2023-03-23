@@ -1,0 +1,38 @@
+---
+permalink: config-admin/insight-syslog-contents.html 
+sidebar: sidebar 
+keywords:  
+summary: サーバでsyslogを有効にして、利用率やトラフィックのデータを含むInsight違反やパフォーマンスアラートメッセージを収集することができます。 
+---
+= Insightのsyslogの内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+サーバでsyslogを有効にして、利用率やトラフィックのデータを含むInsight違反やパフォーマンスアラートメッセージを収集することができます。
+
+
+
+== メッセージタイプ
+
+Insightのsyslogには、次の3種類のメッセージが表示されます。
+
+* SANパス違反
+* 一般的な違反
+* パフォーマンスアラート
+
+
+
+
+== 提供されるデータ
+
+違反の説明には、関連する要素、イベントの時刻、違反の相対的な重大度または優先度が含まれます。
+
+パフォーマンスアラートには次のデータが含まれます。
+
+* 利用率
+* トラフィックタイプ
+* トラフィックレート（MB）
+

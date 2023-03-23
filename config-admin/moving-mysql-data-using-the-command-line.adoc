@@ -1,0 +1,60 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-command-line.html 
+sidebar: sidebar 
+keywords:  
+summary: 'MySQLのデータディレクトリを別のディレクトリに移行することができます。現在のデータディレクトリは保持できます。[Troubleshooting]メニューの移行オプションを使用することも、コマンドラインを使用することもできます。この手順 では、コマンドラインの使用方法について説明します。' 
+---
+= コマンドラインを使用してMySQLデータを移動しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQLのデータディレクトリを別のディレクトリに移行することができます。現在のデータディレクトリは保持できます。[Troubleshooting]メニューの移行オプションを使用することも、コマンドラインを使用することもできます。この手順 では、コマンドラインの使用方法について説明します。
+
+
+
+== このタスクについて
+
+現在のデータディレクトリを保持する場合、そのディレクトリはバックアップとして保持され、名前が変更されます。
+
+MySQLデータの移行ユーティリティを使用するか、を使用できます `java -jar mysqldatamigrator.jar` のOnCommand Insight パスのオプション `\bin\mysqldatamigrator` 次のパラメータを使用する必要があります。
+
+* 必須パラメータ
++
+** *-path *
++
+データフォルダのコピー先となる新しいデータパス。
+
+
+
+* オプションのパラメータ
++
+** *-myCnf <my .cnf file> *
++
+.cnfファイルのパス。デフォルトはです `<install path>\mysql\my.cnf`。このフラグは、デフォルト以外のMySQLを使用する場合にのみ使用します。
+
+** *-doBackup *
++
+このフラグが設定されている場合、現在のデータフォルダの名前は変更されますが、削除されることはありません。
+
+
+
+
+
+
+
+== 手順
+
+. コマンドラインツールには、次のURLからアクセスします。 `<installation path>` \bin\mysqldatamigrator\mysqldatamigrator.jar``
+
+
+
+
+== 使用例
+
+[listing]
+----
+java -jar mysqldatamigrator.jar -path "C:\<new path>" -doBackup
+----

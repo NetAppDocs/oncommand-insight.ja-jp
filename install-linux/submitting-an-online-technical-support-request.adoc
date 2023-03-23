@@ -1,0 +1,48 @@
+---
+permalink: install-linux/submitting-an-online-technical-support-request.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightのインストールで問題が発生した場合は、サポートに登録しておくとオンラインのテクニカルサポートリクエストを送信できます。 
+---
+= オンラインテクニカルサポートリクエストの送信
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightのインストールで問題が発生した場合は、サポートに登録しておくとオンラインのテクニカルサポートリクエストを送信できます。
+
+
+
+== 作業を開始する前に
+
+オンラインサポートサービスを利用するには、会社のEメールアドレスを使用してサポートカスタマーとして登録する必要があります。登録はサポートサイトで行います (http://support.netapp.com)[]。
+
+
+
+== このタスクについて
+
+カスタマーサポートがインストールの問題を解決できるようにするには、次の項目を含め、できるだけ多くの情報を収集する必要があります。
+
+* Insightのシリアル番号
+* 問題の概要
+* Insightのすべてのログファイル
+* エラーメッセージのスクリーンキャプチャ
+
+
+
+
+== 手順
+
+. を作成します `.zip` トラブルシューティングパッケージを作成するために収集した情報のファイル。
+. サポートサイトにログインします http://mysupport.netapp.com/["mysupport.netapp.com"] をクリックし、* Technical Assistance *を選択します。
+. [ケースを開く]*をクリックします。
+. データのパッケージの指示に従ってください。
+
+
+
+
+== 完了後
+
+[Technical Assistance]ページの[Check Case Status]*を使用して、リクエストに従うことができます。

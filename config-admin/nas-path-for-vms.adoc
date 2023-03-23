@@ -1,0 +1,43 @@
+---
+permalink: config-admin/nas-path-for-vms.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3では、ストレージ共有への仮想マシンのNASパスがサポートされます。これらのパスは、ストレージ共有へのホストのNASパスに似ています。VMのIPアドレスが共有へのアクセスを許可されると、NASパスが作成されます。 
+---
+= VMのNASパス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3では、ストレージ共有への仮想マシンのNASパスがサポートされます。これらのパスは、ストレージ共有へのホストのNASパスに似ています。VMのIPアドレスが共有へのアクセスを許可されると、NASパスが作成されます。
+
+仮想マシンのNASパスは、[Internal Volumes]ランディングページに表示されます。このページには、VMがアクセスできる内部ボリュームを特定する[Guest Mounted Storage Resources]ウィジェットが含まれています。
+
+* NASパスは、仮想マシンがバックエンド共有にアクセスできる場合に作成されます。仮想マシンが共有にアクセスするかどうかの確認応答はありません。
+* 相関関係はレイテンシとIOPSに基づいて計算されます。VMにバックエンドストレージへのNASパスがある場合は関係ありません。
+* ユーザはイニシエータのIPアドレスで共有を照会できますが、パスによる照会はサポートされていません。
+
+
+内部ボリュームの[Compute Resources]テーブルに、VMとNASパスが表示されるようになりました。VMごとに、CPUとメモリ、利用率とパフォーマンスのデータが表示されます。
+
+
+
+== Data Warehouseへの影響
+
+OnCommand Insight 7.3へのアップグレード後に行われるData Warehouseに対する変更点は次のとおりです。
+
+* dwh_inventory.nas_logicalテーブルがInventoryデータマートから削除され、ビューに置き換えられました。
++
+NFSパステーブルを含むInsight 7.2.xのレポートはすべて維持されます。
+
+* Inventoryデータマートにdwh_inventory.nas_cr_logicalテーブルが追加されました。次のテーブルが含まれています。
++
+** コンピューティングリソース
+** 内部ボリューム
+** ストレージ
+** NAS共有
+
+
+

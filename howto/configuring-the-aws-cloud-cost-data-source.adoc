@@ -1,0 +1,50 @@
+---
+permalink: howto/configuring-the-aws-cloud-cost-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: AWS Cloud Costデータソースは、Insightのデータソースと同様に設定します。 
+---
+= AWS Cloud Costデータソースを設定しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AWS Cloud Costデータソースは、Insightのデータソースと同様に設定します。
+
+
+
+== 作業を開始する前に
+
+Amazon AWSアカウントのセットアップとInsightのデータ収集の準備が完了している必要があります。また、次の情報を入手しておく必要があります。
+
+* レポート名（ Report Name ）
+* S3バケット名
+* S3バケットが配置されているAWSリージョン。
+* レポートパスプレフィックス
+
+
+
+
+== このタスクについて
+
+AWSアカウントの準備が整い、適切な権限が設定されたら、課金レポートデータを収集するようにOnCommand Insight を設定できます。
+
+[NOTE]
+====
+課金データの取得元となる課金対象のユーザ/アカウントごとに、個別のAWS Cloud Costデータソースを追加する必要があります。
+
+====
+
+
+== 手順
+
+. OnCommand Insight に管理者としてログインします。
+. [Admin]*>*[Data sources]*をクリックして、[Insight Data Source]ページを開きます。
+. 新しいデータソースを追加するには、*+追加*をクリックします。Amazon *を選択し、* AWS Cloud Cost *を選択します。
+. [Configuration]*セクションで、_Report name_、_S3 Bucket_name、_S3 Region_（S3バケットが存在するリージョンを指定する必要があります）、_Report path prefix_、_AWS IAM Access Key ID_、および_AWS IAM Secret Access Key _を入力します。不明な点がある場合は、クラウドプロバイダまたはAWSアカウントの所有者に問い合わせてください。
+. このチェックボックスをオンにすると、InsightデータソースでAPI要求とデータ転送がAWSから課金されることを確認できます。
+. [Advanced Configuration]*で、HTTP接続とソケットタイムアウトを入力します。デフォルトは 300 秒です。
+. [ 保存（ Save ） ] をクリックします。
+

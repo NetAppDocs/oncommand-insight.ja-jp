@@ -1,0 +1,19 @@
+---
+permalink: dwh/data-warehouse-components.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseには複数のコンポーネントがあります。 
+---
+= Data Warehouseのコンポーネント
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseには複数のコンポーネントがあります。
+
+* Data Warehouseポータル
+* OnCommand Insight Reporting Portalの略
+* レポートオーサリングツール
+

@@ -1,0 +1,87 @@
+---
+permalink: config-admin/generic-emc-ecc-storagescope-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'EMC ECC StorageScopeデバイスには"5.x"6.0"6.1の3種類のデータ・ソースがあります' 
+---
+= EMC ECC StorageScopeデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EMC ECC StorageScopeデバイスには'5.x'6.0'6.1の3種類のデータ・ソースがあります
+
+
+
+== 設定
+
+[NOTE]
+====
+このデータコレクタは、OnCommand Insight 7.3.11以降では使用できなくなりました。
+
+====
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+ECCサーバ
+ a| 
+ECCサーバのIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+ECCサーバのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+ECCサーバのパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+ECCポート
+ a| 
+ECCサーバに使用するポート
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは30分）
+
+
+
+ a| 
+データベースに接続するプロトコル
+ a| 
+データベースへの接続に使用されるプロトコル
+
+
+
+ a| 
+ファイルシステム情報を照会します
+ a| 
+WWNエイリアスとファイルシステムの詳細を取得する場合に選択します。
+
+|===

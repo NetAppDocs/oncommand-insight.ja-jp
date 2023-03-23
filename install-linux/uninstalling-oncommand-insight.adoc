@@ -1,0 +1,16 @@
+---
+permalink: install-linux/uninstalling-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 必要に応じて、OnCommand Insight コンポーネントをアンインストールできます。OnCommand Insight コンポーネントは個別にアンインストールする必要があります。 
+---
+= OnCommand Insight をアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要に応じて、OnCommand Insight コンポーネントをアンインストールできます。OnCommand Insight コンポーネントは個別にアンインストールする必要があります。
+
+各コンポーネントは個別にアンインストールされます。

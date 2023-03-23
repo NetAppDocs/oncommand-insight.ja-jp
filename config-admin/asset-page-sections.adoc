@@ -1,0 +1,14 @@
+---
+permalink: config-admin/asset-page-sections.html 
+sidebar: sidebar 
+keywords:  
+summary: アセットページには、アセットに関連する情報を含む複数のセクションが表示されます。表示されるセクションはアセットのタイプによって異なります。 
+---
+= アセットページのセクション
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アセットページには、アセットに関連する情報を含む複数のセクションが表示されます。表示されるセクションはアセットのタイプによって異なります。

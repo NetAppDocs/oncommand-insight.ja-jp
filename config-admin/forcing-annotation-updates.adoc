@@ -1,0 +1,29 @@
+---
+permalink: config-admin/forcing-annotation-updates.html 
+sidebar: sidebar 
+keywords:  
+summary: アノテーションを変更したあとすぐにレポートで使用するには、いずれかのアノテーション強制オプションを使用します。 
+---
+= アノテーションの更新を強制します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アノテーションを変更したあとすぐにレポートで使用するには、いずれかのアノテーション強制オプションを使用します。
+
+
+
+== 手順
+
+. Web UIで、*[Admin]*をクリックし、*[Troubleshooting]*を選択します。
+. ページの下部にある*[高度なトラブルシューティング]リンクをクリックします。
+. [アクション]タブをクリックします。
+. 次のいずれかのオプションを選択します。
++
+** * DWHアノテーションの更新*：Data Warehouseのアノテーションの更新をレポートに使用するように強制します。
+** * DWHアノテーションの更新（[Deleted]）*。Data Warehouseでアノテーションの更新（削除されたオブジェクトを含む）を強制的にレポートに使用します。
+
+
+

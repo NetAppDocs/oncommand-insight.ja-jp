@@ -1,0 +1,14 @@
+---
+permalink: install-windows/performing-the-software-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: 必要な準備作業がすべて完了したら、該当するインストールパッケージをダウンロードして各サーバで実行することで、Insightのすべてのコンポーネントを新しいリリースにアップグレードできます。 
+---
+= ソフトウェアのアップグレードを実行します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要な準備作業がすべて完了したら、該当するインストールパッケージをダウンロードして各サーバで実行することで、Insightのすべてのコンポーネントを新しいリリースにアップグレードできます。

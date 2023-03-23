@@ -1,0 +1,16 @@
+---
+permalink: install-windows/missing-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 機能ごとに異なるライセンスが必要です。OnCommand Insight に表示される内容は、インストールされているライセンスによって制御されます。各ライセンスで制御される機能については、「OnCommand Insight ライセンス」セクションを参照してください。 
+---
+= ライセンスがありません
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 機能ごとに異なるライセンスが必要です。OnCommand Insight に表示される内容は、インストールされているライセンスによって制御されます。各ライセンスで制御される機能については、「OnCommand Insight ライセンス」セクションを参照してください。
+
+各ライセンスで制御される機能については、「OnCommand Insight ライセンス」セクションを参照してください。

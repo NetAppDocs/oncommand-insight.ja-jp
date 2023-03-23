@@ -1,0 +1,173 @@
+---
+permalink: config-admin/netapp-solidfire-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: NetApp SolidFire データソースでは、インベントリとパフォーマンスの両方の収集について、iSCSIとFibre Channel SolidFire の両方の構成がサポートされます。 
+---
+= NetApp SolidFire データソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp SolidFire データソースでは、インベントリとパフォーマンスの両方の収集について、iSCSIとFibre Channel SolidFire の両方の構成がサポートされます。
+
+SolidFire データソースでは、SolidFire REST APIを利用します。データソースが配置されているAcquisition Unitから、SolidFire クラスタ管理IPアドレスのTCPポート443へのHTTPS接続を開始できる必要があります。データソースには、SolidFire クラスタに対してREST APIクエリを実行するためのクレデンシャルが必要です。
+
+
+
+== 用語集
+
+OnCommand Insight では、NetApp SolidFire データソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ドライブ
+ a| 
+ディスク
+
+
+
+ a| 
+クラスタ
+ a| 
+ストレージ
+
+
+
+ a| 
+ノード
+ a| 
+ストレージノード
+
+
+
+ a| 
+ボリューム
+ a| 
+ボリューム
+
+
+
+ a| 
+Fibre Channel Port（ファイバチャネルポート）
+ a| 
+ポート
+
+
+
+ a| 
+ボリュームアクセスグループ、 LUN の割り当て
+ a| 
+ボリュームマップ
+
+
+
+ a| 
+iSCSI セッション
+ a| 
+ボリュームマスク
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+このデータソースの設定に関する要件は次のとおりです。
+
+* 管理仮想 IP アドレス
+* ポート 443
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+管理仮想 IP アドレス（ MVIP ）
+ a| 
+SolidFire クラスタの管理仮想 IP アドレス
+
+
+
+ a| 
+ユーザ名
+ a| 
+SolidFire クラスタへのログインに使用するユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+SolidFire クラスタへのログインに使用するパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+TCP ポート
+ a| 
+SolidFire サーバへの接続に使用するTCPポート（デフォルトは443）
+
+
+
+ a| 
+接続タイムアウト（秒）
+ a| 
+接続タイムアウト（デフォルトは60秒）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 300 秒）
+
+|===
+
+
+== トラブルシューティング
+
+SolidFire からエラーが報告されると、次のようにOnCommand Insight に表示されます。
+
+`An error message was received from a SolidFire device while trying to retrieve data. The call was <method> (<parameterString> ). The error message from the device was (check the device manual): <message>`
+
+ここで、
+
+* method> は、 GET や PUT などの HTTP メソッドです。
+* parameterString> は、 REST 呼び出しに含まれていたパラメータをカンマで区切ったリストです。
+* <message> は、エラーメッセージとして返されたデバイスです。
+

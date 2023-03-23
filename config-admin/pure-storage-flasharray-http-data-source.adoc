@@ -1,0 +1,156 @@
+---
+permalink: config-admin/pure-storage-flasharray-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Pure Storage FlashArray\（HTTP\）データソースは、Pure Storage Flash Arrayから情報を収集するために使用されます。Insightでは、インベントリとパフォーマンスの両方の収集がサポートされます。 
+---
+= Pure Storage FlashArrayデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pure Storage FlashArray（HTTP）データソースは、Pure Storage Flash Arrayから情報を収集するために使用します。Insightでは、インベントリとパフォーマンスの両方の収集がサポートされます。
+
+
+
+== 用語集
+
+OnCommand Insight では、Pure Storage FlashArrayデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ドライブ（ SSD ）
+ a| 
+ディスク
+
+
+
+ a| 
+配列
+ a| 
+ストレージ
+
+
+
+ a| 
+コントローラ
+ a| 
+ストレージノード
+
+
+
+ a| 
+ボリューム
+ a| 
+ボリューム
+
+
+
+ a| 
+ポート
+ a| 
+ポート
+
+
+
+ a| 
+LUNマップ（ホスト、ホストグループ、ターゲットポート）
+ a| 
+ボリュームマップ、ボリュームマスク
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+* ストレージシステムの IP アドレス
+* Pure ストレージシステムの Administrator アカウントのユーザ名とパスワード。
+* ポート要件： HTTP / HTTPS / 443
+
+
+
+
+== 設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+FlashArrayホスト
+ a| 
+FlashArray管理サーバのIIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+FlashArray管理サーバのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+FlashArray管理サーバのパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+接続タイプ
+ a| 
+管理サーバ
+
+
+
+ a| 
+TCP ポート
+ a| 
+FlashArrayサーバへの接続に使用するTCPポート（デフォルトは443）
+
+
+
+ a| 
+接続タイムアウト（秒）
+ a| 
+接続タイムアウト（デフォルトは60秒）
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスポーリングの間隔（デフォルトは300秒）
+
+|===

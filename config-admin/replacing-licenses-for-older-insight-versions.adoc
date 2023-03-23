@@ -1,0 +1,16 @@
+---
+permalink: config-admin/replacing-licenses-for-older-insight-versions.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightの以前のバージョンとの下位互換性がない新しいバージョンを購入した場合は、古いライセンスを新しいライセンスに置き換える必要があります。 
+---
+= Insightの旧バージョンのライセンスの交換
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightの以前のバージョンとの下位互換性がない新しいバージョンを購入した場合は、古いライセンスを新しいライセンスに置き換える必要があります。
+
+新しいライセンスをインストールする場合は、ライセンスキーのテキストを保存する前に*置換*操作を選択する必要があります。

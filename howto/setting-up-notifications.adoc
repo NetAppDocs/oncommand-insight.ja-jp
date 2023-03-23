@@ -1,0 +1,16 @@
+---
+permalink: howto/setting-up-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: パフォーマンスポリシー、グローバルパス、容量違反などのイベントがトリガーされたときに、Eメール、SNMP、syslogを使用して通知を送信するようにInsightを設定できます。また、データソースエラーやAcquisition Unitの障害など、システムレベルのイベントに関するEメール通知を送信するようにInsightを設定することもできます。 
+---
+= 通知を設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+パフォーマンスポリシー、グローバルパス、容量違反などのイベントがトリガーされたときに、Eメール、SNMP、syslogを使用して通知を送信するようにInsightを設定できます。また、データソースエラーやAcquisition Unitの障害など、システムレベルのイベントに関するEメール通知を送信するようにInsightを設定することもできます。
+
+これらは基本的な手順です。通知の詳細については、「Configuration and administration」>「Insight configuration and administration」>「Setting up Insight」を参照してください。

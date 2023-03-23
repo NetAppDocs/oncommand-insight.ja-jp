@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-features.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight データウェアハウスは、複数のデータマートで構成される独立したデータベースです。 
+---
+= Data Warehouseの機能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight データウェアハウスは、複数のデータマートで構成される独立したデータベースです。
+
+Data Warehouseには次の機能があります。
+
+* 現在と過去の設定およびインベントリデータ。予測や計画に役立つトレンドレポートを作成できます
+* 複数の多次元履歴データマートと、最新のみのInventoryデータマートが追加されています
+* 事前定義クエリまたはユーザー定義クエリ用に最適化されたデータベース
+* サードパーティのレポートエンジンやビジネスインテリジェンスエンジンと統合するためのプラットフォーム。次のようなものがあります。
++
+** 構成管理データベース
+** 財務会計システム
+** 資産管理システム
+
+
+

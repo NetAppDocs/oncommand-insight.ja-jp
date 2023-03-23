@@ -1,0 +1,16 @@
+---
+permalink: dwh/welcome-to-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight データウェアハウスは、複数のOnCommand Insight サーバのデータを格納し、照会や分析に使用する共通の多次元データモデルに変換する、一元化されたリポジトリです。 
+---
+= OnCommand Insight データウェアハウスへようこそ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight データウェアハウスは、複数のOnCommand Insight サーバのデータを格納し、照会や分析に使用する共通の多次元データモデルに変換する、一元化されたリポジトリです。
+
+OnCommand Insight データウェアハウスでは、複数のデータマートで構成されるオープンデータベースにアクセスして、容量やパフォーマンスに関するカスタムレポート（チャージバックレポート、履歴データを使用したトレンドレポート、消費分析レポート、予測レポートなど）を生成できます。

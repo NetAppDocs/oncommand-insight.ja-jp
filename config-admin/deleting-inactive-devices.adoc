@@ -1,0 +1,37 @@
+---
+permalink: config-admin/deleting-inactive-devices.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用されていないデバイスを削除すると、データをクリーンに保ち、ナビゲートしやすくなります。 
+---
+= 非アクティブなデバイスの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用されていないデバイスを削除すると、データをクリーンに保ち、ナビゲートしやすくなります。
+
+
+
+== このタスクについて
+
+Insightから非アクティブなデバイスを削除するには、次の手順を実行します。
+
+
+
+== 手順
+
+. 新しいクエリを作成するか、既存のクエリを開きます。
+. [_generic device_]、[_host_]、[_storage_]、[_switch_]、または[_tape_asset]のいずれかのタイプを選択します。
+. 「* is active *」のフィルタを追加し、フィルタを「* No *」に設定します。
++
+結果テーブルには、アクティブでないアセットのみが表示されます。
+
+. 削除するデバイスを選択します。
+. [Actions]ボタンをクリックし、[Delete Inactive Devices]を選択します。
++
+非アクティブなデバイスは削除され、Insightに表示されなくなります。
+
+

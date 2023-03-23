@@ -1,0 +1,10 @@
+---
+section: overview
+title: OnCommand Insight とは
+entries:
+- title: OnCommand Insight の概要
+  url: "/overview/oncommand-insight-overview.html"
+- title: Insightアーキテクチャ
+  url: "/overview/insight-architecture.html"
+- title: 管理者、マネージャー、プランナーがInsightをどのように使用するか
+  url: "/overview/insight-for-administrators-and-planners.html"

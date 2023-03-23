@@ -1,0 +1,14 @@
+---
+permalink: install-windows/uninstalling-the-insight-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Data WarehouseおよびRemote Acquisitionソフトウェアの新しいバージョンをインストールするには、古いバージョンをアンインストールする必要があります。この処理は、これらのコンポーネントをアップグレードする前に実行する必要があります。Insight Serverのソフトウェアは、インプレースアップグレード時にアンインストールされます。 
+---
+= ソフトウェアをアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data WarehouseおよびRemote Acquisitionソフトウェアの新しいバージョンをインストールするには、古いバージョンをアンインストールする必要があります。この処理は、これらのコンポーネントをアップグレードする前に実行する必要があります。Insight Serverのソフトウェアは、インプレースアップグレード時にアンインストールされます。

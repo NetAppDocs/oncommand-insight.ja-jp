@@ -1,0 +1,22 @@
+---
+permalink: howto/servicenow-integration-elevate-role.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightと統合するには、ServiceNowのロールをsecurity_adminに昇格する必要があります。 
+---
+= ロールを昇格します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightと統合するには、ServiceNowのロールをsecurity_adminに昇格する必要があります。
+
+
+
+== 手順
+
+. 管理者権限でServiceNowインスタンスにログインします。
+. [システム管理者]*ドロップダウンで*[ロールの昇格]*を選択し、自分のロールをsecurity_adminに昇格します。[OK] をクリックします。
+

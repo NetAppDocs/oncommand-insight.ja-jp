@@ -1,0 +1,282 @@
+---
+permalink: config-admin/hds-hicommand-devicemanager-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: HDS HiCommandおよびHiCommand Liteデータソースでは、HiCommand Device Managerサーバがサポートされます。OnCommand Insight は、標準のHiCommand APIを使用してHiCommandデバイスマネージャサーバと通信します。 
+---
+= HDS HiCommand Device Managerデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HDS HiCommandおよびHiCommand Liteデータソースでは、HiCommand Device Managerサーバがサポートされます。OnCommand Insight は、標準のHiCommand APIを使用してHiCommandデバイスマネージャサーバと通信します。
+
+
+
+== 用語集
+
+OnCommand Insight では、HDS HiCommandおよびHiCommand Liteデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+PDEV
+ a| 
+ディスク
+
+
+
+ a| 
+ジャーナルプール
+ a| 
+ディスクグループ
+
+
+
+ a| 
+ストレージアレイ
+ a| 
+ストレージ
+
+
+
+ a| 
+Port Controller の略
+ a| 
+ストレージノード
+
+
+
+ a| 
+アレイグループ 'DP プール
+ a| 
+ストレージプール
+
+
+
+ a| 
+論理ユニット、 LDEV
+ a| 
+ボリューム
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== インベントリの要件
+
+* HiCommand Device Manager サーバの IP アドレス
+* HiCommand Device Manager ソフトウェアおよびピアの権限に対する読み取り専用のユーザ名とパスワード
+* ポート要件： 2001 （ http ）または 2443 （ https ）
+* アクセスの検証：
++
+** ピアのユーザ名とパスワードを使用してHiCommand Device Managerソフトウェアにログインします。
+** HiCommand Device Manager APIへのアクセスを確認します。 `telnet <HiCommand Device_Manager_server_ip\> 2001`
+
+
+
+
+
+
+== パフォーマンス要件
+
+* HDS USP 、 USP V 、および VSP のパフォーマンス
++
+** Performance Monitor のライセンスが必要です。
+** 監視スイッチが有効になっている必要があります。
+** エクスポートツール (`Export.exe`）をOnCommand Insight サーバにコピーする必要があります。
+** エクスポートツールのバージョンとターゲットアレイのマイクロコードのバージョンが一致している必要があります。
+
+
+* HDS AMSのパフォーマンス
++
+** Performance Monitorのライセンスが必要です。
+** Storage Navigator Modular 2（SNM2）CLIユーティリティがOnCommand Insight サーバにインストールされている必要があります。
+** 次のコマンドを使用して、OnCommand Insight でパフォーマンスを取得する必要があるAMS、WMS、SMSのすべてのストレージアレイを登録する必要があります。
++
+
+
+** 登録したすべてのアレイがこのコマンドの出力に表示されていることを確認する必要があります。 `auunitref.exe`。
+
+
+
+
+
+
+== 設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+HiCommand サーバ
+ a| 
+HiCommand Device Manager サーバの IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+HiCommand Device Manager サーバのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+HiCommand Device Manager サーバのパスワード
+
+
+
+ a| 
+デバイス - VSP G1000 （ R800 ）、 VSP （ R700 ）、 HUS VM （ HM700 ）、および USP ストレージ
+ a| 
+VSP G1000 （ R800 ）、 VSP （ R700 ）、 HUS VM （ HM700 ）、および USP ストレージのデバイスリスト。各ストレージには以下が必要です。
+
+* Array's IP：ストレージのIPアドレス
+* User Name：ストレージのユーザ名
+* Password：ストレージのパスワード
+* Folder Containing Export Utility JAR Files（エクスポートユーティリティを含むフォルダ）：エクスポートユーティリティを含むフォルダ `.jar` ファイル
+
+
+
+
+ a| 
+SNM2Devices - WMS/SMS/AMS ストレージ
+ a| 
+WMS / SMS / AMS ストレージのデバイスリスト。各ストレージには以下が必要です。
+
+* Array's IP：ストレージのIPアドレス
+* Storage Navigator CLI Path：SNM2 CLIパス
+* Account Authentication Valid：有効なアカウント認証を選択する場合に選択します
+* User Name：ストレージのユーザ名
+* Password：ストレージのパスワード
+
+
+
+
+ a| 
+「 Tuning Manager 」を「 Performance 」に選択します
+ a| 
+パフォーマンスに合わせてTuning Managerを選択し、他のパフォーマンスオプションを上書きします
+
+
+
+ a| 
+Tuning Manager Host （ホストのチューニング）
+ a| 
+Tuning Manager の IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+Tuning Manager ポート
+ a| 
+Tuning Manager に使用するポート
+
+
+
+ a| 
+Tuning Manager のユーザ名
+ a| 
+Tuning Manager のユーザ名
+
+
+
+ a| 
+Tuning Manager パスワード
+ a| 
+Tuning Managerのパスワード
+
+|===
+[NOTE]
+====
+HDS USP、USP V、およびVSPでは、どのディスクも複数のアレイグループに属することができます。
+
+====
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+HiCommand Server ポート
+ a| 
+HiCommand Device Manager に使用するポート
+
+
+
+ a| 
+HTTPs が有効です
+ a| 
+HTTPS を有効にする場合に選択します
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリのポーリング間隔（デフォルトは 40 分）
+
+
+
+ a| 
+「除外」または「含める」を選択してリストを指定します
+ a| 
+以下のリストにあるアレイをデータの収集時に対象に含めるか除外するかを指定します
+
+
+
+ a| 
+デバイスを除外または含める
+ a| 
+対象に含めるか除外するデバイスの ID またはアレイ名をカンマで区切ったリスト
+
+
+
+ a| 
+ホストマネージャを照会します
+ a| 
+ホストマネージャを照会する場合に選択します
+
+
+
+ a| 
+HTTPタイムアウト（秒）
+ a| 
+HTTP接続タイムアウト（デフォルトは60秒）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 300 秒）
+
+
+
+ a| 
+エクスポートのタイムアウト（秒）
+ a| 
+エクスポートユーティリティのタイムアウト（デフォルトは300秒）
+
+|===

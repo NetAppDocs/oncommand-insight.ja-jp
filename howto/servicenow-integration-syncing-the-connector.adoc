@@ -1,0 +1,23 @@
+---
+permalink: howto/servicenow-integration-syncing-the-connector.html 
+sidebar: sidebar 
+keywords:  
+summary: ServiceNow、Insight、およびコネクタを適切に設定したら、コネクタを同期できます。 
+---
+= コネクタを同期しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ServiceNow、Insight、およびコネクタを適切に設定したら、コネクタを同期できます。
+
+
+
+== 手順
+
+. cmdプロンプトを開き、\OCI2SNOWフォルダに移動します。
+. 次のコマンドを2回実行します。1回目の同期で項目が更新され、2回目の同期で関係が更新されます。 `oci_snow_sync.pyz sync`
+. ServiceNowインスタンスのStorage Serverテーブルに値が入力されていることを確認します。ストレージサーバを開き、そのストレージに関連するリソースが表示されていることを確認します。
+

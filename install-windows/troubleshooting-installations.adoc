@@ -1,0 +1,16 @@
+---
+permalink: install-windows/troubleshooting-installations.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight のインストールは、通常、インストールウィザードを使用して管理します。ただし、コンピュータ環境によっては、アップグレード中に問題が発生したり、競合が発生したりする可能性があります。 
+---
+= インストールのトラブルシューティング
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight のインストールは、通常、インストールウィザードを使用して管理します。ただし、コンピュータ環境によっては、アップグレード中に問題が発生したり、競合が発生したりする可能性があります。
+
+また、ソフトウェアのインストールに必要なOnCommand Insight ライセンスがすべてインストールされていることを確認する必要があります。

@@ -1,0 +1,32 @@
+---
+permalink: dwh/data-warehouse-software-components.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Data Warehouseには、複数のソフトウェアコンポーネントが含まれています。 
+---
+= Data Warehouseのソフトウェアコンポーネント
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Data Warehouseには、複数のソフトウェアコンポーネントが含まれています。
+
+* MySQL データベース
++
+データマートテーブルのバックエンドリポジトリ
+
+* IBM Cognos
++
+OnCommand Insight のレポート作成エンジン
+
+* Apache Derbyデータベース
++
+Cognosの設定とコンテンツの格納に使用されます
+
+* ワイルドフライ
++
+OnCommand Insight コンポーネントをホストするJava Enterpriseアプリケーションサーバー
+
+

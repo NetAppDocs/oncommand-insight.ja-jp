@@ -1,0 +1,21 @@
+---
+permalink: howto/integrating-with-servicenow.html 
+sidebar: sidebar 
+keywords: SNOW 
+summary: OnCommand Insight はServiceNow管理ソフトウェアと統合されており、製品が個別に提供するよりも大きな価値を提供します。 
+---
+= ServiceNowとの統合
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight はServiceNow管理ソフトウェアと統合されており、製品が個別に提供するよりも大きな価値を提供します。
+
+Insightでは、Pythonスクリプトを使用してデータをServiceNowと統合し、次の情報を同期できます。
+
+* ServiceNowサーバのストレージ資産データ
+* ServiceNowサーバのホストおよびVMのURL
+* ホスト/ VMとストレージの関係
+

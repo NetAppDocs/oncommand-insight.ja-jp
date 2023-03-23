@@ -1,0 +1,68 @@
+---
+permalink: dwh/issue-resolution-with-autosupport-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: ASUPのログをテクニカルサポートに送信して、トラブルシューティングの支援を受けることができます。Data WarehouseのASUPは自動的に実行されるように設定されます。Data Warehouseポータルでは、自動送信プロセスを無効にしたり、Data Warehouseデータベースのバックアップを含めるように指定したり、ASUPへの転送を開始したりできます。 
+---
+= ASUPを使用した問題 の解決
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASUPのログをテクニカルサポートに送信して、トラブルシューティングの支援を受けることができます。Data WarehouseのASUPは自動的に実行されるように設定されます。Data Warehouseポータルでは、自動送信プロセスを無効にしたり、Data Warehouseデータベースのバックアップを含めるように指定したり、ASUPへの転送を開始したりできます。
+
+ログの情報は、HTTPSプロトコルを使用してテクニカルサポートに転送されます。ASUPを使用してデータを転送するには、Insight ServerでASUPを最初に設定する必要があります。
+
+Data WarehouseからOnCommand Insight サーバにログが送信されます。このサーバは、Data Warehouseポータルの[Connectors]ページにリストされている最初のコネクタです。自動プロセスでは、次のファイルが送信されます。
+
+* Data Warehouseのログ。次のログが記録されます。
++
+** boot.log（バックアップを含む）
+** dwh.log（dwh.log.1などのバックアップを含む）
+** dhw_troubleshoot.log
+** dwh_upgrade.log（バックアップを含む）
+** WildFly.log（バックアップを含む）
+** ldap.log（バックアップを含む）
+** Data Warehouse管理データベースのSQLダンプ
+** mysql：my.cnf、.err、およびスロークエリのログ
+** 完全なInnoDBステータス
+
+
+* Cognosのログ。次のログが記録されます。
++
+** cognos-logs.zip
++
+にあるCognosログファイルが含まれています `<install>\cognos\c10_64\logs` ディレクトリ。また、Cognosで生成されるログ、およびOnCommand Insight Reportingに対するユーザのログインとログアウトがすべて記録されたOnCommand のInsightAP.logファイルも含まれます。
+
+** DailyBackup.zip
++
+[Public Folders]にあるレポートアーティファクトのバックアップが含まれています。[マイフォルダ]の内容はこれには含まれません。
+
+** Cognos _``version``_``site name``_content_store.zip
++
+Cognos Content Storeのフルバックアップが格納されています。
+
+
+
+
+
+トラブルシューティングレポートは手動で生成できます。トラブルシューティングレポートの.zipファイルには、Data Warehouseに関する次の情報が含まれています。
+
+* boot.log（バックアップを含む）
+* dwh.log（dwh.log.1などのバックアップを含む）
+* dwh_upgrade.log（バックアップを含む）
+* wildfly.log（バックアップを含む）
+* ldap.log（バックアップを含む）
+* c：\Program Files\SANscreen\wildfly\standalone\log\dwh\内のダンプファイル
+* Data Warehouse管理データベースのSQLダンプ
+* mysql：my.cnf、.err、およびスロークエリのログ
+* 完全なInnoDBステータス
+
+
+[NOTE]
+====
+OnCommand Insight データベースのバックアップは、ASUPからテクニカルサポートに自動的に送信されません。
+
+====

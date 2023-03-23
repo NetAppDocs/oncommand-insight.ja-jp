@@ -1,0 +1,152 @@
+---
+permalink: config-admin/microsoft-hyper-v-wmi-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Microsoft Hyper-Vデータソースを設定するには、物理ホスト\（ハイパーバイザー\）のIPアドレスまたは解決可能なDNS名が必要です。このデータソースでは、PowerShell \（以前はWMI\）を使用します。 
+---
+= Microsoft Hyper-Vデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Microsoft Hyper-Vデータソースを設定するには、物理ホスト（ハイパーバイザー）のIPアドレスまたは解決可能なDNS名が必要です。このデータソースでは、PowerShell（以前はWMIを使用）を使用します。
+
+
+
+== 用語集
+
+OnCommand Insight では、Hyper-Vデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+Virtual hard diskの略
+ a| 
+仮想ディスク
+
+
+
+ a| 
+ホスト
+ a| 
+ホスト
+
+
+
+ a| 
+仮想マシン
+ a| 
+仮想マシン
+
+
+
+ a| 
+Cluster Shared Volume （ CSV ；クラスタ共有ボリューム）、パーティションボリューム
+ a| 
+データストア
+
+
+
+ a| 
+Internet SCSI Device 、 Multi Path SCSI LUN の略
+ a| 
+LUN
+
+
+
+ a| 
+ファイバチャネルポート
+ a| 
+ポート
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+* Hyper-V では、データ収集とリモートアクセス / 管理用にポート 5985 が開いている必要があります。
+* クラスタリンググループノードの IP アドレス
+* ハイパーバイザーのローカル管理者のユーザとパスワードです
+* 管理者レベルのユーザアカウント
+* ポートの要件:ポート135およびダイナミックTCPポートは、Windows 2003以前の場合は1024-65535、Windows 2008の場合は49152-65535に割り当てられます。
+* データコレクタがIPアドレスのみを参照している場合でも、DNS解決は成功する必要があります。
+* 各Hyper-Vハイパーバイザーで、すべてのホスト上のすべてのVMに対して「リソース計測」をオンにする必要があります。これにより、各ハイパーバイザーは、各ゲストで Cloud Insights に使用できるデータを増やすことができます。この値を設定しない場合は、各ゲストのパフォーマンスメトリックが取得される回数が少なくなります。リソース計測の詳細については、 Microsoft のドキュメントを参照してください。
++
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Hyper-V のリソース計測の概要"]
+
++
+https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["Enable - VMResourceMetering"]
+
+
+
+
+
+== 設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+物理ホストの IP アドレス
+ a| 
+物理ホスト（ハイパーバイザー）の IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+ハイパーバイザーの管理者のユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+ハイパーバイザーのパスワードです
+
+
+
+ a| 
+NT ドメイン
+ a| 
+クラスタ内のノードで使用される DNS 名
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは20分）
+
+
+
+ a| 
+接続タイムアウト（ミリ秒）
+ a| 
+接続タイムアウト（デフォルトは60000ミリ秒）
+
+|===

@@ -1,0 +1,103 @@
+---
+permalink: dwh/connecting-data-warehouse-to-oncommand-insight-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: コネクタは、OnCommand Insight データウェアハウスからOnCommand Insight サーバへの接続を確立します。Data Warehouseは1つ以上のOnCommand Insight サーバに接続できます。OnCommand Insight データベースへの接続またはデータベースからの接続を追加または削除できます。 
+---
+= Data WarehouseとOnCommand Insight サーバの接続
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+コネクタは、OnCommand Insight データウェアハウスからOnCommand Insight サーバへの接続を確立します。Data Warehouseは1つ以上のOnCommand Insight サーバに接続できます。OnCommand Insight データベースへの接続またはデータベースからの接続を追加または削除できます。
+
+
+
+== このタスクについて
+
+Data Warehouseでは、コネクタ名とともに使用されるグローバル一意IDがコネクタに割り当てられます。コネクタの追加後、Data WarehouseはOnCommand Insight データベースにOnCommand Insight のサイト名とバージョンを照会します。
+
+データソースへの接続にSSLを使用するかどうかを選択できます。セキュアなデータソースを選択すると、OnCommand Insight リモートデータベースとの通信時に接続にSSLが使用されます。
+
+Data Warehouseでは、複数のOnCommand Insight 環境のデータをまとめて表示できます。この統合データベースは'次の情報を提供します
+
+* Globally Unique Identifierの略
++
+各オブジェクトには、IDの競合を回避し、重複検出を可能にするために、個 々 のサイトで使用されるIDとは無関係なグローバル一意のIDが割り当てられます。これらのIDはすべてのデータマートで共有されます。このIDは、InventoryデータマートテーブルのComment列にあるGlobally Unique ID（GUID）です。
+
+* 重複はありません
++
+複数のOnCommand Insight データベースに存在するエンティティは'統合データベースに1回だけ登録されます
+
+* 現在のレコード
++
+統合データベース（Inventoryデータマート）のデータは常に最新です。
+
+
+
+接続を追加または編集するときに、接続をテストすることもできます。このテストでは、次のことが行われます。
+
+* ホストのIPアドレス、ユーザ名、およびパスワードを確認し、接続を確立できることを確認します。
++
+無効な接続は赤で表示されます。
+
+* OnCommand Insight のバージョンとData Warehouseのバージョンを比較します。
++
+バージョンに互換性がない場合は、エラーメッセージが表示されます。
+
+* 前回のData Warehouse処理で、OnCommand Insight データベースが別のデータベースに変更またはリストアされていないことが確認されます。変更があった場合は、エラーメッセージが表示されます。
+
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[コネクタ]*をクリックします。
++
+コネクタ(Connectors)テーブルは最初は空白で表示され'コネクタを追加するとコネクタ情報が表示されます
+
+. [新規（New）]*をクリックして、新しいコネクタを追加します。
+. 次のように入力します。
++
+** * 暗号化 *
++
+SSL暗号化を使用してData Warehouse要求を実行できるようにするには、を選択します `Enabled`。
+
+** * 名前 *
++
+[コネクタ（Connectors）]ビューでコネクタを識別するコネクタ名。
+
+** * ホスト *
++
+ホストの IP アドレス
+
+** * ユーザー名 *
++
+"`inventory`"
+
++
+[NOTE]
+====
+このユーザ名とパスワードを使用して、リモートOnCommand Insight データベースにログインし、データに対してクエリを実行できます。
+
+====
+** * パスワード *
++
+" SANscreen "
+
+
+
+. ホストへのTCP接続に使用するポートを指定するには、*[詳細設定]*をクリックし、TCPポート番号を入力します。
+. ホストへのHTTPS接続に使用するポート（デフォルトポート以外）を指定するには、*[詳細設定]*をクリックし、ポート番号を入力します。
+. [ * テスト * ] をクリックします。
++
+Data Warehouseで接続がテストされます。
+
+. [ 保存（ Save ） ] をクリックします。
++
+複数のインストールに対して複数の接続を入力すると、Data Warehouseは、データの抽出元となるデータベースごとに1つずつ、独立したビルドプロセスを呼び出します。このような構築プロセスでは、OnCommand Insight データベースからデータが抽出され、統合データベースにロードされます。
+
+

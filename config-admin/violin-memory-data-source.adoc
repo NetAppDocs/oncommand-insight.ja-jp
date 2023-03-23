@@ -1,0 +1,153 @@
+---
+permalink: config-admin/violin-memory-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Violin 6000-Series Flash Memory Array\（HTTP\）データソースは、Violin 6000シリーズフラッシュメモリアレイから分析と検証に使用するネットワーク情報を収集します。 
+---
+= Violin Flash Memory Arrayデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Violin 6000-Series Flash Memory Array（HTTP）データソースは、Violin 6000シリーズフラッシュメモリアレイから分析と検証に使用するネットワーク情報を収集します。
+
+
+
+== 用語集
+
+[NOTE]
+====
+このデータコレクタは、OnCommand Insight 7.3.11以降では使用できなくなりました。
+
+====
+OnCommand Insight では、Violin 6000-Series Flash Memory Arrayデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+Violin Intelligent Memory Module（VIMM）
+ a| 
+ディスク
+
+
+
+ a| 
+コンテナ
+ a| 
+ストレージ
+
+
+
+ a| 
+Memory Gatewayの略
+ a| 
+ストレージノード
+
+
+
+ a| 
+LUN
+ a| 
+ボリューム
+
+
+
+ a| 
+イニシエータ、イニシエータグループ、ターゲット
+ a| 
+ボリュームマップ、ボリュームマスク
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+* ストレージに対する読み取り専用のユーザ名とパスワードが必要です。
+* ストレージIPアドレスを使用してWebブラウザでアクセスを検証します。
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+Violin Memory Array Main GatewayのIPアドレスまたはFQDN
+ a| 
+Violin Memory Array Main GatewayのIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+Violin Memory Array Main Gatewayのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+Violin Memory Array Main Gatewayのパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+通信ポート
+ a| 
+Violinアレイとの通信に使用するポート
+
+
+
+ a| 
+HTTPSが有効です
+ a| 
+HTTPSを使用する場合に選択します
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは20分）
+
+
+
+ a| 
+接続タイムアウト（秒）
+ a| 
+接続タイムアウト（デフォルトは60秒）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 300 秒）
+
+|===

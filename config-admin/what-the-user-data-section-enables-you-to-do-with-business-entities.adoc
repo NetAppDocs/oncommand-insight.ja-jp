@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'ビジネスエンティティを定義して、環境のデータをより細かく追跡し、レポートすることができます。アセットページの[User Data]セクションで、アセットに割り当てられているビジネスエンティティを変更したり、アセットからビジネスエンティティを削除したりできます。' 
+---
+= [User Data]セクションを使用してビジネスエンティティを割り当てまたは変更する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ビジネスエンティティを定義して、環境のデータをより細かく追跡し、レポートすることができます。アセットページの[User Data]セクションで、アセットに割り当てられているビジネスエンティティを変更したり、アセットからビジネスエンティティを削除したりできます。
+
+
+
+== 手順
+
+. OnCommand Insight Web UIにログインします。
+. 次のいずれかの方法でアセットページを検索します。
++
+** Insightのツールバーで、をクリックします image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]をクリックし、アセットの名前を入力して、リストからアセットを選択します。
+** [Dashboards]*をクリックし、*[Assets Dashboard]*を選択してアセット名をクリックします。アセットページが表示されます。
+
+
+. 次の操作を実行できます。
++
+** 割り当てられたエンティティを変更するか、エンティティを割り当てるには、をクリックします image:../media/pencil-icon-landing-page-be.gif[""] をクリックし、リストからエンティティを選択します。
+** ビジネスエンティティを削除するには、をクリックします image:../media/trash-can-query.gif[""]。
++
+[NOTE]
+====
+アセットに割り当てられているアプリケーションから派生したエンティティを削除することはできません。
+
+====
+
+
+

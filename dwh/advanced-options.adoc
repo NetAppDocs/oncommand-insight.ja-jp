@@ -1,0 +1,14 @@
+---
+permalink: dwh/advanced-options.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseには、さまざまな高度なオプションがあります。 
+---
+= 詳細オプション
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseには、さまざまな高度なオプションがあります。

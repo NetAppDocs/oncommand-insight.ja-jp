@@ -1,0 +1,67 @@
+---
+permalink: dwh/viewing-switches-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: スイッチについて報告されるデータは、Inventoryデータマートから取得されます。すべてのスイッチについて、スイッチについて報告するコネクタごとに行が表示され、各スイッチの取得元であるプライマリコネクタも表示されます。 
+---
+= スイッチの統合に関する問題の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スイッチについて報告されるデータは、Inventoryデータマートから取得されます。すべてのスイッチについて、スイッチについて報告するコネクタごとに行が表示され、各スイッチの取得元であるプライマリコネクタも表示されます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、[**トラブルシューティング*]をクリックします。
+. Chassis Consolidation（シャーシ統合）*セクションで、* SAN Switches（SANスイッチ）*をクリックします。
+. 必要に応じて、テキストの一部を入力して* Filter *をクリックし、このビューでデータをフィルタリングします。フィルタをクリアするには、[フィルタ（Filter）]ボックスをクリアし、*[フィルタ（Filter）]*をクリックします。フィルタには、スイッチ名、スイッチIP、ベンダーモデル、またはOnCommand Insight オブジェクトIDを使用できます。
++
+フィルタでは大文字と小文字が区別されます。
+
+. 次のデータを確認します。
++
+** * GUID *
++
+このタイプの統合デバイス（ストレージアレイ）のグローバル一意識別子
+
+** * 名前 *
++
+Data Warehouseで表示される統合ストレージアレイの名前
+
+** * IP *
++
+統合ストレージアレイのIPアドレス
+
+** *ベンダーおよびモデル*
++
+統合ストレージアレイを販売するベンダーの名前とメーカーのモデル番号
+
+** *WWN*
++
+統合スイッチのWWN
+
+** *プリンシパルコネクタ*
++
+データの実際のソースであったOnCommand Insight コネクタの名前
+
+** *使用可能なコネクタ*
++
+統合ストレージ・アレイが存在するすべてのOnCommand Insight コネクタ
+
+** * Insight ID *
++
+プリンシパルコネクタが配置されているOnCommand Insight シャーシ上の統合ストレージアレイのID
+
+** * Insight Change Time *
++
+ストレージアレイのOnCommand Insight で更新が行われた日時、および同じストレージアレイが他のOnCommand Insight サーバで更新された日時
+
+
+
+

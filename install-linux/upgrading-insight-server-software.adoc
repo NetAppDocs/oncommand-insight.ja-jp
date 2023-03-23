@@ -1,0 +1,45 @@
+---
+permalink: install-linux/upgrading-insight-server-software.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight サーバの更新は、サーバにログインしたあとに確認できます。 
+---
+= Insight Serverソフトウェアをアップグレードしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight サーバの更新は、サーバにログインしたあとに確認できます。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Help]*アイコンをクリックします。
+. [Check for updates]*を選択します。
+. が表示されたら、* OK *をクリックします `Version is up to date` メッセージが表示されます。
+. 新しいバージョンが検出された場合は、メッセージボックスの*ここにダウンロード*リンクをクリックします。
+. [ダウンロード]ページで、[ダウンロード]*をクリックします。ダウンロードディレクトリの場所をメモします。
++
+NetApp Support Site から新しいバージョンをダウンロードすることもできます。
+
+. sudo権限があるアカウントでInsight Serverにログインします。
+. ダウンロードディレクトリに移動し、次のコマンドを入力します。
++
+`unzip oci-<version>-linux-x86_64.zip`
+
++
+インストールファイルのバージョン番号が正しいことを確認します。
+
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-install.sh` ：
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh --help`
+
+. インストールスクリプトを実行します。
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh`
+
+. ライセンス契約に同意し、画面の指示に従います。
+

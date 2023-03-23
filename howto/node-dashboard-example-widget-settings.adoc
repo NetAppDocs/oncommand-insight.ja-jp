@@ -1,0 +1,40 @@
+---
+permalink: howto/node-dashboard-example-widget-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: ノードダッシュボードのウィジェット設定と変数の例。 
+---
+= ノードダッシュボードウィジェットの設定例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ノードダッシュボードのウィジェット設定と変数の例。
+
+以下は、ストレージノードダッシュボードの各ウィジェットの設定例です。
+
+ノード利用率：
+
+image:../media/nodeutilchart.gif[""] image:../media/nodeutiltable.gif[""]
+
+ノードのレイテンシ：
+
+image:../media/nodelatencychart.gif[""] image:../media/nodelatencytable.gif[""]
+
+ストレージプールの利用率：
+
+image:../media/poolutilchart.gif[""] image:../media/poolutiltable.gif[""]
+
+ストレージプールのスループット：
+
+image:../media/poolthroughputchart.gif[""] image:../media/poolthroughputtable.gif[""]
+
+ボリュームレイテンシ：
+
+image:../media/vollatencychart.gif[""] image:../media/vollatencytable.gif[""]
+
+ボリュームIOPS：
+
+image:../media/voliopschart.gif[""] image:../media/voliopstable.gif[""]

@@ -1,0 +1,27 @@
+---
+permalink: config-admin/checking-the-status-of-server-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: このオプションを選択すると、OnCommand Insight サーバの情報（サーバメモリ、ディスクスペース、OS、CPU、OnCommand Insight データベースの情報（InnoDBデータサイズ、データベースが格納されているディスク空きスペースなど）が表示されます。 
+---
+= サーバリソースのステータスを確認しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このオプションを選択すると、OnCommand Insight サーバの情報（サーバメモリ、ディスクスペース、OS、CPU、OnCommand Insight データベースの情報（InnoDBデータサイズ、データベースが存在するディスク空きスペースなど）が表示されます。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックし、*[Troubleshooting]*を選択します。
+. ページ下部の[その他のタスク]領域で、* OnCommand Insight Portal*リンクをクリックします。
+. 次のページの[詳細設定]メニューで、*トラブルシューティング*リンクをクリックします。
+. [サーバリソースステータス]*をクリックします。
++
+*上級OnCommand Insight ユーザーの場合:*管理者は、情報サマリーの最後にあるボタンから、データベースとサーバーの応答時間を確認するためにいくつかのSQLテストを実行できます。このオプションは、サーバリソースが少ない場合に警告を表示します。
+
+

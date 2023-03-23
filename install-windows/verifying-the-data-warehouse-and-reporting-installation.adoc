@@ -1,0 +1,92 @@
+---
+permalink: install-windows/verifying-the-data-warehouse-and-reporting-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Data Warehouseのインストールが完了したら、DWHサービスとReportingサービスをすべてMicrosoft Windowsサービスで使用できることを確認する必要があります。 
+---
+= Data WarehouseとReportingのインストールを確認しています
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Data Warehouseのインストールが完了したら、DWHサービスとReportingサービスをすべてMicrosoft Windowsサービスで使用できることを確認する必要があります。
+
+
+
+== 手順
+
+. Windowsの[スタート]メニューから、[コントロールパネル][システムとセキュリティ]>[管理ツール]>[サービス]の順に選択します。
+. サービスのリストに次のエントリが表示されていることを確認します。
++
+|===
+
+
+| 名前/都道府県 | 説明 
+
+
+ a| 
+* SANscreen サーバ/実行中*
+ a| 
+OnCommand Insight DWHサーバ
+
+
+
+ a| 
+* MySQL /実行中*
+ a| 
+OnCommand Insight SQLデータベース
+
+
+
+ a| 
+* IBM Cognos / Running *
+ a| 
+IBM Cognos Content Databaseの略
+
+
+
+ a| 
+* DB2-DB2COPY1-DB2-0/Running *
+ a| 
+DB2データベースを管理します
+
+
+
+ a| 
+* DB2 Governor（DB2COPY1）/実行されていません*
+ a| 
+DB2データベースに接続されているアプリケーションの統計情報を収集します。
+
+
+
+ a| 
+* DB2 License Server（DB2COPY1）/実行されていません*
+ a| 
+DB2ライセンスコンプライアンスを監視します。
+
+
+
+ a| 
+* DB2 Management Service（DB2COPY1）/実行中*
+ a| 
+以前のバージョンのDB2コピーとの互換性のために、DB2レジストリエントリを管理します。
+
+
+
+ a| 
+*DB2リモートコマンドサーバ（DB2COPY1）/実行中*
+ a| 
+リモートDB2コマンドの実行をサポートします。
+
+
+
+ a| 
+* IBM Secure Shell Server for Windows / Not Running*
+ a| 
+IBM Secure Shell Server for Windowsの略
+
+|===
+

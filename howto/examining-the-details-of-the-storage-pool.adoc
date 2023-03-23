@@ -1,0 +1,16 @@
+---
+permalink: howto/examining-the-details-of-the-storage-pool.html 
+sidebar: sidebar 
+keywords: vm 
+summary: 'ストレージプールのランディングページを確認すると、関連するアセットと同じIOPSスパイクが表示されます。[Resources]セクションでは、このストレージプールのランディングページが旅行アプリケーションのボリュームにリンクしていることを確認できます。ボリュームをクリックすると、ボリュームのランディングページが開きます。' 
+---
+= ストレージプールを確認します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージプールのランディングページを確認すると、関連するアセットと同じIOPSスパイクが表示されます。[Resources]セクションでは、このストレージプールのランディングページが旅行アプリケーションのボリュームにリンクしていることを確認できます。ボリュームをクリックすると、ボリュームのランディングページが開きます。
+
+image::../media/storage-pool-landing-page.gif[ストレージプールのランディングページ]

@@ -1,0 +1,167 @@
+---
+permalink: config-admin/huawei-oceanstor-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight は、Huawei OceanStor\（REST / HTTPS\）データソースを使用して、Huawei OceanStorストレージのインベントリを検出します。 
+---
+= Huawei OceanStorデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight では、Huawei OceanStor（REST / HTTPS）データソースを使用して、Huawei OceanStorストレージのインベントリを検出します。
+
+
+
+== 用語集
+
+OnCommand Insight は、Huawei OceanStorから次のインベントリおよびパフォーマンス情報を取得します。OnCommand Insight で取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | OnCommand Insight 期間 
+
+
+ a| 
+ストレージプール
+ a| 
+ストレージプール
+
+
+
+ a| 
+File System の略
+ a| 
+内部ボリューム
+
+
+
+ a| 
+コントローラ
+ a| 
+ストレージノード
+
+
+
+ a| 
+FC ポート（マッピング済み）
+ a| 
+ボリュームマップ
+
+
+
+ a| 
+ホスト FC イニシエータ（マッピング済み）
+ a| 
+ボリュームマスク
+
+
+
+ a| 
+NFS / CIFS 共有
+ a| 
+共有
+
+
+
+ a| 
+共有
+ a| 
+iSCSI ターゲットノード
+
+
+
+ a| 
+iSCSI リンクイニシエータ
+ a| 
+iSCSI イニシエータノード
+
+
+
+ a| 
+ディスク
+ a| 
+ディスク
+
+
+
+ a| 
+LUN
+ a| 
+ボリューム
+
+|===
+
+
+== 要件
+
+このデータコレクタを設定して使用するための要件は次のとおりです。
+
+* デバイスIP
+* OceanStor デバイスマネージャにアクセスするためのクレデンシャル
+* ポート 8088 が使用可能であることが必要です
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+OceanStor Host IP アドレス
+ a| 
+OceanStor Device Manager の IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+OceanStor Device Manager へのログインに使用するユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+OceanStor Device Manager へのログインに使用するパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+TCP ポート
+ a| 
+OceanStor Device Managerへの接続に使用するTCPポート（デフォルトは8088）
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+接続タイムアウト（秒）
+ a| 
+接続タイムアウト（デフォルトは60秒）
+
+|===

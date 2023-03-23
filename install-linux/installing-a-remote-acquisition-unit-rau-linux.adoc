@@ -1,0 +1,57 @@
+---
+permalink: install-linux/installing-a-remote-acquisition-unit-rau-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 環境には1つ以上のRemote Acquisition Unit（RAU）をインストールできます。Acquisition Unitは、データソースと呼ばれるモジュールを介して\にアクセスし、データセンター内のさまざまなデバイスからデータを収集するネットワークで実行されます。 
+---
+= Remote Acquisition Unitのインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 環境には1つ以上のRemote Acquisition Unit（RAU）をインストールできます。Acquisition Unitは、（data_sources_というモジュールを介して）にアクセスし、データセンター内のさまざまなデバイスからデータを収集するネットワークで実行されます。
+
+
+
+== 作業を開始する前に
+
+インストールの前提条件をすべて満たしておく必要があります。
+
+OnCommand Insight サーバに変更情報を転送するには、少なくとも1つのポートが開いていて、RAUサーバとサーバの間で使用可能である必要があります。不明な場合は、RAUコンピュータでWebブラウザを開き、OnCommand Insight サーバに移動して検証します。
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+Acquisitionのデフォルトポートは443ですが、サーバのインストール時に変更されている可能性があります。接続に成功すると、OnCommand Insight 応答ページが表示され、RAUとOnCommand Insight サーバの間でポートが開いて使用可能であることが示されます。
+
+ネットワークアドレス変換またはポートアドレス変換（NAT/PAT:つまり、IPアドレスの変換）を使用する環境では、InsightではNATとデバイス間のRAUの挿入のみがサポートされます。
+
+* サポート対象：OnCommand Insight \-> NAT\-> RAU \->デバイス
+* サポート対象外：OnCommand Insight \-> RAU \-> NAT\->デバイス
+
+
+
+
+== 手順
+
+. sudo権限があるアカウントでRAUサーバにログインします。
+. インストールファイルが保存されているサーバー上のディレクトリに移動し、次のコマンドを入力します。
++
+`unzip oci-rau-<version>-linux-x86_64.zip`
+
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-install.sh`：
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh --help`
+
+. インストールスクリプトを実行します。
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh`
+
+. ライセンス契約を読んで同意し、画面の指示に従います。
++
+すべてのプロンプトを回答 にすると、インストールが開始されます。所要時間は約10分です（インストールされているアプリケーションによって異なります）。
+
+

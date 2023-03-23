@@ -1,0 +1,22 @@
+---
+permalink: howto/processing-cloud-cost-data-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightは、前月のAWS請求レポートから月に1回データを収集し、その月の最終的なクラウドコストを反映します。 
+---
+= AWSクラウドコストのデータをInsightで処理しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightは、前月のAWS請求レポートから月に1回データを収集し、その月の最終的なクラウドコストを反映します。
+
+AWS Cloud Costデータソースをセットアップしたあと、S3に対して請求レポートを生成済みの場合は、最初のデータソースポーリングの直後から最大3カ月分のデータが取得されます。
+
+Insightでは、AWSの「最後の」データを月に1回収集します。この収集は前月の終わりから数日後に行われるため、AWSは実際のデータを最終的に処理することができます。
+
+AWSの課金データはInsightのData Warehouseに送信され、レポート作成に使用されます。
+
+各データソースは、1つの課金対象アカウント/ユーザに対して設定する必要があることに注意してください。

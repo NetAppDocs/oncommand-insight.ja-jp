@@ -1,0 +1,27 @@
+---
+permalink: install-linux/uninstalling-the-anomaly-detection-engine-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 異常検出エンジンが不要になった場合はアンインストールできます。 
+---
+= 異常検出エンジンをアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+異常検出エンジンが不要になった場合はアンインストールできます。
+
+
+
+== 手順
+
+. sudo権限があるアカウントで、異常検出エンジンソフトウェアをインストールしたサーバにログインします。
+. OnCommand Insight ウィンドウがすべて閉じていることを確認します。
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `uninstall.sh` 次のコマンドを入力します。 `sudo /usr/bin/oci-prelert-uninstall.sh --help`
+. 次のコマンドを入力します。 `sudo /usr/bin/oci-prelert-uninstall.sh`
++
+アンインストールスクリプトが実行されます。プロンプトの指示に従います。
+
+

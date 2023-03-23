@@ -1,0 +1,79 @@
+---
+permalink: config-admin/netapp-storagegrid-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: このデータソースは、StorageGRID のインベントリとパフォーマンスのデータを収集します。 
+---
+= NetApp StorageGRID データソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このデータソースは、StorageGRID のインベントリとパフォーマンスのデータを収集します。
+
+
+
+== 要件
+
+このデータソースの設定に関する要件は次のとおりです。
+
+* StorageGRID ホストの IP アドレス
+* Metric Query ロールとテナントアクセスロールが割り当てられているユーザのユーザ名とパスワード
+* ポート 443
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+StorageGRID ホストIPアドレス（MVIP）
+ a| 
+StorageGRID のホストIPアドレス
+
+
+
+ a| 
+ユーザ名
+ a| 
+StorageGRID へのログインに使用する名前
+
+
+
+ a| 
+パスワード
+ a| 
+StorageGRID へのログインに使用するパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは900秒）
+
+|===

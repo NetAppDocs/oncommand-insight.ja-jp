@@ -1,0 +1,41 @@
+---
+permalink: install-windows/increasing-cognos-memory.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseデータベースをリストアする前に、レポート生成時間を短縮するために、CognosのJava割り当てを768MBから2、048MBに増やす必要があります。 
+---
+= Cognosメモリを拡張しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseデータベースをリストアする前に、レポート生成時間を短縮するために、CognosのJava割り当てを768MBから2、048MBに増やす必要があります。
+
+
+
+== 手順
+
+. Data Warehouseサーバで、管理者としてコマンドプロンプトウィンドウを開きます。
+. に移動します `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` ディレクトリ。
+. 次のコマンドを入力します。 `cogconfigw`
++
+[IBM Cognos Configuration]ウィンドウが表示されます。
+
++
+[NOTE]
+====
+IBM Cognos Configurationショートカットアプリケーションはを指しています `disk drive:\Program Files\SANscreen\cognos\c10_64\bin64\cognosconfigw.bat`。InsightがProgramFiles（スペースなし）ではなくProgram Files（スペースなし）ディレクトリ（デフォルト）にインストールされている場合は、を実行します `.bat` ファイルが機能しません。この場合は、アプリケーションのショートカットを右クリックして変更します `cognosconfigw.bat` 終了： `cognosconfig.exe` ショートカットを修正します。
+
+====
+. 左側のナビゲーションペインで、*[環境]*、*[IBM Cognos services]*の順に展開し、*[IBM Cognos]*をクリックします。
+. [Maximum memory for Tomcat in MB]*を選択し、768 MBを2048 MBに変更します。
+. IBM Cognos Configurationツールバーで、をクリックします image:../media/cognos-save-icon.gif[""]（保存）。
++
+Cognosが実行しているタスクを通知する情報メッセージが表示されます。
+
+. [* 閉じる * ] をクリックします。
+. IBM Cognos Configurationツールバーで、をクリックします image:../media/cognos-stop-icon.gif[""]（停止）。
+. IBM Cognos Configurationツールバーで、をクリックします image:../media/cognos-start-icon.gif[""]（開始）。
+

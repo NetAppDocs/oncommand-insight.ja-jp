@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-database-build-from-history-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight サーバの履歴データを使用してData Warehouseデータベースを構築できます。Data Warehouseでは、[build from history]のスケジュールに従って、OnCommand Insight サーバからデータが抽出され、Data Warehouseデータマートがビルドされます。' 
+---
+= Data Warehouseデータベースの履歴からのビルドの概要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight サーバの履歴データを使用してData Warehouseデータベースを構築できます。Data Warehouseでは、[build from history]のスケジュールに従って、OnCommand Insight サーバからデータが抽出され、Data Warehouseデータマートがビルドされます。
+
+このオプションでは特別なライセンスは必要なく、インベントリデータがビルドに含まれます。ただし、容量情報を作成するには、OnCommand Insight PlanライセンスとOnCommand Insight Performライセンスが必要です。
+
+履歴または現行のいずれかのビルドがすでに実行されている場合、最後のジョブより前の日付にビルドを実行することはできません。つまり、現在のビルドを実行した場合、履歴からビルドすることはできません。具体的には、2012年1月1日に終了した履歴からビルドを実行した場合、2011年にビルドを実行することはできません。
+
+履歴ビルドに1日または2日の失敗したETLプロセスが含まれていない場合は、この数日間だけ履歴をビルドしないでください。履歴データはより長い期間のものであり、1日か2日でトレンドが大きく変わることはありません。履歴から再構築する場合は、履歴全体を再構築します。
+
+[履歴からビルド]ビューには、すべてのコネクタからのすべてのビルドジョブが表示されます。たとえば、すべてのコネクタのインベントリジョブ、ビルド実行ごとのポート容量ジョブ、アノテーションジョブなどが表示されます。
+
+[Build from History]を設定する前に、次の作業を実行する必要があります。
+
+* コネクタを設定する必要があります。
+* アノテーションはOnCommand Insight に入力する必要があり、古いOnCommand Insight ポータルの*[Force Update of Annotations for DWH（DWHのアノテーションの強制更新）]オプション*を使用して手動で更新できます。または、設定後15分で自動的に更新されます。
+

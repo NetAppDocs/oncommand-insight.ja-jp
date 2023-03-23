@@ -1,0 +1,32 @@
+---
+permalink: dwh/oncommand-insight-data-warehouse-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: Data WarehouseポータルはWebベースのユーザインターフェイスです。このインターフェイスを使用して、データを取得するためのオプションを設定したり、固定スケジュールを設定したりできます。Data Warehouseポータルから、OnCommand Insight のレポートポータルにもアクセスできます。 
+---
+= Data Warehouseポータルを使用して実行できる操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data WarehouseポータルはWebベースのユーザインターフェイスです。このインターフェイスを使用して、データを取得するためのオプションを設定したり、固定スケジュールを設定したりできます。Data Warehouseポータルから、OnCommand Insight のレポートポータルにもアクセスできます。
+
+Data Warehouseポータルでは、次の操作を実行できます。
+
+* OnCommand Insight のReportingポータルにアクセスして、事前定義済みのレポートを表示したり、レポートオーサリングツールを使用してカスタムレポートを作成したりできます。
+* 複数のOnCommand Insight データベースを統合します。
+* OnCommand Insight サーバへの接続を管理します。
+* 現在のジョブまたは実行中のクエリのステータスを確認します。
+* Data Warehouseのビルドのスケジュールを設定します。
+* サイト名を編集します。
+* Data Warehouseのバージョンとアップグレード履歴（モジュールのバージョン、サイト、ライセンスなどの特定の情報を含む）を表示します。
+* アノテーションをインポートする。
+* 履歴からビルドを構成します。
+* Data Warehouseのドキュメントとデータベーススキーマを参照できます。
+* Data Warehouseデータベースをリセットします。
+* Data Warehouseデータベースをバックアップおよびリストアします。
+* Data Warehouseの問題のトラブルシューティング
+* ユーザアカウントを管理します。
+

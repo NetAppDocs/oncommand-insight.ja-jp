@@ -1,0 +1,38 @@
+---
+permalink: install-linux/upgrading-remote-acquisition-units.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight Serverソフトウェアをアップグレードしたあとに、Remote Acquisitionソフトウェアをアップグレードする必要があります。 
+---
+= Remote Acquisition Unitソフトウェアをアップグレード中です
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight Serverソフトウェアをアップグレードしたあとに、Remote Acquisitionソフトウェアをアップグレードする必要があります。
+
+
+
+== 手順
+
+. sudo権限があるアカウントでRemote Acquisition Unit（RAU）サーバにログインします。
+. NetApp Support Site からInsight RAUソフトウェアをダウンロードします。
+. ダウンロードディレクトリに移動し、次のコマンドを入力します。
++
+`unzip oci-rau-<version>-linux-x86_64.zip`
+
++
+インストールファイルのバージョン番号が正しいことを確認します。
+
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-install.sh` ：
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh --help`
+
+. インストールスクリプトを実行します。
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh`
+
+. ライセンス契約に同意し、画面の指示に従います。
+

@@ -1,0 +1,153 @@
+---
+section: install-windows
+title: Microsoft Windows用のインストール
+entries:
+- title: インストールの前提条件
+  url: "/install-windows/installation-prerequisites.html"
+  entries:
+  - title: 導入を計画します
+    url: "/install-windows/planning-the-installation.html"
+    entries:
+    - title: データソースのサポート情報
+      url: "/install-windows/data-source-support-information.html"
+    - title: デバイスの識別とデータソースの計画
+      url: "/install-windows/device-identification-and-data-source-planning.html"
+    - title: OnCommand Insight で生成されるネットワークトラフィック
+      url: "/install-windows/network-traffic-generated-by-oncommand-insight.html"
+  - title: ウィルススキャンソフトウェアの無効化
+    url: "/install-windows/disable-virus-scan-software.html"
+  - title: Insight Serverの要件
+    url: "/install-windows/insight-server-requirements.html"
+  - title: Data WarehouseおよびReportingサーバの要件
+    url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
+  - title: Remote Acquisition Unitサーバの要件
+    url: "/install-windows/remote-acquisition-unit-server-requirements.html"
+  - title: 異常検出の要件
+    url: "/install-windows/anomaly-detection-requirements.html"
+  - title: Insight Java UIの要件
+    url: "/install-windows/insight-java-ui-requirements.html"
+  - title: OnCommand Insight でサポートされているブラウザ
+    url: "/install-windows/insight-browser-support.html"
+- title: Insightのインストール手順
+  url: "/install-windows/oncommand-insight-installation-instructions.html"
+  entries:
+  - title: OnCommand Insight インストーラをダウンロードしています
+    url: "/install-windows/downloading-the-oncommand-insight-installer.html"
+  - title: OnCommand Insight サーバをインストールしています
+    url: "/install-windows/installing-the-oncommand-insight-server.html"
+  - title: OnCommand Insight Data WarehouseおよびReportingをインストールしています
+    url: "/install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html"
+    entries:
+    - title: IBM Cognosのドキュメントを参照してください
+      url: "/install-windows/locating-ibm-cognos-documentation.html"
+    - title: Data WarehouseとReportingのインストールを確認しています
+      url: "/install-windows/verifying-the-data-warehouse-and-reporting-installation.html"
+  - title: Remote Acquisition Unit（RAU）のインストール
+    url: "/install-windows/installing-a-remote-acquisition-unit-rau.html"
+    entries:
+    - title: Remote Acquisition Unitサービスを確認しています
+      url: "/install-windows/verifying-the-rau-service.html"
+    - title: Remote Acquisition Unitのインストールを検証しています
+      url: "/install-windows/validating-the-rau-installation.html"
+  - title: 異常検出ソフトウェアをインストールします
+    url: "/install-windows/installing-the-anomaly-detection-software.html"
+  - title: Ethernet Monitoring Unitのインストール
+    url: "/install-windows/installing-an-ethernet-monitoring-unit-linux.html"
+  - title: インストールを確認しています
+    url: "/install-windows/checking-the-installation.html"
+    entries:
+    - title: 新しいInsightサービスを確認しています
+      url: "/install-windows/verifying-new-oncommand-insight-services.html"
+    - title: Insightのログ
+      url: "/install-windows/insight-logs.html"
+    - title: Web UIへのアクセス
+      url: "/install-windows/opening-insight.html"
+    - title: Insightのライセンスをインストールします
+      url: "/install-windows/installing-your-insight-licenses.html"
+      entries:
+      - title: OnCommand Insight ライセンス
+        url: "/install-windows/oncommand-insight-licenses.html"
+  - title: インストールのトラブルシューティング
+    url: "/install-windows/troubleshooting-installations.html"
+    entries:
+    - title: ライセンスがありません
+      url: "/install-windows/missing-licenses.html"
+    - title: オンラインテクニカルサポートリクエストの送信
+      url: "/install-windows/submitting-an-online-technical-support-request.html"
+- title: OnCommand Insight のアップグレード
+  url: "/install-windows/upgrade-insight.html"
+  entries:
+  - title: Insightをバージョン7.3.12以降にアップグレードしています（Windows）
+    url: "/install-windows/upgrading-insight-to-version-7-3-12-or-later-windows.html"
+  - title: OnCommand Insight のアップグレードプロセスの概要
+    url: "/install-windows/overview-of-insight-upgrade-process.html"
+    entries:
+    - title: OnCommand Insight のアップグレードチェックリスト
+      url: "/install-windows/insight-upgrade-checklist.html"
+  - title: OnCommand Insight インストールパッケージのダウンロード
+    url: "/install-windows/downloading-the-installation-packages.html"
+  - title: データベースをバックアップしています
+    url: "/install-windows/backing-up-databases.html"
+    entries:
+    - title: Data Warehouseデータベースをバックアップしています
+      url: "/install-windows/backing-up-the-data-warehouse-database.html"
+    - title: OnCommand Insight データベースをバックアップしています
+      url: "/install-windows/backing-up-the-insight-server-database.html"
+  - title: セキュリティ設定をバックアップしています
+    url: "/install-windows/backing-up-the-security-configuration.html"
+  - title: Data Warehouseカスタムレポートをバックアップしています
+    url: "/install-windows/backing-up-custom-data-warehouse-reports.html"
+  - title: ソフトウェアのアップグレードを実行します
+    url: "/install-windows/performing-the-software-upgrade.html"
+    entries:
+    - title: Insightのアップグレード
+      url: "/install-windows/upgrading-insight.html"
+    - title: Data Warehouseをアップグレードしています
+      url: "/install-windows/upgrading-data-warehouse.html"
+      entries:
+      - title: Data Warehouseのアップグレード時にカスタムのCognos設定を保持
+        url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
+    - title: セキュリティ設定をバックアップしています
+      url: "/install-windows/back-up-the-security-configuration.html"
+    - title: Remote Acquisition Unitサーバをアップグレードします
+      url: "/install-windows/upgrading-remote-acquisition-servers.html"
+    - title: 異常検出エンジンをアップグレードしています
+      url: "/install-windows/upgrading-the-anomaly-detection-engine.html"
+  - title: アップグレード後の手順の実行
+    url: "/install-windows/completing-post-upgrade-tasks.html"
+    entries:
+    - title: データソースパッチをインストールしています
+      url: "/install-windows/installing-data-source-patches.html"
+    - title: OnCommand Insight のアップグレード後の証明書の置き換え
+      url: "/install-windows/replacing-a-certificate-after-upgrading.html"
+    - title: Cognosメモリを拡張しています
+      url: "/install-windows/increasing-cognos-memory.html"
+    - title: Data Warehouseデータベースをリストアしています
+      url: "/install-windows/restoring-the-data-warehouse-database.html"
+    - title: Data Warehouseカスタムレポートをリストアしています
+      url: "/install-windows/restoring-custom-data-warehouse-reports.html"
+    - title: Data Warehouseに履歴データがあることを確認する
+      url: "/install-windows/verifying-data-warehouse-has-historical-data.html"
+    - title: パフォーマンスアーカイブをリストアしています
+      url: "/install-windows/restoring-the-performance-archive.html"
+    - title: コネクタをテストします
+      url: "/install-windows/testing-the-connectors.html"
+    - title: 抽出、変換、読み込みのスケジュールを確認します
+      url: "/install-windows/verifying-the-extract-transform-and-load-process.html"
+    - title: ディスクモデルを更新しています
+      url: "/install-windows/updating-disk-models.html"
+    - title: ビジネスインテリジェンスツールが実行されていることを確認する
+      url: "/install-windows/verifying-that-business-intelligence-tools-are-running.html"
+  - title: アップグレードのトラブルシューティング
+    url: "/install-windows/troubleshooting-an-upgrade.html"
+- title: ソフトウェアをアンインストールしています
+  url: "/install-windows/uninstalling-the-insight-software.html"
+  entries:
+  - title: OnCommand Insight サーバをアンインストールしています
+    url: "/install-windows/uninstalling-insight.html"
+  - title: Data Warehouseソフトウェアをアンインストールしています
+    url: "/install-windows/uninstalling-the-data-warehouse-software.html"
+  - title: Remote Acquisition Unitソフトウェアをアンインストールしています
+    url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"
+  - title: 異常検出エンジンをアンインストールしています
+    url: "/install-windows/uninstalling-the-anomaly-detection-engine-linux.html"

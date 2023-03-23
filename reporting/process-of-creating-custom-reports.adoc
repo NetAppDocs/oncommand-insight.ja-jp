@@ -1,0 +1,21 @@
+---
+permalink: reporting/process-of-creating-custom-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: アドホックレポートを作成するプロセスには、いくつかのタスクが含まれます。 
+---
+= レポートの作成プロセス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アドホックレポートを作成するプロセスには、いくつかのタスクが含まれます。
+
+* レポートの結果を計画します。
+* 結果をサポートするデータを特定します。
+* データが格納されているデータモデル（ Chargeback データモデル、 Inventory データモデルなど）を選択します。
+* レポートのデータ要素を選択します。
+* 必要に応じて、レポート結果の書式設定、並べ替え、フィルタリングを行います。
+

@@ -1,0 +1,106 @@
+---
+permalink: dwh/viewing-oncommand-insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Data WarehouseとCognosのさまざまなログをOnCommand Insight で表示できます。 
+---
+= OnCommand Insight ログの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data WarehouseとCognosのさまざまなログをOnCommand Insight で表示できます。
+
+
+
+== このタスクについて
+
+トラブルシューティングとステータスの情報は、CognosとData Warehouseのログファイルで確認できます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*トラブルシューティング*をクリックします。
+. [ログ]*セクションで、*[ログファイル]*をクリックします。
++
+次のログファイルが表示されます。
+
++
+|===
+
+
+ a| 
+dwh.log
+
+
+
+ a| 
+Data Warehouseのジョブのステータスが表示されます
+
+
+
+ a| 
+wildfly.log
+
+
+
+ a| 
+WildFlyアプリケーションサーバーに関する情報を提供します
+
+
+
+ a| 
+dwh_upgradeログ
+
+
+
+ a| 
+Data Warehouseでのアップグレードに関する情報を提供します
+
+
+
+ a| 
+ldap.log
+
+
+
+ a| 
+LDAP認証に関連するメッセージを記録します
+
+
+
+ a| 
+dwh_troubleshoot.log
+
+
+
+ a| 
+DWHの問題のトラブルシューティングに役立つメッセージが記録されます
+
+
+
+ a| 
+sanscreenap.log
+
+
+
+ a| 
+サーバへの接続、Cognosリポジトリへの認証とアクセス、およびその他のプロセスに関する情報が表示されます
+
+
+
+ a| 
+cognosserver.log
+
+
+
+ a| 
+Cognosのログ
+
+|===
+. 表示するログファイルの名前をクリックします。
+

@@ -1,0 +1,180 @@
+---
+permalink: config-admin/configuring-insight-for-ldap-s.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight には、社内のLDAPドメインで設定されているLightweight Directory Access Protocol（LDAP\）を設定する必要があります。 
+---
+= LDAP用のInsightの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight は、Lightweight Directory Access Protocol（LDAP）設定を使用して、社内のLDAPドメインで設定する必要があります。
+
+LDAPまたはSecure LDAP（LDAPS）で使用するようにInsightを設定する前に、社内環境でのActive Directoryの設定をメモしておいてください。Insightの設定は、組織のLDAPドメイン設定と一致している必要があります。InsightをLDAPで使用するように設定する前に、以下の概念を確認し、LDAPドメイン管理者に問い合わせて、環境で使用する適切な属性を確認してください。
+
+すべてのSecure Active Directory（LDAPS）ユーザに対して、ADサーバ名は証明書で定義されているとおりに正確に使用する必要があります。セキュアADログインにIPアドレスを使用することはできません。
+
+[NOTE]
+====
+OnCommand Insight は、Microsoft Active DirectoryサーバまたはAzure AD経由でLDAPとLDAPSをサポートしています。その他のLDAP実装でも動作する可能性がありますが、Insightでは確認されていません。これらのマニュアルの手順は、Microsoft Active Directoryバージョン2または3 LDAP（Lightweight Directory Access Protocol）を使用していることを前提としています。
+
+====
+*ユーザープリンシパル名属性：*
+
+Insightでは、LDAPのUser PrincipalName属性（userPrincipalName）をユーザ名属性として使用します。ユーザープリンシパル名は、Active Directory(AD)フォレスト内でグローバルに一意であることが保証されていますが、多くの大規模な組織では、ユーザーのプリンシパル名がすぐにはわかりません。組織では、プライマリユーザー名に[ユーザープリンシパル名]属性の代わりに使用することがあります。
+
+次に'ユーザープリンシパル名属性フィールドの代替値を示します
+
+* * sAMAccountName *
++
+このユーザー属性は、Windows 2000 NT以前のレガシーユーザー名です。これは、ほとんどのユーザーが個人用Windowsマシンにログインするのに慣れているものです。これは、ADフォレスト全体でグローバルに一意であることが保証されていません。
+
++
+
+NOTE: sAMAccountNameは'ユーザープリンシパル名属性では大文字と小文字が区別されます
+
+* *メール*
++
+MS Exchangeを使用するAD環境では、この属性はエンドユーザーのプライマリ電子メールアドレスです。これは、userPrincipalName属性とは異なり、ADフォレスト全体でグローバルに一意である必要があります（エンドユーザーにも馴染みがあります）。メール属性は、MS Exchange以外のほとんどの環境には存在しません。
+
+* *紹介*
++
+LDAPリファーラルは、要求されたオブジェクト（より正確には、 オブジェクトが存在するディレクトリツリーのセクションを保持せず、オブジェクトを保持する可能性が高い場所をクライアントに与えます。次に、クライアントはこのリファーラルをドメインコントローラのDNS検索のベースとして使用します。理想的には、リファーラルは常にオブジェクトを保持するドメインコントローラを参照する。ただし、参照先ドメインコントローラが別のリファーラルを生成することは可能ですが、通常はオブジェクトが存在しないことを検出してクライアントに通知するのに時間はかかりません。
+
+
+
+
+TIP: 通常、ユーザプリンシパル名よりもsAMAccountNameが推奨されます。sAMAccountNameは、ドメイン内で一意です（ただし、ドメインフォレスト内で一意ではない場合もあります）が、通常、ログインに使用するドメインユーザの文字列です（例：_NetApp\username_）。識別名はフォレスト内で一意の名前ですが、通常はユーザによって認識されません。
+
+
+TIP: 同じドメインのWindowsシステム部分では、いつでもコマンドプロンプトを開き、setと入力して適切なドメイン名(USERDOMAIN=)を検索できます。OCIログイン名はになります `USERDOMAIN\sAMAccountName`。
+
+ドメイン名* mydomain.x.y.z.com *には、を使用します `DC=x,DC=y,DC=z,DC=com` をクリックします。
+
+* ポート * ：
+
+LDAPのデフォルトポートは389、LDAPSのデフォルトポートは636です
+
+LDAPSの一般的なURL： `ldaps://<ldap_server_host_name>:636`
+
+ログは次の場所にあります。``\\<install directory>\SANscreen\wildfly\standalone\log\ldap.log``
+
+デフォルトでは、次のフィールドに値が表示されます。Active Directory環境でこれらの変更が発生した場合は、InsightのLDAP設定で変更してください。
+
+|===
+
+
+ a| 
+ロール属性
+
+
+
+ a| 
+所属グループ
+
+
+
+ a| 
+Mail属性
+
+
+
+ a| 
+メール
+
+
+
+ a| 
+Distinguished Name属性
+
+
+
+ a| 
+distinguishedName
+
+
+
+ a| 
+リファーラル
+
+
+
+ a| 
+ついて来い
+
+|===
+*グループ：*
+
+OnCommand Insight サーバとDWHサーバで異なるアクセスロールを持つユーザを認証するには、Active Directoryでグループを作成し、OnCommand Insight サーバとDWHサーバでそれらのグループ名を入力する必要があります。以下のグループ名は一例です。InsightでLDAP用に設定する名前は、Active Directory環境用に設定した名前と一致している必要があります。
+
+|===
+
+
+| Insight Groupの略 | 例 
+
+
+ a| 
+Insight Server管理者グループ
+ a| 
+insight.server.admins
+
+
+
+ a| 
+Insight管理者グループ
+ a| 
+insight.admins
+
+
+
+ a| 
+Insightユーザグループ
+ a| 
+insight.users
+
+
+
+ a| 
+Insightゲストグループ
+ a| 
+インサイトゲスト
+
+
+
+ a| 
+Reporting Administrator Groupの略
+ a| 
+insight.report.admins
+
+
+
+ a| 
+Reporting Pro Authorsグループ
+ a| 
+insight.report.proauthors
+
+
+
+ a| 
+レポート作成者グループ
+ a| 
+insight.report.business.authors
+
+
+
+ a| 
+レポートコンシューマグループ
+ a| 
+洞察力レポートビジネス消費者
+
+
+
+ a| 
+レポート受信者グループ
+ a| 
+インサイトレポート受信者
+
+|===

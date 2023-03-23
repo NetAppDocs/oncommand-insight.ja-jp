@@ -1,0 +1,31 @@
+---
+permalink: howto/examining-the-internal-volume.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 内部ボリュームを確認しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+image::../media/greedy-vol1.gif[貪欲なvol1]
+
+内部ボリュームのランディングページには、次の情報が表示されます。
+
+* 内部ボリュームのパフォーマンスグラフは、レイテンシとIOPSの両方について、アプリケーションのパフォーマンスに表示されていたグラフと一致します。
+* 関連するアセットが表示される[Resources]セクションで、「Greedy」リソース（CDot_Boston：SP1：Vol_01）が特定されます。
+
+
+Greedyリソースは、Insightの相関分析で特定されます。システムを大量に消費しているリソースやパフォーマンスが低下しているリソースは、同じ共有リソースを使用する「ピア」です。GreedyリソースのIOPSまたは利用率は、デグレード状態のリソースのIOPSまたはレイテンシに悪影響を及ぼします。
+
+GreedyリソースとDegradedリソースは、仮想マシン、ボリューム、内部ボリュームのランディングページで特定できます。各ランディングページには、最大2つのGreedyリソースが表示されます。
+
+関連性のランキング（%）を選択すると、Greedyリソース分析の結果が表示されます。たとえば、Greedy Percentageの値をクリックすると、デグレード状態のアセットに対する処理に影響する処理がアセットに対して表示されます。次の例を参照してください。
+
+image::../media/greedy-percentage.gif[Greedyパーセンテージ]
+
+デグレード状態のリソースを特定したら、デグレード（%）のスコアを選択して、デグレード状態のリソースに影響している処理とリソースを特定できます。
+
+image::../media/guid-13582cf7-aedf-47d1-935e-edc7c5b1b921.gif[GUID 13582cf7 aedf 47d1 935e edc7c5b1b921]

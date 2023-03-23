@@ -1,0 +1,46 @@
+---
+permalink: howto/reporting-on-cloud-cost-data-task.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightで収集された月単位のクラウドコストデータはデータウェアハウスに送信され、Cloud Costデータマートでレポートに使用できます。 
+---
+= クラウドコストのデータをInsightでレポート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightで収集された月単位のクラウドコストデータはデータウェアハウスに送信され、Cloud Costデータマートでレポートに使用できます。
+
+
+
+== 作業を開始する前に
+
+AWSからクラウドコストデータを収集するようにデータソースを設定しておく必要があります。課金対象の各ユーザ/アカウントには、個別のデータソースが必要です。
+
+Insightでデータの収集を開始するまでに少なくとも36時間かかります。
+
+そのあとに少なくとも1回はETLを実行して、データをデータウェアハウスに送信します。
+
+
+
+== このタスクについて
+
+データが収集されてData Warehouseに送信されたら、事前設定された任意のレポートでデータを表示したり、カスタムレポートを作成したりできます。Insightのクラウドコストデータマートにデータが保存されます。
+
+事前設定されたレポートのいずれかでクラウドコストデータを表示するには、次の手順を実行します。
+
+
+
+== 手順
+
+. 次のいずれかの方法でInsight Reportingを開きます。
++
+** [Reporting Portal]アイコンをクリックします image:../media/oci-reporting-portal-icon.gif[""] InsightサーバのWeb UIまたはData Warehouse UIで使用します。
+** 次のURLを入力して、Reportingを直接起動します。 `https://<dwh_server_name\>:9300/p2pd/servlet/dispatch` または `https://<dwh_server_name\>:9300/bi (7.3.3 and later)`
+
+
+. Reportingにログインしたら、*[Public Folders]*をクリックし、*[Cloud Cost]*を選択します。
+. AWS請求データは、* Cloud Cost *フォルダにある利用可能なレポートで表示できます。また、* Packages *フォルダにある* Cloud Cost Datamart *を使用して独自のカスタムレポートを作成することもできます。
+

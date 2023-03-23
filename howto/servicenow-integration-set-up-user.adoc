@@ -1,0 +1,46 @@
+---
+permalink: howto/servicenow-integration-set-up-user.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightに接続してデータを同期するには、ServiceNowユーザを設定する必要があります。 
+---
+= ServiceNow統合-ユーザを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightに接続してデータを同期するには、ServiceNowユーザを設定する必要があります。
+
+
+
+== このタスクについて
+
+
+
+== 手順
+
+. ServiceNowでサービスアカウントを作成します。ServiceNowにログインし、* system security *>* users and groups *>* users *に移動します。[New]*をクリックします。
+. ユーザ名を入力します。この例では、統合ユーザとして「OCI2SNOW」を使用します。このユーザのパスワードを入力します。
++
+[NOTE]
+====
+この方法では、ドキュメント全体で「OCI2SNOW」という名前のサービスアカウントユーザを使用します。別のサービスアカウントを使用することもできますが、環境全体で一貫したアカウントであることを確認してください。
+
+====
+. メニューバーを右クリックし、*[保存]*をクリックします。これにより、ロールを追加するためにこのユーザにとどまることができます。
+. [編集]*をクリックし、このユーザに次のロールを追加します。
++
+** 資産
+** import_transformer
+** REST_SERVICE
+
+
+. [ 保存（ Save ） ] をクリックします。
+. 同じユーザをOnCommand Insight に追加する必要があります。Administrator権限を持つユーザとしてInsightにログインします。
+. * Admin *>* Setup *に移動し、* Users *タブをクリックします。
+. [操作]*ボタンをクリックし、*[ユーザーの追加]*を選択します。
+. nameに「OCI2SNOW」と入力します。上記で別のユーザ名を使用した場合は、その名前をここに入力します。上記のServiceNowユーザと同じパスワードを入力します。Eメールフィールドは空白のままにしてもかまいません。
+. このユーザに* User *ロールを割り当てます。[ 保存（ Save ） ] をクリックします。
+

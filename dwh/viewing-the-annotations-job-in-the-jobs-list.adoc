@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-annotations-job-in-the-jobs-list.html 
+sidebar: sidebar 
+keywords:  
+summary: '[Jobs]リストにアノテーションジョブを表示し、アノテーションの変更をData Warehouseデータマートに適用できます。' 
+---
+= [Jobs]リストでのアノテーションジョブの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[Jobs]リストにアノテーションジョブを表示し、アノテーションの変更をData Warehouseデータマートに適用できます。
+
+
+
+== 手順
+
+. Data Warehouseポータルに管理者としてログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[ジョブ]*をクリックします。
+

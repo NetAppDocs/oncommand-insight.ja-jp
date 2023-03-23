@@ -1,0 +1,171 @@
+---
+permalink: config-admin/importing-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: SANオブジェクト\（ストレージ、ホスト、仮想マシン\など）のアノテーションをCSVファイルで管理している場合は、その情報をOnCommand Insight にインポートできます。アプリケーション、ビジネスエンティティ、アノテーション（階層や建物など）をインポートできます。 
+---
+= アノテーション値のインポート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANオブジェクト（ストレージ、ホスト、仮想マシンなど）のアノテーションをCSVファイルで管理している場合は、その情報をOnCommand Insight にインポートできます。アプリケーション、ビジネスエンティティ、アノテーション（階層や建物など）をインポートできます。
+
+
+
+== このタスクについて
+
+次のルールが適用されます。
+
+* アノテーション値が空の場合、そのアノテーションはオブジェクトから削除されます。
+* ボリュームまたは内部ボリュームをアノテートする場合、オブジェクト名はストレージ名とボリューム名をダッシュと矢印（\->）で区切った形式になります。
++
+[listing]
+----
+<storage_name>-><volume_name>
+----
+* ストレージ、スイッチ、またはポートがアノテートされている場合、[Application]列は無視されます。
+* ビジネスエンティティは、[Tenant]、[Line_of_Business]、[Business_Unit]、および[Project]の列で構成されます。
++
+いずれの値も空のままにすることができます。アプリケーションがすでに入力値とは異なるビジネスエンティティに関連付けられている場合は、新しいビジネスエンティティに割り当てられます。
+
+
+
+インポートユーティリティでは、次のオブジェクトタイプとキーがサポートされます。
+
+|===
+
+
+| を入力します | キーを押します 
+
+
+ a| 
+ホスト
+ a| 
+`+id-><id>+` または `<Name>` または `<IP>`
+
+
+
+ a| 
+VM
+ a| 
+`+id-><id>+` または `<Name>`
+
+
+
+ a| 
+ストレージプール
+ a| 
+`+id-><id>+` または `<Storage_name>`\->``<Storage_Pool_name>``
+
+
+
+ a| 
+内部ボリューム
+ a| 
+`+id-><id>+` または `<Storage_name>`\->``<Internal_volume_name>``
+
+
+
+ a| 
+ボリューム
+ a| 
+`+id-><id>+` または `<Storage_name>`\->``<Volume_name>``
+
+
+
+ a| 
+ストレージ
+ a| 
+`+id-><id>+` または `<Name>` または `<IP>`
+
+
+
+ a| 
+スイッチ
+ a| 
+`+id-><id>+` または `<Name>` または `<IP>`
+
+
+
+ a| 
+ポート
+ a| 
+`+id-><id>+` または `<WWN>`
+
+
+
+ a| 
+共有
+ a| 
+`+id-><id>+` または `+<Storage Name>-><Internal Volume Name>-><Share Name>-><Protocol>+` [`+-><Qtree Name >+`]`<Qtree>` は、デフォルトのqtreeがある場合は省略可能です。
+
+
+
+ a| 
+qtree
+ a| 
+`+id-><id>+` または `+<Storage Name>-><Internal Volume Name>-><Qtree Name>+`
+
+|===
+CSVファイルの形式は次のとおりです。
+
+[listing]
+----
+, , <Annotation Type> [, <Annotation Type> ...]
+[, Application] [, Tenant] [, Line_Of_Business] [,
+Business_Unit] [, Project]
+
+<Object Type Value 1>, <Object Key 1>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+
+...
+
+<Object Type Value N>, <Object Key N>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+----
+
+
+== 手順
+
+. Insight Web UIにログインします。
+. [管理]*をクリックし、*[トラブルシューティング]*を選択します。
++
+[トラブルシューティング]ページが表示されます。
+
+. ページの*[その他のタスク]セクション*で、* OnCommand Insight Portal*リンクをクリックします。
+. [Insight Connect API]*をクリックします。
+. ポータルにログインします。
+. [Annotation Import Utility]*をクリックします。
+. を保存します `.zip` ファイルを解凍し、を読んでください `readme.txt` 追加情報 およびサンプル用のファイル。
+. CSVファイルをと同じフォルダに配置します `.zip` ファイル。
+. コマンドラインウィンドウで、次のように入力します。
++
+[listing]
+----
+java -jar rest-import-utility.jar [-uusername] [-ppassword]
+[-aserver name or IP address] [-bbatch size] [-ccase sensitive:true/false]
+[-lextra logging:true/false] csv filename
+----
++
+追加のロギングを有効にする-lオプションと、大文字と小文字を区別する-cオプションは、デフォルトでfalseに設定されます。したがって、これらの機能を使用する場合にのみ指定する必要があります。
+
++
+[NOTE]
+====
+オプションとその値の間にスペースはありません。
+
+====
++
+[NOTE]
+====
+次のキーワードは予約されており、ユーザはこれらのキーワードをアノテーション名として指定できません。-Application-Application_Priority -Tenant-Line_of_Business-Business_Unit -Projectいずれかの予約済みキーワードを使用してアノテーションタイプをインポートしようとすると、エラーが生成されます。アノテーションの名前にこれらのキーワードを使用している場合は、インポートユーティリティツールが正常に動作するように変更する必要があります。
+
+[+]
+
+====
+

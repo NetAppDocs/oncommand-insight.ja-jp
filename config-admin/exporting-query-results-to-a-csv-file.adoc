@@ -1,0 +1,65 @@
+---
+permalink: config-admin/exporting-query-results-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: クエリの結果を.csvファイルにエクスポートして、データを別のアプリケーションにインポートできます。 
+---
+= クエリ結果を .csv ファイルにエクスポートしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クエリの結果を.csvファイルにエクスポートして、データを別のアプリケーションにインポートできます。
+
+
+
+== 手順
+
+. OnCommand Insight Web UIにログインします。
+. [ * クエリ * ] をクリックし、 [ * すべてのクエリを表示 * ] を選択します。
++
+[ クエリ ] ページが表示されます。
+
+. クエリをクリックします。
+. をクリックします image:../media/export-to-csv.gif[""] クエリ結果をにエクスポートします``.CSV`` ファイル。
+. 次のいずれかを実行します。
++
+** [ 名前を付けて開く ] をクリックし、次に *OK* をクリックして Microsoft Excel でファイルを開き、特定の場所にファイルを保存します。
+** [ ファイルの保存 ] をクリックし、 [OK] をクリックして、 [ ダウンロード ] フォルダにファイルを保存します。表示されている列の属性のみがエクスポートされます。表示されている一部の列、特に複雑なネストされたリレーションシップの一部である列はエクスポートされません。
+
+
++
+[NOTE]
+====
+アセット名にカンマが含まれている場合は、アセット名と適切な.csv形式は維持され、エクスポート時に名前が引用符で囲まれます。
+
+====
++
++クエリ結果をエクスポートする場合、選択または画面に表示されている行だけでなく、結果テーブルのすべての*行がエクスポートされることに注意してください。最大10,000行までエクスポートされます。
+
++
+[+]
+
++
+[NOTE]
+====
+エクスポートした .csv ファイルを Excel で開くときに、オブジェクト名またはその他のフィールドが NN:NN の形式である場合 (2 桁の数字の後にコロン、 2 桁の数字が続く ) 、 Excel ではその名前がテキスト形式ではなく Time 形式であると解釈されることがあります。その結果、 Excel の列に誤った値が表示されることがあります。たとえば、「 81 ： 45 」という名前のオブジェクトは、 Excel では「 81 ： 45 ： 00 」と表示されます。これを回避するには、次の手順に従って .csv を Excel にインポートします。
+
+[+]
+
+....
+-   Open a new sheet in Excel.
+-   On the "Data" tab, choose "From Text".
+-   Locate the desired .CSV file and click "Import".
+-   In the Import wizard, choose "Delimited" and click Next.
+-   Choose "Comma" for the delimiter and click Next.
+-   Select the desired columns and choose "Text" for the column data format.
+-   Click Finish.
+Your objects should show in Excel in the proper format.
+....
+[+]
+
+====
+

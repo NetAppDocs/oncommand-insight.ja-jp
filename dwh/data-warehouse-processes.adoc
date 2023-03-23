@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-processes.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseでは、さまざまな種類のプロセスが実行されます。 
+---
+= Data Warehouseのプロセス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseでは、さまざまな種類のプロセスが実行されます。
+
+* * ETLプロセス*
++
+抽出、変換、読み込み（ETL）プロセスは、複数のOnCommand Insight データベースからデータを取得して変換し、データマートに保存します。Data WarehouseのビルドプロセスはETLプロセスです。
+
+* * ジョブ *
++
+Data Warehouseで、インベントリ、ディメンション、容量、ポート容量、VM容量などのジョブが実行され、レポートが作成されます。 ファイルシステムの利用率、パフォーマンス、容量効率、ライセンス、履歴ビルド、 動的なアノテーション、コネクタの削除、スキップされたビルド、ASUPオプション、およびメンテナンスジョブ。
+
+* *統合プロセス*
++
+Data Warehouseでは、複数のOnCommand Insight サーバを同じData Warehouseデータベースに統合できます。多くの構成では、同じオブジェクトが複数のコネクタから報告される場合があります（つまり、同じスイッチが2つのOnCommand Insight インスタンスに存在する場合）。その場合、Data Warehouseは複数のオブジェクトを1つに統合します（プライマリコネクタが選択され、オブジェクトのデータはそのコネクタからのみ取得されます）。
+
+

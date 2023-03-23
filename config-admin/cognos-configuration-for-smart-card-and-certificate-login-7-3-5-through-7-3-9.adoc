@@ -1,0 +1,57 @@
+---
+permalink: config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Data Warehouseの設定を変更して、Cognosサーバでスマートカード（CAC\）および証明書によるログインをサポートする必要があります。 
+---
+= スマートカードおよび証明書によるログインのためのCognosの設定（OnCommand Insight 7.3.5~7.3.9）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cognosサーバでスマートカード（CAC）および証明書によるログインをサポートするには、OnCommand Insight Data Warehouseの設定を変更する必要があります。
+
+
+
+== 作業を開始する前に
+
+この手順 は、OnCommand Insight 7.3.5~7.3.9を実行しているシステム用です。
+
+[NOTE]
+====
+CACおよび証明書に関する最新の手順については、次の技術情報アーティクル（サポートへのログインが必要）を参照してください。
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["OnCommand Insight のCommon Access Card（CAC;共通アクセスカード）認証を設定する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["OnCommand Insight Data WarehouseのCommon Access Card（CAC；共通アクセスカード）認証の設定方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["認証局（CA）の署名付き証明書を作成し、OnComand InsightおよびOnCommand Insight Data Warehouse 7.3.xにインポートする方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["WindowsホストにインストールされているOnCommand Insight 7.3.X内で自己署名証明書を作成する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cognos認証局（CA）署名証明書をOnCommand DataWarehouse 7.3.3以降にインポートする方法"]
+
+
+====
+
+
+== 手順
+
+. Cognos TrustoreにCertificate Authority（CA；認証局）を追加します。
++
+.. コマンドウィンドウで、に進みます `..\SANscreen\cognos\analytics\configuration\certs\`
+.. を使用します `keytool` 信頼されたCAをリスト表示するユーティリティ： `..\..\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
++
+各行の最初の単語はCAエイリアスを示します。
+
+.. 適切なファイルが存在しない場合は、CA証明書ファイル（通常は）を指定します `.pem` ファイル。
+.. OnCommand Insight の信頼済みCAに顧客のCAを含めるには、に進みます `..\SANscreen\cognos\analytics\configuration\certs\`。
+.. を使用します `keytool` をインポートするユーティリティ `.pem` ファイル： `..\..\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
++
+`my_alias` は通常、でCAを簡単に識別できるエイリアスです``keytool -list`` 操作。
+
+.. パスワードの入力を求められたら、と入力します `NoPassWordSet`。
+.. 回答 `yes` 証明書を信頼するように求められたら、
+
+
+. CACモードをイネーブルにするには、を実行します `..\SANscreen\bin\cognos_cac\enableCognosCAC.bat`
+. CACモードをディセーブルにするには、を実行します `..\SANscreen\bin\cognos_cac\disableCognosCAC.bat`
+

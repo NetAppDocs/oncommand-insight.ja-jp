@@ -1,0 +1,56 @@
+---
+permalink: howto/preparing-aws-for-insight-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightでクラウドのコストデータを収集できるように、AWSアカウントが適切に設定されている必要があります。 
+---
+= AWSでInsightのデータ収集を準備しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightでクラウドのコストデータを収集できるように、AWSアカウントが適切に設定されている必要があります。
+
+
+
+== このタスクについて
+
+次の手順は、AWSアカウントを介して実行されます。詳細については、Amazonのドキュメントを参照してください。 https://docs.aws.amazon.com["http://docs.aws.amazon.com"]。AWSクラウドアカウントのセットアップに詳しくない場合は、クラウドプロバイダにお問い合わせください。
+
+[NOTE]
+====
+これらの手順は便宜的に提供されており、発行時点で正しいと考えられています。ネットアップは、これらの手順が正確であることを保証するものではありません。AWSアカウントの設定に関する情報やサポートについては、クラウドプロバイダまたはAWSアカウントの所有者にお問い合わせください。
+
+====
+ベストプラクティス：課金レポートをアップロードするS3バケットを所有するアカウントと同じアカウントにプライマリIAMユーザを作成し、このユーザを使用してAWS課金データを設定および収集することを推奨します。
+
+Insightによるデータ収集を許可するようにAWSアカウントを設定するには、次の手順を実行します。
+
+
+
+== 手順
+
+. Identity Access Management（IAM）ユーザとしてAWSアカウントにログインします。適切に収集するには、グループIAMアカウントではなく、プライマリIAMアカウントにログインします。
+. Amazon S3 *に移動してバケットを作成します。一意のバケット名を入力し、リージョンが正しいことを確認します。
+. Amazon Cost and Usage Reportを有効にします。を参照してください https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[] を参照してください。
++
+.. AWS ** Billing and Cost Management Dashboard **に移動し、* Reports *を選択します。
+.. [レポートの作成]*をクリックし、[レポート名]にと入力します。[時間単位]*で[毎日]を選択します。[リソースID]*を含めるチェックボックスをオンにし、*[次へ]*をクリックします。
+.. [Select delivery options]ページの[Sample Policy]リンクをクリックします。ボックス内のサンプルポリシーテキストをクリップボードにコピーします。[* 閉じる * ] をクリックします。
+.. 作成したS3バケットに戻り、*[Permissions]*タブをクリックして*[Bucket Policy]*ボタンを選択します。
+.. サンプルポリシーのテキストを貼り付けて、を置き換えます `<bucketname>` 実際のバケット名を次の行に入力します。 `"Resource": "arn:aws:s3:: <bucketname>"`。*ポリシーを保存*します。
+.. [Create Report]画面に戻り、S3バケットにと入力して*[Verify]*ボタンをクリックします。「 * 次へ * 」をクリックします。
+.. 情報を確認し、*[確認して完了]*をクリックします。
+
+
+. InsightでAWSからデータを収集するには、権限を付与する必要があります。次のリンクでは、「* List All Buckets *」（手順4.1）に権限を付与し、フォルダ内のオブジェクトに権限を設定する方法（手順5.2）について詳しく説明します。 https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html[]。
+. IAMコンソールで、*[Policies]*に移動し、*[Create policy]*をクリックします。
+. [ポリシー名]*フィールドに名前を入力し、下部にある*[ポリシーの作成]*をクリックします。
+. IAMコンソールでユーザを選択し、画面下部の*[インラインポリシーの追加]*を選択します。
+. [Choose a service]*をクリックし、[S3]を選択します。
+. * JSON *タブに移動します。AWSウォークスルーの手順5.1.2.gのJSONサンプルテキストをJSONボックスにコピーします。
+. JSONの_companybucket_and_Development_fieldsをS3情報に置き換えます。
+. [ポリシーの確認]*をクリックして、ポリシー設定を確認します。
+

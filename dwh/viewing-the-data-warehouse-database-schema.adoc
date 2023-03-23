@@ -1,0 +1,31 @@
+---
+permalink: dwh/viewing-the-data-warehouse-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: データベーススキーマを表示して、別のAPIでデータを使用する方法を理解したり、SQLクエリを開発したりすることができます。schemaオプションを使用すると、スキーマ内のすべてのデータベース、テーブル、および列が一覧表示されます。テーブルの関係を示すデータベーススキーマ図を確認することもできます。 
+---
+= Data Warehouseデータベーススキーマの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベーススキーマを表示して、別のAPIでデータを使用する方法を理解したり、SQLクエリを開発したりすることができます。schemaオプションを使用すると、スキーマ内のすべてのデータベース、テーブル、および列が一覧表示されます。テーブルの関係を示すデータベーススキーマ図を確認することもできます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. をクリックします image:../media/oci-7-help-icon-gif.gif[""] をクリックし、* Documentation *を選択します。
+. [データベーススキーマ]*を選択します。
+. たとえば、*[データベース]*ペインで* dwh_inventory *をクリックします。
+. [すべてのテーブル]*ペインで、* dwh_inventory *セクションまで下にスクロールし、* annotation_value *テーブルをクリックします。
++
+image::../media/oci-dwh-databaseschema-inventory-annotation-gif.gif[Inventoryデータマートのアノテーション値テーブル]
+
++
+dwh_inventory.annotationテーブルが表示されます。
+
+

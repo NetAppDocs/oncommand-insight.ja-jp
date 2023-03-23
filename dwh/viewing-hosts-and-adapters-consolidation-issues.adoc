@@ -1,0 +1,93 @@
+---
+permalink: dwh/viewing-hosts-and-adapters-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: ホストとその関連アダプタについて報告されるデータは、Inventoryデータマートから取得されます。 
+---
+= ホストとアダプタの統合に関する問題の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストとその関連アダプタについて報告されるデータは、Inventoryデータマートから取得されます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*トラブルシューティング*をクリックします。
+. [Chassis Consolidation]*セクションで、*[Hosts and Adapters]*をクリックします。
++
+[NOTE]
+====
+この例の構成は有効な構成ではありません。プリンシパルコネクタと使用可能なコネクタがlocalhostにあることから、Insight ServerとDWHが同じサーバにインストールされていることがわかります。この例の目的は、統合テーブルを理解することです。
+
+====
++
+image::../media/oci-dwh-admin-troubleshooting-hostsandadapters-gif.gif[Chassis Consolidation Hosts and Adaptersの略]
+
++
+すべてのホストとアダプタについて、ホストとアダプタについて報告するコネクタごとに行が作成され、ホストとアダプタの取得元であるプライマリコネクタも表示されます。ホストとアダプタの場合のみ、あるコネクタから報告されるホストのアダプタが別のコネクタから報告されることがあります。
+
++
+各コネクタのホスト/アダプタのOnCommand Insight 変更時刻を確認することもできます。このパラメータを使用すると、ホスト/アダプタがOnCommand Insight で更新された日時と、同じホスト/アダプタが他のOnCommand Insight サーバで更新された日時を検出できます。
+
+. 必要に応じて、テキストの一部を入力して* Filter *をクリックし、このビューでデータをフィルタリングします。フィルタをクリアするには、* Filter *ボックスのテキストを削除し、* Filter *をクリックします。ホスト名、ホストIP、アダプタWWN、またはOnCommand Insight オブジェクトIDでフィルタリングできます。
++
+フィルタでは大文字と小文字が区別されます。
+
+. 次のデータを確認します。
++
+** *ホストGUID *
++
+このタイプの統合デバイス（ホスト）のグローバル一意識別子
+
+** * ホスト名 *
++
+Data Warehouseに表示される統合ホストの名前
+
+** *ホストIP *
++
+統合ホストのIPアドレス
+
+** *アダプタGUID *
++
+ホストアダプタのグローバル一意識別子
+
+** *アダプタWWN *
++
+ホストアダプタのWWN
+
+** *プリンシパルコネクタ*
++
+データの実際のソースであったOnCommand Insight コネクタの名前
+
+** *使用可能なコネクタ*
++
+統合ホスト/アダプタが存在するすべてのOnCommand Insight コネクタ
+
+** * Insight ID *
++
+関連するレポートコネクタの統合ホスト/アダプタのOnCommand Insight ID
+
+** * Insight Change Time *
++
+ホスト/アダプタのOnCommand Insight で更新が行われたとき、および同じホスト/アダプタが他のOnCommand Insight サーバで更新されたとき
+
+
+
+. コネクタの詳細を取得するには、コネクタをクリックします。
++
+コネクタに関する次の情報が表示されます。
+
++
+** ホスト名
+** そのコネクタに対して最後にData Warehouseジョブが実行された日時
+** そのコネクタから最後に変更を受信した日時
+** そのコネクタが参照しているOnCommand Insight サーバーのバージョン
+
+
+

@@ -1,0 +1,23 @@
+---
+permalink: dwh/generating-a-manual-data-warehouse-build.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight でアノテーションを強制的に更新したら\（一時データを実行\）、Data Warehouseのビルドを開始する必要があります。スケジュールされた次回のビルドまで待つか、今すぐビルドを開始できます。 
+---
+= Data Warehouseの手動ビルドを生成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight でアノテーションを強制的に更新（一時データを実行）したら、Data Warehouseのビルドを開始する必要があります。スケジュールされた次回のビルドまで待つか、今すぐビルドを開始できます。
+
+
+
+== 手順
+
+. Data Warehouseポータルに管理者としてログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[スケジュール]*をクリックします。
+. [今すぐビルド]*をクリックします。
+

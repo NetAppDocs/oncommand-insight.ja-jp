@@ -1,0 +1,12 @@
+---
+permalink: dwh/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 『Data Warehouse Administration Guide』を参照してください
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

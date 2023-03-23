@@ -1,0 +1,84 @@
+---
+permalink: config-admin/red-hat-rhev-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Red Hat Enterprise Virtualization \（REST\）データソースは、HTTPS経由でRHEVインスタンスに関する情報を収集します。 
+---
+= Red Hat（RHEV）データソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Red Hat Enterprise Virtualization（REST）データソースは、HTTPS経由でRHEVインスタンスに関する情報を収集します。
+
+
+
+== 要件
+
+* REST API を使用した RHEV サーバのポート 443 経由の IP アドレス
+* 読み取り専用のユーザ名とパスワード
+* RHEV バージョン 3.0+
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+RHEV サーバの IP アドレス
+ a| 
+RHEVサーバのIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+RHEVサーバのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+RHEVサーバのパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+HTTPS 通信ポート
+ a| 
+RHEV への HTTPS 通信に使用するポート
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは20分）
+
+
+
+ a| 
+接続タイムアウト（秒）
+ a| 
+接続タイムアウト（デフォルトは60秒）
+
+|===

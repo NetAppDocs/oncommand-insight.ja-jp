@@ -1,0 +1,16 @@
+---
+permalink: install-windows/verifying-that-business-intelligence-tools-are-running.html 
+sidebar: sidebar 
+keywords:  
+summary: 必要に応じて、アップグレード後にビジネスインテリジェンスツールが実行され、データを取得していることを確認する必要があります。 
+---
+= ビジネスインテリジェンスツールが実行されていることを確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要に応じて、アップグレード後にビジネスインテリジェンスツールが実行され、データを取得していることを確認する必要があります。
+
+BMC AtriumやServiceNowなどのビジネスインテリジェンスツールが動作しており、データを取得できることを確認します。これには、BMC ConnectorやRESTを利用したソリューションが含まれます。

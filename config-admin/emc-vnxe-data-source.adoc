@@ -1,0 +1,184 @@
+---
+permalink: config-admin/emc-vnxe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: EMC VNXeデータソースは、EMC VNXeおよびUnityユニファイドストレージアレイのインベントリサポートを提供します。 
+---
+= EMC VNXeデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EMC VNXeデータソースは、EMC VNXeおよびUnityユニファイドストレージアレイのインベントリサポートを提供します。
+
+このデータソースはCLIベースであり、VNXeデータソースが存在するAcquisition UnitにUnisphere for VNXe CLI（uemcli.exe）をインストールする必要があります。uemcli.exeは転送プロトコルとしてHTTPSを使用するため、Acquisition UnitからVNXe/UnityアレイへのHTTPS接続を開始できる必要があります。データソースで使用する読み取り専用ユーザが少なくとも1人必要です。
+
+
+
+== 用語集
+
+OnCommand Insight では、EMC VNXeデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ディスク
+ a| 
+ディスク
+
+
+
+ a| 
+ストレージアレイ
+ a| 
+ストレージ
+
+
+
+ a| 
+プロセッサ
+ a| 
+ストレージノード
+
+
+
+ a| 
+ストレージプール
+ a| 
+ストレージプール
+
+
+
+ a| 
+一般的な iSCSI ブロック情報、 VMware VMFS
+ a| 
+ボリューム
+
+
+
+ a| 
+共有フォルダ
+ a| 
+内部ボリューム
+
+
+
+ a| 
+VMware NFSデータストアからのCIFS共有、NFS共有、共有
+ a| 
+共有
+
+
+
+ a| 
+Replication Remote System の略
+ a| 
+同期
+
+
+
+ a| 
+iSCSI ノード
+ a| 
+iSCSI ターゲットノード
+
+
+
+ a| 
+iSCSI イニシエータ
+ a| 
+iSCSI ターゲットイニシエータ
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+このデータソースを設定して使用するための要件は次のとおりです。
+
+* VNXe データコレクタは CLI ベースです。 VNXe データコレクタが存在する Acquisition Unit に Unisphere for VNXe CLI （ uemcli.exe ）をインストールする必要があります。
+* uemcli.exe は HTTPS を転送プロトコルとして使用するため、 VNXe への HTTPS 接続を Acquisition Unit から開始できる必要があります。
+* データソースで使用する読み取り専用ユーザが少なくとも1人必要です。
+* 管理用 Solutions Enabler サーバの IP アドレス
+* ポート 443 での HTTPS が必要です
+* EMC VNXeデータコレクタは、NASおよびiSCSIによるインベントリのサポートを提供します。ファイバチャネルボリュームは検出されますが、InsightではFCマッピング、マスキング、ストレージポートについてはレポートされません。
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+VNXe ストレージ
+ a| 
+VNXe デバイスの IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+VNXe デバイスのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+VNXe デバイスのパスワード
+
+
+
+ a| 
+uemcli実行可能ファイルの完全パス
+ a| 
+への完全パス `uemcli.exe` 実行ファイル
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリのポーリング間隔（デフォルトは 40 分）
+
+
+
+ a| 
+VNXe CLIポート
+ a| 
+VNXe CLI に使用するポート
+
+
+
+ a| 
+インベントリ外部プロセスタイムアウト（秒）
+ a| 
+外部プロセスのタイムアウト（デフォルトは1、800秒）
+
+|===

@@ -1,0 +1,41 @@
+---
+permalink: dwh/getting-started-with-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Data Warehouseでは、データを含むレポートを生成する前に必要なオプションを設定できます。Data Warehouseには多くの機能が含まれていますが、使用する機能はごく一部です。Data Warehouseをセットアップするには、Data Warehouseポータルのオプションを使用します。 
+---
+= Data Warehouseでの作業の開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Data Warehouseでは、データを含むレポートを生成する前に必要なオプションを設定できます。Data Warehouseには多くの機能が含まれていますが、使用する機能はごく一部です。Data Warehouseをセットアップするには、Data Warehouseポータルのオプションを使用します。
+
+
+
+== このタスクについて
+
+OnCommand Insight Data Warehouseをセットアップするには、ストレージ管理者が次の手順を実行する必要があります。
+
+* Data Warehouseポータルにアクセスします
+* Data WarehouseとOnCommand Insight サーバの接続
+* 履歴からデータベースをビルドしています
+* バックアッププロセスとリストアプロセスをセットアップします
+
+
+また、ストレージ管理者が次の手順を実行することもできます。
+
+* コマンドラインインターフェイスを使用したMySQLへのアクセス
+* 日次ビルドのスケジュール設定
+* レポートにマルチテナンシーを設定しています
+* セットアップの問題のトラブルシューティング
++
+** アノテーションが表示されないのはなぜですか？
+** 失敗した履歴ビルドポイントの処理
+
+
+
+
+Data Warehouseポータルを初めて使用する場合は、[Jobs]ページに情報を表示する前にData Warehouseをセットアップしておく必要があります。Data Warehouseデータベースをリセットしたあとにも、このセットアッププロセスを繰り返す必要があります。

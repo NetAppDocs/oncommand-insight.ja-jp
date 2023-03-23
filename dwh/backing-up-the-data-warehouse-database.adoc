@@ -1,0 +1,262 @@
+---
+permalink: dwh/backing-up-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Cognosのバックアップも含まれるData Warehouseデータベースをファイルにバックアップし、あとでData Warehouseポータルを使用してリストアできます。バックアップを作成すると、別のData Warehouseサーバに移行したり、新しいバージョンのData Warehouseにアップグレードしたりできます。 
+---
+= Data Warehouseデータベースをバックアップしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cognosのバックアップも含まれるData Warehouseデータベースをファイルにバックアップし、あとでData Warehouseポータルを使用してリストアできます。バックアップを作成すると、別のData Warehouseサーバに移行したり、新しいバージョンのData Warehouseにアップグレードしたりできます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://fqdn/dwh+`。
+. 左側のナビゲーションペインで、*[バックアップ/リストア]*を選択します。
+. [バックアップ]*をクリックし、バックアップ構成を選択します。
++
+.. Performance Datamartを除くすべてのDatamarts
+.. すべてのデータマート
+
+
++
+この処理には30分以上かかることがあります。
+
++
++ Data Warehouseでバックアップファイルが作成され、その名前が表示されます。
+
+. バックアップファイルを右クリックし、目的の場所に保存します。
++
+ファイル名は変更しなくてもかまいませんが、Data Warehouseのインストールパス以外の場所に保存してください。
+
++
+Data Warehouseのバックアップファイルには、DWHインスタンスのMySQL、カスタムスキーマ（MySQL DB）とテーブル、LDAP設定、CognosをMySQLデータベースに接続するデータソース（Insight Serverをデータを取得するデバイスに接続するデータソースではない）が含まれています。 レポートをインポートまたはエクスポートしたタスクのインポートとエクスポート、セキュリティロール、グループ、名前空間のレポート、ユーザーアカウント Reporting Portalの変更後のレポートとカスタムレポート（保存場所に関係なく、[My Folders]ディレクトリにも保存されます）。Cognosのシステム設定パラメータ（SMTPサーバ設定など）、およびCognosのカスタムメモリ設定はバックアップされません。
+
++
+カスタムテーブルがバックアップされるデフォルトのスキーマには、次のものがあります。
+
++
+|===
+
+
+ a| 
+dwh_capacityの略
+
+
+
+ a| 
+dwh_capacity_stagingの略
+
+
+
+ a| 
+dwh_dimensionsの略
+
+
+
+ a| 
+dwh_fs_utilを参照してください
+
+
+
+ a| 
+dwh_inventoryの略
+
+
+
+ a| 
+dwh_inventory_stagingの略
+
+
+
+ a| 
+dwh_inventory_transient
+
+
+
+ a| 
+dwh_managementの略
+
+
+
+ a| 
+dwh_performanceの略
+
+
+
+ a| 
+dwh_performance_stagingの略
+
+
+
+ a| 
+DWH_ポート
+
+
+
+ a| 
+dwh_reportsの略
+
+
+
+ a| 
+dwh_sa_stagingの略
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+カスタムテーブルをバックアップから除外するスキーマには、次のものがあります。
+
++
+|===
+
+
+ a| 
+information_schema
+
+
+
+ a| 
+取得
+
+
+
+ a| 
+cloud_model
+
+
+
+ a| 
+host_data
+
+
+
+ a| 
+InnoDB
+
+
+
+ a| 
+在庫
+
+
+
+ a| 
+inventory_private
+
+
+
+ a| 
+inventory_time
+
+
+
+ a| 
+ログ
+
+
+
+ a| 
+管理
+
+
+
+ a| 
+MySQL
+
+
+
+ a| 
+NAS
+
+
+
+ a| 
+パフォーマンス
+
+
+
+ a| 
+performance_schema
+
+
+
+ a| 
+performance_viewsの略
+
+
+
+ a| 
+SANscreen
+
+
+
+ a| 
+スクラブ
+
+
+
+ a| 
+サービス保証
+
+
+
+ a| 
+テスト
+
+
+
+ a| 
+tmp
+
+
+
+ a| 
+ワークベンチ
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+手動で開始したバックアップでは、が使用されます `.zip` 次のファイルを含むファイルが作成されます。
+
++
+** 日次バックアップ `.zip` ファイル（Cognosのレポート定義を含む）
+** Aはバックアップを報告します `.zip` ファイル。[My Folders]ディレクトリにあるレポートも含め、Cognosのすべてのレポートが含まれます
+** Data WarehouseデータベースのバックアップファイルCognosでは、手動バックアップ（いつでも実行可能）に加えて、日次バックアップ（毎日という名前のファイルに自動的に生成されます `DailyBackup.zip`）をクリックします。日次バックアップには、製品に同梱されている上位フォルダとパッケージが含まれます。[My Folders]ディレクトリおよび製品の上位フォルダ以外に作成したディレクトリは、Cognosのバックアップには含まれません。
+
+
++
+[NOTE]
+====
+Insightでのファイルの命名方法が原因です `.zip` ファイル。一部の解凍プログラムでは、ファイルを開くと空であることが表示されます。限り `.zip` ファイルのサイズが0より大きく、末尾がではありません `.bad` 拡張子、 `.zip` ファイルは有効です。7-ZipやWinZip®などの別の解凍プログラムでファイルを開くことができます。
+
+====
+

@@ -1,0 +1,243 @@
+---
+permalink: dwh/historical-data-retention-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: データはスケジュールに従ってData Warehouseで管理されます。データが古くなると、データレコードの保持期間が短くなります。 
+---
+= Data Warehouseでの履歴データの保持方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データはスケジュールに従ってData Warehouseで管理されます。データが古くなると、データレコードの保持期間が短くなります。
+
+Data Warehouseでは、次の表に示すように、データマートおよびデータの単位に基づいて履歴データが保持されます。
+
+|===
+
+
+| データマート | 測定されたオブジェクト | 精度 | 保持期間 
+
+
+ a| 
+Performance データマート
+ a| 
+ボリュームと内部ボリューム
+ a| 
+毎時
+ a| 
+14 日
+
+
+
+ a| 
+Performance データマート
+ a| 
+ボリュームと内部ボリューム
+ a| 
+毎日
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+アプリケーション
+ a| 
+毎時
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+ホスト
+ a| 
+毎時
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+ポートのスイッチパフォーマンス
+ a| 
+毎時
+ a| 
+5週間です
+
+
+
+ a| 
+Performance データマート
+ a| 
+ホスト、ストレージ、およびテープのスイッチパフォーマンス
+ a| 
+毎時
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+ストレージノード
+ a| 
+毎時
+ a| 
+14 日
+
+
+
+ a| 
+Performance データマート
+ a| 
+ストレージノード
+ a| 
+毎日
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+VM パフォーマンス
+ a| 
+毎時
+ a| 
+14 日
+
+
+
+ a| 
+Performance データマート
+ a| 
+VM パフォーマンス
+ a| 
+毎日
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+ハイパーバイザーのパフォーマンス
+ a| 
+毎時
+ a| 
+14 日
+
+
+
+ a| 
+Performance データマート
+ a| 
+ハイパーバイザーのパフォーマンス
+ a| 
+毎日
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+VMDK パフォーマンス
+ a| 
+毎時
+ a| 
+14 日
+
+
+
+ a| 
+Performance データマート
+ a| 
+VMDK パフォーマンス
+ a| 
+毎日
+ a| 
+13 カ月
+
+
+
+ a| 
+Performance データマート
+ a| 
+ディスクパフォーマンス
+ a| 
+毎時
+ a| 
+14 日
+
+
+
+ a| 
+Performance データマート
+ a| 
+ディスクパフォーマンス
+ a| 
+毎日
+ a| 
+13 カ月
+
+
+
+ a| 
+Capacity データマート
+ a| 
+すべて（個々のボリュームを除く）
+ a| 
+毎日
+ a| 
+13 カ月
+
+
+
+ a| 
+Capacity データマート
+ a| 
+すべて（個々のボリュームを除く）
+ a| 
+月の代表日
+ a| 
+14 カ月以上
+
+
+
+ a| 
+Inventory データマート
+ a| 
+個々のボリューム
+ a| 
+現在の状態
+ a| 
+1 日（または次の ETL まで）
+
+|===
+13カ月（設定可能）が経過すると、Data Warehouseの次のファクトテーブルでは、容量、パフォーマンス、リソースのデータが1日に1レコードではなく1カ月に1レコードだけ保持されます。
+
+* Chargebackファクトテーブル（dwh_capacity.chargeback_fact）
+* File System Utilizationファクトテーブル（dwh_fs_util.fs_util_fact）
+* Hostファクトテーブル（dwh_sa.sa_host_fact）
+* Internal Volume Capacityファクトテーブル（dwh_capacity.internal_volume_capacity_fact）
+* Portsファクトテーブル（dwh_ports.ports_fact）
+* Qtree Capacityファクトテーブル（dwh_capacity.qtree_capacity_fact）
+* Storage and Storage Pool Capacityファクトテーブル（dwh_capacity.storage_and_storage_pool_capacity_fact）
+* Volume Capacityファクトテーブル（dwh_capacity.vm_capacity_fact）
+* Storage Node Hourly Performanceファクトテーブル（storage_node_hourly_performance_fact）とStorage Node Daily Performanceファクトテーブル（storage_node_daily_performance_fact）
+

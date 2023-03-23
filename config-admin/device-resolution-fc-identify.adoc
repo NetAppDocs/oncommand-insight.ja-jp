@@ -1,0 +1,29 @@
+---
+permalink: config-admin/device-resolution-fc-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: '[FC Identify]画面には、自動デバイス解決でホストが識別されていないFibre ChannelデバイスのWWNとWWPNが表示されます。この画面には、手動デバイス解決で解決されたデバイスも表示されます。' 
+---
+= ファイバチャネルデバイスの解決
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[FC Identify]画面には、自動デバイス解決でホストが識別されていないFibre ChannelデバイスのWWNとWWPNが表示されます。この画面には、手動デバイス解決で解決されたデバイスも表示されます。
+
+手動解決によって解決されたデバイスには「OK」のステータスが含まれ、デバイスの識別に使用されたルールが示されます。検出されなかったデバイスのステータスは「Unidentified」になります。このページには、デバイスの識別範囲の合計が表示されます。
+
+image::../media/fcidentify.gif[fcidentify]
+
+一括操作を実行するには、[FC Identify]画面の左側で複数のデバイスを選択します。1つのデバイスでアクションを実行するには、デバイスにカーソルを合わせ、リストの右端にある[Identify]または[Unidentify]ボタンを選択します。
+
+[Total coverage]リンクには、構成の「識別されたデバイス数/使用可能なデバイス数」のリストが表示されます。
+
+* SRM エイリアス
+* ストレージエイリアス
+* スイッチエイリアス
+* ゾーン
+* ユーザ定義
+

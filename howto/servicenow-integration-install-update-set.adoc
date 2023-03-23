@@ -1,0 +1,31 @@
+---
+permalink: howto/servicenow-integration-install-update-set.html 
+sidebar: sidebar 
+keywords:  
+summary: ServiceNowとOnCommand Insight の統合の一環として、データを抽出およびロードするための特定のフィールドとテーブルをコネクタに提供するために、事前設定されたデータをServiceNowにロードするアップデートセットをインストールする必要があります。 
+---
+= アップデートセットをインストールします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ServiceNowとOnCommand Insight の統合の一環として、データを抽出およびロードするための特定のフィールドとテーブルをコネクタに提供するために、事前設定されたデータをServiceNowにロードするアップデートセットをインストールする必要があります。
+
+
+
+== 手順
+
+. 「取得したアップデートセット」を検索して、ServiceNowのリモートアップデートセットテーブルに移動します。
+. [Import Update Set from XML]をクリックします。
+. アップデートセットは、以前にローカルドライブにダウンロードしたPythonコネクタ.zipファイル（この例では、）にあります `C:\OCI2SNOW` フォルダ）をクリックします `\update_sets` サブフォルダ。[Choose File]*をクリックし、このフォルダの.xmlファイルを選択します。[ アップロード ] をクリックします。
+. 更新セットがロードされたら、それを開き、*[更新セットのプレビュー]*をクリックします。
++
+エラーが検出された場合は、更新セットをコミットする前に修正する必要があります。
+
+. エラーがない場合は、*[Commit Update Set]*をクリックします。
++
+アップデート・セットがコミットされると、* System Update Sets *>* Update Sources *ページに表示されます。
+
+

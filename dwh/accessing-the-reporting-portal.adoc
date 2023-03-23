@@ -1,0 +1,22 @@
+---
+permalink: dwh/accessing-the-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: Data WarehouseポータルからReportingポータルにアクセスし、Workspace AdvancedやReport Studioなどのレポートオーサリングツールを使用してカスタムレポートを作成できます。 
+---
+= Reportingポータルへのアクセス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data WarehouseポータルからReportingポータルにアクセスし、Workspace AdvancedやReport Studioなどのレポートオーサリングツールを使用してカスタムレポートを作成できます。
+
+
+
+== 手順
+
+. Data Warehouseツールバーで、をクリックします image:../media/oci-reporting-portal-icon.gif[""] をクリックしてInsight Reportingポータルを開きます。
+. ユーザー名とパスワードを入力し、* Login *をクリックします。
+

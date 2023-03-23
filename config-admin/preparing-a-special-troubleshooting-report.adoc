@@ -1,0 +1,16 @@
+---
+permalink: config-admin/preparing-a-special-troubleshooting-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightでは、ソフトウェアのインストール後にセットアップしたASUPシステムを通じて、ネットアップカスタマーサポートに情報が自動的に送信されます。ただし、トラブルシューティングレポートを作成し、特定の問題についてサポートチームとケースをオープンすることもできます。 
+---
+= 特別なトラブルシューティングレポートの準備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightでは、ソフトウェアのインストール後にセットアップしたASUPシステムを通じて、ネットアップカスタマーサポートに情報が自動的に送信されます。ただし、トラブルシューティングレポートを作成し、特定の問題についてサポートチームとケースをオープンすることもできます。
+
+Insightのツールを使用すると、Insightを手動でバックアップし、ログをバンドルして、その情報をネットアップのカスタマーサポートに送信できます。

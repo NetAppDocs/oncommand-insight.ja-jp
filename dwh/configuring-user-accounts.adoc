@@ -1,0 +1,23 @@
+---
+permalink: dwh/configuring-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: ユーザアカウントを設定するには、いくつかの手順を実行する必要があります。 
+---
+= ユーザアカウントの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ユーザアカウントを設定するには、いくつかの手順を実行する必要があります。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[ユーザ管理]*をクリックします。
+. 各ユーザアカウントを設定します。
+

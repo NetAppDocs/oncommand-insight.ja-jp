@@ -1,0 +1,30 @@
+---
+permalink: howto/configuring-performance-and-assurance-violation-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight では、パフォーマンスや品質管理の違反の通知がサポートされます。これらの違反に関する通知は、デフォルトではInsightから送信されません。違反が発生した場合に、Eメールを送信するか、syslogサーバにsyslogメッセージを送信するか、SNMP通知を送信するようにInsightを設定する必要があります。 
+---
+= パフォーマンスと品質管理の違反通知の設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight では、パフォーマンスや品質管理の違反の通知がサポートされます。これらの違反に関する通知は、デフォルトではInsightから送信されません。違反が発生した場合に、Eメールを送信するか、syslogサーバにsyslogメッセージを送信するか、SNMP通知を送信するようにInsightを設定する必要があります。
+
+
+
+== 作業を開始する前に
+
+違反の送信方法をEメール、syslog、およびSNMPで設定しておく必要があります。
+
+
+
+== 手順
+
+. [管理]*>*[通知]*をクリックします。
+. [*イベント*]をクリックします。
+. [Performance Violations events]*または[Assure Violations events]*セクションで、目的の通知方法（* Eメール*、* syslog *、または* SNMP *）のリストをクリックし、違反の重大度レベル（* Warning and above *または* Critical *）を選択します。
+. [ 保存（ Save ） ] をクリックします。
+

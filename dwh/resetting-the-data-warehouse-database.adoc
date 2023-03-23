@@ -1,0 +1,42 @@
+---
+permalink: dwh/resetting-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseデータマートの内容を削除し、設定されているすべてのコネクタを削除できます。この処理は、インストールまたはアップグレードが正常に完了せず、Data Warehouseデータベースが中間の状態になった場合に実行します。InventoryデータモデルまたはCognos Reportingデータモデルのみを削除することもできます。 
+---
+= Data WarehouseデータベースまたはReportingサーバをリセットしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseデータマートの内容を削除し、設定されているすべてのコネクタを削除できます。この処理は、インストールまたはアップグレードが正常に完了せず、Data Warehouseデータベースが中間の状態になった場合に実行します。InventoryデータモデルまたはCognos Reportingデータモデルのみを削除することもできます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[DWHデータベースのリセット]*をクリックします。
+. 次のいずれかのオプションをクリックします。
++
+** * DWHデータベースのリセット*
++
+これにより、すべてのData Warehouseデータマートの内容と設定済みのコネクタがすべて削除され、カスタム設定を行わずにData Warehouseがインストールされたデフォルトの状態になります。このオプションは、接続しているサーバを変更したあとにサーバで別のData Warehouseデータベースを誤ってリストアし、インストール済みのデフォルトの状態に戻す必要がある場合などに選択します。レポートは削除されません。（レポートはCognos Content Storeに保存されます）。
+
+** *在庫のみリセット*
++
+これにより、Inventoryデータモデルの内容のみが削除されます。履歴データは削除されません。
+
+** *レポートコンテンツのリセット*
++
+これにより、レポーティングサーバのコンテンツがリセットされます。これにより、既存のカスタムレポートがすべて削除されます。このオプションを選択する前に、レポートをバックアップしてください。
+
+
+
++
+警告メッセージが表示されます。
+
+. 続行するには、*[はい]*をクリックします。
+

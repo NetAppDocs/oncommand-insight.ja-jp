@@ -1,0 +1,18 @@
+---
+permalink: reporting/colors-used-in-data-model-elements.html 
+sidebar: sidebar 
+keywords:  
+summary: データモデル要素の色には意味があります。 
+---
+= データモデル要素で使用される色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データモデル要素の色には意味があります。
+
+* 黄色のアセット：測定値を表します。
+* 黄色以外のアセット：属性を表します。これらの値は集計されません。
+

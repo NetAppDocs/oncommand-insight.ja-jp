@@ -1,0 +1,20 @@
+---
+permalink: config-admin/email-configuration-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: EメールシステムにアクセスするようにOnCommand Insight を設定するには、\（SMTPまたはExchange\）メールサーバを識別するホスト名またはIPアドレスを検出し、OnCommand Insight レポート用のEメールアカウントを割り当てる必要があります。 
+---
+= Eメール設定の前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EメールシステムにアクセスするようにOnCommand Insight を設定するには、（SMTPまたはExchange）メールサーバを識別するためのホスト名またはIPアドレスを検出し、OnCommand Insight レポート用のEメールアカウントを割り当てる必要があります。
+
+メール管理者に、OnCommand Insight 用のメールアカウントを作成するよう依頼してください。次の情報が必要です。
+
+* 組織で使用されているメールサーバ（SMTPまたはExchange）を識別するホスト名またはIPアドレス。この情報は、メールを読むために使用するアプリケーションで確認できます。たとえば、Microsoft Outlookでは、アカウント設定を表示してサーバーの名前を確認できます。[ツール]-[電子メールアカウント]-[既存の電子メールアカウントの表示または変更]。
+* OnCommand Insight が定期的にレポートを送信するメールアカウントの名前。アカウントは、組織内の有効なEメールアドレスである必要があります。（ほとんどのメールシステムは、有効なユーザから送信されない限り、メッセージを送信しません）。 メールサーバでメールを送信するためにユーザ名とパスワードが必要な場合は、システム管理者にこの情報を入手してください。
+

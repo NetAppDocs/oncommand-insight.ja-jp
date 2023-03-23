@@ -1,0 +1,27 @@
+---
+permalink: install-windows/oncommand-insight-installation-instructions.html 
+sidebar: sidebar 
+keywords:  
+summary: インストールでは、Insight Server、Data Warehouse and Reporting、異常検出など、複数のOnCommand Insight コンポーネントをインストールする必要があります。 
+---
+= Insightのインストール手順
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールでは、Insight Server、Data Warehouse and Reporting、異常検出など、複数のOnCommand Insight コンポーネントをインストールする必要があります。
+
+インストールには、次の主な作業が含まれます。
+
+* OnCommand Insight インストーラをダウンロードしています
+* OnCommand Insight サーバをインストールしています
+* ライセンスのインストール
+* DWHとReportingのインストール（オプション）（別のマシンまたは仮想マシンにインストールする必要があります）
+* Remote Acquisition Unit（RAU）のインストール（オプション）。RAUは、ファイアウォールの内側、リモートサイト、またはプライベートネットワークに配置されたデバイスリソースから情報を取得します
+* 異常検出エンジンのインストール（オプション）。Linuxを実行している別のマシンまたは仮想マシンにインストールする必要があります。
+* アップグレードの場合は、OnCommand Insight レポートをアップグレードします。
+
+
+インストールが完了したら、環境に関する情報を取得するようにInsightを設定する必要があります。必要な作業については、_ OnCommand Insight 構成および管理ガイド_を参照してください。

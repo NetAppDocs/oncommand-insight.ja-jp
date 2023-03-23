@@ -1,0 +1,134 @@
+---
+permalink: config-admin/hitachi-content-platform-hcp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'このデータコレクタは、HCP Management APIを使用してHitachi Content Platform\(HCP\)をサポートします。' 
+---
+= Hitachi Content Platform（HCP）データソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このデータコレクタは、 HCP 管理 API を使用して、 Hitachi Content Platform （ HCP ）をサポートします。
+
+
+
+== 用語集
+
+OnCommand Insight では、HCPデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+HCP クラスタです
+ a| 
+ストレージ
+
+
+
+ a| 
+テナント
+ a| 
+ストレージプール
+
+
+
+ a| 
+ネームスペース
+ a| 
+内部ボリューム
+
+
+
+ a| 
+ノード
+ a| 
+ノード
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== インベントリの要件
+
+* HCP サーバの IP アドレス
+* HCP ソフトウェアおよびピア権限の読み取り専用のユーザ名およびパスワード
+
+
+
+
+== 設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+HCP ホスト
+ a| 
+HCP ホストの IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+HCP ポート
+ a| 
+デフォルトは 9090 です
+
+
+
+ a| 
+HCPユーザーID
+ a| 
+HCPホストのユーザ名
+
+
+
+ a| 
+HCP パスワード
+ a| 
+HCPホストのパスワード
+
+
+
+ a| 
+HCP 認証タイプ
+ a| 
+HCP_LOCAL または active_directory を選択してください
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは900秒）
+
+|===

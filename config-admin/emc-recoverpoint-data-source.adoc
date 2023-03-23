@@ -1,0 +1,87 @@
+---
+permalink: config-admin/emc-recoverpoint-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: EMC RecoverPointデータソースは、EMC RecoverPointストレージからインベントリ情報を収集します。データソースを設定するには、ストレージプロセッサのIPアドレス、および読み取り専用のユーザ名とパスワードが必要です。 
+---
+= EMC RecoverPointデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EMC RecoverPointデータソースは、EMC RecoverPointストレージからインベントリ情報を収集します。データソースを設定するには、ストレージプロセッサのIPアドレス、および_read-only_userの名前とパスワードが必要です。
+
+EMC RecoverPointデータソースは、RecoverPointが他のストレージアレイ間で調整するボリューム間レプリケーション関係を収集します。OnCommand Insight は各RecoverPointクラスタのストレージアレイを表示し、そのクラスタ上のノードとストレージポートのインベントリデータを収集します。ストレージプールまたはボリュームのデータは収集されません。
+
+
+
+== 要件
+
+* ストレージプロセッサの IP アドレスまたは完全修飾ドメイン名
+* 読み取り専用のユーザ名とパスワード
+* ポート 443 経由での REST API へのアクセス
+* PuTTYを使用したSSHアクセス
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+RecoverPoint のアドレス
+ a| 
+RecoverPoint クラスタの IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+RecoverPoint クラスタのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+RecoverPointクラスタのパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+TCP ポート
+ a| 
+RecoverPoint クラスタへの接続に使用する TCP ポート
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは20分）
+
+
+
+ a| 
+除外クラスタ
+ a| 
+ポーリング時に除外するクラスタのIDまたは名前をカンマで区切ったリスト
+
+|===

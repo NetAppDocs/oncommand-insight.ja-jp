@@ -1,0 +1,37 @@
+---
+permalink: install-linux/verifying-new-insight-services-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: インストールが完了したら、サーバに新しいコンポーネントが存在することを確認する必要があります。 
+---
+= 新しいInsightコンポーネントがインストールされていることを確認します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールが完了したら、サーバに新しいコンポーネントが存在することを確認する必要があります。
+
+
+
+== 手順
+
+. ログインしているサーバで現在動作しているサービスのリストを表示するには、次のように入力します。
++
+`sudo oci-service.sh status all`
+
+. ログインしているサーバに応じて、リストに次のInsightサービスが表示されているかどうかを確認し、ステータスが「Running」であることを確認します。
++
+** Insightサーバ：wildfly、acquisition、mysql、elasticsearch
+** Data Warehouseサーバ：wildfly、mysql
+** Remote Acquisitionサーバ：acquisition
+
+
+
+
+
+
+== 結果
+
+これらのコンポーネントが表示されない場合は、テクニカルサポートにお問い合わせください。

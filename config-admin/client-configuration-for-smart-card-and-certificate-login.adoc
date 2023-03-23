@@ -1,0 +1,70 @@
+---
+permalink: config-admin/client-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: クライアントマシンでスマートカードを使用し、証明書によるログインを有効にするには、ミドルウェアを使用し、ブラウザを変更する必要があります。スマート・カードをすでに使用しているお客様は、クライアント・マシンに追加の変更を加える必要はありません。 
+---
+= スマートカードおよび証明書によるログインをサポートするようにクライアントを設定しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クライアントマシンでスマートカードを使用し、証明書によるログインを有効にするには、ミドルウェアを使用し、ブラウザを変更する必要があります。スマート・カードをすでに使用しているお客様は、クライアント・マシンに追加の変更を加える必要はありません。
+
+
+
+== 作業を開始する前に
+
+[NOTE]
+====
+CACおよび証明書に関する最新の手順については、次の技術情報アーティクル（サポートへのログインが必要）を参照してください。
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["OnCommand Insight のCommon Access Card（CAC;共通アクセスカード）認証を設定する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["OnCommand Insight Data WarehouseのCommon Access Card（CAC；共通アクセスカード）認証の設定方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["認証局（CA）の署名付き証明書を作成し、OnComand InsightおよびOnCommand Insight Data Warehouse 7.3.xにインポートする方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["WindowsホストにインストールされているOnCommand Insight 7.3.X内で自己署名証明書を作成する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cognos認証局（CA）署名証明書をOnCommand DataWarehouse 7.3.3以降にインポートする方法"]
+
+
+====
+
+
+== このタスクについて
+
+一般的なクライアント設定要件は次のとおりです。
+
+* ActivClientなどのスマートカードミドルウェアのインストール（を参照） http://militarycac.com/activclient.htm)[]
+* IEブラウザの変更（を参照 http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
+* Firefoxブラウザの変更（を参照 https://militarycac.com/firefox2.htm)[]
+
+
+その他の設定手順は次のとおりです。
+
+
+
+== 手順
+
+. Javaクライアントの起動時に不要なダイアログのポップアップを無効にします。
++
+.. 「Java」コントロールパネルを開きます。
+.. 「詳細設定」タブを選択します。
+.. 「高度なセキュリティ設定」を選択します。
+.. [Use certificates and keys in browser keystore]オプションをオフにします。
+
+
+. Chromeブラウザを使用して、ユーザの個人証明書にソフト証明書をインポートします。
++
+.. 「詳細設定」に移動します。
+.. 「証明書の管理」を選択します。
+.. 「個人用」証明書タブを選択します。
+.. 「インポート...」を選択します。
+.. .p12ファイルを選択します。
+.. ウィザードを完了します。パスワードフィールドに、証明書の作成に使用したパスワードを入力してください。
+
+
++
+Internet ExplorerとFirefoxのブラウザを設定するには、同様の手順が必要です。
+
+

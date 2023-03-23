@@ -1,0 +1,201 @@
+---
+permalink: config-admin/hp-eva-storage-sssu-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: EVA Storage\（SSSU\）データソースを設定するには、Command View\（CV\）サーバのIPアドレス、およびCVソフトウェアに対する読み取り専用のユーザ名とパスワードが必要です。ユーザーはCVソフトウェアで定義する必要があります。 
+---
+= HP EVA Storageデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EVA Storage（SSSU）データソースを設定するには、Command View（CV）サーバのIPアドレス、およびCVソフトウェアに対する_read-only_usernameとパスワードが必要です。ユーザーはCVソフトウェアで定義する必要があります。
+
+
+
+== 用語集
+
+OnCommand Insight では、HP EVAデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ディスク
+ a| 
+ディスク
+
+
+
+ a| 
+ディスクグループ
+ a| 
+ディスクグループ（モデル化されていません）
+
+
+
+ a| 
+ストレージセル
+ a| 
+ストレージ
+
+
+
+ a| 
+仮想ディスク
+ a| 
+ストレージプール
+
+
+
+ a| 
+仮想ディスク
+ a| 
+ボリューム
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== インベントリの要件
+
+* CVサーバのIPアドレス
+* CVソフトウェアに対する読み取り専用のユーザ名とパスワード。ユーザーはCVソフトウェアで定義する必要があります。
+* OnCommand Insight サーバ/ RAUにインストールされているサードパーティ製ソフトウェア： `sssu.exe`。。 `sssu.exe` バージョンはCVバージョンに対応している必要があります。
+* アクセスの検証：を実行します `sssu.exe` ユーザ名とパスワードを使用したコマンド。
+
+
+
+
+== パフォーマンス要件
+
+HP StorageWorks Command View EVAソフトウェアスイートがOnCommand Insight サーバーにインストールされている必要があります。または、EVAサーバにRemote Acquisition Unit（RAU）をインストールすることもできます。
+
+. HP StorageWorks Command View EVAソフトウェアスイートをOnCommand Insight サーバーにインストールするか、Remote Acquisition UnitをCommand View EVAサーバーにインストールします。
+. を探します `evaperf.exe` コマンドを実行します例： `c:\Program Files\Hewlett-Packard\EVA Performance Monitor\`
+. Command ViewサーバのIPを使用して、次の手順を実行します。
++
+.. このコマンドを実行します。860はデフォルトのポートです `Evaperf.exe server <Command View Server IP\> 860 <username\>`
+.. パスワードプロンプトでCommand Viewサーバのパスワードを入力します。
++
+これにより、コマンドラインプロンプトが表示され、それ以外は表示されません。
+
+
+
+. を実行してセットアップを確認します `evaperf.exe ls`。
++
+Command Viewサーバで管理されているアレイまたはコントローラのリストが表示されます。各行はEVAアレイのコントローラを示しています。
+
+
+
+
+
+== 設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+CommandView Serverの略
+ a| 
+EVA Storage ManagerのIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+Command View Managerのユーザ名。名前はCommand Viewで定義する必要があります。
+
+
+
+ a| 
+パスワード
+ a| 
+Command View Managerのパスワード。
+
+
+
+ a| 
+Performance User Nameの略
+ a| 
+パフォーマンスを向上させるために、Command View Managerのユーザ名。名前はCommand Viewで定義する必要があります。
+
+
+
+ a| 
+パフォーマンスパスワード
+ a| 
+パフォーマンスを向上させるために、Command View Managerに使用するパスワード。
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| * フィールド * | * 概要 * 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリのポーリング間隔（デフォルトは 40 分）
+
+
+
+ a| 
+CLIホーム
+ a| 
+CLIホームディレクトリのフルパス名 `sssu.exe` があります
+
+
+
+ a| 
+インベントリ除外デバイス
+ a| 
+対象に含めるデバイス名をカンマで区切ったリスト
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 300 秒）
+
+
+
+ a| 
+Performance CLI Homeの略
+ a| 
+アレイパフォーマンスの場合は、sssu.exeが格納されているCLIホームディレクトリの完全なパス名。アクセスを検証するには、を実行します `sssu.exe`
+
+
+
+ a| 
+コマンドタイムアウト（秒）
+ a| 
+`evaperf` コマンド待機タイムアウト（デフォルトは600秒）
+
+
+
+ a| 
+Performance Exclude Devicesを参照してください
+ a| 
+パフォーマンスデータの収集対象から除外するデバイスの名前をカンマで区切ったリスト
+
+|===

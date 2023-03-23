@@ -1,0 +1,28 @@
+---
+permalink: config-admin/determining-data-source-acquisition-status.html 
+sidebar: sidebar 
+keywords:  
+summary: データソースはInsightの主要な情報源であるため、必ず実行状態を維持する必要があります。 
+---
+= データソースのデータ収集ステータスの確認
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データソースはInsightの主要な情報源であるため、必ず実行状態を維持する必要があります。
+
+データソースのデータ収集ステータスは、直接取得したすべてのアセットのすべてのアセットページで確認できます。次のいずれかの状況が発生する可能性があります。アセットページの右上にステータスが表示されます。
+
+* データソースから正常に取得されました
++
+ステータス"`Acquired"を表示します `xxxx``", where `xxxx` アセットのデータソースの最新の取得時刻を示します。
+
+* 取得エラーが発生しました。
++
+ステータス"`Acquired"を表示します `xxxx``", where `xxxx` アセットの1つ以上のデータソースの最新の取得時刻を示します image:../media/acquisition-icon.gif[""]。をクリックします image:../media/acquisition-icon.gif[""]には、アセットの各データソース、データソースのステータス、および前回のデータ取得日時が表示されます。データソースをクリックすると、データソースの詳細ページが表示されます。
+
+
+
+アセットが直接取得されていない場合は、ステータスは表示されません。

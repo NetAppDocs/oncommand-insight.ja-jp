@@ -1,0 +1,36 @@
+---
+permalink: faq/oci-faq-netapp-storage-iops.html 
+sidebar: sidebar 
+keywords:  
+summary: このFAQでは、Data ONTAP ストレージシステムのIOPS値をどのように算出するかについて、よくある質問に回答します。 
+---
+= Data ONTAP ストレージのIOPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このFAQでは、Data ONTAP ストレージシステムのIOPS値をどのように算出するかについて、よくある質問に回答します。
+
+
+
+== Data ONTAP ストレージシステムからストレージIOPSを取得する方法
+
+* ストレージアレイレベルのIOPSは、内部ボリュームのIOPSから集計されます
+* ストレージノードレベルのIOPSにはメタデータOPSが含まれます
+* ストレージプールレベルのIOPSにメタデータOPSは含まれません。測定されるのはディスクのみです
+* 内部ボリュームレベルのIOPSには、読み取り+書き込みOPS（処理）+その他のOPSが含まれます
+
+
+
+
+== 質問-アグリゲートIOPSがノードIOPSよりも高くなることがあるのはどのような場合ですか。
+
+clustered Data ONTAP 8.3.1より前のバージョンでは、ノードのIOPSはプロトコルのIOPSで構成されています。clustered Data ONTAP 8.3.1では、以降は、システム構成要素の指標で構成されます。これには、データ要求やフロントドアからの要求が含まれますが、SnapMirrorや重複排除などのバックエンドタスクは含まれません。一方、これらのタスクではディスクIOPSが生成されるため、アグリゲートIOPSが生成されます。そのため、アグリゲートIOPSがノードIOPSよりも高くなる可能性があります。
+
+
+
+== 質問-メタデータまたはその他のOPSはどのように計算されますか
+
+その他のOPS =合計-（読み取り+書き込み）

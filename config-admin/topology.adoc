@@ -1,0 +1,20 @@
+---
+permalink: config-admin/topology.html 
+sidebar: sidebar 
+keywords:  
+summary: 'アセットに適用されている場合は[Topology]セクションで、ベースアセットと関連するアセットの接続状況を確認できます。' 
+---
+= トポロジ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[Topology]セクション（該当するアセットがある場合）では、ベースアセットとそれに関連するアセットがどのように接続されているかを確認できます。
+
+次の例は、仮想マシンのアセットページの[Topology]セクションに表示される内容を示しています。
+
+image::../media/topology-section.gif[[Topology]セクション]
+
+アセットのトポロジがセクションに収まらない場合は、代わりに*リンクをクリックしてトポロジを表示*ハイパーリンクが表示されます。

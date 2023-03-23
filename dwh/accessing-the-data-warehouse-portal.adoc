@@ -1,0 +1,29 @@
+---
+permalink: dwh/accessing-the-data-warehouse-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight Data WarehouseポータルはWebベースのユーザインターフェイスで、コネクタ情報の更新、ジョブキューの表示、日次ビルドのスケジュール設定、アノテーションの選択、Eメール通知の設定、システム情報の表示、データベースのビルド、Data Warehouseのリセット、データベースのバックアップとリストア、問題のトラブルシューティングを実行できます。 Data WarehouseポータルとReportingポータルのユーザアカウントを管理し、ドキュメントやスキーマ図にアクセスできます。 
+---
+= Data Warehouseポータルにアクセスします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Data WarehouseポータルはWebベースのユーザインターフェイスで、コネクタ情報の更新、ジョブキューの表示、日次ビルドのスケジュール設定、アノテーションの選択、Eメール通知の設定、システム情報の表示、データベースのビルド、Data Warehouseのリセット、データベースのバックアップとリストア、問題のトラブルシューティングを実行できます。 Data WarehouseポータルとReportingポータルのユーザアカウントを管理し、ドキュメントやスキーマ図にアクセスできます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. ユーザ名とパスワードを入力します。
+. [* ログイン ] をクリックします。
++
+Data Warehouseポータルが開きます。
+
++
+image::../media/oci-dwh-admin-login-gif.gif[On Command Insight DWHへのログイン]
+
+

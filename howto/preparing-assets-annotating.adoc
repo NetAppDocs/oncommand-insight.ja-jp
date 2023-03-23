@@ -1,0 +1,14 @@
+---
+permalink: howto/preparing-assets-annotating.html 
+sidebar: sidebar 
+keywords:  
+summary: アノテーションを使用すると、選択したアセットに特定のタグやラベルを関連付けることができ、アセットの管理やレポート作成に役立ちます。 
+---
+= アセットの準備：アノテーション
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アノテーションを使用すると、選択したアセットに特定のタグやラベルを関連付けることができ、アセットの管理やレポート作成に役立ちます。

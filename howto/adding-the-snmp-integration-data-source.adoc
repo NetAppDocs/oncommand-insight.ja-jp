@@ -1,0 +1,66 @@
+---
+permalink: howto/adding-the-snmp-integration-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 統合SNMPデータソースは、BrocadeおよびCiscoのOnCommand Insight データソースに含まれている他のSNMPベースのデータソースと同様に、共通のSNMP設定プロパティを提供します。 
+---
+= SNMP統合データソースを作成しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+統合SNMPデータソースは、BrocadeおよびCiscoのOnCommand Insight データソースに含まれている他のSNMPベースのデータソースと同様に、共通のSNMP設定プロパティを提供します。
+
+
+
+== 作業を開始する前に
+
+SNMP統合データソースを使用してデータを収集するには、次の条件を満たしている必要があります。
+
+* このSNMPデータソースに使用する統合パックをインポートしておく必要があります。
+* すべてのターゲットデバイスで同じ資格情報が共有されます。
+* すべてのターゲットデバイスは、設定された統合パックによって参照されるSNMPオブジェクトを実装します。
+
+
+
+
+== このタスクについて
+
+SNMP統合データソースを作成するには、データソース作成ウィザードでベンダー「Integration」およびモデル「SNMP」を選択します。
+
+
+
+== 手順
+
+. OnCommand Insight Web UIで、*[管理]*>*[データソース]*をクリックします
+. 「 * + 追加」をクリックします。
+. データソースの名前を入力します
+. Vendor（ベンダー）で* Integration（統合）*を選択します
+. [Model]で、*[SNMP]*を選択します
++
+image::../media/add-integration-ds.gif[インテグレーションDSを追加します]
+
+. [What to collect]で*[Integration]*をオンにします
++
+このデータソース上の唯一のパッケージであり、デフォルトでオンになっています。
+
+. [設定]*をクリックします
+. SNMPデータの収集元となるシステムのIPアドレスを入力します
+. インポートしたSNMP統合パックを選択します
+. 統合ポーリング間隔を設定します
+. SNMPのバージョンを選択します
+. SNMPコミュニティストリングを入力します
++
+SNMP V1およびV2の場合。
+
+. データの収集元となるシステムのユーザ名とパスワードを追加します。
++
+SNMP V3の場合。
+
+. [詳細設定]*をクリックします
++
+[Advanced Configuration]のデフォルト設定が表示されます。必要に応じてこれらの設定を変更します。
+
+

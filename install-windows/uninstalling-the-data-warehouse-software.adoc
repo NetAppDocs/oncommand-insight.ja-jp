@@ -1,0 +1,41 @@
+---
+permalink: install-windows/uninstalling-the-data-warehouse-software.html 
+sidebar: sidebar 
+keywords:  
+summary: アップグレードする前に、Data Warehouseソフトウェアをアンインストールする必要があります。 
+---
+= Data Warehouseソフトウェアをアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アップグレードする前に、Data Warehouseソフトウェアをアンインストールする必要があります。
+
+
+
+== 作業を開始する前に
+
+保持するレポートに変更を加えた場合は、Data Warehouseをアンインストールする前にバックアップを作成しておくことが重要です。Data Warehouseを完全にアンインストールすると、以前に収集したデータがすべて削除され、新しく作成または編集したレポートも含めてすべてのレポートが削除されます。
+
+
+
+== 手順
+
+. Data Warehouseサーバにログインします。
+. サーバ上のInsightウィンドウがすべて閉じていることを確認します。
+. コントロールパネルを使用してアンインストールするには：
++
+.. コントロールパネルから*プログラムのアンインストール*を開き、削除するOnCommand Insight アプリケーションを選択します。[アンインストール]*をクリックし、画面の指示に従います。
+.. 削除するIBM DB2アプリケーションを選択します。[アンインストール]*をクリックし、画面の指示に従います。
+.. DB2インストールフォルダ（例：_C:\Program Files\IBM\DB2_）を削除して、DB2データベースを完全に削除します。
+
+
+. 提供されているスクリプトを使用してをアンインストールするには
++
+.. _uninstall_oci_dwh_uninstall\_フォルダに移動<download location> し、_uninstall_oci_dwh.bat_scriptを実行します。
+
+
+. サーバをリブートします。
+

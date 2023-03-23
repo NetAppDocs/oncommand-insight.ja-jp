@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-xtremeio-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: EMC XtremIO\（HTTP\）データソースを構成するには、XtremIO Management Server\（XMS\）ホストアドレスと管理者権限を持つアカウントが必要です。 
+---
+= EMC XtremIOデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EMC XtremIO（HTTP）データソースを構成するには、XtremIO Management Server（XMS）ホストアドレスと管理者権限を持つアカウントが必要です。
+
+
+
+== 用語集
+
+OnCommand Insight では、EMC XtremIOデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ディスク（ SSD ）
+ a| 
+ディスク
+
+
+
+ a| 
+クラスタ
+ a| 
+ストレージ
+
+
+
+ a| 
+コントローラ
+ a| 
+ストレージノード
+
+
+
+ a| 
+ボリューム
+ a| 
+ボリューム
+
+
+
+ a| 
+LUN マップ
+ a| 
+ボリュームマップ
+
+
+
+ a| 
+イニシエータ、ターゲット
+ a| 
+ボリュームマスク
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 要件
+
+* 各XtremIO Management ServerのIPアドレス
+* 管理者権限を持つアカウント
+* ポート 443 へのアクセス（ HTTPS ）
+
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+XMS ホスト
+ a| 
+XtremIO Management Server の IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+XtremIO Management Server のユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+XtremIO Management Server のパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+TCP ポート
+ a| 
+XtremIO Management Serverへの接続に使用するTCPポート（デフォルトは443）
+
+
+
+ a| 
+インベントリのポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+接続タイムアウト（秒）
+ a| 
+接続タイムアウト（デフォルトは60秒）
+
+
+
+ a| 
+パフォーマンスのポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 300 秒）
+
+|===

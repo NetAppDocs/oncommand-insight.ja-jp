@@ -1,0 +1,14 @@
+---
+permalink: install-windows/completing-post-upgrade-tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightを最新バージョンにアップグレードしたら、追加の手順を実行する必要があります。 
+---
+= アップグレード後の手順の実行
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightを最新バージョンにアップグレードしたら、追加の手順を実行する必要があります。

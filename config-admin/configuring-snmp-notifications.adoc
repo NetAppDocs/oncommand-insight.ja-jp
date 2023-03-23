@@ -1,0 +1,60 @@
+---
+permalink: config-admin/configuring-snmp-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight では、設定およびグローバルパスポリシーの変更および違反に関するSNMP通知がサポートされます。SNMP通知は、たとえばデータソースのしきい値を超えたときに送信されます。 
+---
+= SNMP通知の設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight では、設定およびグローバルパスポリシーの変更および違反に関するSNMP通知がサポートされます。SNMP通知は、たとえばデータソースのしきい値を超えたときに送信されます。
+
+
+
+== 作業を開始する前に
+
+次の作業が完了している必要があります。
+
+* イベントのタイプごとにトラップを統合するサーバのIPアドレスを特定します。
++
+この情報を取得するには、システム管理者に問い合わせる必要があります。
+
+* イベントのタイプごとに、指定したマシンがSNMPトラップを取得する際に使用するポート番号を識別します。
++
+SNMPトラップのデフォルトポートは162です。
+
+* サイトでMIBをコンパイルします。
++
+独自のMIBには、OnCommand Insight トラップをサポートするインストールソフトウェアが付属しています。NetApp MIBは、すべての標準的なSNMP管理ソフトウェアと互換性があり、Insightサーバのにあります `<install dir>\SANscreen\MIBS\sanscreen.mib`。
+
+
+
+
+
+== 手順
+
+. [管理]*をクリックし、*[通知]*を選択します。
+. ページの*[SNMP]*セクションまでスクロールします。
+. [Actions]*をクリックし、*[Add trap source]*を選択します。
+. [SNMPトラップ受信者の追加]*ダイアログボックスで、次の値を入力します。
++
+** * IP *
++
+OnCommand Insight がSNMPトラップメッセージを送信するIPアドレス。
+
+** * ポート *
++
+OnCommand Insight がSNMPトラップメッセージを送信するポート番号。
+
+** *コミュニティストリング*
++
+SNMPトラップメッセージには「public」を使用します。
+
+
+
+. [ 保存（ Save ） ] をクリックします。
+

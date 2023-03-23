@@ -1,0 +1,39 @@
+---
+permalink: install-linux/uninstalling-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 必要に応じて、OnCommand Insight サーバをアンインストールできます。 
+---
+= OnCommand Insight サーバをアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要に応じて、OnCommand Insight サーバをアンインストールできます。
+
+
+
+== 作業を開始する前に
+
+ベストプラクティス：Insightをアンインストールする前に、OnCommand Insight データベースをバックアップしてください。
+
+
+
+== 手順
+
+. sudo権限があるアカウントでOnCommand Insight サーバにログインします。
+. OnCommand Insight ウィンドウがすべて閉じていることを確認します。
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-uninstall.sh` 次のコマンドを入力します。
++
+`sudo /usr/bin/oci-uninstall.sh --help`
+
++
+通常のアンインストールでは、Insightのライセンスや日次バックアップは削除されません。インストール全体を削除するには、を使用します `--purge` とOPTIOON``oci-install.sh`` コマンドを実行します
+
+. 次のコマンドを入力します。
++
+`sudo /usr/bin/oci-uninstall.sh`
+
+

@@ -1,0 +1,20 @@
+---
+permalink: faq/faq-environment-management.html 
+sidebar: sidebar 
+keywords:  
+summary: このFAQでは、OnCommand Insight 環境の管理に関する一般的な質問に回答します。 
+---
+= 環境の管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このFAQでは、OnCommand Insight 環境の管理に関する一般的な質問に回答します。
+
+
+
+== OCIへのアクセスを特定のユーザに許可し、表示対象を特定のリソース（SVM と関連するボリューム、 VM 、サーバ）
+
+OCIでは、ロールベースアクセスが可能です。たとえば、ReportingへのアクセスはOCIのData Warehouseレポートで制御されます。レポートは、スケジュール設定したり、 PDF 、 HTML 、 CSV 形式で電子メールで送信したり、ファイル共有や、表示する前にユーザーに認証を要求する URL に送信したりできます。ユーザベースのアクセス権は、 Admins 、 users 、および guests の形式で付与されます。Active Directory / LDAP のサポートも利用できます。

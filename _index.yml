@@ -1,0 +1,24 @@
+---
+indexpage:
+  lead: OnCommand Insight は、オンプレミス環境、パブリッククラウド、プライベートクラウドのハイブリッドITインフラの運用管理を簡易化します。
+  tiles:
+  - title: はじめに
+    links:
+    - title: インストール（Windows）
+      url: install-windows/installation-prerequisites.html
+    - title: インストール（Linux）
+      url: install-linux/installation-prerequisites.html
+    - title: 構成と管理
+      url: config-admin/setting-up-insight.html
+  - title: レポート作成
+    links:
+    - title: Data Warehouse Administrationの略
+      url: dwh/welcome-to-data-warehouse.html
+    - title: レポート作成
+      url: reporting/welcome-to-oncommand-insight-reporting.html
+  - title: ハウツーとFAQ
+    links:
+    - title: 使い方
+      url: howto/getting-started-with-insight.html
+    - title: よくある質問
+      url: faq/faq-general-insight-questions.html

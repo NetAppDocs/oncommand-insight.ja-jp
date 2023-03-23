@@ -1,0 +1,45 @@
+---
+permalink: dwh/seeing-the-annotation-changes-in-the-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: データベーススキーマには、特定のテーブルの変更が反映されます。 
+---
+= データベーススキーマでのアノテーションの変更の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベーススキーマには、特定のテーブルの変更が反映されます。
+
+
+
+== このタスクについて
+
+たとえば、ストレージアレイにアノテーションを追加すると、Inventoryデータマートなどのデータマートのstorageテーブルまたはswitchテーブルにアノテーションが表示されます。
+
+OnCommand Insight のユーザインターフェイスを使用してリソースのアノテーションを更新し、Data Warehouseのビルドを開始（または次回のビルドまで待機）すると、インベントリ内の対応するオブジェクト（dwh_inventory）および対応するディメンションテーブルでも新しい列が追加または削除されます （該当するデータマート内）。結果は次の表に表示されます。
+
+* dwh_inventory.annotation_value
+* dwh_inventory.object_to_annotation
+
+
+
+
+== 手順
+
+. をクリックします image:../media/oci-7-help-icon-gif.gif[""] Data Warehouseツールバーで* Documentation *を選択します。
+. [データベーススキーマ]*を選択します。
+. 左側の*[データベーススキーマ]*ペインで、* dwh_inventory *セクションまでスクロールし、* switch *をクリックします。
++
+image::../media/oci-dwh-databaseschema-inventory-switch-gif.gif[DWHのインベントリデータベーススキーマのスイッチテーブル]
+
+. dwh_inventory.switch *テーブルに変更が反映されます。
++
+image::../media/oci-dwh-databaseschema-capacity-sd-gif.gif[DWHの容量データベーススキーマのストレージディメンションテーブル]
+
++
+storage_dimensionsテーブルにdatacenterアノテーション列が表示されます。
+
+

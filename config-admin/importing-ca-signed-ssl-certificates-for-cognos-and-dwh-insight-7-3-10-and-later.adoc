@@ -1,0 +1,118 @@
+---
+permalink: config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html 
+sidebar: sidebar 
+keywords: CAC,Cognos 11,SSL certificates 
+summary: SSL証明書を追加して、Data WarehouseおよびCognos環境の認証と暗号化を強化することができます。 
+---
+= CognosおよびDWHのCA署名SSL証明書のインポート（Insight 7.3.10以降）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SSL証明書を追加して、Data WarehouseおよびCognos環境の認証と暗号化を強化することができます。
+
+
+
+== 作業を開始する前に
+
+この手順 は、OnCommand Insight 7.3.10以降を実行しているシステム用です。
+
+[NOTE]
+====
+CACおよび証明書に関する最新の手順については、次の技術情報アーティクル（サポートへのログインが必要）を参照してください。
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["OnCommand Insight のCommon Access Card（CAC;共通アクセスカード）認証を設定する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["OnCommand Insight Data WarehouseのCommon Access Card（CAC；共通アクセスカード）認証の設定方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["認証局（CA）の署名付き証明書を作成し、OnComand InsightおよびOnCommand Insight Data Warehouse 7.3.xにインポートする方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["WindowsホストにインストールされているOnCommand Insight 7.3.X内で自己署名証明書を作成する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cognos認証局（CA）署名証明書をOnCommand DataWarehouse 7.3.3以降にインポートする方法"]
+
+
+====
+
+
+== このタスクについて
+
+この手順 を実行するには、admin権限が必要です。
+
+
+
+== 手順
+
+. IBM Cognos Configurationツールを使用してCognosを停止します。Cognosを閉じます。
+. のバックアップを作成します `..\SANScreen\cognos\analytics\configuration` および `..\SANScreen\cognos\analytics\temp\cam\freshness` フォルダ。
+. Cognosから証明書暗号化要求を生成します。Admin CMDウィンドウで、次のコマンドを実行します。
++
+.. CD `“\Program Files\sanscreen\cognos\analytics\bin”`
+.. `ThirdPartyCertificateTool.bat -java:local -c -e -p NoPassWordSet -a RSA -r c:\temp\encryptRequest.csr -d “CN=server.domain.com,O=NETAPP,C=US” -H “server.domain.com” -I “ipaddress”`。注意:ここで-Hと-IはdnsやipaddressのようなsubjectAltNamesを追加します。
+
+
+. を開きます `c:\temp\encryptRequest.csr` ファイルを作成し、生成されたコンテンツをコピーします。
+. encryptRequest.csrコンテンツを入力し、CA署名ポータルを使用して証明書を生成します。
+. PKCS7形式を使用してルート証明書を含め、チェーン証明書をダウンロードします
++
+FQDNの.p7bファイルがダウンロードされます
+
+. CAから.p7b形式の証明書を取得します。Cognos Webサーバの証明書としてマークする名前を使用します。
+. ThirdPartyCertificateTool.batはチェーン全体をインポートできないため、すべての証明書をエクスポートするには複数の手順が必要です。チェーンを次のように個別にエクスポートして分割します。
++
+.. "`Crypto Shell Extensions`"の.p7b証明書を開きます。
+.. 左側のペインで「証明書」を参照します。
+.. ルートCA > All Tasks > Exportを右クリックします。
+.. Base64出力を選択します。
+.. ルート証明書として識別するファイル名を入力します。
+.. 手順8aから8eを繰り返して、すべての証明書を.cerファイルに個別にエクスポートします。
+.. ファイルにmediateX.cerとcognos.cerという名前を付けます。
+
+
+. CA証明書が1つしかない場合は、この手順を無視します。それ以外の場合は、root.cerとintermediateX.cerの両方を1つのファイルにマージします。
++
+.. メモ帳でroot.cerを開き、内容をコピーします。
+.. メモ帳を使用してintermediate.cerを開き、9aのコンテンツを追加します（最初に中間、次にルート）。
+.. ファイルをchain.cerとして保存します。
+
+
+. Admin CMDプロンプトを使用して、Cognosキーストアに証明書をインポートします。
++
+.. cd「Program Files\SANscreen\cognos\analytics\bin`」
+.. ThirdPartyCertificateTool.bat - java：local -i -T -r c：\temp\root.cer
+.. ThirdPartyCertificateTool.bat - java：local -i -T -r c：\temp\intermediate.cer
+.. ThirdPartyCertificateTool.bat - java：local -i -e -r c：\temp\cognos.cer -t c：\temp\chain.cer
+
+
+. [IBM Cognos Configuration]を開きます。
++
+.. [Local Configuration]->[Security]->[Cryptography]->[Cognos]を選択します
+.. 「サードパーティCAを使用しますか？」を変更します。 Trueに設定します。
+.. 設定を保存します。
+.. Cognosを再起動します
+
+
+. Admin CMDプロンプトを使用して、最新のCognos証明書をcognos.crtにエクスポートします。
++
+.. CD "`C：\Program Files\SANscreen"
+.. java\bin\keytool.exe -exportcert -file c：\temp\cognos.crt -keystore cognos\analytics\configuration\certs\CAMKeystore -storetype PKCS12 -storepass NoPassWordSet -alias encryption
+
+
+. DWHサーバのtrustoreをにバックアップします``..\SANscreen\wildfly\standalone\configuration\server.trustore``
+. Admin CMDプロンプトウィンドウを使用して、「c：\temp\cognos.crt」をDWH trustoreにインポートし、CognosとDWHの間のSSL通信を確立します。
++
+.. CD "`C：\Program Files\SANscreen"
+.. java\bin\keytool.exe -importcert -file c：\temp\cognos.crt -keystore wildfly\standalone\configuration\server.trustore -storepass changeit -alias cognos3rdca
+
+
+. SANscreen サービスを再起動します。
+. DWHのバックアップを実行して、DWHがCognosと通信していることを確認します。
+. 次の手順は、「sl certificate」のみを変更し、デフォルトのCognos証明書を変更しない場合でも実行する必要があります。そうしないと、新しいSANscreen 証明書についてCognosから苦情が表示されたり、DWHバックアップを作成できない可能性があります。
++
+.. `cd “%SANSCREEN_HOME%cognos\analytics\bin\”`
+.. `“%SANSCREEN_HOME%java64\bin\keytool.exe” -exportcert -file “c:\temp\sanscreen.cer” -keystore “%SANSCREEN_HOME%wildfly\standalone\configuration\server.keystore” -storepass changeit -alias “ssl certificate”`
+.. `ThirdPartyCertificateTool.bat -java:local -i -T -r “c:\temp\sanscreen.cer”`
+
+
++
+通常、これらの手順はCognos証明書のインポートプロセスの一環として実行します（を参照） https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cognos認証局（CA）署名証明書をOnCommand DataWarehouse 7.3.3以降にインポートする方法"]
+
+

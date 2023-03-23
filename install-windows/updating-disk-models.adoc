@@ -1,0 +1,31 @@
+---
+permalink: install-windows/updating-disk-models.html 
+sidebar: sidebar 
+keywords:  
+summary: アップグレード後はディスクモデルを更新する必要がありますが、何らかの理由でInsightで新しいディスクモデルが検出されなかった場合は、ディスクモデルを手動で更新できます。 
+---
+= ディスクモデルを更新しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アップグレード後はディスクモデルを更新する必要がありますが、何らかの理由でInsightで新しいディスクモデルが検出されなかった場合は、ディスクモデルを手動で更新できます。
+
+
+
+== 作業を開始する前に
+
+テクニカルサポートからを入手しておく必要があります `.zip` 最新のデータソースパッチを含むファイル。
+
+
+
+== 手順
+
+. SANscreen Acqサービスを停止します。
+. 次のディレクトリに移動します。 `<install directory>\SANscreen\wildfly\standalone\deployments\datasources.war`。
+. 現在のを移動します `diskmodels.jar` ファイルを別の場所に保存します。
+. 新しいをコピーします `diskmodels.jar` ファイルをに挿入します `datasources.war` ディレクトリ。
+. SANscreen Acqサービスを開始します。
+

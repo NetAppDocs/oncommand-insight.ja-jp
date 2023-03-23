@@ -1,0 +1,99 @@
+---
+section: install-linux
+title: インストール（Linux
+entries:
+- title: インストールの前提条件
+  url: "/install-linux/installation-prerequisites.html"
+  entries:
+  - title: 導入を計画します
+    url: "/install-linux/planning-the-installation.html"
+    entries:
+    - title: データソースのサポート情報
+      url: "/install-linux/data-source-support-information.html"
+    - title: デバイスの識別とデータソースの計画
+      url: "/install-linux/device-identification-and-data-source-planning.html"
+    - title: OnCommand Insight で生成されるネットワークトラフィック
+      url: "/install-linux/network-traffic-generated-by-oncommand-insight.html"
+  - title: MariaDBをアンインストールしています
+    url: "/install-linux/uninstalling-mariadb.html"
+  - title: Insight Serverの要件
+    url: "/install-linux/insight-server-requirements.html"
+  - title: Data Warehouseサーバの要件
+    url: "/install-linux/data-warehouse-server-requirements-linux.html"
+  - title: Remote Acquisition Unitサーバの要件
+    url: "/install-linux/remote-acquisition-unit-server-requirements.html"
+  - title: 異常検出の要件
+    url: "/install-linux/anomaly-detection-requirements.html"
+  - title: Insight Java UIの要件
+    url: "/install-linux/insight-java-ui-requirements.html"
+  - title: OnCommand Insight でサポートされているブラウザ
+    url: "/install-linux/insight-browser-support.html"
+- title: Insightのインストール手順
+  url: "/install-linux/oncommand-insight-installation-instructions.html"
+  entries:
+  - title: OnCommand Insight インストーラをダウンロードしています
+    url: "/install-linux/downloading-the-oncommand-insight-installer.html"
+  - title: OnCommand Insight サーバをインストールしています
+    url: "/install-linux/installing-the-oncommand-insight-server-linux.html"
+  - title: OnCommand Insight Data Warehouseをインストールしています
+    url: "/install-linux/installing-oncommand-insight-data-warehouse-linux.html"
+  - title: Remote Acquisition Unitのインストール
+    url: "/install-linux/installing-a-remote-acquisition-unit-rau-linux.html"
+    entries:
+    - title: Remote Acquisition Unitのインストールを検証しています
+      url: "/install-linux/validating-the-rau-installation.html"
+  - title: 異常検出ソフトウェアをインストールします
+    url: "/install-linux/installing-the-anomaly-detection-software.html"
+  - title: Ethernet Monitoring Unitのインストール
+    url: "/install-linux/installing-an-ethernet-monitoring-unit-linux.html"
+  - title: インストールを確認しています
+    url: "/install-linux/checking-the-installation.html"
+    entries:
+    - title: 新しいInsightコンポーネントがインストールされていることを確認します
+      url: "/install-linux/verifying-new-insight-services-linux.html"
+    - title: Insightのログ
+      url: "/install-linux/insight-logs.html"
+    - title: Web UIへのアクセス
+      url: "/install-linux/opening-insight.html"
+    - title: Insightのライセンスをインストールします
+      url: "/install-linux/installing-your-insight-licenses.html"
+      entries:
+      - title: OnCommand Insight ライセンス
+        url: "/install-linux/oncommand-insight-licenses.html"
+  - title: インストールのトラブルシューティング
+    url: "/install-linux/troubleshooting-installations.html"
+    entries:
+    - title: ライセンスがありません
+      url: "/install-linux/missing-licenses.html"
+    - title: オンラインテクニカルサポートリクエストの送信
+      url: "/install-linux/submitting-an-online-technical-support-request.html"
+- title: Insightのアップグレード
+  url: "/install-linux/upgrading-insight-linux.html"
+  entries:
+  - title: Insightをバージョン7.3.12以降にアップグレードしています（Linux）
+    url: "/install-linux/upgrading-insight-to-version-7-3-12-or-later-linux.html"
+  - title: Insight Serverソフトウェアをアップグレードしています
+    url: "/install-linux/upgrading-insight-server-software.html"
+  - title: Data Warehouseソフトウェアをアップグレードしています
+    url: "/install-linux/upgrading-data-warehouse.html"
+  - title: Remote Acquisition Unitソフトウェアをアップグレード中です
+    url: "/install-linux/upgrading-remote-acquisition-units.html"
+  - title: 異常検出エンジンをアップグレードしています
+    url: "/install-linux/upgrading-the-anomaly-detection-engine.html"
+  - title: Ethernet Monitoring Unitソフトウェアをアップグレードしています
+    url: "/install-linux/upgrading-ethernet-monitoring-units.html"
+  - title: WindowsからLinuxへの移行
+    url: "/install-linux/migrating-from-windows-to-linux.html"
+- title: OnCommand Insight をアンインストールしています
+  url: "/install-linux/uninstalling-oncommand-insight.html"
+  entries:
+  - title: OnCommand Insight サーバをアンインストールしています
+    url: "/install-linux/uninstalling-insight.html"
+  - title: Data Warehouseをアンインストールしています
+    url: "/install-linux/uninstalling-data-warehouse.html"
+  - title: Remote Acquisition Unitのアンインストール
+    url: "/install-linux/uninstalling-a-remote-acquisition-unit-rau.html"
+  - title: Ethernet Monitoring Unitのアンインストール
+    url: "/install-linux/uninstalling-an-ethernet-monitoring-unit-emu-linux.html"
+  - title: 異常検出エンジンをアンインストールしています
+    url: "/install-linux/uninstalling-the-anomaly-detection-engine-linux.html"

@@ -1,0 +1,25 @@
+---
+permalink: install-windows/locating-ibm-cognos-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: Reporting Portalソフトウェアを開始および停止する方法など、基本的な情報については、製品とともにインストールされるIBM Cognosのドキュメントを参照してください。Query Studio、Report Studio、Business Insight、Business Insight Advancedなど、IBM Cognosのレポート製品に関する情報は、WebブラウザでIBMのWebサイトのInformation Centerで検索できます。 
+---
+= IBM Cognosのドキュメントを参照してください
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Reporting Portalソフトウェアを開始および停止する方法など、基本的な情報については、製品とともにインストールされるIBM Cognosのドキュメントを参照してください。Query Studio、Report Studio、Business Insight、Business Insight Advancedなど、IBM Cognosのレポート製品に関する情報は、WebブラウザでIBMのWebサイトのInformation Centerで検索できます。
+
+
+
+== 手順
+
+. OnCommand Insight とともにインストールされるIBM Cognosのドキュメントを参照するには、このディレクトリに移動します。
++
+`<install_dir\>\cognos\c10_64\webcontent\documentation\help_docs.html`
+
+. また、OnCommand Insight Reportingポータルで使用されるIBM Cognosの個 々 のウィンドウについて説明したトピックも表示できます。ウィンドウツールバーの*？*アイコンをクリックします。
+

@@ -1,0 +1,16 @@
+---
+permalink: install-windows/insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightには、調査やトラブルシューティングに役立つ多数のログファイルが用意されています。使用可能なログは、logディレクトリに一覧表示されます。BareTailなどのログ監視ツールを使用すると、すべてのログを一度に表示できます。 
+---
+= Insightのログ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightには、調査やトラブルシューティングに役立つ多数のログファイルが用意されています。使用可能なログは、logディレクトリに一覧表示されます。BareTailなどのログ監視ツールを使用すると、すべてのログを一度に表示できます。
+
+ログファイルはにあります `<install directory>\SANscreen\wildfly\standalone\log` ディレクトリ。収集ログはにあります `<install directory>\SANscreen\Acq\Log` ディレクトリ。

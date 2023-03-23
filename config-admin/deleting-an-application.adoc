@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-an-application.html 
+sidebar: sidebar 
+keywords:  
+summary: 環境のニーズを満たせなくなったアプリケーションを削除することもできます。 
+---
+= アプリケーションの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+環境のニーズを満たせなくなったアプリケーションを削除することもできます。
+
+
+
+== 手順
+
+. Insight Web UIにログインします。
+. [管理]*をクリックし、*[アプリケーション]*を選択します。
+. 削除するアプリケーションにカーソルを合わせ、をクリックします image:../media/trash-can-query.gif[""]。
++
+アプリケーションを削除するかどうかを確認するダイアログボックスが表示されます。
+
+. [OK] をクリックします。
+

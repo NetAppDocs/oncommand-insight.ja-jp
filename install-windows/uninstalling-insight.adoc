@@ -1,0 +1,30 @@
+---
+permalink: install-windows/uninstalling-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 必要に応じて、OnCommand Insight サーバをアンインストールできます。 
+---
+= OnCommand Insight サーバをアンインストールしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要に応じて、OnCommand Insight サーバをアンインストールできます。
+
+
+
+== 作業を開始する前に
+
+ベストプラクティス：Insightをアンインストールする前に、OnCommand Insight データベースをバックアップしてください。
+
+
+
+== 手順
+
+. 管理者権限があるアカウントでOnCommand Insight サーバにログインします。
+. サーバ上のInsightウィンドウがすべて閉じていることを確認します。
+. コントロールパネルから*プログラムのアンインストール*機能を開き、削除するOnCommand Insight アプリケーションを選択します。
+. [アンインストール]*をクリックし、画面の指示に従います。
+

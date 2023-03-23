@@ -1,0 +1,27 @@
+---
+permalink: install-linux/uninstalling-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: Remote Acquisition Unitが不要になった場合はアンインストールできます。 
+---
+= Remote Acquisition Unitのアンインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remote Acquisition Unitが不要になった場合はアンインストールできます。
+
+
+
+== 手順
+
+. sudo権限があるアカウントでRemote Acquisition Unitサーバにログインします。
+. OnCommand Insight ウィンドウがすべて閉じていることを確認します。
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `uninstall.sh` 次のコマンドを入力します。 `sudo /usr/bin/oci-uninstall.sh --help`
+. 次のコマンドを入力します。 `sudo /usr/bin/oci-uninstall.sh`
++
+アンインストールスクリプトが実行されます。プロンプトの指示に従います。
+
+

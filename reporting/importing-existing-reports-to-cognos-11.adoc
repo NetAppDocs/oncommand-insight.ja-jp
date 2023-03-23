@@ -1,0 +1,38 @@
+---
+permalink: reporting/importing-existing-reports-to-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: 以前クリップボードにコピーされたレポート仕様を開くことができます。 
+---
+= クリップボードからレポート（ XML ）を開く
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以前クリップボードにコピーされたレポート仕様を開くことができます。
+
+
+
+== このタスクについて
+
+Reportingユーザインターフェイスに入るには、新しいレポートを作成するか、既存のレポートを開きます
+
+
+
+== 手順
+
+. Cognos 11 Reportingポータルを開きます。 https://server-name:9300/bi/[]
+. ツールバーで、をクリックします image:../media/new-report.gif[""]
+. [ レポート（ Report ） ] をクリックします
+. [ * ページ * ] アイコンをクリックしますimage:../media/pages-icon.gif[""]
++
+[レポート（Report）]アイコン image:../media/report-icon.gif[""] が表示されます
+
+. [レポート（Report）]*アイコンを左クリックします
++
+レポートオプションが表示されます。
+
+. [ クリップボードからレポートを開く *] をクリックします。
+

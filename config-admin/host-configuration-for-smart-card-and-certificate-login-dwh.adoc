@@ -1,0 +1,89 @@
+---
+permalink: config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html 
+sidebar: sidebar 
+keywords:  
+summary: スマートカード（CAC\）および証明書によるログインをサポートするには、OnCommand Insight Data Warehouseの設定を変更する必要があります。 
+---
+= Data Warehouseでスマートカードおよび証明書によるログインを設定しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スマートカード（CAC）および証明書によるログインをサポートするには、OnCommand Insight データウェアハウスの設定を変更する必要があります。
+
+
+
+== 作業を開始する前に
+
+* システムでLDAPが有効になっている必要があります。
+* LDAP `User principal account name` 属性は、ユーザの政府機関ID番号を含むLDAPフィールドと一致する必要があります。
++
+政府発行のCACに保存される共通名（CN）は、通常次の形式になります。 `first.last.ID`。一部のLDAPフィールド（など） `sAMAccountName`この形式は長すぎます。これらのフィールドの場合、OnCommand Insight はCNからID番号だけを抽出します。
+
+
+
+[NOTE]
+====
+CACおよび証明書に関する最新の手順については、次の技術情報アーティクル（サポートへのログインが必要）を参照してください。
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["OnCommand Insight のCommon Access Card（CAC;共通アクセスカード）認証を設定する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["OnCommand Insight Data WarehouseのCommon Access Card（CAC；共通アクセスカード）認証の設定方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["認証局（CA）の署名付き証明書を作成し、OnComand InsightおよびOnCommand Insight Data Warehouse 7.3.xにインポートする方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["WindowsホストにインストールされているOnCommand Insight 7.3.X内で自己署名証明書を作成する方法"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cognos認証局（CA）署名証明書をOnCommand DataWarehouse 7.3.3以降にインポートする方法"]
+
+
+====
+
+
+== 手順
+
+. regeditを使用して、のレジストリ値を変更します `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun2.0\SANscreen Server\Parameters\Java`
++
+.. jvm_optionを変更します `-DclientAuth=false` 終了： `-DclientAuth=true`。
+
+
++
+Linuxの場合は、を変更します `clientAuth` のパラメータ `/opt/netapp/oci/scripts/wildfly.server`
+
+. Data Warehouse TrustoreにCertificate Authority（CA；認証局）を追加します。
++
+.. コマンドウィンドウで、に進みます `..\SANscreen\wildfly\standalone\configuration`。
+.. を使用します `keytool` 信頼されたCAをリスト表示するユーティリティ： `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
++
+各行の最初の単語はCAエイリアスを示します。
+
+.. 必要に応じて、CA証明書ファイル（通常は）を指定します `.pem` ファイル。Data Warehouseの信頼済みCAにお客様のCAを含めるには、に進みます `..\SANscreen\wildfly\standalone\configuration` およびを使用します `keytool` インポートコマンド： `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore server.trustore -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
++
+my_aliasは通常、でCAを簡単に識別できるエイリアスです``keytool -list`` 操作。
+
+
+
+. OnCommand Insight サーバで、を実行します `wildfly/standalone/configuration/standalone-full.xml` でverify-clientを「requested」に更新して、ファイルを変更する必要があります ``/subsystem=undertow/server=default-server/https-listener=default-https``CACを有効にします。Insight Serverにログインし、該当するコマンドを実行します。
++
+|===
+
+
+| OS | スクリプト 
+
+
+ a| 
+Windows の場合
+ a| 
+<install dir> を参照してくださいenableCACforRemoteEJB.bat
+
+
+
+ a| 
+Linux の場合
+ a| 
+/opt/netapp/oci/wildfly/bin/enableCACforRemoteEJB.sh
+
+|===
++
+スクリプトの実行後、wildflyサーバのリロードが完了するまで待ってから、次の手順に進みます。
+
+. OnCommand Insight サーバを再起動します。
+

@@ -1,0 +1,26 @@
+---
+permalink: install-windows/validating-the-rau-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Remote Acquisition Unitが適切にインストールされていることを確認するために、サーバに接続されているRemote Acquisition Unitのステータスを表示できます。 
+---
+= Remote Acquisition Unitのインストールを検証しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remote Acquisition Unitが適切にインストールされていることを確認するために、サーバに接続されているRemote Acquisition Unitのステータスを表示できます。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックします。
+. Acquisition Units *をクリックします。
+. 新しいRemote Acquisition Unitが正しく登録され、ステータスが「Connected」になっていることを確認します。
++
+表示されない場合は、テクニカルサポートにお問い合わせください。
+
+

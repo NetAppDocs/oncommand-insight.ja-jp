@@ -1,0 +1,79 @@
+---
+permalink: howto/configure-insight-for-filesystem-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: ファイルシステム利用率データを収集するようにInsightを設定するには、Host Utilization Packライセンスをインストールし、NetApp Host and VM File Systemsデータソースを設定する必要があります。 
+---
+= ファイルシステム収集用にInsightを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ファイルシステム利用率データを収集するようにInsightを設定するには、Host Utilization Packライセンスをインストールし、NetApp Host and VM File Systemsデータソースを設定する必要があります。
+
+
+
+== 作業を開始する前に
+
+Host Utilization Packライセンスをインストールしていない場合は、インストールします。ライセンスは、* Admin *>* Setup *ページの* Licenses *タブで確認できます。
+
+Host and VM File Systemsデータソースでは、Insightで現在収集または検出されている既知の*コンピューティングリソース*（ホストおよびVM）について、ファイルシステムの利用率とファイルシステムのメタデータのみが報告されます。
+
+* 仮想マシンは、Hyper-VやVMwareなどのハイパーバイザーデータソースによって収集されます。
+* ホストはデバイス解決によって検出されます。
+
+
+適切な階層のアノテーションが適切なストレージリソースに表示されている必要があります。
+
+接続された次のブロックストレージデバイスがサポートされます。
+
+* NetApp clustered Data ONTAP （clustered Data ONTAP）
+* NetApp 7-Mode
+* クラリオン
+* Windows：FC、iSCSI用のVMware仮想ディスク（VMDK）
+* Linux：VMware VMDK（iSCSIおよびFCはサポートされません）
+
+
+コンピューティングリソースグループ*は、共通の管理クレデンシャルを共有するホストや仮想マシンをグループ化できるアノテーションです。
+
+
+
+== 手順
+
+. 最初に、*コンピューティングリソースグループ*に含めるホストや仮想マシンをアノテートします。[クエリ]*>*+[新しいクエリ]*に移動し、_Virtual Machine_assetsを検索します。
++
+この手順は、_Host_assetsについても繰り返す必要があります。
+
+. テーブルの右側にある列セレクタをクリックし、*[Compute Resource Group]*列を選択してクエリ結果テーブルに表示します。
+. 目的のコンピューティングリソースグループに追加する仮想マシンを選択します。フィルタを使用して特定のアセットを検索できます。
+. [Actions]*ボタンをクリックし、*[Edit annotation]*を選択します。
+. [_Compute Resource Group_]アノテーションを選択し、[_value_]フィールドで目的のリソースグループ名を選択します。
++
+選択したVMにリソースグループのアノテーションが追加されます。リソースグループ名は、あとでHost and VM File Systemsデータソースで設定する名前と一致している必要があります。
+
+. コンピューティングリソースグループのHost and VM File Systemsデータソースを設定するには、* Admin *>* Data sources *および* Add * The_NetApp Host and VM File Systems_data sourceをクリックします。
++
+image::../media/hostutil-dsconfig.gif[HOSTUTIL dsconfig]
+
+. [設定]セクションで、ファイルシステムデータを取得するための適切な権限を持つオペレーティングシステムユーザーの*[ユーザー名]および*[パスワード]を入力します。Windowsオペレーティングシステムユーザの場合、Windows環境でドメインプレフィックスが使用されている場合は、ドメインプレフィックスを含める必要があります。
++
+LinuxにインストールされているInsight Acquisition Unit（AU）はLinuxのコンピューティングリソースについてレポートできますが、WindowsにインストールされているAUはLinuxまたはWindowsのいずれかのコンピューティングリソースと通信できます。
+
+. ファイルシステムの利用率データの収集元となるアセットの*[コンピューティングリソースグループ]*の名前を入力します。この名前は、上記のアセットへのアノテートに使用したリソースグループの名前と一致している必要があります。
++
+[Compute Resource Group]フィールドを空のままにした場合は、[Compute Resource Group]アノテーションのないホストまたはVMのデータがデータソースで収集されます。
+
+. [**Advanced Configuration**]セクションで、このデータソースのポーリング間隔を入力します。通常、デフォルトの6時間で十分です。
+. 保存する前に、データソース接続を*テスト*することをお勧めします。接続が成功すると、グループに含まれているコンピューティングリソースターゲットの数も表示されます。
+. [ 保存（ Save ） ] をクリックします。Host and VM File Systemsデータソースの次回のポーリング時にデータの収集が開始されます。
+. 収集されたファイルシステムデータは、ホストまたはVMのアセットページの[File System]ウィジェットで確認できます。
++
+image::../media/hostutil-vmlpfstable.gif[HOSTUTIL vmlpfstable]
+
+. 作成するコンピューティングリソースグループごとに、上記の手順を繰り返します。各コンピューティングリソースグループに専用のHost and VM File Systemsデータソースを関連付ける必要があります。
++
+ファイルシステム情報は、環境内の従来のVMwareまたはHyper-Vデータソースですでに取得されているホストおよびVMについて収集されます。
+
+

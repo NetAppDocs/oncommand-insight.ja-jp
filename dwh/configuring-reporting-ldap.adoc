@@ -1,0 +1,144 @@
+---
+permalink: dwh/configuring-reporting-ldap.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouseポータルでは、管理者がData WarehouseおよびReportingでのLDAPの使用方法を設定できます。 
+---
+= レポート用にLDAPを設定しています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouseポータルでは、管理者がData WarehouseおよびReportingでのLDAPの使用方法を設定できます。
+
+
+
+== 作業を開始する前に
+
+このタスクを実行するには、管理者としてInsightにログインする必要があります。
+
+すべてのSecure Active Directory（LDAPS）ユーザに対して、ADサーバ名は証明書で定義されているとおりに正確に使用する必要があります。セキュアADログインにIPアドレスを使用することはできません。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[ユーザ管理]*をクリックします。
+. [LDAP設定]*をクリックします。
+. [LDAPを有効にする]*を選択して、LDAPユーザの認証と許可のプロセスを開始します。
+. LDAPの設定に必要な変更を行います。
++
+ほとんどのフィールドにはデフォルト値が含まれています。デフォルト設定はActive Directoryに対して有効です。
+
++
+** *ユーザープリンシパル名属性*
++
+LDAPサーバ内の各ユーザを識別する属性。デフォルトはです `userPrincipalName`世界的にユニークなものですOnCommand Insight は、この属性の内容を上記で指定したユーザ名と照合しようとします。
+
+** *ロール属性*
++
+指定したグループ内でのユーザの適合性を識別するLDAP属性。デフォルトはです `memberOf`。
+
+** *メール属性*
++
+ユーザのEメールアドレスを識別するLDAP属性。デフォルトはです `mail`。これは、OnCommand Insight から利用可能なレポートをサブスクライブする場合に便利です。Insightでは、各ユーザが初めてログインしたときにユーザのEメールアドレスが取得され、それ以降は検索されません。
+
++
+[NOTE]
+====
+LDAPサーバでユーザのEメールアドレスが変更された場合は、Insightでそのアドレスを更新してください。
+
+====
+** *識別名属性*
++
+ユーザの識別名を識別するLDAP属性。デフォルトはです `distinguishedName`。
+
+** *紹介*
++
+企業内に複数のドメインがある場合に、他のドメインへのパスをたどるかどうかを指定します。常にデフォルトを使用する必要があります `follow` 設定：
+
+** *タイムアウト*
++
+タイムアウトするまでにLDAPサーバからの応答を待機する時間（ミリ秒）。デフォルトは2、000です。これはすべてのケースで適切なため、変更しないでください。
+
+** * LDAPサーバ*
++
+LDAPサーバを識別するIPアドレスまたはDNS名です。特定のポートを識別するには、を参照してください `ldap-server-address` はLDAPサーバの名前です。次の形式を使用できます。
+
++
+[listing]
+----
+ldap://ldap-server-address:port
+----
++
+デフォルトのポートを使用するには、次の形式を使用します。
+
++
+[listing]
+----
+ldap://ldap-server-address
+----
++
+[NOTE]
+====
+ When entering multiple LDAP servers in this field, separate entries with a comma, and ensure that the correct port number is used in each entry.
++ LDAP証明書をインポートするには、*[証明書のインポート]*をクリックし、証明書ファイルを自動的にインポートするか、手動で検索します。
+
+====
+** *ドメイン*
++
+OnCommand Insight がLDAPユーザの検索を開始するLDAPノード。通常、これは組織のトップレベルドメインです。例：
+
++
+[listing]
+----
+DC=<enterprise>,DC=com
+----
+** * Insight Server adminsグループ*
++
+Insight Server管理者権限を持つユーザーのLDAPグループ。デフォルトはです `insight.server.admins`。
+
+** * Insight管理者グループ*
++
+Insight管理者の権限を持つユーザのLDAPグループ。デフォルトはです `insight.admins`。
+
+** * Insight Usersグループ*
++
+Insightユーザの権限を持つユーザのLDAPグループ。デフォルトはです `insight.users`。
+
+** * Insightゲストグループ*
++
+Insight Guest権限を持つユーザのLDAPグループ。デフォルトはです `insight.guests`。
+
+** *レポート管理者グループ*
++
+Insight Reportingの管理者権限を持つユーザのLDAPグループ。デフォルトはです `insight.report.admins`。
+
+** * Reporting Pro Authorsグループ*
++
+Insight Reporting Pro Authorsの権限を持つユーザのLDAPグループ。デフォルトはです `insight.report.proauthors`。
+
+** *レポートビジネス作成者グループ*
++
+Insight ReportingのBusiness Authors権限を持つユーザのLDAPグループ。デフォルトはです `insight.report.business.authors`。
+
+** *ビジネス消費者グループの報告*
++
+Insight Reporting Business Consumers権限を持つユーザのLDAPグループ。デフォルトはです `insight.report.business.consumers`。
+
+** *レポート受信者グループ*
++
+Insight Reportingの受信者の権限を持つユーザのLDAPグループ。デフォルトはです `insight.report.recipients`。
+
+
+
+. 変更を加えた場合は、* Directory lookup user *および* Directory lookup user password *フィールドに値を入力します。
++
+これらのフィールドに変更後の値を入力しないと、変更内容は保存されません。
+
+. [ディレクトリルックアップユーザパスワードの確認]フィールドにディレクトリルックアップユーザパスワードを再入力し、*[パスワードの検証]*をクリックしてサーバ上のパスワードを検証します。
+. [更新]*をクリックして変更を保存します。変更を削除するには、*[キャンセル]*をクリックします。
+

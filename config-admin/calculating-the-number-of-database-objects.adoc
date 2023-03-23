@@ -1,0 +1,24 @@
+---
+permalink: config-admin/calculating-the-number-of-database-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight データベース内のオブジェクトの数を確認するには、スケールの計算機能を使用します。 
+---
+= データベースオブジェクトの数を計算します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight データベース内のオブジェクトの数を確認するには、スケールの計算機能を使用します。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックし、*[Troubleshooting]*を選択します。
+. ページ下部の[その他のタスク]領域で、*[高度なトラブルシューティング]*リンクをクリックします。
+. [高度なトラブルシューティング]ページで、*[レポート]*タブをクリックします。
+. [計算スケール]*をクリックします。
+

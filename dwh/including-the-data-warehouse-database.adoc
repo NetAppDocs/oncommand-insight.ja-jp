@@ -1,0 +1,30 @@
+---
+permalink: dwh/including-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: デフォルトでは、トラブルシューティングのサポートを受けるためにASUPからテクニカルサポートに送信されるのはData Warehouseのログファイルだけですが、Data Warehouseデータベースのバックアップを含めるように指定して、送信するデータのタイプを選択することもできます。 
+---
+= Data Warehouseデータベースのバックアップを含む
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+デフォルトでは、トラブルシューティングのサポートを受けるためにASUPからテクニカルサポートに送信されるのはData Warehouseのログファイルだけですが、Data Warehouseデータベースのバックアップを含めるように指定して、送信するデータのタイプを選択することもできます。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*トラブルシューティング*をクリックします。
+. ASUPにData Warehouseデータベースのバックアップを含めるように指定するには、*[Include DWH Database Backup]*リストをクリックし、バックアップに含めるデータのタイプとして次のいずれかのオプションを選択します。
++
+** すべて（パフォーマンスを含む）
+** パフォーマンスを除くすべて
+** 在庫のみ
+
+
+. [ 更新（ Update ） ] をクリックします。
+

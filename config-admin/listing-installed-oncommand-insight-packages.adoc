@@ -1,0 +1,24 @@
+---
+permalink: config-admin/listing-installed-oncommand-insight-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: インストールされているOnCommand Insight コンポーネントのリスト（インベントリ、容量、ディメンションなど）を表示できます。 およびData Warehouseビュー。カスタマーサポートからこの情報の入力を求められる場合や、インストールされているソフトウェアのバージョンとインストール日時を確認する必要がある場合があります。 
+---
+= インストールされているOnCommand Insight コンポーネントの一覧表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールされているOnCommand Insight コンポーネントのリスト（インベントリ、容量、ディメンションなど）を表示できます。 およびData Warehouseビュー。カスタマーサポートからこの情報の入力を求められる場合や、インストールされているソフトウェアのバージョンとインストール日時を確認する必要がある場合があります。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックし、*[Troubleshooting]*を選択します。
+. ページ下部の[その他のタスク]領域で、*[高度なトラブルシューティング]*リンクをクリックします。
+. [高度なトラブルシューティング]ページで、*[レポート]*タブをクリックします。
+. [インストールされているソフトウェアパッケージ]*をクリックします。
+

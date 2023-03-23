@@ -1,0 +1,26 @@
+---
+permalink: config-admin/finding-ghost-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: デバイスを削除してもデバイスデータが残っている場合は、ゴーストデータソースを見つけて削除できます。 
+---
+= ゴーストデータソースの検索
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+デバイスを削除してもデバイスデータが残っている場合は、ゴーストデータソースを見つけて削除できます。
+
+
+
+== 手順
+
+. Web UIで、*[Admin]*をクリックし、*[Troubleshooting]*を選択します。
+. ページ下部の[その他のタスク]領域で、*[高度なトラブルシューティング]*リンクをクリックします。
+. [レポート]タブで、*[ゴーストデータソース]*リンクをクリックします。
++
+OnCommand Insight は、発信者とそのデバイス情報のリストを生成します。
+
+

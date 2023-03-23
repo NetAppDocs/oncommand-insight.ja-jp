@@ -1,0 +1,51 @@
+---
+permalink: howto/servicenow-integration-python-middleware-setup.html 
+sidebar: sidebar 
+keywords:  
+summary: Pythonと必要なライブラリがインストールされたので、OnCommand Insight とServiceNowと通信するようにミドルウェアコネクタを設定できます。 
+---
+= Pythonミドルウェアをセットアップします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pythonと必要なライブラリがインストールされたので、OnCommand Insight とServiceNowと通信するようにミドルウェアコネクタを設定できます。
+
+
+
+== 手順
+
+. コネクタソフトウェアをダウンロードしたホストまたはVMで、管理者としてcmdウィンドウを開き、に変更します `\OCI2SNOW\` フォルダ。
+. 空の* config.ini*ファイルを生成するには、スクリプトを初期化する必要があります。次のコマンドを実行します。 `oci_snow_sync.pyz init`
+. テキストエディタで**config.ini**fileを開き、[OCI]セクションで次の変更を行います。
++
+** 「* url *」をに設定します `https://<name.domain>` または `https://<ip address>` （Insightインスタンス）。
+** 作成したInsightユーザ（OCI2SNOWなど）に、* user *と* password *を設定します。
+** include_off_vms *を* false *に設定します
+
+
+. [SNOW]セクションで、次の変更を行います。
++
+** Instance *をServiceNowインスタンスのFQDNまたはIPアドレスに設定します
+** *User*および*Password*をServiceNowサービスアカウントユーザ（OCI2SNOWなど）に設定します。
+** OCI URL *の*フィールドで、* URL *フィールドを「`u_oci_url`」に設定します。このフィールドは、コネクタOCIの更新セットの一部として作成されます。これはお客様の環境で変更できますが、変更する場合は、こことServiceNowで変更する必要があります。このフィールドはそのままにしておくことを推奨します。
+** *filter_status*フィールドを"`installed, in Stock`に設定します。ステータスが異なる場合は、新しいレコードをアップロードする前に、すべてのレコードをInsightレコードと一致させるために、ここでステータスを設定する必要があります。ほとんどの場合、このフィールドは変更されません。
+** ** stale_status**を"`Retired"に設定します。
+
+
+. [プロキシ]セクションは、プロキシサーバーを使用する場合にのみ必要です。このセクションを使用する必要がある場合は、次の設定を確認してください。
++
+** ；https = http://<host>:<port>[]
+** ；http= http://<host>:<port>[]
+** ；include_oci = True
+** ；INCLUDE_SNOW = True
+
+
+. [Log]セクションは、より詳細なデバッグ情報が必要な場合にのみ編集してください。
+. コネクタをテストするには、管理者としてcmdプロンプトを開き、\OCI2SNOWフォルダに移動します。次のコマンドを実行します。 `oci_snow_sync.pyz test`
++
+詳細については、を参照してください `logs\` フォルダ。
+
+

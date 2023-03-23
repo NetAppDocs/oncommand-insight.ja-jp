@@ -1,0 +1,61 @@
+---
+section: reporting
+title: レポート作成
+entries:
+- title: OnCommand Insight Reportingへようこそ
+  url: "/reporting/welcome-to-oncommand-insight-reporting.html"
+  entries:
+  - title: OnCommand Insight Reportingポータルへのアクセス
+    url: "/reporting/accessing-the-oncommand-insight-reporting-portal.html"
+  - title: インストールされているライセンスによる違い
+    url: "/reporting/variations-due-to-installed-licenses.html"
+  - title: Reportingユーザのロール
+    url: "/reporting/reporting-user-roles.html"
+  - title: セキュリティヘッダーの有効化
+    url: "/reporting/enabling-security-headers.html"
+- title: レポート作成が容易に
+  url: "/reporting/reporting-made-easy.html"
+  entries:
+  - title: 事前定義済みのOnCommand Insight レポートへの移動
+    url: "/reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html"
+  - title: Storage Manager Dashboardで実行できる操作
+    url: "/reporting/storage-manager-dashboard.html"
+  - title: 事前定義済みのレポートを使用した回答に関する一般的な質問への
+    url: "/reporting/which-report-answers-your-question.html"
+  - title: Cognosを使用したレポートの作成11
+    url: "/reporting/creating-a-report-cognos-11.html"
+- title: レポートの管理
+  url: "/reporting/managing-reports.html"
+  entries:
+  - title: レポートの出力形式と配信方法をカスタマイズする
+    url: "/reporting/customizing-a-report-s-output-format-and-delivery.html"
+  - title: レポートをクリップボードにコピーしています
+    url: "/reporting/copying-a-report-to-the-clipboard.html"
+  - title: クリップボードからレポート（ XML ）を開く
+    url: "/reporting/importing-existing-reports-to-cognos-11.html"
+- title: カスタムアドホックレポートの作成
+  url: "/reporting/creating-custom-ad-hoc-reports.html"
+  entries:
+  - title: レポートを設計する前に行う必要がある作業
+    url: "/reporting/what-you-need-to-do-before-you-design-your-report.html"
+  - title: レポートの作成プロセス
+    url: "/reporting/process-of-creating-custom-reports.html"
+    entries:
+    - title: カスタムレポートの結果を計画する方法
+      url: "/reporting/how-to-plan-the-results-of-your-custom-report.html"
+    - title: レポートの設計に関するヒント
+      url: "/reporting/tips-for-designing-reports.html"
+- title: Reportingデータモデル
+  url: "/reporting/reporting-data-model.html"
+  entries:
+  - title: データモデルの概要
+    url: "/reporting/data-model-overview.html"
+    entries:
+    - title: OnCommand Insight データモデル
+      url: "/reporting/oncommand-insight-data-model-descriptions.html"
+    - title: データモデルのファクトテーブルとディメンションテーブル
+      url: "/reporting/data-model-fact-and-dimension-tables.html"
+    - title: データモデル要素で使用される色
+      url: "/reporting/colors-used-in-data-model-elements.html"
+    - title: 1 つのレポートで複数のデータモデルを使用する
+      url: "/reporting/using-multiple-data-models-in-one-report.html"

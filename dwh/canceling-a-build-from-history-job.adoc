@@ -1,0 +1,23 @@
+---
+permalink: dwh/canceling-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: 計画されたすべてのジョブをキャンセルできます。ジョブのステータスが「Aborted」になります。 
+---
+= 履歴からビルドジョブをキャンセルしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+計画されたすべてのジョブをキャンセルできます。ジョブのステータスが「中止」になります。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://hostname/dwh+`、ここで `hostname` は、OnCommand Insight Data Warehouseがインストールされているシステムの名前です。
+. 左側のナビゲーションペインで、*[履歴からビルド]*をクリックします。
+. [ キャンセル（ Cancel ） ] をクリックします。
+

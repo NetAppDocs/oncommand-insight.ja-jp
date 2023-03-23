@@ -1,0 +1,22 @@
+---
+permalink: howto/collecting-aws-billing-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Amazon AWS Cloud Costデータソースは、Amazonによって生成された課金データを統合データとしてInsightにインポートし、データウェアハウスでレポートを作成できるようにします。 
+---
+= AWS課金データを収集してレポートする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Amazon AWS Cloud Costデータソースは、Amazonによって生成された課金データを統合データとしてInsightにインポートし、データウェアハウスでレポートを作成できるようにします。
+
+クラウドの課金データをInsightで利用できるようにするには、次の3つの要素があります。
+
+AWSアカウント情報を確認しています。
+
+データを収集するために、InsightでAWS Cloud Costデータソースを設定します。
+
+ETLを使用してData Warehouseにデータを送信し、レポートで使用できるようにします。

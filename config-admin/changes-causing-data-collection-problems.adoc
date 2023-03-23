@@ -1,0 +1,29 @@
+---
+permalink: config-admin/changes-causing-data-collection-problems.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight でデータ収集の問題が発生している場合は、環境内での変更が原因 である可能性があります。一般的なメンテナンスルールとして、Insightでの環境の変更にも対応する必要があります。 
+---
+= データ収集の問題を引き起こす変更
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight でデータ収集の問題が発生している場合は、環境内での変更が原因 である可能性があります。一般的なメンテナンスルールとして、Insightでの環境の変更にも対応する必要があります。
+
+次のチェックリストを使用して、問題の原因となる可能性のあるネットワークの変更を特定できます。
+
+* パスワードを変更しましたか？これらのパスワードはInsightで変更されましたか？
+* ネットワークからデバイスを削除しましたか？また、デバイスが再検出されて再導入されないように、OnCommand Insight からデバイスを削除する必要があります。
+* インフラストラクチャソフトウェア（HP CommandView EVAやEMC Solutions Enablerなど）をアップグレードしましたか。
++
+Acquisition Unitに適切なバージョンのクライアントツールがインストールされていることを確認します。データソースで問題が解決しない場合は、テクニカルサポートに連絡してサポートやデータソースパッチの入手を依頼する必要があります。
+
+* すべてのOnCommand Insight Acquisition Unitで同じバージョンのOnCommand Insight が使用されていますか？Remote Acquisition UnitとLocal Acquisition Unitで異なるバージョンのOnCommand Insight が実行されている場合は、データ収集の問題を解決するために、すべてのユニットに同じバージョンをインストールしてください。
++
+すべてのAcquisition Unitに新しいバージョンのOnCommand Insight をインストールする必要がある場合は、サポートサイトにアクセスして正しいバージョンをダウンロードしてください。
+
+* ドメイン名を変更したか、新しいドメインを追加しましたか。デバイス解決（以前の自動解決）方法を更新する必要があります。
+

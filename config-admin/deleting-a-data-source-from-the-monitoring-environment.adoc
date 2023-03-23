@@ -1,0 +1,29 @@
+---
+permalink: config-admin/deleting-a-data-source-from-the-monitoring-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 環境からデータソースを削除した場合は、OnCommand Insight 監視環境からも削除する必要があります。 
+---
+= データソースの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+環境からデータソースを削除した場合は、OnCommand Insight 監視環境からも削除する必要があります。
+
+
+
+== 手順
+
+. Insightのツールバーで、*[Admin]*をクリックします。
++
+[Data sources]リストが開きます。
+
+. 削除するデータソースを選択します。
+. リンクされたデータソース名をクリックします。
+. 選択したデータソースの情報を概要ページで確認し、そのデータソースが削除対象であることを確認します。
+. [ 削除（ Delete ） ] をクリックします。
+. [OK]*をクリックして操作を確定します。
+

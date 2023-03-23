@@ -1,0 +1,28 @@
+---
+permalink: install-windows/downloading-the-oncommand-insight-installer.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight インストーラはNetApp Support Site からダウンロードできます。 
+---
+= OnCommand Insight インストーラをダウンロードしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight インストーラはNetApp Support Site からダウンロードできます。
+
+
+
+== 作業を開始する前に
+
+NetApp Support Site へのログインが必要です http://mysupport.netapp.com/["mysupport.netapp.com"]。
+
+
+
+== 手順
+
+. OnCommand Insight をインストールするサーバにログインします。
+. NetApp Support Site からインストールファイルをダウンロードします。
+

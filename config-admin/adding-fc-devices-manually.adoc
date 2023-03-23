@@ -1,0 +1,46 @@
+---
+permalink: config-admin/adding-fc-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: 'ファイバチャネルデバイスは、[Device resolution FC Identify]タブの手動追加機能を使用してOnCommand Insight に手動で追加できます。このプロセスは、今後検出されることが予想されるデバイスの事前識別に使用される場合があります。' 
+---
+= ファイバチャネルデバイスを手動で追加する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ファイバチャネルデバイスは、[Device resolution FC Identify]タブの手動追加機能を使用してOnCommand Insight に手動で追加できます。このプロセスは、今後検出されることが予想されるデバイスの事前識別に使用される場合があります。
+
+
+
+== 作業を開始する前に
+
+システムにデバイス識別情報を追加するには、 WWN または IP アドレスとデバイス名を確認しておく必要があります。
+
+
+
+== このタスクについて
+
+ホスト、ストレージ、テープ、または不明なFibre Channelデバイスは手動で追加できます。
+
+
+
+== 手順
+
+. Insight Web UIにログインします
+. [管理]*>*[デバイス解決]*をクリックします
+. [FC Identify]*タブをクリックします。
+. 追加ボタンをクリックします。
++
+Add Device ダイアログが表示されます
+
+. WWN または IP アドレスとデバイス名を入力し、デバイスタイプを選択します。
+
+
+
+
+== 結果
+
+入力したデバイスが[FC Identify]タブのデバイスのリストに追加されます。"`Rule'"はManualとして識別されます。

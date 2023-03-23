@@ -1,0 +1,107 @@
+---
+permalink: config-admin/ibm-tivoli-monitoring-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: このデータソースは、ファイルシステム利用率のみに使用されます。Tivoli Monitoringデータベース（Tivoli Monitoring Data Warehouseとも呼ばれます）と直接通信します。OracleデータベースとDB2データベースがサポートされています。 
+---
+= IBM Tivoli Monitoringデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このデータソースは、ファイルシステム利用率のみに使用されます。Tivoli Monitoringデータベース（Tivoli Monitoring Data Warehouseとも呼ばれます）と直接通信します。OracleデータベースとDB2データベースがサポートされています。
+
+
+
+== Oracleのエラー・メッセージ
+
+[NOTE]
+====
+このデータコレクタは、OnCommand Insight 7.3.11以降では使用できなくなりました。
+
+====
+SIDを指定して接続を試行したときに「ORA-12154」を含むエラーメッセージが表示される場合は、Oracle DBネットワークサービスの設定を再確認してください。アクセス設定で完全修飾ホスト名（「names.default_domain」など）が指定されている場合は、SIDフィールドに完全修飾サービス名を挿入してみてください。簡単な例としては、SIDへの接続があります `testdb` が失敗しており、Oracleの設定でドメインが指定されています``company.com``。ベースSIDの代わりに次の文字列を使用して接続を試行できます。 `testdb.company.com`。
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+Tivoli Monitoring Database IPの略
+ a| 
+Tivoli MonitoringサーバのIPアドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+Tivoli Monitoringサーバのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+Tivoli Monitoringサーバのパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+Tivoli Monitoringデータベースポート
+ a| 
+Tivoliモニタリングデータベースに使用するポート
+
+
+
+ a| 
+Oracle SIDまたはDB2データベース名
+ a| 
+OracleリスナーサービスIDまたはDB2データベース名
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+使用するデータベースドライバ
+ a| 
+使用するデータベースドライバを選択します
+
+
+
+ a| 
+データベースへの接続に使用されるプロトコル
+ a| 
+データベースへの接続に使用されるプロトコル
+
+
+
+ a| 
+データベーススキーマ
+ a| 
+データベーススキーマを入力します
+
+|===

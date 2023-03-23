@@ -1,0 +1,44 @@
+---
+permalink: install-windows/troubleshooting-an-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight のアップグレード後に問題が発生した場合は、いくつかの考えられる問題に関連するトラブルシューティング情報を確認すると役立つことがあります。 
+---
+= アップグレードのトラブルシューティング
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight のアップグレード後に問題が発生した場合は、いくつかの考えられる問題に関連するトラブルシューティング情報を確認すると役立つことがあります。
+
+
+
+== Windowsの[スタート]メニューからCognosを起動できない
+
+以前の空間の存在 `\SANscreen\cognos` パス名には問題 が含まれています。詳細については、ネットアップのCustomer Success Communityで次の情報を参照してください。 https://forums.netapp.com/thread/62721[]。
+
+
+
+== 「有効なwin32アプリケーションではありません」というエラーメッセージが表示されます
+
+これはMicrosoft Windowsを搭載した問題 です。この問題 を解決するには、レジストリ内のイメージパスを引用符で囲む必要があります。詳細については、次のドキュメントを参照してください。 https://support.microsoft.com/en-us/kb/812486/en-us[]。
+
+
+
+== 注釈は表示されません
+
+Data WarehouseのETLジョブでInsightインスタンスのアノテーションを照会するときに、エラーとして空の応答（0の結果）が返されることがあります。このエラーにより、Data Warehouseで特定のオブジェクトのアノテーションが「present」と「not present」の間で前後に移動します。詳細については、次を参照してください。 https://forums.netapp.com/docs/DOC-44167[]
+
+
+
+== レポートに表示される値の違い
+
+7.0より前のバージョンでは、レポートは整数ベースでした。これらは10進数ベースになっているため、アップグレード後に値の表示方法が増減することがあります。
+
+
+
+== レポートにデータが表示されない
+
+7.0.1では、いくつかのモデル名が変更されました（たとえば、SymmetrixがSymmetrix VMAXに変更されました）。そのため、レポートに"`symmetrix`"のフィルタが含まれている場合、レポートを実行してもデータは表示されません。レポートを変更するには、Report StudioのQuery Explorerでレポートを開き、モデル名を検索して新しいモデル名に置き換え、レポートを保存する必要があります。

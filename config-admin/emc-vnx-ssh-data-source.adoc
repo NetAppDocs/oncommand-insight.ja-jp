@@ -1,0 +1,105 @@
+---
+permalink: config-admin/emc-vnx-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: EMC VNX\（SSH\）データソースを構成するには、Control StationのIPアドレス、および読み取り専用のユーザー名とパスワードが必要です。 
+---
+= EMC VNXデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EMC VNX（SSH）データソースを構成するには、Control StationのIPアドレス、および_read-only_usernameとパスワードが必要です。
+
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+VNX IP
+ a| 
+VNX Control Station の IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+VNXユーザー名
+ a| 
+VNX Control Station のユーザー名
+
+
+
+ a| 
+VNXパスワード
+ a| 
+VNX Control Station のパスワード
+
+|===
+
+
+== 要件
+
+* Control StationのIPアドレス
+* 読み取り専用のユーザ名とパスワード
+* アクセスの検証：PuTTYによるSSHアクセスを確認します。
+
+
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリのポーリング間隔（デフォルトは 40 分）
+
+
+
+ a| 
+VNX SSHプロセス待機タイムアウト（秒）
+ a| 
+VNX SSHプロセスのタイムアウト（デフォルトは600秒）
+
+
+
+ a| 
+Celerraコマンドの再試行
+ a| 
+Celerraコマンドの再試行回数
+
+
+
+ a| 
+CLARiXインベントリの外部プロセスタイムアウト（秒）
+ a| 
+インベントリのCLARiX外部プロセスのタイムアウト（デフォルトは1、800秒）
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）
+ a| 
+パフォーマンスのポーリング間隔（デフォルトは 300 秒）
+
+
+
+ a| 
+CLARiX外部プロセスのパフォーマンスタイムアウト（秒）
+ a| 
+CLARiX外部プロセスのパフォーマンスタイムアウト（デフォルトは1、800秒）
+
+|===

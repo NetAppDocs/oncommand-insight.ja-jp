@@ -1,0 +1,107 @@
+---
+permalink: config-admin/microsoft-azure-compute-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insightsは、Azureコンピューティングデータコレクタを使用して、Azureコンピューティングインスタンスからインベントリとパフォーマンスのデータを取得します。 
+---
+= Microsoft Azure computeデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insightsは、Azureコンピューティングデータコレクタを使用して、Azureコンピューティングインスタンスからインベントリとパフォーマンスのデータを取得します。
+
+
+
+== 要件
+
+このデータコレクタを設定するには、次の情報が必要です。
+
+* ポート要件： 443 HTTPS
+* Azure Management Rest IP （ management.azure.com ）
+* Azureサービスプリンシパルアプリケーション（クライアント）ID（ユーザアカウント）
+* Azureサービスプリンシパル認証キー（ユーザパスワード）
+
+
+Insight Discovery用のAzureアカウントをセットアップする必要があります。アカウントを適切に設定してAzureにアプリケーションを登録すると、InsightでAzureインスタンスを検出するために必要なクレデンシャルが取得されます。検出用アカウントの設定方法については、https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portalを参照してください
+
+
+
+== 設定
+
+次の表に従って、データソースフィールドにデータを入力します。
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+Azure サービスプリンシパルアプリケーション（クライアント） ID （リーダーのロールが必要）
+ a| 
+Azure へのサインイン IDリーダーの役割アクセスが必要です。
+
+
+
+ a| 
+Azure テナント ID
+ a| 
+Microsoft テナント ID
+
+
+
+ a| 
+Azure サービスプリンシパルの認証キー
+ a| 
+ログイン認証キー
+
+
+
+ a| 
+Microsoft が API リクエストを請求することを理解しています
+ a| 
+これをチェックして、 Insight のポーリングで作成された API 要求を Microsoft から課金することを理解していることを確認します。
+
+|===
+
+
+== 詳細設定
+
+次の表に従って、データソースフィールドにデータを入力します。
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+デフォルトは 60 です。
+
+
+
+ a| 
+「除外」または「含める」を選択して、タグによる VM のフィルタリングに適用します
+ a| 
+データの収集時にタグを使用して VM を含めるか除外するかを指定します。'`Include''を選択した場合、Tag Keyフィールドを空にすることはできません。
+
+
+
+ a| 
+VM をフィルタするタグキーと値
+ a| 
++ タグのフィルタ * をクリックして、 VM のキーとタグの値に一致するキーと値をフィルタリングして、対象に含める / 除外する VM （および関連ディスク）を選択します。タグキーは必須です。タグ値はオプションです。タグ値が空の場合、タグキーと一致する限り、 VM はフィルタリングされます。
+
+
+
+ a| 
+パフォーマンスポーリング間隔（秒）|
+ a| 
+デフォルトは 300 です。
+
+|===

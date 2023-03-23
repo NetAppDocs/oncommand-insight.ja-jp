@@ -1,0 +1,32 @@
+---
+permalink: install-windows/verifying-the-extract-transform-and-load-process.html 
+sidebar: sidebar 
+keywords:  
+summary: アップグレードが完了したら、抽出、変換、ロード\（ETL\）プロセスがOnCommand Insight データベースからデータを取得して変換し、データマートに保存していることを確認する必要があります。 
+---
+= 抽出、変換、読み込みのスケジュールを確認します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アップグレードが完了したら、ETL（抽出、変換、読み込み）プロセスがOnCommand Insight データベースからデータを取得して変換し、データマートに保存していることを確認する必要があります。
+
+
+
+== 手順
+
+. Data Warehouseポータルにログインします `+https://fqdn/dwh+`。
+. 左側のナビゲーションペインで、*[スケジュール]*をクリックします。
+. [スケジュールの編集]*をクリックします。
+. [タイプ]リストから*[毎日]*または*[毎週]*を選択します。
++
+ETLを1日1回実行するようにスケジュールを設定することを推奨します。
+
+. 選択した時刻がジョブを実行する時刻であることを確認します。
++
+これにより、ビルドジョブが自動的に実行されます。
+
+. [ 保存（ Save ） ] をクリックします。
+

@@ -1,0 +1,20 @@
+---
+permalink: config-admin/advanced-troubleshooting.html 
+sidebar: sidebar 
+keywords: Legacy portal 
+summary: 'OnCommand Insight の設定を完了するには、高度なトラブルシューティングツールを使用する必要があります。これらのツールはブラウザで実行され、[Admin]>[Troubleshooting]ページから開きます。' 
+---
+= 高度なトラブルシューティング
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight の設定を完了するには、高度なトラブルシューティングツールを使用する必要があります。これらのツールはブラウザで実行され、* Admin *>* Troubleshooting *ページから開きます。
+
+ブラウザで高度なトラブルシューティングツールを開くには、ページ下部の*高度なトラブルシューティング*リンクをクリックします。
+
+高度なトラブルシューティングツールを使用すると、さまざまなレポート、システム情報、インストールされているパッケージ、ログを表示したり、サーバやAcquisition Unitの再起動、DWHアノテーションの更新、アノテーションのインポートなどのさまざまな操作を実行したりできます。
+
+使用可能なすべてのオプションについては、詳細トラブルシューティングページを参照してください。

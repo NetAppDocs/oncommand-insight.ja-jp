@@ -1,0 +1,154 @@
+---
+permalink: config-admin/infinidat-infinibox-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Infinidat InfiniBox \（HTTP \）データソースは、Infinidat InfiniBoxストレージから情報を収集するために使用されます。InfiniBox管理ノードにアクセスする必要があります。 
+---
+= Infinidat InfiniBoxデータソース
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Infinidat InfiniBox（HTTP）データソースは、Infinidat InfiniBoxストレージから情報を収集するために使用されます。InfiniBox管理ノードにアクセスする必要があります。
+
+
+
+== 用語集
+
+OnCommand Insight では、InfiniBoxデータソースから次のインベントリ情報を取得します。Insightで取得したアセットタイプごとに、このアセットに使用される最も一般的な用語が表示されます。このデータソースを表示またはトラブルシューティングするときは、次の用語に注意してください。
+
+|===
+
+
+| ベンダー / モデルの用語 | Insightの用語 
+
+
+ a| 
+ドライブ
+ a| 
+ディスク
+
+
+
+ a| 
+InfiniBox
+ a| 
+ストレージ
+
+
+
+ a| 
+ノード
+ a| 
+ストレージノード
+
+
+
+ a| 
+プール
+ a| 
+ストレージプール
+
+
+
+ a| 
+ボリューム
+ a| 
+ボリューム
+
+
+
+ a| 
+FC ポート
+ a| 
+ポート
+
+
+
+ a| 
+ファイルシステム
+ a| 
+内部ボリューム
+
+
+
+ a| 
+ファイルシステム
+ a| 
+ファイル共有
+
+
+
+ a| 
+ファイルシステムエクスポート
+ a| 
+共有
+
+|===
+[NOTE]
+====
+これらは一般的な用語のマッピングであり、このデータソースのすべてのケースを表しているとは限りません。
+
+====
+
+
+== 設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+InfiniBox ホスト
+ a| 
+InfiniBox 管理ノードの IP アドレスまたは完全修飾ドメイン名
+
+
+
+ a| 
+ユーザ名
+ a| 
+InfiniBox 管理ノードのユーザ名
+
+
+
+ a| 
+パスワード
+ a| 
+InfiniBox 管理ノードのパスワード
+
+|===
+
+
+== 高度な設定
+
+|===
+
+
+| フィールド | 説明 
+
+
+ a| 
+TCP ポート
+ a| 
+InfiniBoxサーバへの接続に使用するTCPポート（デフォルトは443）
+
+
+
+ a| 
+インベントリポーリング間隔（分）
+ a| 
+インベントリポーリングの間隔（デフォルトは60分）
+
+
+
+ a| 
+接続タイムアウト
+ a| 
+接続タイムアウト（デフォルトは60秒）
+
+|===

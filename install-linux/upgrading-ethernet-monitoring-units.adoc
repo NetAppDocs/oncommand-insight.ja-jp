@@ -1,0 +1,47 @@
+---
+permalink: install-linux/upgrading-ethernet-monitoring-units.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight Serverソフトウェアをアップグレードしたら、イーサネット監視ソフトウェアをアップグレードする必要があります。 
+---
+= Ethernet Monitoring Unitソフトウェアをアップグレードしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight Serverソフトウェアをアップグレードしたら、イーサネット監視ソフトウェアをアップグレードする必要があります。
+
+
+
+== このタスクについて
+
+[NOTE]
+====
+OnCommand Insight バージョン7.3.12以降では、イーサネット監視ユニット（EMU）はサポートされません。
+
+====
+
+
+== 手順
+
+. sudo権限があるアカウントでEthernet Monitoring Unit（EMU）サーバにログインします。
+. NetApp Support Site からInsight EMUソフトウェアをダウンロードします。
+. ダウンロードディレクトリに移動し、次のコマンドを入力します。
++
+`unzip oci-ethernet-<version>-linux-x86_64.zip`
+
++
+インストールファイルのバージョン番号が正しいことを確認します。
+
+. の構文、コマンド引数、およびパラメータの使用方法を確認できます `oci-install.sh` ：
++
+`sudo ./oci-ethernet-<version>-linux-x86_64/oci-install.sh --help`
+
+. インストールスクリプトを実行します。
++
+`sudo ./oci-ethernet-<version>-linux-x86_64/oci-install.sh`
+
+. ライセンス契約に同意し、画面の指示に従います。
+

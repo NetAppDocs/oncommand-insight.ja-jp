@@ -1,0 +1,24 @@
+---
+permalink: reporting/adding_a_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: '簡単にアクセスできるように、レポートのダッシュボードグループをタブに表示することもできます。このタブは、[User Preferences]から追加できます。' 
+---
+= [User Preferences]からのダッシュボードの追加
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+簡単にアクセスできるように、レポートのダッシュボードグループをタブに表示することもできます。このタブは、[User Preferences]から追加できます。
+
+.手順
+. OnCommand Insight Reportingポータルを開きます。
+. 右上の[Person]アイコンをクリックして、ドロップダウンメニューを表示します。
+. [マイプリファレンス]を選択します。
+. [プリファレンスの設定]ビューで、[ポータルタブ]タブをクリックします。
+. [ポータルタブ]タブで、[追加]リンクをクリックします。
+. [Public Folders]フォルダと[Dashboard]フォルダで、タブとして表示するダッシュボードを選択してオンにします。
+. 矢印をクリックして[選択したエントリ]ボックスに移動し、[OK]をクリックします。
+

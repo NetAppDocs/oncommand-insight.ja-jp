@@ -1,0 +1,30 @@
+---
+permalink: howto/setting-up-snmp-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightでは、違反やデータソースのしきい値を超えたときなど、イベントがトリガーされたときにSNMP通知を送信できます。 
+---
+= 通知用のSNMPの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightでは、違反やデータソースのしきい値を超えたときなど、イベントがトリガーされたときにSNMP通知を送信できます。
+
+
+
+== このタスクについて
+
+InsightでSNMPを設定するには、次の基本的な手順を実行します。
+
+
+
+== 手順
+
+. [管理]*>*[通知]*をクリックし、*[SNMP]*セクションに移動します。
+. [Actions]*をクリックし、*[Add trap source]*を選択します。
+. [SNMPトラップ受信者の追加]ダイアログボックスで、SNMPトラップメッセージの送信先の* IP *アドレスと*ポート*を入力します。コミュニティストリング*には、SNMPトラップメッセージに「public」を使用します。
+. [ 保存（ Save ） ] をクリックします。
+

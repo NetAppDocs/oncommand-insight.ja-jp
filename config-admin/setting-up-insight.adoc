@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Insightをセットアップするには、Insightのライセンスをアクティブ化し、データソースをセットアップし、ユーザと通知を定義し、バックアップを有効にして、必要な高度な設定手順を実行する必要があります。 
+---
+= Insightをセットアップしています
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insightをセットアップするには、Insightのライセンスをアクティブ化し、データソースをセットアップし、ユーザと通知を定義し、バックアップを有効にして、必要な高度な設定手順を実行する必要があります。
+
+OnCommand Insight システムをインストールしたら、次のセットアップタスクを実行する必要があります。
+
+* Insightのライセンスをインストールします。
+* Insightでデータソースを設定します。
+* ユーザアカウントを設定します。
+* Eメールを設定します。
+* 必要に応じて、SNMP、Eメール、またはsyslogの通知を定義します。
+* Insightデータベースの自動週次バックアップを有効にします。
+* アノテーションやしきい値の定義など、必要な高度な設定手順を実行します。
+
