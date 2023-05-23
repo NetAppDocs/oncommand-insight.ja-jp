@@ -35,9 +35,9 @@ CACおよび証明書に関する最新の手順については、次の技術�
 
 一般的なクライアント設定要件は次のとおりです。
 
-* ActivClientなどのスマートカードミドルウェアのインストール（を参照） http://militarycac.com/activclient.htm)[]
-* IEブラウザの変更（を参照 http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
-* Firefoxブラウザの変更（を参照 https://militarycac.com/firefox2.htm)[]
+* ActivClientなどのスマートカードミドルウェアのインストール（を参照）
+* IEブラウザの変更（を参照
+* Firefoxブラウザの変更（を参照
 
 
 その他の設定手順は次のとおりです。
