@@ -8205,6 +8205,42 @@
   <block id="135cca1b87ae0b4a874f6d6184055603" category="sidebar">オブジェクトの動作を時間の経過とともに観察します</block>
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">1つのオブジェクトの合計レイテンシを、上位10個のオブジェクトの合計レイテンシと比較します</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">レポートの出力形式と配信方法をカスタマイズする</block>
-  <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight は単一の解決策 であり、物理環境と仮想環境のネットワーク、ストレージ、サーバにわたって、ドメイン間、マルチベンダーのリソース管理と分析を可能にします。Insightを使用すると、現在のインフラを最適化し、ビジネスニーズに合わせて運用を適切な規模に調整できます。それは何をいつ購入するかを決定するプロセスを簡素化します。また、クラウド移行の候補となるワークロードを特定することで、ハイブリッドクラウドへの移行など、複雑なテクノロジ移行の際のリスクを軽減します。Insightを使用すると、企業のITサービスデリバリチェーン全体にリソースを統合することで、ITインフラをエンドツーエンドのサービスとして管理できます。</block>
   <block id="9a94b99275970f0f82451969eeccb836" category="sidebar">HDS Ops Center の略</block>
+  <block id="8020d56a67ade967a3254ada824b1406" category="summary">HDS Ops Center データコレクタの設定</block>
+  <block id="edfa0366cb6c25de6aa46576a0e54251" category="doc">Hitachi Ops Center データコレクタ</block>
+  <block id="317ca49a534ef6dc0317a60fdf058fef" category="paragraph">このデータコレクタは、 Hitachi Ops Center の統合されたアプリケーションスイートを使用して、複数のストレージデバイスのインベントリとパフォーマンスのデータにアクセスします。インベントリと容量を検出するには、 Operations Center のインストールに「 Common Services 」と「 Administrator 」の両方のコンポーネントを含める必要があります。パフォーマンス収集では、さらに「 Analyzer 」を導入する必要があります。</block>
+  <block id="aa274d02dd5bbca295ce4b6cd3594c6d" category="paragraph">OnCommand Insightはこのデータコレクタから次のインベントリ情報を取得します。取得したアセットのタイプごとに、そのアセットに使用される最も一般的な用語が表示されます。このデータコレクタを表示またはトラブルシューティングするときは、次の用語に注意してください。</block>
+  <block id="5c6ab1284b6b7a5a7102854a969c99be" category="cell">ストレージシステム</block>
+  <block id="6fa6e2299a829e04bba19b10e38dc56c" category="cell">パリティグループ</block>
+  <block id="7f47ab518e59deb2aed009c3db49ddbd" category="cell">ストレージプール（ RAID ）、ディスクグループ</block>
+  <block id="88bda324c3afff84ed43de6af0cfdc82" category="cell">ストレージプール（シン、スナップ）</block>
+  <block id="b539957d5ac5efa3c17ecf122d0aef01" category="cell">外部パリティグループ</block>
+  <block id="8d574b46d24459c09062877c134e14a5" category="cell">ストレージプール（バックエンド）、ディスクグループ</block>
+  <block id="08aa09e012efb5b185b38b15d4ded675" category="cell">ストレージノード→コントローラノード→ポートの順にクリックします</block>
+  <block id="a18b5712dface3f20bce7750886350d3" category="cell">ホストグループ</block>
+  <block id="5b52c3da7acdc6837b619fa0e7beb98b" category="cell">ボリュームのマッピングとマスキング</block>
+  <block id="b4a20e3a6be7e6cd6f8e3dcdd45cb2a8" category="cell">ボリュームペア</block>
+  <block id="561b06d0d233f84983c474e6cd225d20" category="paragraph">注：これらは一般的な用語の対応のみを示したものであり、このデータコレクタのすべてのケースを表しているわけではありません。</block>
+  <block id="ea9460ea7afc9634eafcb42137ae3f7b" category="paragraph">インベントリデータを収集するには、次の情報が必要です。</block>
+  <block id="d96f025cc7db5db06dd47e78c55d8f1e" category="list-text">「Common Services」コンポーネントをホストするOps CenterサーバのIPアドレスまたはホスト名</block>
+  <block id="8281bdee16e3d690812d635a332bd2cf" category="list-text">ルート/ sysadminユーザアカウントとパスワード。Ops Centerコンポーネントをホストするすべてのサーバに存在します。HDSでは、Ops Center 10.8以降まで、LDAP/SSOユーザによるREST APIサポートは実装されていませんでした</block>
+  <block id="fdfceedcfadaa8fc4e641a9271ff7595" category="section-title">パフォーマンス要件</block>
+  <block id="8f2fd5a7846dd234e704c033378310ab" category="paragraph">パフォーマンスデータを収集するには、次の要件を満たしている必要があります。</block>
+  <block id="d3a405c96e9fcea92b0929c28b531e59" category="list-text">HDS Ops Centerの「Analyzer」モジュールがインストールされている必要があります</block>
+  <block id="e71e6bc0f8f44471c52859083251c1b7" category="list-text">ストレージアレイがOps Centerの「Analyzer」モジュールにデータを供給している必要があります</block>
+  <block id="8f4ab816532074b60c2865f1089b6d38" category="cell">Hitachi Ops Center の IP アドレス</block>
+  <block id="211ba4facc37bc8a85949c753a2fcfbd" category="cell">「 Common Services 」コンポーネントをホストする Ops Center サーバの IP アドレスまたは完全修飾ドメイン名</block>
+  <block id="8db0f231405345684c1dab98cc049f52" category="cell">Ops Center サーバのユーザ名。</block>
+  <block id="18bf6f2c111fb8ac2dbe99d3445cbadd" category="cell">Ops Center サーバのパスワード。</block>
+  <block id="bc742a3b20c159bc11ea844e4d798e34" category="cell">デフォルトは HTTPS （ポート 443 ）です</block>
+  <block id="d394f4a37cee9ff0a48907bfdacc4a9f" category="cell">TCP ポートを上書きします</block>
+  <block id="cd5f584259d833ff583a4824164dfbc3" category="cell">デフォルト以外の場合に使用するポートを指定します</block>
+  <block id="4908467e27b4191d95f9c906a4d8dcd3" category="cell">インベントリのポーリング間隔。デフォルトは 40. です。</block>
+  <block id="07570853d28c7dc0401130aea747f9fb" category="cell">下のリストに表示されたアレイをデータの収集時に対象に含めるか除外するかを指定します。</block>
+  <block id="e245ed75c6b828ee4ae338a39e57c9bc" category="cell">デバイスリストをフィルタリングします</block>
+  <block id="0f6a3a02976086b90f48da7e5992aa82" category="cell">対象に含めるか除外するデバイスのシリアル番号をカンマで区切ったリスト</block>
+  <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">パフォーマンスのポーリング間隔デフォルトは 300. です。</block>
+  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">Data Collector サポートマトリックス</block>
+  <block id="b13fdf15118fa90916588b42c9eab20f" category="paragraph">追加情報はから入手できます <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> ページまたはを参照してください <block ref="6bcd41b5488d3cd417d31b80921f5af9" category="inline-link-macro-rx"></block>。</block>
+  <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight は単一の解決策 であり、物理環境と仮想環境のネットワーク、ストレージ、サーバにわたって、ドメイン間、マルチベンダーのリソース管理と分析を可能にします。Insightを使用すると、現在のインフラを最適化し、ビジネスニーズに合わせて運用を適切な規模に調整できます。それは何をいつ購入するかを決定するプロセスを簡素化します。また、クラウド移行の候補となるワークロードを特定することで、ハイブリッドクラウドへの移行など、複雑なテクノロジ移行の際のリスクを軽減します。Insightを使用すると、企業のITサービスデリバリチェーン全体にリソースを統合することで、ITインフラをエンドツーエンドのサービスとして管理できます。</block>
 </blocks>

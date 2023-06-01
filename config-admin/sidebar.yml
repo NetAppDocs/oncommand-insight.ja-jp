@@ -425,6 +425,8 @@ entries:
     - title: HDS HiCommand Device Managerデータソース
       url: "/config-admin/hds-hicommand-devicemanager-data-source.html"
       entries:
+      - title: HDS Ops Center の略
+        url: "/collector_hds_ops_center.html"
       - title: HDSストレージ
         url: "/config-admin/hds-landing-page-terminology-storage.html"
       - title: HITACHI Storage Poolの略
