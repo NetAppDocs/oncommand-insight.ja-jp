@@ -228,7 +228,6 @@
   <block id="f54e475559c1e0bbea40068043297640" category="list-text">OnCommand Insight サーバ、Data WarehouseとReporting、およびRemote Acquisition Unitのハードウェアとネットワークの構成を含む導入計画。</block>
   <block id="3f8a6e68b00f22c533895ece22d473da" category="list-text">Java 8 - OnCommand Insight Java UI用。</block>
   <block id="d254861f20bb59d58db872722e57ba9c" category="inline-link">通知</block>
-  <block id="699321795769c28cf1c69b5372a7d45b" category="admonition">OnCommand Insight には、Java SE 8用のOracle有料ライセンスが含まれています。Java SE 8ライセンスを追加で購入する必要はありません。このライセンスでは、Java SE 8をすべてのOCIコンポーネントで使用できます。を参照してください<block ref="def4fc5b0e06154939b4ae3afd91bf54" category="inline-link-rx"></block> ページを参照してください。</block>
   <block id="b9f2c94d18eb493993627757483e8d1e" category="summary">Insightのライセンスキーが格納されたライセンスファイルをネットアップから受け取ったら、セットアップ機能を使用してすべてのライセンスを同時にインストールできます。</block>
   <block id="595e865728eb02f9590430ea2511cab5" category="doc">Insightのライセンスをインストールします</block>
   <block id="fad1f300af08a9c525cdac95524a08aa" category="paragraph">Insightのライセンスキーはに格納されます<block ref="be4117b0c842c4be8f9960294bdc2cd1" prefix=" " category="inline-code"></block> または<block ref="38d7925a50d5b22cb1c850b0d12c9086" prefix=" " category="inline-code"></block> ファイル。</block>
@@ -8240,7 +8239,6 @@
   <block id="e245ed75c6b828ee4ae338a39e57c9bc" category="cell">デバイスリストをフィルタリングします</block>
   <block id="0f6a3a02976086b90f48da7e5992aa82" category="cell">対象に含めるか除外するデバイスのシリアル番号をカンマで区切ったリスト</block>
   <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">パフォーマンスのポーリング間隔デフォルトは 300. です。</block>
-  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">Data Collector サポートマトリックス</block>
-  <block id="b13fdf15118fa90916588b42c9eab20f" category="paragraph">追加情報はから入手できます <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> ページまたはを参照してください <block ref="6bcd41b5488d3cd417d31b80921f5af9" category="inline-link-macro-rx"></block>。</block>
   <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight は単一の解決策 であり、物理環境と仮想環境のネットワーク、ストレージ、サーバにわたって、ドメイン間、マルチベンダーのリソース管理と分析を可能にします。Insightを使用すると、現在のインフラを最適化し、ビジネスニーズに合わせて運用を適切な規模に調整できます。それは何をいつ購入するかを決定するプロセスを簡素化します。また、クラウド移行の候補となるワークロードを特定することで、ハイブリッドクラウドへの移行など、複雑なテクノロジ移行の際のリスクを軽減します。Insightを使用すると、企業のITサービスデリバリチェーン全体にリソースを統合することで、ITインフラをエンドツーエンドのサービスとして管理できます。</block>
+  <block id="ee3e2c17548456b388eeca1c8945d0fb" category="admonition">OnCommand Insight には、Java SE 8用のOracle有料ライセンスが含まれています。Java SE 8ライセンスを追加で購入する必要はありません。このライセンスでは、Java SE 8をすべてのOCIコンポーネントで使用できます。を参照してください <block ref="22f0bd9eac0233f917b202967c553066" category="inline-link-macro-rx"></block> ページを参照してください。</block>
 </blocks>
