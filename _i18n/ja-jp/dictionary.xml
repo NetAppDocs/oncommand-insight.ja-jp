@@ -8241,4 +8241,5 @@
   <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">パフォーマンスのポーリング間隔デフォルトは 300. です。</block>
   <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight は単一の解決策 であり、物理環境と仮想環境のネットワーク、ストレージ、サーバにわたって、ドメイン間、マルチベンダーのリソース管理と分析を可能にします。Insightを使用すると、現在のインフラを最適化し、ビジネスニーズに合わせて運用を適切な規模に調整できます。それは何をいつ購入するかを決定するプロセスを簡素化します。また、クラウド移行の候補となるワークロードを特定することで、ハイブリッドクラウドへの移行など、複雑なテクノロジ移行の際のリスクを軽減します。Insightを使用すると、企業のITサービスデリバリチェーン全体にリソースを統合することで、ITインフラをエンドツーエンドのサービスとして管理できます。</block>
   <block id="ee3e2c17548456b388eeca1c8945d0fb" category="admonition">OnCommand Insight には、Java SE 8用のOracle有料ライセンスが含まれています。Java SE 8ライセンスを追加で購入する必要はありません。このライセンスでは、Java SE 8をすべてのOCIコンポーネントで使用できます。を参照してください <block ref="22f0bd9eac0233f917b202967c553066" category="inline-link-macro-rx"></block> ページを参照してください。</block>
+  <block id="e465e42419c3405f98dfba07fa9da3fc" category="paragraph">OnCommand Insightsは、* Azure Active Directory *でのみSSOをサポートしています。</block>
 </blocks>

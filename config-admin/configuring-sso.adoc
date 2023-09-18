@@ -20,6 +20,8 @@ summary: シングルサインオン\（SSO\）を使用すると、組織内の
 ====
 SSOは、Insight ServerのWebベースUIでのみ使用できます。SSOは、Data Warehouse、Reporting、Java ClientのUIコンポーネントでは使用できません。
 
+OnCommand Insightsは、* Azure Active Directory *でのみSSOをサポートしています。
+
 ====
 
 
