@@ -28,9 +28,14 @@ summary: securityadminツールを使用すると、Data Warehouseサーバの�
 == 手順
 
 . Data Warehouseサーバへのリモートログインを実行します。
-. 対話型モードでセキュリティ管理ツールを起動します。 `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. 対話型モードでセキュリティ管理ツールを起動します。
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 ログインクレデンシャルが要求されます。
+
+
 
 . 「Admin」クレデンシャルを持つアカウントのユーザ名とパスワードを入力します。
 +

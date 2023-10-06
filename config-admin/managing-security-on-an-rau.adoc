@@ -25,10 +25,6 @@ summary: securityadminツールを使用すると、RAUのセキュリティオ�
 
 LAU（RAU）のセキュリティ設定を更新する1つのシナリオは、サーバで「acquisition」ユーザのパスワードが変更されたときに「acquisition」ユーザのパスワードを更新することです。すべてのRAUおよびLAUでは、サーバとの通信にサーバ「acquisition」ユーザのパスワードと同じパスワードを使用します。
 
-[NOTE]
-====
-
-====
 「acquisition」ユーザが存在するのはInsight Serverだけです。RAUまたはLAUは、サーバに接続するときにそのユーザとしてログインします。
 
 RAUでセキュリティオプションを管理するには、次の手順を実行します。
@@ -38,9 +34,14 @@ RAUでセキュリティオプションを管理するには、次の手順を�
 == 手順
 
 . RAUを実行しているサーバへのリモートログインを実行します
-. 対話型モードでセキュリティ管理ツールを起動します。 `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. 対話型モードでセキュリティ管理ツールを起動します。
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 ログインクレデンシャルが要求されます。
+
+
 
 . 「Admin」クレデンシャルを持つアカウントのユーザ名とパスワードを入力します。
 +
@@ -64,8 +65,6 @@ RAUのメニューが表示されます。
 [NOTE]
 ====
 リストアを使用すると、複数のサーバのパスワードとキーを同期できます。例：- 1つのサーバで暗号化キーを変更-ヴォールトのバックアップを作成-ヴォールトバックアップを2つ目のサーバにリストアします
-
-[+]
 
 ====
 ** *暗号化キーの変更*

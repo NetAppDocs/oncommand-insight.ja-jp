@@ -34,9 +34,14 @@ summary: securityadminツールを使用すると、ローカル取得ユーザ\
 == 手順
 
 . Insight Serverへのリモートログインを実行します。
-. セキュリティ管理ツールを対話型モード（-i）で起動します。
+. 対話型モードでセキュリティ管理ツールを起動します。
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 ログインクレデンシャルが要求されます。
+
+
 
 . 「Admin」クレデンシャルを持つアカウントのユーザ名とパスワードを入力します。
 . Local Acquisition Unit *を選択して、Local Acquisition Unitのセキュリティ設定を再設定します。
@@ -61,8 +66,6 @@ summary: securityadminツールを使用すると、ローカル取得ユーザ\
 [NOTE]
 ====
 リストアを使用すると、複数のサーバのパスワードとキーを同期できます。例：- LAUで暗号化キーを変更-ヴォールトのバックアップを作成-各RAUにヴォールトバックアップをリストアします
-
-[+]
 
 ====
 ** *暗号化キーの変更*

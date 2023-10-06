@@ -3376,7 +3376,6 @@
   <block id="ae5ec4adfd829d0ce42eda85f1bf19f3" category="list-text">Windows -<block ref="09b50f27173fab90f2f09515f3322532" prefix=" " category="inline-code"></block></block>
   <block id="6d43f414975e3172b0e6b0387f3c9660" category="list-text">Linux -<block ref="9363a944a51c65486664aed0f6e192fa" prefix=" " category="inline-code"></block></block>
   <block id="2d805e40f048f8ac5921fd582a426f41" category="list-text">Data Warehouseサーバへのリモートログインを実行します。</block>
-  <block id="92c5c92115fe622170841b7252788aa3" category="list-text">対話型モードでセキュリティ管理ツールを起動します。<block ref="977ec0e53c2f0026946e460f126d1758" prefix=" " category="inline-code"></block></block>
   <block id="1e0243d49be54f99f7eef9855a7cee80" category="paragraph">ログインクレデンシャルが要求されます。</block>
   <block id="445ee2e4288af83712e4c04825cf6c34" category="list-text">「Admin」クレデンシャルを持つアカウントのユーザ名とパスワードを入力します。</block>
   <block id="c10f995fef645bfed0597a66f5e22e68" category="paragraph">Data Warehouseのセキュリティ管理メニューが表示されます。</block>
@@ -4404,7 +4403,6 @@
   <block id="166ace9389f2989154d4edf8ca669668" category="doc">Insight Serverでセキュリティを管理する</block>
   <block id="d71586f0584584e73897bf02e9802afa" category="paragraph">。<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> ツールを使用すると、Insight Serverでセキュリティオプションを管理できます。セキュリティの管理には、パスワードの変更、新しいキーの生成、作成したセキュリティ設定の保存とリストア、デフォルト設定への設定のリストアが含まれます。</block>
   <block id="34466f85207045ded27b393581889d20" category="list-text">Insight Serverへのリモートログインを実行します。</block>
-  <block id="0bc4782a44f12c3fb60ecc61006b818c" category="list-text">対話型モードでセキュリティ管理ツールを起動します。<block ref="095b9dfc195e5bbeafd5a7c2bb0ccd3f" prefix=" " category="inline-code"></block></block>
   <block id="4b2f543780a949ab3938618b76a6aeb5" category="list-text">「 * サーバー * 」を選択します。</block>
   <block id="15cf432cc55f528ff3c57c6406d8bcd4" category="paragraph">次のサーバ設定オプションを使用できます。</block>
   <block id="55ef7bc8b50b24453b764be4b80da043" category="paragraph">すべてのパスワードとキーが格納されているバックアップのzipファイルを作成し、そのファイルをユーザが指定した場所、または次のデフォルトの場所に置きます。</block>
@@ -6252,7 +6250,6 @@
   <block id="0a03d1757c591cb47b67e3867b2aa573" category="doc">Local Acquisition Unit上のセキュリティの管理</block>
   <block id="1843d0ce10aa71f1d72edd6683f93064" category="paragraph">。<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> ツールを使用すると、Local Acquisition User（LAU；ローカル収集ユーザ）のセキュリティオプションを管理できます。セキュリティの管理には、キーとパスワードの管理、作成したセキュリティ設定の保存とリストア、またはデフォルト設定への設定のリストアが含まれます。</block>
   <block id="70ba259bdcb1df4b8b8840343db3ba72" category="paragraph">が必要です<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> セキュリティ設定タスクを実行するための権限。</block>
-  <block id="19ba4ac9871bca5c94c0fac78e3c3a9b" category="list-text">セキュリティ管理ツールを対話型モード（-i）で起動します。</block>
   <block id="bf598265068097bdfb964fb65b464993" category="list-text">Local Acquisition Unit *を選択して、Local Acquisition Unitのセキュリティ設定を再設定します。</block>
   <block id="3efa8859202eff1b280ec70c247e9ef0" category="paragraph">次のオプションが表示されます。</block>
   <block id="db48c1af350671c4ffd32d01200d5950" category="paragraph">リストアを使用すると、複数のサーバのパスワードとキーを同期できます。例：- LAUで暗号化キーを変更-ヴォールトのバックアップを作成-各RAUにヴォールトバックアップをリストアします</block>
@@ -8242,4 +8239,7 @@
   <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight は単一の解決策 であり、物理環境と仮想環境のネットワーク、ストレージ、サーバにわたって、ドメイン間、マルチベンダーのリソース管理と分析を可能にします。Insightを使用すると、現在のインフラを最適化し、ビジネスニーズに合わせて運用を適切な規模に調整できます。それは何をいつ購入するかを決定するプロセスを簡素化します。また、クラウド移行の候補となるワークロードを特定することで、ハイブリッドクラウドへの移行など、複雑なテクノロジ移行の際のリスクを軽減します。Insightを使用すると、企業のITサービスデリバリチェーン全体にリソースを統合することで、ITインフラをエンドツーエンドのサービスとして管理できます。</block>
   <block id="ee3e2c17548456b388eeca1c8945d0fb" category="admonition">OnCommand Insight には、Java SE 8用のOracle有料ライセンスが含まれています。Java SE 8ライセンスを追加で購入する必要はありません。このライセンスでは、Java SE 8をすべてのOCIコンポーネントで使用できます。を参照してください <block ref="22f0bd9eac0233f917b202967c553066" category="inline-link-macro-rx"></block> ページを参照してください。</block>
   <block id="e465e42419c3405f98dfba07fa9da3fc" category="paragraph">OnCommand Insightsは、* Azure Active Directory *でのみSSOをサポートしています。</block>
+  <block id="1cb3ec988e29678c641cba59564947b3" category="list-text">対話型モードでセキュリティ管理ツールを起動します。</block>
+  <block id="f098be646546d6fe2a75059a01c330f7" category="list-text">Windows -<block ref="6fc3ad2c3aa4e51a6e001ff98a533c91" prefix=" " category="inline-code"></block></block>
+  <block id="a8b0a56b2ae62eec476aea5806960a1a" category="list-text">Linux -<block ref="7e8977b89fc4dcb2507a133fc2b8b1fe" prefix=" " category="inline-code"></block></block>
 </blocks>
