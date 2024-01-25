@@ -21,6 +21,11 @@ Remote Acquisition Unitが適切にインストールされていることを確
 . Acquisition Units *をクリックします。
 . 新しいRemote Acquisition Unitが正しく登録され、ステータスが「Connected」になっていることを確認します。
 +
-表示されない場合は、テクニカルサポートにお問い合わせください。
+ステータスが「Connected」になっていない場合は、サービスを再起動してください。Remote Acquisition Unitシステムにログインし、次のコマンドを実行します。
+
++
+ oci-service.sh restart acquisition
++
+それでも接続されない場合は、テクニカルサポートにお問い合わせください。
 
 
