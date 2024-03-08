@@ -165,7 +165,9 @@ java -jar rest-import-utility.jar [-uusername] [-ppassword]
 ====
 次のキーワードは予約されており、ユーザはこれらのキーワードをアノテーション名として指定できません。-Application-Application_Priority -Tenant-Line_of_Business-Business_Unit -Projectいずれかの予約済みキーワードを使用してアノテーションタイプをインポートしようとすると、エラーが生成されます。アノテーションの名前にこれらのキーワードを使用している場合は、インポートユーティリティツールが正常に動作するように変更する必要があります。
 
-[+]
-
 ====
++
+
+NOTE: Annotation ImportユーティリティにはJava 8またはJava 11が必要です。インポートユーティリティを実行する前に、これらのいずれかがインストールされていることを確認してください。最新のOpenJDK 11を使用することを推奨します。
+
 

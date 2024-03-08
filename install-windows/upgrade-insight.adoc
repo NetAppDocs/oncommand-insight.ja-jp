@@ -2,7 +2,7 @@
 permalink: install-windows/upgrade-insight.html 
 sidebar: sidebar 
 keywords:  
-summary: 通常は、異常検出ソフトウェアを実行するサーバを除き、すべてのInsightサーバ\（Insight Server、Data Warehouseサーバ、Remote Acquisition Unit、Ethernet Monitoring Unit \）でアップグレードを実行する必要があります。OnCommand Insight の新しいリリースのアップグレード要件については、必ずリリースノートを参照してください。 
+summary: 通常は、すべてのInsightサーバ（Insight Server、Data Warehouseサーバ、Remote Acquisition Unit）でアップグレードを実行する必要があります。\OnCommand Insight の新しいリリースのアップグレード要件については、必ずリリースノートを参照してください。 
 ---
 = OnCommand Insight のアップグレード
 :allow-uri-read: 
@@ -11,6 +11,6 @@ summary: 通常は、異常検出ソフトウェアを実行するサーバを�
 
 
 [role="lead"]
-通常、アップグレードは、異常検出ソフトウェアを実行するサーバを除き、すべてのInsightサーバ（Insight Server、Data Warehouseサーバ、Remote Acquisition Unit、Ethernet Monitoring Unit）で実行する必要があります。OnCommand Insight の新しいリリースのアップグレード要件については、必ずリリースノートを参照してください。
+通常、アップグレードはすべてのInsight Server（Insight Server、Data Warehouseサーバ、Remote Acquisition Unit）で実行する必要があります。OnCommand Insight の新しいリリースのアップグレード要件については、必ずリリースノートを参照してください。
 
 ここに記載されている要件と手順は、特に断りのないかぎり、Insight 7.xから最新バージョンにアップグレードする場合に適用されます。7.0より前のバージョンからアップグレードする場合は、アカウント担当者にお問い合わせください。

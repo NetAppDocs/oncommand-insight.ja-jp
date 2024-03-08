@@ -35,7 +35,7 @@ image::../media/search-exchange.gif[検索交換]
 ====
 . 検索結果から「Exchange 2016」を選択すると、アプリケーションのランディングページが表示されます。
 +
-image::../media/exch2016-land-page.gif[EXCH2016のランドページ]
+image::../media/exch2016-land-page.png[EXCH2016のランドページ]
 
 +
 アプリケーションランディングページには、次の情報が記載されています。

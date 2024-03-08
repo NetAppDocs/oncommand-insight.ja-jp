@@ -45,28 +45,6 @@ Local Acquisition Unitのステータス
 
 
  a| 
-Anomaly Detection Engineの略
- a| 
-エンジン容量
- a| 
-異常検出が監視されているアプリケーションの数
- a| 
-48個の可能なアプリケーションのうち、監視されているアプリケーションの数と割合。
-
-
-
- a| 
-Anomaly Detection Engineの略
- a| 
-エンジンステータス
- a| 
-異常検出エンジンのステータス
- a| 
-エラーが検出されない場合は「OK」、検出されたエラーに関する情報が表示されます。を参照してください `prelert.log` ファイルを参照してください。
-
-
-
- a| 
 DWH
  a| 
 バックアップ
@@ -263,12 +241,4 @@ Insightで使用可能なサービスパックがあるかどうかが表示さ�
 週次バックアップが有効になっている場合は「OK」、有効になっていない場合は「週次バックアップは有効になっていません」と表示されます。
 
 |===
-+
-[NOTE]
-====
-異常検出エンジンにエラーが表示された場合は、を参照してください `prelert.log` 詳細については、次の場所にあるファイルを参照してください。-windows： `disk drive:\install directory\SANscreen\Wildfly\Standalone\Logs`- Linux： `/var/log/netapp/oci/wildfly/`
-
-[+]
-
-====
 

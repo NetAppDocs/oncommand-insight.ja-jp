@@ -39,7 +39,6 @@ Insight Serverには、ソフトウェアファイアウォールをインスト
 * Remote Acquisition UnitがInsight Serverへの接続を要求しています
 * このInsightサーバへのコネクタを備えたOCI DWHサーバ。
 * Insight REST APIとのプログラムによるやり取り
-* 異常検出エンジンは、異常情報をレンダリングするためにInsightのパフォーマンスデータを収集します
 
 
 Insight Serverのホストレベルのファイアウォール機能の実装を検討している方には、企業ネットワークのすべてのIPブロックへのHTTPSアクセスを許可することをお勧めします。

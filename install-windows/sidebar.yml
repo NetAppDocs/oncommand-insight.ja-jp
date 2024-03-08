@@ -22,10 +22,6 @@ entries:
     url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
   - title: Remote Acquisition Unitサーバの要件
     url: "/install-windows/remote-acquisition-unit-server-requirements.html"
-  - title: 異常検出の要件
-    url: "/install-windows/anomaly-detection-requirements.html"
-  - title: Insight Java UIの要件
-    url: "/install-windows/insight-java-ui-requirements.html"
   - title: OnCommand Insight でサポートされているブラウザ
     url: "/install-windows/insight-browser-support.html"
 - title: Insightのインストール手順
@@ -49,10 +45,6 @@ entries:
       url: "/install-windows/verifying-the-rau-service.html"
     - title: Remote Acquisition Unitのインストールを検証しています
       url: "/install-windows/validating-the-rau-installation.html"
-  - title: 異常検出ソフトウェアをインストールします
-    url: "/install-windows/installing-the-anomaly-detection-software.html"
-  - title: Ethernet Monitoring Unitのインストール
-    url: "/install-windows/installing-an-ethernet-monitoring-unit-linux.html"
   - title: インストールを確認しています
     url: "/install-windows/checking-the-installation.html"
     entries:
@@ -111,8 +103,6 @@ entries:
       url: "/install-windows/back-up-the-security-configuration.html"
     - title: Remote Acquisition Unitサーバをアップグレードします
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
-    - title: 異常検出エンジンをアップグレードしています
-      url: "/install-windows/upgrading-the-anomaly-detection-engine.html"
   - title: アップグレード後の手順の実行
     url: "/install-windows/completing-post-upgrade-tasks.html"
     entries:
@@ -149,5 +139,3 @@ entries:
     url: "/install-windows/uninstalling-the-data-warehouse-software.html"
   - title: Remote Acquisition Unitソフトウェアをアンインストールしています
     url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"
-  - title: 異常検出エンジンをアンインストールしています
-    url: "/install-windows/uninstalling-the-anomaly-detection-engine-linux.html"

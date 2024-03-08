@@ -22,9 +22,4 @@ OnCommand Insight をインストールする前に、次のものがあるこ�
 現在の製品では、以前のバージョンのOnCommand Insight 製品では使用されていなかった追加のハードウェアリソース（OnCommand Insight 製品の機能強化のため）が消費される可能性があります。
 
 * OnCommand Insight サーバ、Data WarehouseとReporting、およびRemote Acquisition Unitのハードウェアとネットワークの構成を含む導入計画。
-* Java 8 - OnCommand Insight Java UI用。
-+
-
-NOTE: OnCommand Insight には、Java SE 8用のOracle有料ライセンスが含まれています。Java SE 8ライセンスを追加で購入する必要はありません。このライセンスでは、Java SE 8をすべてのOCIコンポーネントで使用できます。を参照してください link:legal-notices.html["通知"] ページを参照してください。
-
 

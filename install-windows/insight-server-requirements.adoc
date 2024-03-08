@@ -2,7 +2,7 @@
 permalink: install-windows/insight-server-requirements.html 
 sidebar: sidebar 
 keywords: redhat 
-summary: 専用のサーバを使用することを推奨します。他のアプリケーションがインストールされているサーバにはInsightをインストールしないでください。製品の要件が満たされていれば、物理サーバと仮想サーバの両方がサポートされます。 
+summary: OnCommand Insightサーバコンポーネントをインストールするための要件。 
 ---
 = Insight Serverの要件
 :allow-uri-read: 
@@ -66,7 +66,7 @@ OnCommand Insight のサイジングには、データソースのタイプと�
  a| 
 オペレーティングシステム
  a| 
-64ビットのMicrosoft Windows Server 2012、2012 R2、2016、または2019を実行しているコンピュータ（最新のサービスパックを適用）。
+64ビットのMicrosoft Windows Server 2016、2019、または2022（最新のサービスパックを適用）を実行しているコンピュータ。
 
 Windows Server 2012で導入されたResilient File System（ReFS）は、OnCommand Insight と互換性がありません。OnCommand Insight のWindowsインストールは、NTFSファイルシステムでのみサポートされます。
 

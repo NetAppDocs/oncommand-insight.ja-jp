@@ -28,8 +28,6 @@ entries:
       url: "/config-admin/editing-a-user-definition.html"
     - title: ユーザアカウントの削除
       url: "/config-admin/deleting-a-user-account.html"
-    - title: シングルサインオン（SSO）の設定
-      url: "/config-admin/configuring-sso.html"
   - title: ログイン警告メッセージの設定
     url: "/config-admin/configuring-a-login-warning-message.html"
   - title: Insightセキュリティ
@@ -125,17 +123,6 @@ entries:
       url: "/config-admin/editing-applications.html"
     - title: アプリケーションの削除
       url: "/config-admin/deleting-an-application.html"
-  - title: OnCommand Insight の異常検出の仕組み
-    url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
-    entries:
-    - title: 異常検出用のアプリケーションの設定
-      url: "/config-admin/configuring-anomaly-detection-for-applications.html"
-    - title: "[Anomalies]セクションを使用します"
-      url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
-    - title: 異常検出の監視ステータス
-      url: "/config-admin/anomaly-detection-monitoring-status.html"
-    - title: アプリケーションパフォーマンスポリシーを作成します
-      url: "/config-admin/creating-an-application-performance-policy.html"
   - title: ビジネスエンティティ階層
     url: "/config-admin/your-business-entities-hierarchy.html"
     entries:
@@ -274,17 +261,6 @@ entries:
   url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
 - title: SSL証明書のインポート
   url: "/config-admin/importing-an-ssl-certificate.html"
-- title: OnCommand Insight の異常検出の仕組み
-  url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
-  entries:
-  - title: 異常検出用のアプリケーションの設定
-    url: "/config-admin/configuring-anomaly-detection-for-applications.html"
-  - title: "[Anomalies]セクションを使用します"
-    url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
-  - title: 異常検出の監視ステータス
-    url: "/config-admin/anomaly-detection-monitoring-status.html"
-  - title: アプリケーションパフォーマンスポリシーを作成します
-    url: "/config-admin/creating-an-application-performance-policy.html"
 - title: ビジネスエンティティ階層
   url: "/config-admin/your-business-entities-hierarchy.html"
   entries:
@@ -635,8 +611,6 @@ entries:
         url: "/config-admin/moving-mysql-data-using-the-command-line.html"
     - title: アノテーションの更新を強制します
       url: "/config-admin/forcing-annotation-updates.html"
-    - title: クライアント設定の構成
-      url: "/config-admin/configuring-client-settings.html"
     - title: サーバリソースのステータスを確認しています
       url: "/config-admin/checking-the-status-of-server-resources.html"
     - title: ゴーストデータソースの検索
@@ -688,11 +662,6 @@ entries:
           url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html"
         - title: User Data セクションを使用して、注釈を割り当てまたは変更する
           url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html"
-      - title: 異常だ
-        url: "/config-admin/anomalies.html"
-        entries:
-        - title: "[Anomalies]セクションを使用します"
-          url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
       - title: エキスパートビュー
         url: "/config-admin/expert-view.html"
         entries:

@@ -59,29 +59,7 @@ CACおよび証明書に関する最新の手順については、次の技術�
 すべての中間証明書について、この手順を繰り返します。
 
 . この例と一致するようにLDAPでドメインを指定します。
-. OnCommand Insight サーバで、を実行します `wildfly/standalone/configuration/standalone-full.xml` でverify-clientを「requested」に更新して、ファイルを変更する必要があります ``/subsystem=undertow/server=default-server/https-listener=default-https``CACを有効にします。該当するコマンドを実行します。
-+
-|===
 
-
-| OS | スクリプト 
-
-
- a| 
-Windows の場合
- a| 
-<install dir> を参照してくださいenableCACforRemoteEJB.bat
-
-
-
- a| 
-Linux の場合
- a| 
-/opt/netapp/oci/wildfly/bin/enableCACforRemoteEJB.sh
-
-|===
-+
-スクリプトの実行後、wildflyサーバのリロードが完了するまで待ってから、次の手順に進みます。
 
 . サーバを再起動します。
 

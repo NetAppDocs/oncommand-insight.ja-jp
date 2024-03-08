@@ -22,10 +22,6 @@ entries:
     url: "/install-linux/data-warehouse-server-requirements-linux.html"
   - title: Remote Acquisition Unitサーバの要件
     url: "/install-linux/remote-acquisition-unit-server-requirements.html"
-  - title: 異常検出の要件
-    url: "/install-linux/anomaly-detection-requirements.html"
-  - title: Insight Java UIの要件
-    url: "/install-linux/insight-java-ui-requirements.html"
   - title: OnCommand Insight でサポートされているブラウザ
     url: "/install-linux/insight-browser-support.html"
 - title: Insightのインストール手順
@@ -42,10 +38,6 @@ entries:
     entries:
     - title: Remote Acquisition Unitのインストールを検証しています
       url: "/install-linux/validating-the-rau-installation.html"
-  - title: 異常検出ソフトウェアをインストールします
-    url: "/install-linux/installing-the-anomaly-detection-software.html"
-  - title: Ethernet Monitoring Unitのインストール
-    url: "/install-linux/installing-an-ethernet-monitoring-unit-linux.html"
   - title: インストールを確認しています
     url: "/install-linux/checking-the-installation.html"
     entries:
@@ -78,10 +70,6 @@ entries:
     url: "/install-linux/upgrading-data-warehouse.html"
   - title: Remote Acquisition Unitソフトウェアをアップグレード中です
     url: "/install-linux/upgrading-remote-acquisition-units.html"
-  - title: 異常検出エンジンをアップグレードしています
-    url: "/install-linux/upgrading-the-anomaly-detection-engine.html"
-  - title: Ethernet Monitoring Unitソフトウェアをアップグレードしています
-    url: "/install-linux/upgrading-ethernet-monitoring-units.html"
   - title: WindowsからLinuxへの移行
     url: "/install-linux/migrating-from-windows-to-linux.html"
 - title: OnCommand Insight をアンインストールしています
@@ -93,7 +81,3 @@ entries:
     url: "/install-linux/uninstalling-data-warehouse.html"
   - title: Remote Acquisition Unitのアンインストール
     url: "/install-linux/uninstalling-a-remote-acquisition-unit-rau.html"
-  - title: Ethernet Monitoring Unitのアンインストール
-    url: "/install-linux/uninstalling-an-ethernet-monitoring-unit-emu-linux.html"
-  - title: 異常検出エンジンをアンインストールしています
-    url: "/install-linux/uninstalling-the-anomaly-detection-engine-linux.html"
