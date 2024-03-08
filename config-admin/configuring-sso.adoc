@@ -2,7 +2,7 @@
 permalink: config-admin/configuring-sso.html 
 sidebar: sidebar 
 keywords:  
-summary: シングルサインオン\（SSO\）を使用すると、組織内のユーザーは特別なアカウントを必要とせずにOnCommand Insight を使用できます。 
+summary: シングルサインオン（SSO）を使用すると、組織内のユーザーは特別なアカウントを必要とせずにOnCommand Insight を使用できます。 
 ---
 = シングルサインオン（SSO）の設定
 :allow-uri-read: 
