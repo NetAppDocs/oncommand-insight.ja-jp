@@ -12,10 +12,4 @@ summary:
 
 OnCommand Insight のリリースノートはドキュメントセンターには含まれていません。NetApp Support Siteのクレデンシャルでログインするように求められます。
 
-リリースノートには、次の形式があります。
-
-link:https://library.netapp.com/ecmdocs/ECMLP2652943/html/frameset.html["HTML"^]
-
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["PDF"^]
-
-link:https://library.netapp.com/ecm/ecm_get_file2/ECMLP2652943?Rendition=EPUB["ePub"^]
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["リリースノート.pdf"^]
