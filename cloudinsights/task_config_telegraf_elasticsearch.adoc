@@ -1,0 +1,194 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_elasticsearch.html 
+keywords: telegraf, installation, install, ElasticSearch 
+summary: Elasticsearch データコレクタの設定 
+---
+= Elasticsearch Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights は、このデータコレクタを使用して Elasticsearch から指標を収集します。
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Elasticsearch]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. Agent for Collection をまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォームに Agent をインストールする場合は、 _Show Instructions_ をクリックしてを展開します link:task_config_telegraf_agent.html["エージェントのインストール"] 手順
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:ElasticsearchDCConfigLinux.png["Elasticsearch 設定"]
+
+
+
+== セットアップ（ Setup ）
+
+情報は、に記載されています link:https://www.elastic.co/guide/index.html["Elasticsearch のドキュメント"]。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| Elasticsearch クラスタ | ネームスペース
+クラスタ | ノードIP
+ノード名
+クラスタのステータス | マスターノード数
+合計ノード数
+ファイルシステムの使用可能データ（バイト）
+ファイルシステムの空き容量（バイト）
+ファイルシステムデータ合計（バイト）
+JVMスレッド
+OS割り当て済みのプロセッサ
+OS利用可能なプロセッサ
+OSメモリ空き容量（バイト）
+OSメモリフリー
+OSメモリ合計（バイト）
+使用済みOSメモリ（バイト）
+使用されているOSメモリ
+プロセスCPU
+インデックス完了サイズ（バイト）
+インデックス数
+インデックスドキュメント数
+インデックスドキュメントが削除されました
+Indicesフィールドデータの削除
+インデックスフィールドデータメモリサイズ（バイト）
+インデックスクエリキャッシュ数
+インデックスキャッシュサイズ
+Indices Segments Countの略
+インデックスセグメントドキュメント値メモリ（バイト）
+インデックスシャードインデックスプライマリー平均
+インデックスシャードインデックスプライマリー最大
+Indices shards Index Primaries Min
+インデックスシャードインデックスレプリケーション平均
+インデックスシャードインデックスレプリケーション最大
+インデックスシャードインデックスレプリケーション最小
+インデックスシャード平均
+インデックスシャード最大
+インデックスシャードプライマリー
+インデックスシャードレプリケーション
+インデックスシャード合計
+インデックスストアサイズ（バイト） 
+
+
+| Elasticsearch ノード | ネームスペース
+クラスタ
+ESノードID
+ESノードIP
+ESノード | ゾーン ID | 機械学習が有効になりました
+機械学習メモリ
+機械学習の最大オープンジョブ数
+X-Packがインストールされています
+ブレーカーアカウンティング推定サイズ（バイト）
+ブレーカーアカウンティング制限サイズ（バイト）
+ブレーカー会計オーバーヘッド
+ブレーカー会計が作動しました
+ブレーカーフィールドデータ推定サイズ（バイト）
+ブレーカーフィールドのデータ制限サイズ（バイト）
+ブレーカフィールドデータオーバーヘッド
+ブレーカーフィールドデータがトリップしました
+ブレーカの飛行中の推定サイズ（バイト）
+ブレーカインフライト制限サイズ（バイト）
+ブレーカインフライトオーバーヘッド
+ブレーカインフライトが停止しました
+ブレーカ親推定サイズ（バイト）
+ブレーカ親制限サイズ（バイト）
+Breakers親の頭上
+ブレーカの親がトリップしました
+ブレーカー要求推定サイズ（バイト）
+ブレーカー要求制限サイズ（バイト）
+ブレーカー要求オーバーヘッド
+ブレーカー要求が作動しました
+ファイルシステムの使用可能データ（バイト）
+ファイルシステムの空き容量（バイト）
+ファイルシステムデータ合計（バイト）
+Filesystem IO Stats Devices Opsの略
+ファイルシステムIO統計デバイス読み取り（kb）
+Filesystem IO Stats Devices Read Opsの略
+Filesystem IO Stats Devices Erite（KB）
+Filesystem IO Stats Devices Write Opsの略
+ファイルシステムIO統計の合計処理数
+ファイルシステムI/O統計合計読み取り（KB）
+ファイルシステムIO統計読み取り処理
+ファイルシステムI/O統計合計書き込み（KB）
+ファイルシステムIO統計書き込み処理
+使用可能なファイルシステムの最小使用量の見積もり（バイト）
+ファイルシステムの最小使用量の概算合計（バイト）
+Filesystem Least Usage Diskの略
+FileSystem Most Usage Estimate Available（バイト）
+FileSystem Most Usage Estimate Total（バイト）
+FileSystem Most Usage Used Diskの略
+ファイルシステムの合計使用可能容量（バイト）
+ファイルシステムの合計空き容量（バイト）
+ファイルシステム合計（バイト）
+インデックス完了サイズ（バイト）
+インデックスドキュメント数
+インデックスドキュメントが削除されました
+Indicesフィールドデータの削除
+インデックスフィールドデータメモリサイズ（バイト）
+Indices Flush Periodic（インデックスフラッシュ周期）の略
+Indices Flush Total（インデックスフラッシュ合計）
+Indices Flush Total Timeの略
+インデックスは現在の値を取得します
+インデックスが存在する時間を取得します
+インデックス取得存在合計
+インデックスは合計を取得します
+Indices Indexing Delete Total（インデックスインデックスインデックスの削除合計
+Indices Indexing Index Total（インデックスインデックスインデックス合計）
+インデックスインデックスNOOP更新合計
+Indices Indexing Throttle Timeの略
+HTTP Current Openの略
+HTTP合計オープン数
+JVMバッファプールの直接数
+JVMクラス現在ロードされている数
+JVM GCコレクタの旧コレクション数
+コミットされたJVMメモリヒープ（バイト）
+OS CPU Load Average 15m（OS CPU負荷平均15m
+OS CPU
+OSメモリ空き容量（バイト）
+OSスワップ空き容量（バイト）
+プロセスCPU
+プロセスCPU合計
+最大ファイル記述子を処理します
+プロセスメモリ合計仮想（バイト）
+スレッドプール分析がアクティブです
+スレッドプールの分析が完了しました
+スレッドプール分析最大
+スレッドプール分析キュー
+スレッドプール分析が拒否されました
+スレッドプールスレッドを分析します
+スレッドプールフェッチシャードがアクティブに開始されました
+スレッドプールのフェッチシャードが開始されました
+スレッドプールフェッチシャードが最大で開始されました
+Thread Pool Fetch Shard Started Queueの略
+スレッドプールのFetch Shardが拒否されました
+スレッドプールFetch Shard Started Shreads.
+スレッドプールフェッチシャードストアがアクティブです
+スレッドプールのFetch Shard Storeが完了しました
+転送RX（1秒あたり）
+転送受信バイト数（1秒あたり）
+トランスポートサーバが開いています
+転送TX（1秒あたり）
+転送転送バイト数（1秒あたり） 
+|===
+
+
+== トラブルシューティング
+
+追加情報はから入手できます link:concept_requesting_support.html["サポート"] ページ

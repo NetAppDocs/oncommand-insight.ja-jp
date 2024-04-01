@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_couchbase.html 
+keywords: telegraf, installation, install, couchbase 
+summary: Couchbase データコレクタの設定 
+---
+= Couchbase Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights では、このデータコレクタを使用して Couchbase から指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Couchbase]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. Agent for Collection をまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォームに Agent をインストールする場合は、 _Show Instructions_ をクリックしてを展開します link:task_config_telegraf_agent.html["エージェントのインストール"] 手順
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:CouchbaseDCConfigWindows.png["Couchbase 構成"]
+
+
+
+== セットアップ（ Setup ）
+
+情報は、に記載されています link:https://docs.couchbase.com/home/index.html["Couchbase ドキュメント"]。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| Couchbase Node | ネームスペース
+クラスタ
+Couchbaseノードのホスト名 | ノード名
+ノードIP | メモリ空き
+メモリ合計 
+
+
+| Couchbase バケット | ネームスペース
+バケット
+クラスタ | ノード名
+ノードIP | 使用済みデータ
+データフェッチ
+使用されているディスク
+アイテム数
+使用されているメモリ
+1秒あたりの処理数
+使用済みクォータ 
+|===
+
+
+== トラブルシューティング
+
+追加情報はから入手できます link:concept_requesting_support.html["サポート"] ページ

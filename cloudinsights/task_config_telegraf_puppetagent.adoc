@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_puppetagent.html 
+keywords: telegraf, installation, install, Puppet 
+summary: Puppet データコレクタの設定 
+---
+= Puppet Agent データコレクタ
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights では、このデータコレクタを使用して Puppet Agent から指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Puppet]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. Agent for Collection をまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォームに Agent をインストールする場合は、 _Show Instructions_ をクリックしてを展開します link:task_config_telegraf_agent.html["エージェントのインストール"] 手順
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:PuppetDCConfigWindows.png["Puppet の設定"]
+
+
+
+== セットアップ（ Setup ）
+
+情報は、に記載されています https://puppet.com/docs["Puppet のドキュメント"]
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+
+
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| Puppet Agent | ネームスペース
+ノード UUID | ノード名
+場所
+ノードIP
+バージョン設定文字列
+バージョンPuppet | 合計を変更します
+イベント失敗
+イベント成功
+イベント合計
+リソースが変更されました
+リソースに失敗しました
+リソースを再起動できませんでした
+リソースOutofsync
+リソースが再起動しました
+リソースがスケジュールされました
+リソースがスキップされました
+リソース合計
+タイムアンカー
+Time Configretrievalの略
+タイムcron
+タイム・エグゼクティブ
+時間ファイル（Time File）
+Time Filebucketの略
+タイムラストラン
+タイムパッケージ
+タイムスケジュール
+タイムサービス
+時間Sshauthorizedキー
+合計時間
+タイムユーザー 
+|===
+
+
+== トラブルシューティング
+
+追加情報はから入手できます link:concept_requesting_support.html["サポート"] ページ

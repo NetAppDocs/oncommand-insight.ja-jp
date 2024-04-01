@@ -1,0 +1,409 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_docker.html 
+keywords: telegraf, installation, install, docker 
+summary: Docker データコレクタの設定 
+---
+= Docker Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights は、このデータコレクタを使用して Docker から指標を収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Docker]を選択します。
++
+収集用にエージェントを設定していない場合は、にプロンプトが表示されます link:task_config_telegraf_agent.html["エージェントをインストールします"] お客様の環境で実現します。
+
++
+エージェントがすでに設定されている場合は、適切な OS またはプラットフォームを選択し、 [* Continue （続行） ] をクリックします。
+
+. Docker Configuration 画面の指示に従って、データコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:DockerDCConfigLinux.png["Docker 構成"]
+
+
+
+== セットアップ（ Setup ）
+
+Telegraf Docker 用入力プラグインは、指定された UNIX ソケットまたは TCP エンドポイントを介してメトリックを収集します。
+
+
+
+=== 互換性
+
+Docker バージョン 1.12.6 に対して構成が開発されました。
+
+
+
+=== セットアップ中です
+
+
+
+=== UNIX ソケット経由で Docker にアクセスする
+
+Tegraf エージェントが BareMetal 上で実行されている場合は、次のコマンドを実行して、テレグラフ UNIX ユーザを Docker UNIX グループに追加します。
+
+ sudo usermod -aG docker telegraf
+Telegraf エージェントが Kubernetes ポッド内で実行されている場合は、ソケットをポッドにボリュームとしてマッピングし、そのボリュームを /var/run/docker.sock にマウントすることで、 Docker Unix ソケットを公開します。  たとえば、 PodSpec に次の情報を追加します。
+
+[listing]
+----
+volumes:
+...
+- name: docker-sock
+hostPath:
+path: /var/run/docker.sock
+type: File
+----
+次に、次の項目をコンテナに追加します。
+
+[listing]
+----
+volumeMounts:
+...
+- name: docker-sock
+mountPath: /var/run/docker.sock
+----
+Kubernetes プラットフォーム用に提供されている Cloud Insights インストーラは、このマッピングを自動的に処理します。
+
+
+
+=== TCP エンドポイントを介して Docker にアクセスする
+
+デフォルトでは、 Docker は暗号化されていないアクセスにポート 2375 を使用し、暗号化されたアクセスにポート 2376 を使用します。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| Docker Engine の略 | ネームスペース
+Docker Engine の略 | ノード名
+ノードIP
+ノード UUID
+ノードOS
+Kubernetesクラスタ
+Dockerバージョン
+単位 | メモリ
+コンテナ
+コンテナが一時停止しました
+実行中のコンテナ
+コンテナが停止しました
+CPU
+ルーチンを実行します
+イメージ
+リスナーイベント
+使用されているファイル記述子
+使用可能なデータ
+データ合計
+使用済みデータ
+メタデータが使用可能です
+メタデータ合計
+使用されているメタデータ
+プールのブロックサイズ 
+
+
+| Docker コンテナ | ネームスペース
+コンテナ名
+Docker Engine の略 | Kubernetesコンテナハッシュ
+Kubernetesコンテナポート
+Kubernetesコンテナの再起動数
+Kubernetes Container Termination Message Pathの略
+Kubernetes Container Termination Message Policyの略
+Kubernetesポッド終了の猶予期間
+コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+Kubernetesコンテナログパス
+Kubernetesコンテナ名
+Kubernetes Dockerタイプ
+Kubernetesポッド名
+Kubernetesポッドネームスペース
+KubernetesポッドUID
+KubernetesサンドボックスID
+ノードIP
+ノード UUID
+Dockerバージョン
+Kubernetes IO設定を確認しました
+Kubernetes IO構成ソース
+OpenShift IO SCC
+Kubernetes概要の略
+Kubernetesの表示名
+OpenShiftタグ
+Komposeサービス
+ポッドテンプレートハッシュ
+コントローラリビジョンハッシュ
+ポッドテンプレート生成
+使用許諾
+スキーマビルド日
+スキーマライセンス
+スキーマ名
+スキーマURL
+スキーマVCS URL
+スキーマベンダー
+スキーマバージョン
+スキーマスキーマバージョン
+メンテナ
+顧客ポッド
+Kubernetes StatefulSetポッド名
+テナント
+WebConsoleの略
+アーキテクチャ
+信頼できるソースURL
+ビルド日
+RHビルドホスト
+RHコンポーネント
+配布範囲
+をインストールします
+リリース。
+を実行します
+まとめ
+をアンインストールします
+VCS参照
+VCSタイプ
+ベンダー
+バージョン
+正常性ステータス
+コンテナID | Memory Active Anonymousの略
+メモリアクティブファイル
+メモリキャッシュ
+メモリ階層の制限
+メモリ非アクティブ匿名
+メモリ非アクティブファイル
+メモリ制限
+Memory Mapped Fileの略
+Memory Max Usageの略
+メモリページ障害
+メモリページの重大な障害
+メモリがページインされました
+メモリがページアウトされました
+メモリ常駐設定サイズ
+メモリ常駐セットサイズが大きすぎます
+Memory Total Active Anonymousの略
+Memory Total Active Fileの略
+メモリ合計キャッシュ
+Memory Total Inactive Anonymousの略
+Memory Total Inactive Fileの略
+Memory Total Mapped Fileの略
+Memory Total Page Faultの略
+Memory Total Page Major Faultの略
+ページインされたメモリの合計
+ページアウトされたメモリの合計
+Memory Total Resident Set Sizeの略
+メモリ合計常駐セットサイズが大きすぎます
+Memory Total Unevictableの略
+Memory Unevictable（アクセス不能メモリ）の略
+メモリ使用量
+メモリ使用率
+終了コード
+ウームは殺された
+ピッド
+で開始しました
+ストリークに失敗しました 
+
+
+| Docker コンテナブロック IO | ネームスペース
+コンテナ名
+デバイス
+Docker Engine の略 | Kubernetesコンテナハッシュ
+Kubernetesコンテナポート
+Kubernetesコンテナの再起動数
+Kubernetes Container Termination Message Pathの略
+Kubernetes Container Termination Message Policyの略
+Kubernetesポッド終了の猶予期間
+コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+Kubernetesコンテナログパス
+Kubernetesコンテナ名
+Kubernetes Dockerタイプ
+Kubernetesポッド名
+Kubernetesポッドネームスペース
+KubernetesポッドUID
+KubernetesサンドボックスID
+ノードIP
+ノード UUID
+Dockerバージョン
+Kubernetes Configを確認
+Kubernetes構成ソース
+OpenShift SCC
+Kubernetes概要の略
+Kubernetesの表示名
+OpenShiftタグ
+スキーマスキーマバージョン
+ポッドテンプレートハッシュ
+コントローラリビジョンハッシュ
+ポッドテンプレート生成
+Komposeサービス
+スキーマビルド日
+スキーマライセンス
+スキーマ名
+スキーマベンダー
+顧客ポッド
+Kubernetes StatefulSetポッド名
+テナント
+WebConsoleの略
+ビルド日
+使用許諾
+ベンダー
+アーキテクチャ
+信頼できるソースURL
+RHビルドホスト
+RHコンポーネント
+配布範囲
+をインストールします
+メンテナ
+リリース。
+を実行します
+まとめ
+をアンインストールします
+VCS参照
+VCSタイプ
+バージョン
+スキーマURL
+スキーマVCS URL
+スキーマバージョン
+コンテナID | IO Service Bytes Recursive Asyncの略
+IO Service Bytes Recursive Readの略
+IO Service Bytes Recursive Syncの略
+IOサービスバイト数の再帰的合計
+IO Service Bytes Recursive Writeの略
+IO Serviced Recursive Asyncの略
+IO Serviced Recursive Readの略
+IO Serviced Recursive Syncの略
+IOサービス再帰合計
+IO Serviced Recursive Writeの略 
+
+
+| Docker コンテナネットワーク | ネームスペース
+コンテナ名
+ネットワーク
+Docker Engine の略 | コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+ノードIP
+ノード UUID
+ノードOS
+Kubernetesクラスタ
+Dockerバージョン
+コンテナID | RXがドロップされました
+Rxバイト
+Rxエラー
+Rxパケット
+送信がドロップされました
+送信バイト数
+TXエラー
+送信パケット数 
+
+
+| Docker コンテナの CPU | ネームスペース
+コンテナ名
+CPU
+Docker Engine の略 | Kubernetesコンテナハッシュ
+Kubernetesコンテナポート
+Kubernetesコンテナの再起動数
+Kubernetes Container Termination Message Pathの略
+Kubernetes Container Termination Message Policyの略
+Kubernetesポッド終了の猶予期間
+Kubernetes Configを確認
+Kubernetes構成ソース
+OpenShift SCC
+コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+Kubernetesコンテナログパス
+Kubernetesコンテナの名前
+Kubernetes Dockerタイプ
+Kubernetesポッド名
+Kubernetesポッドネームスペース
+KubernetesポッドUID
+KubernetesサンドボックスID
+ノードIP
+ノード UUID
+ノードOS
+Kubernetesクラスタ
+Dockerバージョン
+Kubernetes概要の略
+Kubernetesの表示名
+OpenShiftタグ
+スキーマバージョン
+ポッドテンプレートハッシュ
+コントローラリビジョンハッシュ
+ポッドテンプレート生成
+Komposeサービス
+スキーマビルド日
+スキーマライセンス
+スキーマ名
+スキーマベンダー
+顧客ポッド
+Kubernetes StatefulSetポッド名
+テナント
+WebConsoleの略
+ビルド日
+使用許諾
+ベンダー
+アーキテクチャ
+信頼できるソースURL
+RHビルドホスト
+RHコンポーネント
+配布範囲
+をインストールします
+メンテナ
+リリース。
+を実行します
+まとめ
+をアンインストールします
+VCS参照
+VCSタイプ
+バージョン
+スキーマURL
+スキーマVCS URL
+スキーマバージョン
+コンテナID | スロットリング期間
+調整された期間の調整
+スロットル調整時間
+カーネルモードでの使用
+ユーザーモードでの使用方法
+使用率
+使用システム
+使用量の合計 
+|===
+
+
+== トラブルシューティング
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| 設定ページの手順に従っても、 Cloud Insights に Docker 指標が表示されない。 | Telegrafエージェントログで、次のエラーが報告されているかどうかを確認します。
+
+ 来い! プラグイン[inputs.docker]のエラー：Dockerデーモンソケットに接続しようとしているときに権限が拒否されました
+
+もしそうなら、上記のようにTelegrafエージェントがDocker Unixソケットにアクセスできるようにするために必要な手順を実行します。 
+|===
+追加情報はから入手できます link:concept_requesting_support.html["サポート"] ページ

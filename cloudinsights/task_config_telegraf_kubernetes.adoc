@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kubernetes.html 
+keywords: telegraf, installation, install, kubernetes 
+summary: Kubernetes のデータコレクタの設定 
+---
+= Kubernetes Data Collector を実行します
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights は、このデータコレクタを使用して Kubernetes ポッド、ノード、コンテナの指標を収集します。
+
+
+
+== インストール
+
+Kubernetes のインストール手順については、を参照してください link:task_config_telegraf_agent.html#kubernetes["エージェントのインストール"] ページ
+
+
+NOTE: kube-state-metrics * に関する情報がに移動されました link:task_config_telegraf_agent.html#kubernetes["エージェントのインストール"] ページ
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| Kubernetes コンテナ | ネームスペース
+ポッド
+コンテナ
+クラスタ | Kubernetes ノード
+ノード名
+ノードOS
+ノード UUID
+ノードIP | CPUナノ秒
+CPU使用量Nanocores
+Memory Major Page Faults.
+メモリ常駐セットサイズ（RSS）
+Memory Working Setの略
+メモリページ障害
+メモリ使用量
+使用可能なルートファイルシステム
+ルートファイルシステムの容量
+使用されているルートファイルシステム 
+
+
+| Kubernetes ノード | Kubernetes ノード
+クラスタ | ノード名
+ノードOS
+ノード UUID
+ノードIP | CPU使用量Nanocores
+CPU使用率（ナノ秒）
+ファイルシステムが使用可能です
+ファイルシステム合計
+使用されるファイルシステム
+使用可能なメモリ
+メモリ使用量
+Memory Major Page Faults.
+メモリページ障害
+メモリ常駐セットサイズ（RSS）
+Memory Working Setの略
+ネットワーク受信エラー数（1秒あたり）
+ネットワーク受信バイト数（1秒あたり）
+ネットワーク送信エラー数（1秒あたり）
+ネットワーク送信バイト数（1秒あたり）
+ランタイムイメージファイルシステムが使用可能です
+使用されるランタイムイメージファイルシステム
+ランタイムイメージファイルシステム容量 
+
+
+| Kubernetes ポッド | ネームスペース
+ポッド
+クラスタ | Kubernetes ノード
+ノード名
+ノードIP
+ノードOS
+ノード UUID | ネットワーク送信バイト数（1秒あたり）
+ネットワーク送信エラー数（1秒あたり）
+ネットワーク受信バイト数（1秒あたり）
+ネットワーク受信エラー数（1秒あたり） 
+
+
+| Kubernetes ポッドボリューム | ボリューム
+ポッド
+クラスタ
+ネームスペース | Kubernetes ノード
+ノード名
+ノード UUID
+ノードIP
+ノードOS | 利用可能
+容量
+使用済み 
+
+
+| Kubernetes システムコンテナ | システムコンテナ
+Kubernetes ノード
+クラスタ | ノード名
+ノードIP
+ノードOS
+ノード UUID | CPU使用量Nanocores
+CPU使用率コアナノ秒
+Memory Major Page Faults.
+メモリページ障害
+メモリ常駐セットサイズ（RSS）
+メモリ使用量
+Memory Working Setの略
+使用可能なルートファイルシステム
+ルートファイルシステムの容量
+使用可能なログファイルシステム
+ログファイルシステム容量 
+|===
+
+
+== トラブルシューティング
+
+[cols="2*"]
+|===
+| 問題 | 次の操作を実行します 
+
+
+| Kubernetesエージェントインストーラコマンドを実行しましたが、次の方法で実行されているTelegrafエージェントポッドが表示されません。
+
+ sudo kubectl -- namespace ci-monitoringポッドを取得する | DaemonSetの展開中にエラーが発生していないかどうかを確認します。
+
+ sudo kubectl -- namespace ci-monitoring ds telegraf-dsを記述する
+
+SecurityContextConstraintsに関連するエラーがある場合は、次の手順を実行します。
+
+1. TelegrafデーモンセットYAMLを生成します
+
+ sudo kubectl --namespace ci-monitoring ds telegraf-ds-o yaml>/tmp/telegraf-ds.yamlを取得します
+
+2. Telegrafサービスを停止します
+
+ sudo kubectl -- namespace ci-monitoring delete ds telegraf-ds
+
+3.必要なSecurityContextConstraintを作成します(「データを収集するためのエージェントの設定」セクションを参照)。
+
+4. Telegrafデーモンセットを再作成します 
+
+
+| Telegraf を設定して Kubernetes クラスタに関する情報を取得しましたが、 Cloud Insights には何も表示されません。設定した Kubernetes 入力プラグインに関連する Telegraf ログファイルに「 Invalid header field value 」というエラーが表示されます。 | 参照先の bearer_token ファイルに末尾の改行がないことを確認してください。確認するには、次のコマンドを実行し、0が返されることを確認します。
+
+ Tail-c1 <bearer_token_file>の略 
+|===
+追加情報はから入手できます link:concept_requesting_support.html["サポート"] ページ

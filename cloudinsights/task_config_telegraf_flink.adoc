@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_flink.html 
+keywords: telegraf, installation, install, flink 
+summary: Flink データコレクタの設定 
+---
+= Flink Data Collector の使用
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights では、このデータコレクタを使用してフロークからメトリックを収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。[Flink]を選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. Agent for Collection をまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォームに Agent をインストールする場合は、 _Show Instructions_ をクリックしてを展開します link:task_config_telegraf_agent.html["エージェントのインストール"] 手順
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:FlinkDCConfigWindows.png["FLINK 構成"]
+
+
+
+== セットアップ（ Setup ）
+
+フルリンク展開では、次のコンポーネントが使用されます。
+
+JobManager ： Flink プライマリシステム。一連の TaskManager を調整しますハイアベイラビリティ設定では、システムに複数の JobManager が存在します。
+TaskManager ： Flink 演算子が実行される場所です。
+Flink プラグインは、テレグラムの Jolokia プラグインに基づいています。すべての Flink コンポーネントから情報を収集するための要件など、 JMX はすべてのコンポーネントで Jolokia を介して設定および公開する必要があります。
+
+
+
+=== 互換性
+
+Flink バージョン 1.7.0 に対して設定が開発されました。
+
+
+
+=== セットアップ中です
+
+
+
+==== Jolokia エージェント JAR
+
+個々のコンポーネントについては、 Jolokia エージェント jar ファイルのバージョンをダウンロードする必要があります。テスト対象のバージョンは、でした link:https://jolokia.org/download.html["Jolokia 代理店 1.6.0"]。
+
+以下の手順では、ダウンロードした jar ファイル（ jolokia-jvm-1.6.0-agent.jar ）が「 /opt/Flink/lib/' 」の下に配置されると想定しています。
+
+
+
+==== JobManager
+
+JobManager で Jolokia API を公開するように設定するには、ノードで次の環境変数を設定して JobManager を再起動します。
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+Jolokia （ 8778 ）には別のポートを選択できます。Jolokia をロックする内部 IP を持っている場合は、「 catch all 」 0.0.0.0 を自分の IP で置き換えることができます。この IP には、テレグラムプラグインからアクセスできる必要があります。
+
+
+
+==== TaskManager の略
+
+Jolokia API を公開するように TaskManager を設定するには ' ノードに次の環境変数を設定し 'TaskManager を再起動します
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+Jolokia （ 8778 ）には別のポートを選択できます。Jolokia をロックする内部 IP を持っている場合は、「 catch all 」 0.0.0.0 を自分の IP で置き換えることができます。この IP には、テレグラムプラグインからアクセスできる必要があります。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| Flink タスクマネージャ | クラスタ
+ネームスペース
+サーバ | ノード名
+タスクマネージャID
+ノードIP | Network Available Memory Segmentsの略
+Network Total Memory Segmentsの略
+ガベージコレクションPS MarkSweep数
+ガベージコレクションPS MarkSweep Timeの略
+ガベージコレクションPSスカベンジ数
+ガベージコレクションPSスカベンジ時間
+ヒープメモリがコミットされました
+ヒープメモリの初期化
+ヒープメモリ最大
+ヒープメモリ使用済み
+スレッドカウントデーモン
+スレッド数のピーク
+スレッド数
+スレッド数合計が開始されました 
+
+
+| フリンクジョブ | クラスタ
+ネームスペース
+サーバ
+ジョブ ID | ノード名
+ジョブ名
+ノードIP
+Last Checkpoint External Pathの略
+再起動時間 | ダウンタイム
+完全に再起動します
+前回のチェックポイントアライメントがバッファリングされました
+前回のチェックポイント期間
+前回のチェックポイントサイズ
+完了したチェックポイントの数
+失敗したチェックポイントの数
+進行中のチェックポイントの数
+チェックポイントの数
+アップタイム 
+
+
+| Flink ジョブマネージャー | クラスタ
+ネームスペース
+サーバ | ノード名
+ノードIP | ガベージコレクションPS MarkSweep数
+ガベージコレクションPS MarkSweep Timeの略
+ガベージコレクションPSスカベンジ数
+ガベージコレクションPSスカベンジ時間
+ヒープメモリがコミットされました
+ヒープメモリの初期化
+ヒープメモリ最大
+ヒープメモリ使用済み
+登録されているタスクマネージャの数
+実行中のジョブの数
+使用可能なタスクスロット
+タスクスロットの合計
+スレッドカウントデーモン
+スレッド数のピーク
+スレッド数
+スレッド数合計が開始されました 
+
+
+| Flink タスク | クラスタ
+ネームスペース
+ジョブ ID
+タスク ID | サーバ
+ノード名
+ジョブ名
+サブタスクインデックス
+タスク試行ID
+タスク試行番号
+タスク名
+タスクマネージャID
+ノードIP
+Current Input Watermarkの略 | Pool Usageのバッファ
+Buffers in Queue Lengthの略
+Buffers Out Pool Usageの略
+バッファアウトキュー長
+ローカルのバッファ数
+Number Buffers in Local Per Secondカウント
+ローカル/秒レートのバッファ数
+リモートのNumber Buffers（バッファ数）
+Number Buffers in Remote Per Second（リモート/秒）カウント
+Number Buffers in Remote Per Second Rate（リモート/秒レート）
+Number Buffers Outの略
+Number Buffers Out Per Secondカウント
+Number Buffers Out Per Second Rateの略
+ローカルのバイト数
+1秒あたりのローカルバイト数
+ローカル/秒レートのバイト数
+リモートのバイト数
+1秒あたりのリモートバイト数
+Remote Per Second Rateのバイト数
+送信されたバイト数
+Number Bytes Out Per Second Count（1秒
+1秒あたりの送信バイト数レート
+のレコード数
+1秒あたりのレコード数
+1秒あたりのレコード数
+レコード数が出ている
+Number Records Out Per Second Countの略
+Number Records Out Per Second Rateの略 
+
+
+| Flink タスクオペレータ | クラスタ
+ネームスペース
+ジョブ ID
+オペレータID
+タスク ID | サーバ
+ノード名
+ジョブ名
+演算子名
+サブタスクインデックス
+タスク試行ID
+タスク試行番号
+タスク名
+タスクマネージャID
+ノードIP | Current Input Watermarkの略
+Current Output Watermarkの略
+のレコード数
+1秒あたりのレコード数
+1秒あたりのレコード数
+レコード数が出ている
+Number Records Out Per Second Countの略
+Number Records Out Per Second Rateの略
+遅延レコード数がドロップされました
+割り当て済みパーティション
+Bytes Consumed Rate
+コミットレイテンシの平均
+コミットレイテンシ最大
+コミット率
+コミットに失敗しました
+コミットに成功しました
+接続完了率
+接続数
+接続作成レート
+カウント
+フェッチレイテンシの平均
+フェッチレイテンシの最大値
+フェッチレート
+取得サイズ平均
+フェッチサイズ最大
+フェッチスロットル時間平均
+フェッチスロットル時間最大
+ハートビートレート
+受信バイトレート
+IO比率
+IO時間の平均（ns）
+IO待機比率
+IO待機時間の平均（ns）
+参加率
+ジョイン時間平均
+前回のハートビート前
+Network IO Rateの略
+Outgoing Byte Rateの略
+レコード消費率
+最大遅延レコード
+リクエストあたりのレコード平均
+リクエスト率
+リクエストサイズ平均
+要求サイズ最大
+応答速度
+レートを選択します
+同期レート
+同期時間平均
+ハートビート応答時間最大
+結合時間の最大値
+同期時間最大 
+|===
+
+
+== トラブルシューティング
+
+追加情報はから入手できます link:concept_requesting_support.html["サポート"] ページ

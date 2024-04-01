@@ -7925,4 +7925,2914 @@
   <block id="2d38b7c541c52f4778b0146ee5977422" category="paragraph"><block ref="2d38b7c541c52f4778b0146ee5977422" category="inline-link-rx"></block></block>
   <block id="84cf7cbe773d4bdce52df2d271ec42ad" category="inline-link">OnCommand Insight 7.3.13に関する注意事項</block>
   <block id="7b06c1df3904beda719ace07d24e5d2e" category="paragraph"><block ref="7b06c1df3904beda719ace07d24e5d2e" category="inline-link-rx"></block></block>
+  <block id="18906ecb044421552f4c94c742621646" category="summary">kapacitor の設定</block>
+  <block id="d3761f3a03696694e546430b624f3542" category="doc">Kapacitor Data Collector</block>
+  <block id="1d82355e9a49b0e00b0df8f87a981b73" category="paragraph">Cloud Insights は、このデータコレクタを使用して、インフレータデータカパコールタから指標を収集します。</block>
+  <block id="7cd8fb6e31cc946c078d2740c76a9899" category="section-title">インストール</block>
+  <block id="34328c30b9aeceaed8fcff2dfe3eec30" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。Kapacitorを選択します。</block>
+  <block id="577ef588d3f183c37ef82368a6ff589c" category="paragraph">Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。</block>
+  <block id="1be0a2da8f4fd3b263e749ccf7b51da7" category="inline-link-macro">エージェントのインストール</block>
+  <block id="16a55be69114dba2ac674b708e441474" category="list-text">Agent for Collection をまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォームに Agent をインストールする場合は、 _Show Instructions_ をクリックしてを展開します <block ref="f5c63eced10ddc346253829eec79c562" category="inline-link-macro-rx"></block> 手順</block>
+  <block id="92d44d4b64d18fea589854680c8cd732" category="list-text">このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。</block>
+  <block id="d9f03c7fbabce6eb575b8ba4bbe299bc" category="list-text">設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。</block>
+  <block id="6501fa3c86462ded7187a4c119d46e5b" category="inline-image-macro">Kapacitor の構成</block>
+  <block id="dbf6b5b2cdedf021b5f438c1d0d94f55" category="paragraph"><block ref="dbf6b5b2cdedf021b5f438c1d0d94f55" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad2376beebecdcf7846ba973fa1a005b" category="section-title">セットアップ（ Setup ）</block>
+  <block id="e711cd4bbd4573cce8f56f9019ee69f5" category="inline-link">カパトールの資料</block>
+  <block id="613c0ccc72426c675ba16888b7beb75b" category="paragraph">セットアップ情報は、で確認できます<block ref="4a1162f0f136a577fb8e0c35cb055638" category="inline-link-rx"></block></block>
+  <block id="a7a78b5087753fa02d45d7bbd76ed0d6" category="section-title">オブジェクトとカウンタ</block>
+  <block id="df3df39a15aeb5cf831a87d21a352935" category="paragraph">次のオブジェクトとそのカウンタが収集されます。</block>
+  <block id="497031794414a552435f90151ac3b54b" category="cell">オブジェクト</block>
+  <block id="e2da36de4fe1aaf514aaef4ecca2c8ec" category="cell">識別子</block>
+  <block id="287234a1ff35a314b5b6bc4e5828e745" category="cell">属性（ Attributes ）</block>
+  <block id="9568886685b0148a2a42e61380688e11" category="cell">「 dataPoints 」：</block>
+  <block id="496e790e66d36d3bfbadd9eca21b9d6b" category="cell">カパトール</block>
+  <block id="8aff22b7ab299e63ad122521b8cce856" category="cell">ネームスペース
+ノード名
+ノードIP</block>
+  <block id="3f6d224a7b20e18c557bf21bfe5ede71" category="cell">OSアーキテクチャ
+OS名
+OSバージョン
+ランタイム仕様
+ランタイム仕様ベンダー
+ランタイム仕様バージョン
+アップタイム
+Kapacitor版
+ランタイムVM名
+ランタイムVMベンダー
+ランタイムVMバージョン</block>
+  <block id="1d3092a2cd5069209f6c8a3a894f204c" category="cell">割り当てバイト数
+Buck Hash Systemの略
+自由だ
+GCシステム
+GCC PU分数
+ヒープ割り当て
+ヒープアイドル
+ヒープの使用
+ヒープオブジェクト
+ヒープが解放されました
+ヒープシステム
+最後のGC（ns）
+UPSを見てください
+マロック
+mcacheが使用中です
+mcacheシステム
+Mspanが使用されています
+MSANシステム
+次のGC（ns）
+Num GC
+その他のシステム
+一時停止合計（ns）
+スタックは使用中です
+スタックシステム
+システムバイト数
+合計割り当てバイト数
+平均実行時間（ns）
+エラー</block>
+  <block id="28362762be9926ed2f769fa58e5451bf" category="paragraph">追加情報はから入手できます <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> ページ</block>
+  <block id="4002c18c39606cdbd9ec7cf8e2a090ad" category="summary">Redis データコレクタの設定</block>
+  <block id="001dce6e76a3b3b754db59e538750dd8" category="doc">Redis Data Collector の場合</block>
+  <block id="0188f056a49bdb8c4c3a015b2229d13e" category="paragraph">Cloud Insights は、このデータコレクタを使用して Redis から指標を収集します。Redis は、データベース、キャッシュ、メッセージブローカーとして使用されるオープンソースのインメモリデータ構造ストアで、文字列、ハッシュ、リスト、セットなどのデータ構造をサポートしています。</block>
+  <block id="3c9d727e041ea1596d9e67f7568b3d4b" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。Redisを選択します。</block>
+  <block id="602c395372ffc11185f0cc2291099c7f" category="inline-image-macro">Redis Data Collector の設定</block>
+  <block id="5c452c3f36884795da26d34b96db691c" category="paragraph"><block ref="5c452c3f36884795da26d34b96db691c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6f6c7e0bd9df07afbd8f27f303fba934" category="inline-link-macro">Redis 文書</block>
+  <block id="ae042fc4879ccb38022624b37b7c15bd" category="paragraph">情報は、に記載されています <block ref="f84fd6d9d2467b4d3f4dd370ee4175c5" category="inline-link-macro-rx"></block>。</block>
+  <block id="f322d46b7caf7e1252191f92e72ed682" category="cell">オブジェクト：</block>
+  <block id="7bb916f645305a34ea12c0e8306013e0" category="cell">識別子：</block>
+  <block id="77174410b72decfd0b259961f1f65a8f" category="cell">属性：</block>
+  <block id="e111446745a1825b862f8727ae63bce4" category="cell">Redis</block>
+  <block id="f69f559468f0eeb001c1c4ac7e03ba16" category="cell">ネームスペース
+サーバ</block>
+  <block id="57e45a1f550d7e2a276b57b6bca05dca" category="summary">netstat データコレクタ設定です</block>
+  <block id="38fe3e3fc1af1752c621d2c58ca1d537" category="doc">netstat Data Collector の場合</block>
+  <block id="1d90778793975e863bbd8302e8bebf4f" category="paragraph">Cloud Insights は、このデータコレクタを使用して netstat 指標を収集します。</block>
+  <block id="3d0738af358079dc547755789be4774a" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。netstatを選択します。</block>
+  <block id="fbe4c8006ab6084c9caa4749e31a48b2" category="inline-image-macro">Windows の netstat 構成です</block>
+  <block id="3b600482a8cf2d80423a46534f251590" category="paragraph"><block ref="3b600482a8cf2d80423a46534f251590" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5640ddf22fd2c345be7dd9bb71023b38" category="cell">netstat</block>
+  <block id="c3e78df51911e54e9bf950f6adb83f17" category="cell">ノード UUID</block>
+  <block id="f3149829d80f1010c9764cf219626e96" category="cell">ノードIP
+ノード名</block>
+  <block id="3af2b23a1e0e5c8f8f71ba7f0645e753" category="summary">HAProxy データコレクタの設定</block>
+  <block id="d7f6334a8fd2ef6e012df8e7d1bc1840" category="doc">HAProxy Data Collector</block>
+  <block id="f43901d1ca245307f30d36ef67a4ef53" category="paragraph">Cloud Insights は、このデータコレクタを使用して HAProxy からのメトリックを収集します。</block>
+  <block id="419697cbdba3ded9f042d2b7a045a7be" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[HAProxy]を選択します。</block>
+  <block id="6c1dacdba2adca5cfa22ff19b2d327fe" category="inline-image-macro">HAProxy の設定</block>
+  <block id="00f9d91055267fed1b468bf28bbfbb04" category="paragraph"><block ref="00f9d91055267fed1b468bf28bbfbb04" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cb69e07b7e1dc3bc5864b07b79bba857" category="paragraph">Telegraf の HAProxy 用プラグインは、 HAProxy Stats の有効化に依存しています。これは HAProxy に組み込まれている構成ですが、すぐに有効にすることはできません。有効にすると 'HAProxy はブラウザで表示できる HTML エンドポイントを公開したり ' すべての HAProxy 構成のステータスを抽出するためにスクレイピングしたりできます</block>
+  <block id="427a02dad880facfe9fb816312194295" category="section-title">互換性：</block>
+  <block id="4be336e5cd4f5bf12e0746a849c25857" category="paragraph">構成は HAProxy バージョン 1.9.4 に対して開発されました。</block>
+  <block id="0c3983f3904b2dc8bf6ac988603783d3" category="section-title">設定：</block>
+  <block id="376c8f5141386640268a2d2c2187ca53" category="paragraph">統計情報を有効にするには、 haproxy 設定ファイルを編集し、「金庫」セクションの後に次の行を追加します。この行には、ユーザー自身のユーザー名とパスワード、および / または haproxy URL を使用します。</block>
+  <block id="06e964df53203dd063d51650b2e750c1" category="paragraph">次に、 stats を有効にした単純な構成ファイルの例を示します。</block>
+  <block id="c3236962a66f7a46e03d64979b9d1600" category="inline-link-macro">HAProxy のドキュメント</block>
+  <block id="b4ba6dee394cc6642974efbba5297a9a" category="paragraph">最新の手順の詳細については、を参照してください <block ref="5a379a5f4fc2aff325e2186c5a680899" category="inline-link-macro-rx"></block>。</block>
+  <block id="cd1ff811c7eb5c250dc81f6a5286cf43" category="cell">HAProxy フロントエンド</block>
+  <block id="8dea80f14c6104c5733a52c154ef935e" category="cell">ネームスペース
+住所
+プロキシ</block>
+  <block id="c45e1928ae65186fbbe90a9be80ee483" category="cell">ノードIP
+ノード名
+プロキシID
+モード
+プロセスID
+セッションレート制限
+サーバID
+セッション制限
+ステータス</block>
+  <block id="958c01b1efd28326ab76cd02bbd1597e" category="cell">受信バイト数
+バイトアウト
+キャッシュヒット
+キャッシュルックアップ
+圧縮バイトがバイパスされました
+圧縮バイト数
+圧縮バイトが送信されました
+圧縮応答
+接続レート
+接続レート最大
+接続合計
+接続ルールによって拒否された要求
+セキュリティ上の懸念により拒否されたリクエスト
+セキュリティ上の懸念により拒否された応答
+セッションルールによって拒否された要求
+エラーを要求します
+応答1xx
+応答は2xx
+応答は3xx
+応答は4xx
+応答は5xx
+応答その他
+要求が傍受されました
+セッションレート
+セッションレート最大
+リクエスト率
+要求レート最大
+リクエストの合計
+セッション
+セッションの最大数
+セッションの合計
+書き換えを要求します</block>
+  <block id="dada9c5c3057d3996c71c414bb95f293" category="cell">HAProxy サーバ</block>
+  <block id="b79b9d688e7feb386a427ddee600bf90" category="cell">ネームスペース
+住所
+プロキシ
+サーバ</block>
+  <block id="5576d0777cc9aa03fb396cdae277dc93" category="cell">ノードIP
+ノード名
+完了までの時間を確認します
+フォール設定を確認します
+健全性の値を確認します
+立ち上がり設定を確認します
+ステータスを確認します
+プロキシID
+最終変更時刻
+前回のセッション時間
+モード
+プロセスID
+サーバID
+ステータス
+重量</block>
+  <block id="7eb59f1dcd9a062c8263f5e4b2ebeb69" category="cell">アクティブサーバ
+バックアップサーバ
+受信バイト数
+バイトアウト
+チェックダウン
+チェックに失敗しました
+クライアントが中止されました
+接続
+接続平均時間
+ダウンタイムの合計
+拒否された応答
+接続エラー
+応答エラー
+応答1xx
+応答は2xx
+応答は3xx
+応答は4xx
+応答は5xx
+応答その他
+サーバ選択合計
+キューの現在
+キューの最大数
+キュー平均時間
+1秒あたりのセッション数
+1秒あたりのセッションの最大数
+接続の再利用
+応答時間平均
+セッション
+セッションの最大数
+サーバ転送が中止されます
+セッションの合計
+セッション合計時間平均
+再ディスパッチを要求します
+再試行を要求します
+書き換えを要求します</block>
+  <block id="f7e484ed281631da8383d690f4eddd80" category="cell">HAProxy バックエンド</block>
+  <block id="97147057d2a68260221e7116c41c9222" category="cell">ノードIP
+ノード名
+プロキシID
+最終変更時刻
+前回のセッション時間
+モード
+プロセスID
+サーバID
+セッション制限
+ステータス
+重量</block>
+  <block id="9a0ea7807c7dd21ed7a14f4f90d3e5ba" category="cell">アクティブサーバ
+バックアップサーバ
+受信バイト数
+バイトアウト
+キャッシュヒット
+キャッシュルックアップ
+チェックダウン
+クライアントが中止されました
+圧縮バイトがバイパスされました
+圧縮バイト数
+圧縮バイトが送信されました
+圧縮応答
+接続
+接続平均時間
+ダウンタイムの合計
+セキュリティ上の懸念により拒否されたリクエスト
+セキュリティ上の懸念により拒否された応答
+接続エラー
+応答エラー
+応答1xx
+応答は2xx
+応答は3xx
+応答は4xx
+応答は5xx
+応答その他
+サーバ選択合計
+キューの現在
+キューの最大数
+キュー平均時間
+1秒あたりのセッション数
+1秒あたりのセッションの最大数
+リクエストの合計
+接続の再利用
+応答時間平均
+セッション
+セッションの最大数
+サーバ転送が中止されます
+セッションの合計
+セッション合計時間平均
+再ディスパッチを要求します
+再試行を要求します
+書き換えを要求します</block>
+  <block id="29f2c433c8324679db838494d114ace0" category="summary">Elasticsearch データコレクタの設定</block>
+  <block id="b254328dbad8d7bef169a1d38f1b1bec" category="doc">Elasticsearch Data Collector</block>
+  <block id="7ad1c9b2a026e8cd588b98357fc68620" category="paragraph">Cloud Insights は、このデータコレクタを使用して Elasticsearch から指標を収集します。</block>
+  <block id="c22bbce40f7866184fc5238e4cf0526d" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[Elasticsearch]を選択します。</block>
+  <block id="8dc7af6f97dac4ac46d66b12e0c86974" category="inline-image-macro">Elasticsearch 設定</block>
+  <block id="5b3344ac5bf291f59c070db863943014" category="paragraph"><block ref="5b3344ac5bf291f59c070db863943014" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7423bcb1039be167bcf002d43ee6670e" category="inline-link-macro">Elasticsearch のドキュメント</block>
+  <block id="1cd7a99f1b7abd82e5c52da438eb8098" category="paragraph">情報は、に記載されています <block ref="bcfb5ea01b37890a7134cc470707e795" category="inline-link-macro-rx"></block>。</block>
+  <block id="824ae3473df67a0ffcc2e7213c8155ab" category="cell">Elasticsearch クラスタ</block>
+  <block id="b47ef76054c94c60d8ded4d3bf1ca5ae" category="cell">ネームスペース
+クラスタ</block>
+  <block id="89fc526a8bc54d6b35b9f537497ad12b" category="cell">ノードIP
+ノード名
+クラスタのステータス</block>
+  <block id="8abf5b6d1ce731d469067e732db35e2c" category="cell">マスターノード数
+合計ノード数
+ファイルシステムの使用可能データ（バイト）
+ファイルシステムの空き容量（バイト）
+ファイルシステムデータ合計（バイト）
+JVMスレッド
+OS割り当て済みのプロセッサ
+OS利用可能なプロセッサ
+OSメモリ空き容量（バイト）
+OSメモリフリー
+OSメモリ合計（バイト）
+使用済みOSメモリ（バイト）
+使用されているOSメモリ
+プロセスCPU
+インデックス完了サイズ（バイト）
+インデックス数
+インデックスドキュメント数
+インデックスドキュメントが削除されました
+Indicesフィールドデータの削除
+インデックスフィールドデータメモリサイズ（バイト）
+インデックスクエリキャッシュ数
+インデックスキャッシュサイズ
+Indices Segments Countの略
+インデックスセグメントドキュメント値メモリ（バイト）
+インデックスシャードインデックスプライマリー平均
+インデックスシャードインデックスプライマリー最大
+Indices shards Index Primaries Min
+インデックスシャードインデックスレプリケーション平均
+インデックスシャードインデックスレプリケーション最大
+インデックスシャードインデックスレプリケーション最小
+インデックスシャード平均
+インデックスシャード最大
+インデックスシャードプライマリー
+インデックスシャードレプリケーション
+インデックスシャード合計
+インデックスストアサイズ（バイト）</block>
+  <block id="dc74b66d0fe6a965e5a23640119f3c60" category="cell">Elasticsearch ノード</block>
+  <block id="673731fc48d3aeb518baecf281fb2c22" category="cell">ネームスペース
+クラスタ
+ESノードID
+ESノードIP
+ESノード</block>
+  <block id="ca7086c6ed2859db76f290c9cc1ed037" category="cell">ゾーン ID</block>
+  <block id="63fa005b729d1d453dbcab794d84a459" category="cell">機械学習が有効になりました
+機械学習メモリ
+機械学習の最大オープンジョブ数
+X-Packがインストールされています
+ブレーカーアカウンティング推定サイズ（バイト）
+ブレーカーアカウンティング制限サイズ（バイト）
+ブレーカー会計オーバーヘッド
+ブレーカー会計が作動しました
+ブレーカーフィールドデータ推定サイズ（バイト）
+ブレーカーフィールドのデータ制限サイズ（バイト）
+ブレーカフィールドデータオーバーヘッド
+ブレーカーフィールドデータがトリップしました
+ブレーカの飛行中の推定サイズ（バイト）
+ブレーカインフライト制限サイズ（バイト）
+ブレーカインフライトオーバーヘッド
+ブレーカインフライトが停止しました
+ブレーカ親推定サイズ（バイト）
+ブレーカ親制限サイズ（バイト）
+Breakers親の頭上
+ブレーカの親がトリップしました
+ブレーカー要求推定サイズ（バイト）
+ブレーカー要求制限サイズ（バイト）
+ブレーカー要求オーバーヘッド
+ブレーカー要求が作動しました
+ファイルシステムの使用可能データ（バイト）
+ファイルシステムの空き容量（バイト）
+ファイルシステムデータ合計（バイト）
+Filesystem IO Stats Devices Opsの略
+ファイルシステムIO統計デバイス読み取り（kb）
+Filesystem IO Stats Devices Read Opsの略
+Filesystem IO Stats Devices Erite（KB）
+Filesystem IO Stats Devices Write Opsの略
+ファイルシステムIO統計の合計処理数
+ファイルシステムI/O統計合計読み取り（KB）
+ファイルシステムIO統計読み取り処理
+ファイルシステムI/O統計合計書き込み（KB）
+ファイルシステムIO統計書き込み処理
+使用可能なファイルシステムの最小使用量の見積もり（バイト）
+ファイルシステムの最小使用量の概算合計（バイト）
+Filesystem Least Usage Diskの略
+FileSystem Most Usage Estimate Available（バイト）
+FileSystem Most Usage Estimate Total（バイト）
+FileSystem Most Usage Used Diskの略
+ファイルシステムの合計使用可能容量（バイト）
+ファイルシステムの合計空き容量（バイト）
+ファイルシステム合計（バイト）
+インデックス完了サイズ（バイト）
+インデックスドキュメント数
+インデックスドキュメントが削除されました
+Indicesフィールドデータの削除
+インデックスフィールドデータメモリサイズ（バイト）
+Indices Flush Periodic（インデックスフラッシュ周期）の略
+Indices Flush Total（インデックスフラッシュ合計）
+Indices Flush Total Timeの略
+インデックスは現在の値を取得します
+インデックスが存在する時間を取得します
+インデックス取得存在合計
+インデックスは合計を取得します
+Indices Indexing Delete Total（インデックスインデックスインデックスの削除合計
+Indices Indexing Index Total（インデックスインデックスインデックス合計）
+インデックスインデックスNOOP更新合計
+Indices Indexing Throttle Timeの略
+HTTP Current Openの略
+HTTP合計オープン数
+JVMバッファプールの直接数
+JVMクラス現在ロードされている数
+JVM GCコレクタの旧コレクション数
+コミットされたJVMメモリヒープ（バイト）
+OS CPU Load Average 15m（OS CPU負荷平均15m
+OS CPU
+OSメモリ空き容量（バイト）
+OSスワップ空き容量（バイト）
+プロセスCPU
+プロセスCPU合計
+最大ファイル記述子を処理します
+プロセスメモリ合計仮想（バイト）
+スレッドプール分析がアクティブです
+スレッドプールの分析が完了しました
+スレッドプール分析最大
+スレッドプール分析キュー
+スレッドプール分析が拒否されました
+スレッドプールスレッドを分析します
+スレッドプールフェッチシャードがアクティブに開始されました
+スレッドプールのフェッチシャードが開始されました
+スレッドプールフェッチシャードが最大で開始されました
+Thread Pool Fetch Shard Started Queueの略
+スレッドプールのFetch Shardが拒否されました
+スレッドプールFetch Shard Started Shreads.
+スレッドプールフェッチシャードストアがアクティブです
+スレッドプールのFetch Shard Storeが完了しました
+転送RX（1秒あたり）
+転送受信バイト数（1秒あたり）
+トランスポートサーバが開いています
+転送TX（1秒あたり）
+転送転送バイト数（1秒あたり）</block>
+  <block id="1da80b1336c0c9594d16e3d3dab10d20" category="summary">絶縁データコレクタの設定</block>
+  <block id="c4079b6998dfb2e5f02a35b303e1acce" category="doc">総領事データ収集</block>
+  <block id="44aa5a1c223b0773b5006801b857966b" category="paragraph">Cloud Insights は、このデータコレクタを使用して、総領事からのメトリックを収集します。</block>
+  <block id="6ed4f0f0b93d3def9b1fe51a22e44d7a" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。Consulを選択します。</block>
+  <block id="90b5256380802f2feaca144a438190c3" category="inline-link-macro">エージェントをインストールします</block>
+  <block id="dc31f8b70f914e6d9f6e9267b53fb552" category="paragraph">収集用にエージェントを設定していない場合は、にプロンプトが表示されます <block ref="a1b69a79c96be75135c991d76ebf15bb" category="inline-link-macro-rx"></block> お客様の環境で実現します。</block>
+  <block id="bfd9f9769236435b451e6625d2b38cd5" category="paragraph">エージェントがすでに設定されている場合は、適切な OS またはプラットフォームを選択し、 [* Continue （続行） ] をクリックします。</block>
+  <block id="bddbdda6ad83151063cda71734d4faf4" category="list-text">[Consul Configuration] 画面の指示に従って、データコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。</block>
+  <block id="488f9e22c68fcc3e89060d2f5f537744" category="inline-link-macro">総領事からのご説明</block>
+  <block id="a47b0fae235ee24589e1075c2fe0daeb" category="paragraph">情報は、に記載されています <block ref="209f85ad7011f70864ffdec527911e92" category="inline-link-macro-rx"></block>。</block>
+  <block id="058912364976efe3be18dc926c430355" category="section-title">接続のためのオブジェクトとカウンタ</block>
+  <block id="52668346d353c3e6fdee1d0c1b711981" category="cell">総領事</block>
+  <block id="24a1a9023bf78f02042ebc02aae1acda" category="cell">ネームスペース
+IDを確認します
+サービスノード</block>
+  <block id="4cbed0b534c83a56e07762ba4b9a62f4" category="cell">ノードIP
+ノードOS
+ノード UUID
+ノード名
+サービス名
+[ 名前（ Name ） ] を
+サービス ID
+ステータス</block>
+  <block id="701fda79498070ea91a9c98bbdd1dd4e" category="cell">重要
+パス
+警告</block>
+  <block id="aee1b49e2ea5679073623959ef024069" category="summary">HTTPデータコレクタの設定</block>
+  <block id="d5418d1fa8d23d7e5951dbf339c3c5a8" category="doc">ActiveMQ データコレクタ</block>
+  <block id="123afee47eb477e020c1546a00fd80a1" category="paragraph">Cloud Insights は、このデータコレクタを使用して ActiveMQ からのメトリックを収集します。</block>
+  <block id="4bcd3cf21ebb34b835f0e6aa0d638f54" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[ActiveMQ]を選択します。</block>
+  <block id="52e070f5418cead2f633bf0a2288946c" category="inline-image-macro">ActiveMQ の設定</block>
+  <block id="21562149e2176820b6c8d39f6bf47011" category="paragraph"><block ref="21562149e2176820b6c8d39f6bf47011" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16fc9b4d33f552995ec677b1a481fba5" category="inline-link">ActiveMQ のドキュメント</block>
+  <block id="af713bd2f304582c4b486e93a2e9e5a6" category="paragraph">情報は、に記載されています<block ref="d9a53f438d966f90bfb05037caa61b81" category="inline-link-rx"></block></block>
+  <block id="8a07863586a1d1c6f2c552f72c46e180" category="cell">ActiveMQ キュー</block>
+  <block id="203da89ec2d37f8da5871651156dc15a" category="cell">ネームスペース
+キュー
+ポート
+サーバ</block>
+  <block id="b76bb2de5529facad404eaf6a5c4b511" category="cell">ノード名
+ノードIP
+ノード UUID</block>
+  <block id="18734ab50531cecf383920035017d2cc" category="cell">消費者数
+デキューカウント
+enqueueカウント
+キューサイズ</block>
+  <block id="f0e7ed43fc90ff6a4e95ff91a0a7a480" category="cell">ActiveMQ サブスクライバ</block>
+  <block id="e6ced1c4e8201f48dae7310d7e19b364" category="cell">クライアント ID
+接続ID
+ポート
+サーバ
+ネームスペース</block>
+  <block id="825eed3baabe97b7c40a52703d100946" category="cell">はアクティブです
+デスティネーション
+ノード名
+ノードIP
+ノード UUID
+ノードOS
+セレクタ
+サブスクリプション。</block>
+  <block id="710583130d9d27b7a330a9eafed00d38" category="cell">デキューカウント
+ディスパッチ数
+ディスパッチキューサイズ
+enqueueカウント
+保留中のキューサイズ</block>
+  <block id="31c61bb8a89aefd1e2819389798f7ec7" category="cell">ActiveMQ トピック</block>
+  <block id="125e537310f9a240c5cd57e48866cfea" category="cell">トピック
+ポート
+サーバ
+ネームスペース</block>
+  <block id="22a6fbd49f601102da3f17cc56176d59" category="cell">ノード名
+ノードIP
+ノード UUID
+ノードOS</block>
+  <block id="592897d62e3575026edb33cb4cb753ae" category="cell">消費者数
+デキューカウント
+enqueueカウント
+サイズ</block>
+  <block id="9d2537f158357c95ae162019d658de08" category="doc">RethinkDB データコレクタ</block>
+  <block id="86e303e0c497b52b7c3e448d2a739f78" category="paragraph">Cloud Insights は、このデータコレクタを使用して、 RepinkDB から指標を収集します。</block>
+  <block id="5ccd9dd8e50ca94f3cd4db51f6b42c50" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[RethinkDB]を選択します。</block>
+  <block id="10e1e1205ffd97adbe671ede9a7d4f2d" category="inline-image-macro">RethinkDB Data Collector の設定</block>
+  <block id="dd379e6631df8e94fe26188b06220cf7" category="paragraph"><block ref="dd379e6631df8e94fe26188b06220cf7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7fc41d1df644e11b26a2696444f69499" category="inline-link-macro">RethinkDB のドキュメント</block>
+  <block id="61c63e4b6fa084c1807e368faaf150e4" category="paragraph">情報は、に記載されています <block ref="02af3cecada50a802d68e28a6a325991" category="inline-link-macro-rx"></block>。</block>
+  <block id="89be6ffd9cf2244c68503bbda41ae112" category="summary">Cloud Insights は統合データの収集のためのエージェントとしてTelegrafをサポートしており、WindowsまたはLinux上で設定できます。</block>
+  <block id="2ddc4416c197500bc7619829b98c8b77" category="doc">データを収集するためのエージェントの設定(Windows/Linux)</block>
+  <block id="bdb9a31f361d8d3be1c6915647e92d4d" category="inline-link-macro">Tegraf</block>
+  <block id="23da8c24c0f52acdf7f6f9c4a08997c8" category="paragraph">Cloud Insights ではを使用します <block ref="eed175bcf32f20f81ea47b9c982c2797" category="inline-link-macro-rx"></block> 統合データを収集するエージェントとして。Telegraf はプラグインベースのサーバエージェントで、指標、イベント、ログの収集とレポートに使用できます。入力プラグインは、システム /OS に直接アクセスするか、サードパーティ API を呼び出すか、設定されたストリームをリスニングすることによって、エージェントに必要な情報を収集するために使用されます（例：） Kafka や StatsD など）を参照してください。出力プラグインは、収集した指標、イベント、およびログをエージェントから Cloud Insights に送信するために使用します。</block>
+  <block id="5186b139e52f7a5447ce73de13e4e524" category="paragraph">Cloud Insights の現在のTelegrafバージョンは*1.24.0 *です。</block>
+  <block id="8334797b9b3383d4f48d98178b8845ea" category="inline-link-macro">このページです</block>
+  <block id="6dac8d8f7e40ada8d5686e3e8192f90f" category="paragraph">Kubernetesへのインストールの詳細については、を参照してください。 <block ref="36dbd85d6f83f853e5478a62019a359b" category="inline-link-macro-rx"></block>。</block>
+  <block id="ae2f2b5e87a12f1cd650f0e46b92e4ec" category="admonition">正確な監査およびデータレポートを作成するためには、 * Network Time Protocol （ NTP; ネットワークタイムプロトコル） * または * Simple Network Time Protocol （ SNTP ） * を使用して、 Agent マシンの時刻を同期することを強くお勧めします。</block>
+  <block id="f97f94f0ff0c35a96686e2fd00940ac8" category="admonition">エージェントをインストールする前にインストールファイルを確認する場合は、の項を参照してください <block ref="1d9f3d6343939e76574c60762a7f2fae" category="inline-xref-macro-rx"></block>。</block>
+  <block id="137bac1c26ca6d0b61bc783c9a2fcbbd" category="section-title">エージェントをインストールしています</block>
+  <block id="a4c0f3c4bd8931418c028fb88c45e72f" category="paragraph">サービスデータコレクタをインストールしていて、エージェントをまだ設定していない場合は、最初に適切なオペレーティングシステム用のエージェントをインストールするように求められます。このトピックでは、 Tegraf エージェントを次のオペレーティングシステムにインストールする手順について説明します。</block>
+  <block id="8d6f7baf6fd8e47d9316fcc507ab0f85" category="list-text"><block ref="85415f26af88eac138de6f713927df0c" category="inline-xref-macro-rx"></block></block>
+  <block id="95f68796200de884bc3186742179de85" category="list-text"><block ref="8311b71d9af22c435aebd4b15988ca17" category="inline-xref-macro-rx"></block></block>
+  <block id="d41bd76f36789e8fddb867c10a5eca40" category="list-text"><block ref="f0b8d86b1d5e602002cf4f7e7b6c1cac" category="inline-xref-macro-rx"></block></block>
+  <block id="4705018fb833a2cd4979b3acd0c3171f" category="paragraph">エージェントをインストールするには、使用しているプラットフォームに関係なく、まず次の手順を実行する必要があります。</block>
+  <block id="60e927136e016a2a126538b1a592e8c5" category="list-text">エージェントに使用するホストにログインします。</block>
+  <block id="513f11f8d213c209a990a1bb086ea780" category="list-text">Cloud Insights環境にログインし、*オブザーバビリティ&gt; Collectors *に移動します。</block>
+  <block id="212039b527f83b6053ae8fd23bb11e26" category="list-text">[*+Data Collector* ] をクリックして、インストールするデータコレクタを選択します。</block>
+  <block id="72213a3f462eab56462e1fd1892f6fc0" category="list-text">ホストに適したプラットフォームを選択（Windows、Linux）</block>
+  <block id="0b5b60f6bf77a0318f6283c5d8ce5be7" category="list-text">プラットフォームごとに、残りの手順を実行します。</block>
+  <block id="09e0466fcc22c337dc6af8a799296033" category="admonition">ホストにエージェントをインストールしたら、そのホストに再度エージェントをインストールする必要はありません。</block>
+  <block id="4779eaa1340da59df6b8231755992886" category="inline-link-macro">「ノード」指標</block>
+  <block id="02cec17a35aef41b0e1a09a9070bf893" category="admonition">サーバ /VM にエージェントをインストールすると、 Cloud Insights は、設定したデータコレクタからの収集に加えて、そのシステムからメトリックを収集します。これらの指標は、のように収集されます <block ref="721decf63f7a81173878238d526f87a6" category="inline-link-macro-rx"></block>。</block>
+  <block id="2611d0720b029b968257661771d287e6" category="admonition">プロキシを使用している場合は、 Tegraf エージェントをインストールする前に、お使いのプラットフォームのプロキシの手順をお読みください。</block>
+  <block id="b2997605f7b826343b475f71837415f4" category="section-title">ログの場所</block>
+  <block id="21872dffda230726cb93a6dddff7dd00" category="paragraph">Telegrafログメッセージは、stdoutから次のログファイルにリダイレクトされます。デフォルトでは、</block>
+  <block id="176f2e3b515143c4119028872457ab70" category="list-text">RHEL / CentOS：/var/log/telegraf/telegraf.log</block>
+  <block id="dba98037ac90ffd514afa8ae59edc426" category="list-text">Ubuntu/Debian：/var/log/telegraf/telegraf.log</block>
+  <block id="e6c0bd06ad9776dae0a5cf43e60b0ff4" category="list-text">Windows：C：\Program Files\telegraf\telegraf.log</block>
+  <block id="e881539baa442c22144c7ae555cac843" category="list-text">PowerShell がインストールされていること</block>
+  <block id="2156565620990981867eac598ee8b32d" category="list-text">プロキシの背後にいる場合は、「Windows *プロキシ・サポートの構成」セクションの手順に従う必要があります。</block>
+  <block id="77fe3eec7153b8f297a2bc358451e189" category="section-title">Windows 向けプロキシサポートを設定しています</block>
+  <block id="f3dd6d7b854220a72089f42589f41cba" category="admonition">プロキシを使用する環境の場合は、をインストールする前にこのセクションをお読みください。</block>
+  <block id="9b08a379d02da9e64bce4ee2389fc783" category="admonition">次の手順は '_http_proxy/https_proxy_environment 変数を設定するために必要なアクションの概要を示しています一部のプロキシ環境では '_no_proxy 環境変数も設定する必要があります</block>
+  <block id="a5f3019989ce33b954d73eef96682b0a" category="paragraph">プロキシの背後にあるシステムの場合、 Telegraf エージェントをインストールする前に _https_proxy_ および /or_http_proxy_environment 変数 * を設定するには、次の手順を実行します。</block>
+  <block id="59c020eb3b2fac7b9a29161528b3da48" category="section-title">エージェントをインストールしています</block>
+  <block id="8774ad5045a9c9dbd5af8443ad85146e" category="inline-image-macro">Windows Agent のインストール</block>
+  <block id="dcdaa0ef05a3fb89ab74a979905c80d2" category="paragraph"><block ref="dcdaa0ef05a3fb89ab74a979905c80d2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5002498d543f683aae80ee22af4a4919" category="list-title">Windows にエージェントをインストールする手順：</block>
+  <block id="08c86f7c6085b75b443831ac2339b9eb" category="list-text">エージェントアクセスキーを選択します。</block>
+  <block id="210f49b0f42e5dd87eb3a71d8a25532e" category="list-text">エージェントのインストールダイアログからコマンドブロックをコピーします。クリップボードアイコンをクリックすると、コマンドをクリップボードに簡単にコピーできます。</block>
+  <block id="cc9e3ada3e15910f4f34f7dddee7971a" category="list-text">PowerShell ウィンドウを開きます</block>
+  <block id="19e2304cac236ec4b99e287bd1711c9a" category="list-text">コマンドを PowerShell ウィンドウに貼り付け、 Enter キーを押します。</block>
+  <block id="72aaa179eba4eb63e2dc64b9a417771d" category="list-text">コマンドは、適切なエージェントインストーラをダウンロードしてインストールし、デフォルト設定を行います。終了すると、エージェントサービスが再起動されます。コマンドには一意のキーがあり、 24 時間有効です。</block>
+  <block id="ffd71ae6a321e93c38ab5f9b79ceb31a" category="list-text">[ 完了 ] または [ 続行 ] をクリックします</block>
+  <block id="4fa34467eb66080db7c23f897ac4b8af" category="paragraph">エージェントのインストール後、次のコマンドを使用してサービスを開始または停止できます。</block>
+  <block id="573a1cc1840c9732e7145a21d3f3734d" category="section-title">エージェントをアンインストールしています</block>
+  <block id="d19721dc26042ef4a2f9474f15fd9551" category="paragraph">Windows でエージェントをアンインストールするには、 PowerShell ウィンドウで次の手順を実行します。</block>
+  <block id="a8e0b2a2a3d514566af06fa837684d99" category="list-text">Tegraf サービスを停止して削除します。</block>
+  <block id="b5de2c13f95171f5dc8fed7123f4fd51" category="list-text">証明書を信頼ストアから削除します。</block>
+  <block id="f68c6450fe9cbf9bcf2153b40c67f142" category="list-text">バイナリ、ログ、およびコンフィグレーションファイルを削除するには、 _C ： \Program Files\テレ グラムフォルダを削除します</block>
+  <block id="482671fee2a539ceb19e6bc08e0b0655" category="list-text">レジストリから _SYSTEM\CurrentControlSet\Services\EventLog\Application\テレ グラムキーを削除します</block>
+  <block id="bc72b4980d123f85b510df4ebcab83bf" category="section-title">Agent をアップグレードしています</block>
+  <block id="8cf39a7fcad49926187638c2ef3888e4" category="paragraph">テレグラムエージェントをアップグレードするには、次の手順に従います。</block>
+  <block id="2131151d9623bddef4c64eb9b42c4c1e" category="list-text">テレグラムサービスを停止および削除します。</block>
+  <block id="307db1eaa318a5a19e7f13b2a410df0a" category="list-text">レジストリから _SYSTEM\CurrentControlSet\Services\EventLog\Application\テレ グラムキーを削除します</block>
+  <block id="54bab0726441aa1bd7acb54e33ed0af1" category="list-text">DELETE_C ： \Program Files\テレ グラム \テレ グラム af.conf_</block>
+  <block id="e548b13be6208523f2daa7458e9ab258" category="list-text">DELETE_C ： \Program Files\テレ グラム \テレ グラム af.exe_</block>
+  <block id="44bbcb23890d6d6f6e19f827fe6a3239" category="inline-link-macro">新しいエージェントをインストールします</block>
+  <block id="1e3047ccd30b2ed259aa8b3fe3e877d1" category="list-text"><block ref="67cec2de8f18c94e7ba97311262ff17e" category="inline-link-macro-rx"></block>。</block>
+  <block id="b523f646735e8e8381556641bbff1d1f" category="section-title">RHEL および CentOS</block>
+  <block id="267bedda4c5c4a640bb527d89667582d" category="list-text">cURL 、 sudo 、 ping 、 sha256sum 、 openssl 、 dmidecode となります</block>
+  <block id="d45fc0c2a28126623498664c1e032858" category="list-text">プロキシの背後にある場合は、「RHEL / CentOS *用のプロキシサポートの設定」セクションの手順に従う必要があります。</block>
+  <block id="019f11868271c32347a01f45447d4e72" category="section-title">RHEL / CentOS でのプロキシサポートの設定</block>
+  <block id="80b682b4c5b4642df4eae385b21569a1" category="paragraph">プロキシの背後にあるシステムの場合は、 Telegraf エージェントをインストールする前に、次の手順 * を実行します。</block>
+  <block id="b28d80fd10a0256acc49b263b43162c6" category="list-text">現在のユーザの _https_proxy_ 変数と _http_proxy_environment 変数を設定します。</block>
+  <block id="1572d13b281f402b801b3e8fe53aa37b" category="list-text">/etc/default/テレ グラム af_ を作成し、 _https_proxy_/or_http_proxy_variable の定義を挿入します。</block>
+  <block id="e0d7a90b12ef3cae3c8429a34b69736a" category="inline-image-macro">RHEL / CentOS Agent のインストール</block>
+  <block id="530723ab95ea5239b9c308f8890b5069" category="paragraph"><block ref="530723ab95ea5239b9c308f8890b5069" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c9a13bf8b19a106ff517d02fffbce168" category="list-title">RHEL または CentOS にエージェントをインストールする手順：</block>
+  <block id="371155faf9e65eedebc467c42881ab64" category="list-text">Bash ウィンドウを開きます</block>
+  <block id="cb672d725b5532024df625e16f4b2c0c" category="list-text">Bash ウィンドウにコマンドを貼り付けて、 Enter キーを押します。</block>
+  <block id="9fdc20ebb14c5dab6824fe28b1600c94" category="paragraph">オペレーティングシステムで systemd （ CentOS 7+ および RHEL 7+ ）を使用している場合：</block>
+  <block id="e16e46804943331d9caf8452c87dfa2b" category="paragraph">オペレーティングシステムで systemd （ CentOS 7+ および RHEL 7+ ）を使用していない場合：</block>
+  <block id="58cbdcc7fe2213684c932ead0296c88a" category="paragraph">Bash 端末で RHEL または CentOS のエージェントをアンインストールするには、次の手順を実行します。</block>
+  <block id="561c2b82227ce1633c89ee229e9285c3" category="list-text">Telegraf サービスを停止します。</block>
+  <block id="4092367a698b248c0ef54aa8fa6d6589" category="list-text">Tegraf エージェントを取り外します。</block>
+  <block id="00685c25e29deb7cd384ac57b9da8a6a" category="list-text">残っている設定ファイルまたはログファイルを削除します。</block>
+  <block id="8454d961e549d71d53dc014fde0b5dff" category="list-text">テレグラムサービスを停止します。</block>
+  <block id="4a1301eea91ca5bc33f38eb5756f1f68" category="list-text">前のテレグラムエージェントを削除します。</block>
+  <block id="bf2c36be7f2bc4dd2e37e375e76d6d4a" category="list-text"><block ref="8fae6fa4f132bafa12a111b0e12ddf22" category="inline-link-macro-rx"></block>。</block>
+  <block id="7ae220dde836123a83ab52aa985caa47" category="section-title">Ubuntu と Debian</block>
+  <block id="5c45aaf7999f2a6de4e86ca7726bce2b" category="list-text">プロキシの背後にいる場合は、「Ubuntu / Debian *用のプロキシサポートの設定」セクションの手順に従う必要があります。</block>
+  <block id="777a7eacf1727a42155a716a8fa767e9" category="section-title">Ubuntu / Debian のプロキシサポートの設定</block>
+  <block id="0d0d38b5222d561807cc4ef53f325bd5" category="list-text">/etc/default/テレ グラムを作成し、 _https_proxy_/or_http_proxy_variable 以下の定義を挿入します。</block>
+  <block id="3fcd2752c343d8536926bfb628eec3dc" category="inline-image-macro">Ubuntu / Debian Agent のインストール</block>
+  <block id="49d620df1cdf6184275e83524131195e" category="paragraph"><block ref="49d620df1cdf6184275e83524131195e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2ccb8fda807f639572273dc350f43bbf" category="list-title">Debian または Ubuntu にエージェントをインストールする手順 :</block>
+  <block id="6271d65c06a7a1fd244d963c100a1a1c" category="paragraph">オペレーティング・システムが systemd を使用している場合：</block>
+  <block id="b5648f15565fb8185bfc83aaabee9577" category="paragraph">オペレーティングシステムが systemd を使用していない場合は、次の手順を実行します。</block>
+  <block id="936ff88b3ce432ac2624f7f2bb4998a4" category="paragraph">Ubuntu または Debian でエージェントをアンインストールするには、 Bash ターミナルで次のコマンドを実行します。</block>
+  <block id="7f3a9bda6122a676154f73d5edf02232" category="list-text"><block ref="760050cb55c606cd7ef0af21f798bf45" category="inline-link-macro-rx"></block>。</block>
+  <block id="99b7973dda927022b1a7232d7b78e926" category="section-title">チェックサムを検証する</block>
+  <block id="25334cc3e68d534ebb5ad59907c70159" category="paragraph">Cloud Insights エージェントのインストーラで整合性チェックが実行されますが、ダウンロードしたアーティファクトのインストールまたは適用前に独自の検証を実行したいユーザもいます。これを行うには、インストーラをダウンロードしてダウンロードしたパッケージのチェックサムを生成し、チェックサムをインストール手順に示されている値と比較します。</block>
+  <block id="1078df24543dad61e1b5b51f611f5b0f" category="section-title">インストールせずにインストーラパッケージをダウンロードします</block>
+  <block id="48feb91430f93bd8ac9740e9cdc40c75" category="paragraph">デフォルトのダウンロードおよびインストールではなく、ダウンロードのみの操作を実行するには、UIから取得したエージェントインストールコマンドを編集し、末尾の「インストール」オプションを削除します。</block>
+  <block id="deadee5e2cfce7600cfd5def40a7d618" category="paragraph">次の手順を実行します。</block>
+  <block id="8c386e0a7a8cfc20ef9a26dacd925e69" category="list-text">指示に従ってエージェントインストーラスニペットをコピーします。</block>
+  <block id="225b18b0098145b352b8fbf6c04e8098" category="list-text">スニペットをコマンドウィンドウに貼り付ける代わりに、テキストエディタに貼り付けます。</block>
+  <block id="98cd1da81daac82fdd86ce7412e50a24" category="list-text">コマンドから末尾の「--install」（Linux）または「-install」（Windows）を削除します。</block>
+  <block id="34e3334224025c0302c21ab69b535b6e" category="list-text">コマンド全体をテキストエディタからコピーします。</block>
+  <block id="d2a9c05594a3807487efd306f7e06ff5" category="list-text">次に、コマンドウィンドウ（作業ディレクトリ内）に貼り付けて実行します。</block>
+  <block id="02761a47fb2c7ca60e3b94426c0516d2" category="paragraph">Windows 以外（ Kubernetes の場合は次の例を使用します。実際のスクリプト名は異なる場合があります）</block>
+  <block id="051ab73b0c77a3e60cd6e6de57fc9319" category="list-text">Download and install （デフォルト）：</block>
+  <block id="a3ef489d553e0422ea8926faf65bf77a" category="list-text">ダウンロードのみ：</block>
+  <block id="140710a8dd48496a1ea3b09f2799c408" category="paragraph">Windows の場合</block>
+  <block id="10835cdc0c344b8183321c8a0e88269e" category="paragraph">download-only コマンドを使用すると、必要なアーティファクトがすべて Cloud Insights から作業ディレクトリにダウンロードされます。アーティファクトには次のものがありますが、これらに限定することはできません。</block>
+  <block id="8d4a361a3f25b78818c569d8f15cf4a6" category="list-text">インストールスクリプト</block>
+  <block id="b015398c226e1e3576258432ece31819" category="list-text">環境ファイル</block>
+  <block id="004cac3ce7d67014b5fadcffaf9b5b70" category="list-text">YAMLファイル</block>
+  <block id="9f32134bbefffdc9df70a2d73c2df6a6" category="list-text">チェックサムファイル（末尾がSHA256.signedまたはSHA256.ps1）</block>
+  <block id="4f1c754cd67cd57cebe0be2f5e8638a4" category="paragraph">インストールスクリプト、環境ファイル、 YAML ファイルは、目視検査を使用して検証できます。</block>
+  <block id="d8f6d626cfe2a4f97d97ff93d95db51b" category="section-title">チェックサム値を生成します</block>
+  <block id="d1703bc5bb53c90ffbbae52dfe829603" category="paragraph">チェックサム値を生成するには、使用するプラットフォームに応じて次のコマンドを実行します。</block>
+  <block id="9374ddadb9776b458a2963573b22f63d" category="list-text">RHEL / Ubuntu：</block>
+  <block id="aacd43790bd404cab1a350cb047a9a9d" category="section-title">チェックサムを検証</block>
+  <block id="43e3c65a555911ad6d7235d9e9206e4c" category="paragraph">チェックサムファイルから期待されるチェックサムを抽出する</block>
+  <block id="47a6cd89e04d0d805a75aa0fe5822c20" category="list-text">Windows 以外：</block>
+  <block id="b59ea01f26635c31c3c1df660848f6c8" category="section-title">ダウンロードしたパッケージをインストールします</block>
+  <block id="6c32334bfce9f857b0fdbdca68040a0b" category="paragraph">すべてのアーティファクトが正常に検証されたら、次のコマンドを実行してエージェントのインストールを開始できます。</block>
+  <block id="19032097e8464bc9b326d59737b0bdbc" category="paragraph">エージェントの設定で問題が発生した場合の対処方法を次に示します。</block>
+  <block id="2c53f37725165d35104102da8d88caf1" category="cell">次の操作を実行します</block>
+  <block id="3a0f609bf65bf53f905fdcfae464bcae" category="cell">新しいプラグインを設定してTegrafを再起動すると、Tegrafが起動しない。ログには次のようなエラーが記録されています。
+
+"[telegraf] Error running agent: Error loading config file /etc/telegraf/telegraf.d/cloudinsights-default.conf : plugin outputs.http:line &lt;linenumber&gt;: configuration specified the fields ["use_system_proxy"] but they were not used"</block>
+  <block id="39930ddf87d2960ef2f5a8ff06e4993e" category="cell">インストールされているTelegrafのバージョンが古い。このページの手順に従って、お使いのプラットフォームに対応するエージェント*をアップグレードしてください。</block>
+  <block id="90388b17e672eeaae8e092ebd4bf6362" category="cell">古いインストールでインストーラスクリプトを実行したが、エージェントがデータを送信していない</block>
+  <block id="7cc579c6f20ffbe0b9452d6f5fff9167" category="cell">テレグラムエージェントをアンインストールし、インストールスクリプトを再実行します。お使いのプラットフォームに応じて、このページの*エージェントのアップグレード*の手順を実行します。</block>
+  <block id="fb0132b157c251ea47224310ff68ee9b" category="cell">すでに Cloud Insights を使用してエージェントをインストールしました</block>
+  <block id="1fed0141939f301599f8ba56fcb40b18" category="cell">ホスト /VM にエージェントがすでにインストールされている場合は、エージェントを再度インストールする必要はありません。この場合は、 Agent Installation （エージェントのインストール）画面で適切な Platform and Key （プラットフォームとキー）を選択し、 * Continue * （続行）または * Finish （完了） * をクリックします。</block>
+  <block id="eca45129c8446e68f5ce8f765f25b4c7" category="cell">すでにエージェントをインストールしていますが、 Cloud Insights インストーラを使用してインストールしていません</block>
+  <block id="ceba88aab9e14c687ffb3ce263a229a1" category="cell">前のエージェントを削除し、 Cloud Insights エージェントのインストールを実行して、適切なデフォルト設定ファイルを設定します。完了したら、 [* Continue * （続行） ] または [* Finish （完了） ] をクリックします。</block>
+  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">Data Collector サポートマトリックス</block>
+  <block id="47c66df8007a6168673191bfaef7dfab" category="paragraph">追加情報はから入手できます <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> ページまたはを参照してください <block ref="9dd2beb67fe62b2f58f66806d3cbe842" category="inline-link-macro-rx"></block>。</block>
+  <block id="98f1b16edd9c418c18f29042ee157677" category="summary">Telegraf データ表示オプション</block>
+  <block id="59a039b9bdde97f886d094af635410bd" category="doc">メトリックの変革</block>
+  <block id="d66e199a7109fa5e8cb92ddc071162c4" category="paragraph">Cloud Insights では、ウィジェット（具体的には「カスタム」または統合指標（ Kubernetes 、 ONTAP Advanced Data 、 Tegraf プラグインなど）の特定の指標に対してさまざまな * transform * オプションが提供されており、さまざまな方法でデータを表示できます。変換可能なメトリックをウィジェットに追加する場合は、ドロップダウンから次のトランスフォームの選択肢を選択できます。</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="list-text">なし</block>
+  <block id="8dff9b3275d903bce911a227cbed3634" category="list-text">データはそのまま表示され、操作は行われません。</block>
+  <block id="dcb66ff6e4a2517ade22183779939c9d" category="list-text">レート</block>
+  <block id="9b3e9f4a548e4f107c31fe2a21eed22a" category="list-text">現在の値を前回の観察以降の時間範囲で割った値。</block>
+  <block id="eb2527806a7e1ef48009eaaa785368fe" category="list-text">累計</block>
+  <block id="81be1e144a5ed592ed4813fe9a14b16d" category="list-text">前の値と現在の値の合計の累積値。</block>
+  <block id="db1f4ab5845def61a83d5df13e0c2397" category="list-text">デルタ（ Delta ）</block>
+  <block id="a1933dae1248a2768b141e98f357f4e1" category="list-text">前回の観察値と現在の値の差。</block>
+  <block id="182287f79b18308934050eed051fa06e" category="list-text">デルタレート</block>
+  <block id="c4b4b6e9c3267be39ae1c34d6560414a" category="list-text">デルタ値を前回の観察からの時間範囲で割った値。</block>
+  <block id="bef0e8af1d9f29c6ecb74d3390d4f227" category="list-text">累積レート</block>
+  <block id="71d65ae1cbf6688be0226ae6c7ce8a47" category="list-text">累積値を前回の観察以降の時間範囲で割った値。</block>
+  <block id="7ade6c64e9a88c6a4e7b10ff7debb111" category="paragraph">指標を変換しても、基盤となるデータ自体は変わりませんが、表示されるのはデータの表示方法だけです。</block>
+  <block id="1914b55914b6ee44bc0dcd84cc7caeb3" category="summary">Apache データコレクタの設定</block>
+  <block id="a2c447b19901c50472d86c46b78e4269" category="doc">Apache Data Collector</block>
+  <block id="7f9a66bbf7786386f3da129eb0ca4ce8" category="paragraph">このデータコレクタを使用すると、環境内の Apache サーバからデータを収集できます。</block>
+  <block id="e11da9afe91d381489a365c86cc614ab" category="list-title">前提条件</block>
+  <block id="1194c1f585884540788ba8946023cc33" category="list-text">Apache HTTP Server がセットアップされ、適切に実行されている必要があります</block>
+  <block id="6b1dbef46026830edbb8a38bb35f7c07" category="list-text">エージェントのホスト / VM に対する sudo 権限または管理者権限が必要です</block>
+  <block id="c16390c8cf2123acd316f38a743628ab" category="list-text">通常、 apache_mod_status_module は、 Apache サーバの「 /server-status?auto 」場所にページを公開するように設定されています。使用可能なすべてのフィールドを収集するには、 _ExtendedStatus_ オプションを有効にする必要があります。サーバの設定方法については、 Apache モジュールのドキュメントを参照してください。<block ref="7174f93683616a9a4040d970e3c6eb19" category="inline-link-rx"></block></block>
+  <block id="b0896396e0f3a7aa981b2ef8957b9208" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。Apacheを選択します。</block>
+  <block id="db3b3ca5f6c31a760f5aa49a9a809802" category="inline-image-macro">Apache の設定</block>
+  <block id="5ec6fd62051ccff5584535e6108b55ba" category="paragraph"><block ref="5ec6fd62051ccff5584535e6108b55ba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ed6e8b2146d5bd121cfea083307611f3" category="paragraph">Telegraf の Apache の HTTP Server 用プラグインは 'OD _status' モジュールを有効にする必要があります。これを有効にすると、 Apache の HTTP サーバは、ブラウザで表示したり、 Apache の HTTP サーバ設定の状態を抽出するためにスクレイピングされた HTML エンドポイントを公開します。</block>
+  <block id="8461c6dd6dfb26c96b75667840908e25" category="paragraph">構成は Apache の HTTP Server バージョン 2.4.38 に対して開発されました。</block>
+  <block id="5e35671340e6c9c7b25787ff637f0d95" category="section-title">mod_status を有効にします。</block>
+  <block id="0f3bcff634f4d3862c37ca9068d609a1" category="paragraph">'OD_status' モジュールを有効にして公開するには、次の 2 つの手順を実行します。</block>
+  <block id="efb59b39eb3bfe8e4da0936bb46519fc" category="list-text">イネーブルモジュール</block>
+  <block id="3b817156f776bb94b972cf7a91ba3184" category="list-text">モジュールから統計情報を公開しています</block>
+  <block id="27c3a633e4b056a5469dc8064c89f668" category="section-title">イネーブルモジュール：</block>
+  <block id="44371abdc5e441e96423652f2b9d834b" category="paragraph">モジュールのロードは '/usr/local/apache/conf/httpd.conf ' の下の config ファイルによって制御されます。構成ファイルを編集し、次の行のコメントを解除します。</block>
+  <block id="5096c93091356730cc76dca2451a6d0c" category="section-title">モジュールからの統計情報の公開：</block>
+  <block id="553822327e85ab49367d681e24c3df28" category="paragraph">'OD_status' の公開は '/usr/local/apache2/conf/extra /httpd-info.conf' の下の config ファイルによって制御されます。設定ファイルに次のものがあることを確認してください ( 少なくとも、他のディレクティブが存在することを確認してください ) 。</block>
+  <block id="bc34f8d241b1e1bccaf9d0575c5b92b3" category="inline-link-macro">Apache のドキュメント</block>
+  <block id="7727bb6b0739435252f5c813bbbdb290" category="paragraph">'OD_status' モジュールの詳細な手順については、を参照してください <block ref="1384449c324b5981491fad302f32d968" category="inline-link-macro-rx"></block></block>
+  <block id="e9713ae04a02a810d6f33dd956f42794" category="cell">Apache</block>
+  <block id="aaba4d734bb5c6c1cd828a66a204028f" category="cell">ノードIP
+ノード名
+ポート
+親サーバー構成の生成
+親サーバーのMPM生成
+サーバの稼働時間
+が停止しています</block>
+  <block id="af40aea2350db56f2ccf87bd2e878384" category="cell">多忙な労働者
+要求あたりのバイト数
+1秒あたりのバイト数
+CPU Children Systemの略
+CPU Children Userの略
+CPU負荷
+CPUシステム
+CPUユーザ
+非同期接続が終了しています
+非同期接続のキープアライブ
+非同期接続の書き込み
+接続合計
+リクエストごとの期間
+アイドル状態の従業員
+負荷平均（過去1m）
+負荷平均（過去15m）
+負荷平均（過去5m）
+プロセス
+1秒あたりの要求数
+合計アクセス数
+合計期間
+合計KB
+スコアボード終了
+スコアボードのDNSルックアップ
+スコアボードの仕上げ
+スコアボードアイドルクリーンアップ
+スコアボードキープアライブ
+スコアボードログ
+スコアボードが開きます
+スコアボードの読み取り
+スコアボード送信
+スコアボードが開始されました
+スコアボード待機中</block>
+  <block id="a1151f371f1db5ddea0adcadbc49738e" category="summary">PostgreSQL データコレクタの設定</block>
+  <block id="28279ca1d2fa23440d64e252b10c2f2e" category="doc">PostgreSQL データコレクタ</block>
+  <block id="45946606e52c951c2b379ff7a77d2b76" category="paragraph">Cloud Insights は、このデータコレクタを使用して PostgreSQL からのメトリックを収集します。</block>
+  <block id="0ba3615a02f45b8a7b485192d849f02b" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。PostgreSQLを選択します。</block>
+  <block id="9efde47a7f6913de0fa15c50384c3916" category="inline-image-macro">PostgreSQL の設定</block>
+  <block id="ee807d599c86ec0cddb65a95252754a9" category="paragraph"><block ref="ee807d599c86ec0cddb65a95252754a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="939acd793e013bec3f238716d1e5a1e9" category="inline-link-macro">PostgreSQL のドキュメント</block>
+  <block id="5d213cdd76206e521a99ee763867f286" category="paragraph">情報は、に記載されています <block ref="3b5af5b1f584ca750656ee54bcf2acd9" category="inline-link-macro-rx"></block>。</block>
+  <block id="b3cba72c5eaf0e9b001ad474d3a7f104" category="cell">PostgreSQL サーバ</block>
+  <block id="9eb39642e01cf00ecfb6933ae0d8c91e" category="cell">ネームスペース
+データベース
+サーバ</block>
+  <block id="8439f36077726e546877845c0ee98c4a" category="cell">ノード名
+ノードIP</block>
+  <block id="416d97bf6aa220146cd29e24d4f5ae1f" category="cell">割り当てられたバッファ
+バッファバックエンド
+バッファーバックエンドファイル同期
+バッファチェックポイント
+バッファクリーニング
+Checkpoints Sync Timeの略
+Checkpoints Write Timeの略
+チェックポイントリクエスト
+チェックポイントに時間が設定されました
+MAX Written Clean</block>
+  <block id="f9fa8e4ec8d4dfd8388984164c7cfd07" category="cell">PostgreSQL データベース</block>
+  <block id="47587388fb25edfeb337d39473d4183f" category="cell">データベースOID
+ノード名
+ノードIP</block>
+  <block id="03ccb35e4244ef1cc7ff8662031b0a7f" category="cell">Blocks Read Timeの略
+Blocks Write Timeの略
+ブロックヒット
+読み取りをブロックします
+コンフリクト
+デッドロック
+クライアント番号
+一時ファイルのバイト数
+一時ファイル番号
+行を削除しました
+行がフェッチされました
+挿入された行
+返される行数
+行を更新しました
+コミットされたトランザクション
+ロールバックされたトランザクション</block>
+  <block id="f23d43a2f8827bf71755047f9233d1d7" category="summary">Flink データコレクタの設定</block>
+  <block id="43b4fe530611e0a29d40ae51f1110192" category="doc">ノードデータ収集</block>
+  <block id="a95bc37c275448ac1c6069158f92b809" category="paragraph">Cloud Insights は、エージェントをインストールするノードからメトリックを収集します。</block>
+  <block id="baaf023f6d75d85198bf4906a1760b9a" category="list-text">[Observability]&gt;[Collectors]*で、オペレーティングシステム/プラットフォームを選択します。統合データコレクタ（ Kubernetes 、 Docker 、 Apache など）をインストールすると、ノードのデータ収集も設定されることに注意してください。</block>
+  <block id="5f6ce12582c69bad9341e28467c0c0d0" category="list-text">指示に従って、エージェントを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。</block>
+  <block id="c166791fe89a8eb17ee0a37ad809ba2b" category="paragraph">次のオブジェクトとそのカウンタがノードの指標として収集されます。</block>
+  <block id="1f8c535824144ce794fd8ac5fdcfe9f1" category="cell">ノードファイルシステム</block>
+  <block id="8fcdaf1e82ebe454e557f94d0676e94b" category="cell">ノード UUID
+デバイス
+パス
+を入力します</block>
+  <block id="1f887fd15f6189f871338dd33033cd43" category="cell">ノードIP
+ノード名
+ノードOS
+モード</block>
+  <block id="ad06ad8b4ea618930277691a7ca85b8a" category="cell">無料
+空きinode
+inodeの合計
+使用されているinode
+合計
+使用済み合計
+使用済み</block>
+  <block id="995a8be8130452c3880f8f3a8efb892f" category="cell">ノードディスク</block>
+  <block id="8d31b98bd62df2c8e71a8ccda6950620" category="cell">ノード UUID
+ディスク</block>
+  <block id="395504c5fc3cdba387d8e31a83c56f88" category="cell">ノードIP
+ノード名
+ノードOS</block>
+  <block id="504e0980cd10557e0d0eeeadb727d763" category="cell">IO時間の合計
+IOPSを実行中です
+読み取りバイト数（1秒あたり）
+読み取り時間合計
+読み取り数（1秒あたり）
+Weighted IO Time Totalの略
+書き込みバイト数（1秒あたり）
+書き込み時間合計
+1秒あたりの書き込み数
+現在のディスクキューの長さ
+書き込み時間
+読み取り時間
+IO時間</block>
+  <block id="9560e0d605d2cc7aa05155382b767318" category="cell">ノードCPU</block>
+  <block id="7f0dc83c5502913a601c96af73494913" category="cell">ノード UUID
+CPU</block>
+  <block id="19e5a412b9d9ce58d147c936a5bf221e" category="cell">システムCPU使用率
+ユーザCPU使用率
+アイドルCPU使用率
+プロセッサCPU使用率
+割り込みCPU使用率
+DPC CPU使用率</block>
+  <block id="16d2c29487805cc97063b63f5f00c68e" category="cell">カーネル起動時間
+カーネルコンテキストスイッチ（1秒あたり）
+カーネルエントロピーが利用可能です
+カーネル割り込み（1秒あたり）
+カーネルプロセスのフォーク（1秒あたり）
+メモリがアクティブです
+使用可能なメモリの合計
+使用可能なメモリ
+メモリがバッファされました
+メモリキャッシュ
+メモリコミット制限
+メモリはとしてコミットされます
+メモリが汚れています
+メモリ空き
+メモリの空き容量が大きい
+Memory High Totalの略
+メモリのページサイズが大きすぎます
+メモリ巨大なページ無料
+Memory Huge Pages Totalの略
+メモリが不足しています
+Memory Low Totalの略
+メモリマップ済み
+Memory Page Tablesの略
+メモリ共有
+メモリスラブ
+メモリスワップキャッシュ
+メモリスワップフリー
+メモリスワップの合計
+メモリ合計
+使用メモリの合計
+使用されているメモリ
+メモリvmallocチャンク
+メモリvmallocの合計
+メモリvmallocが使用されています
+メモリが配線されています
+メモリライトバック合計
+Memory Writeback tmp（メモリライトバックtmp
+メモリキャッシュの障害
+メモリ要求ゼロエラー
+メモリページ障害
+メモリページ
+メモリがページされていません
+メモリがページされました
+メモリキャッシュコア
+メモリスタンバイキャッシュが正常です
+Memory Standby Cache Reserveの略
+メモリ遷移障害
+プロセスがブロックされました
+プロセスデッド
+プロセスがアイドル状態です
+プロセスページング
+実行中のプロセス
+プロセスがスリープ中です
+プロセスが停止しました
+プロセスの合計
+合計スレッドを処理します
+不明なプロセスです
+ゾンビを処理する
+プロセッサキューの長さ
+スワップフリー
+合計をスワップします
+スワップ使用合計
+スワップを使用しました
+入れ替えます
+交換します
+システムの稼働時間
+System Num CPUの略
+System Num Usersの略
+システムコール</block>
+  <block id="695c8433fb0290581bae584e00feeee4" category="cell">ノードネットワーク</block>
+  <block id="0a7c391bbf4a5a2942fabe6c508c95eb" category="cell">Network Interface の略
+ノード UUID</block>
+  <block id="7e497ea07b0bb26a9fccfea169adadb5" category="cell">ノード名
+ノードIP
+ノードOS</block>
+  <block id="228775e556bb7d0b1893a0069479cc55" category="cell">受信したバイト数
+送信されたバイト数
+送信されたパケットが破棄されました
+Packets Outboud Errors（パケット送信エラー）
+受信したパケットは破棄されました
+パケット受信エラー
+受信したパケット
+送信されたパケット</block>
+  <block id="620f85b913de46972f8dc2d9791d0335" category="inline-link-macro">エージェントの設定</block>
+  <block id="11e9a60bae5c09e0b15ee77e596f4b30" category="paragraph">セットアップおよびトラブルシューティングの情報は、にあります <block ref="253f1bddd94d888bccb7868889c4eaa6" category="inline-link-macro-rx"></block> ページ</block>
+  <block id="d500a402a0f4d5ab2dedb2c5a7ec2eaf" category="summary">Memcached データコレクタの設定</block>
+  <block id="0f5c57f0abc7ee69be3379cf9f5ede78" category="doc">Memcached Data Collector</block>
+  <block id="353f811fa170b612fa3a1340d62d9219" category="paragraph">Cloud Insights は、このデータコレクタを使用して Memcached からメトリックを収集します。</block>
+  <block id="589728f32967406f1fdbd032c3fe018d" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。Memcachedを選択します。</block>
+  <block id="198cd654ded33685760b4676e579ff66" category="inline-image-macro">Memcached 設定</block>
+  <block id="a986c1bc689361d60658b48c116b9bda" category="paragraph"><block ref="a986c1bc689361d60658b48c116b9bda" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e26124564f900a300b66ae6ad54d0791" category="inline-link-macro">Memcached Wiki</block>
+  <block id="275cfcf9eff65ee82ad249d1a35cadfb" category="paragraph">情報は、に記載されています <block ref="5ded07e322e421e6ecffb5f41bada1c9" category="inline-link-macro-rx"></block>。</block>
+  <block id="05894ba2c918dd33592bf1bd21c347f6" category="cell">Memcached</block>
+  <block id="05345376e590de98cc623cdd4392065e" category="cell">接続を受け入れています
+認証要求を処理しました
+認証に失敗しました
+使用済みバイト数
+読み取りバイト数（1秒あたり）
+書き込みバイト数（1秒あたり）
+キャス・バヴァル
+CASヒット
+CASミス
+フラッシュ要求（1秒あたり）
+要求の取得（1秒あたり）
+要求の設定（1秒あたり）
+タッチ要求（1秒あたり）
+接続歩留まり（1秒あたり）
+接続構造
+接続を開きます
+現在保存されているアイテム
+Decr Requests Hits（1秒あたり）
+Decr Requests Misses（1秒あたり）
+Delete Requests Hits（1秒あたり）
+Delete Requests Misses（1秒あたり）
+削除されたアイテム
+有効な削除
+期限切れのアイテム
+GETヒット数（1秒あたり）
+Get Misses（1秒あたり）
+使用されているハッシュバイト数
+ハッシュが拡張されています
+ハッシュパワーレベル
+Incr Requests Hits（1秒あたり）
+Incr Requests Misses（1秒あたり）
+サーバ最大バイト数
+リッスン無効番号
+再生されました
+ワーカースレッド数
+オープンされている接続の総数
+保存されている合計アイテム数
+[ヒット]に触れます
+[不在着信]をタッチします
+サーバの稼働時間</block>
+  <block id="83fbc11c171008ea835730f7922a6417" category="summary">OpenZFS データコレクタ設定</block>
+  <block id="280698a257edec445fc9d2a3c41f9089" category="doc">OpenZFS Data Collector を使用します</block>
+  <block id="9109116c1e875f98e978783a131e4466" category="paragraph">Cloud Insights では、このデータコレクタを使用して OpenZFS から指標を収集します。</block>
+  <block id="5888b2a0267a27f9f34b34863d7a8110" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[OpenZFS]を選択します。</block>
+  <block id="c5ea32057bfe11187d339d524ccea393" category="inline-image-macro">Linux OpenZFS 構成</block>
+  <block id="252ab915aaf37678f2c31259844d9830" category="paragraph"><block ref="252ab915aaf37678f2c31259844d9830" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b016f6d8b58fbc57dff98ba0460cd713" category="inline-link-macro">OpenZFS のドキュメント</block>
+  <block id="5f9f2125ea94bc8ee63a894e33ebaf33" category="paragraph">追加情報は、にあります <block ref="0ee1b5ccb1dd9edb24ef60d421e0c18a" category="inline-link-macro-rx"></block>。</block>
+  <block id="3ed1623d8dee972d71ef8f8f97d1e7b7" category="summary">JVM データコレクタの設定</block>
+  <block id="83940d42e25b16f92792429af8696c02" category="doc">JVM Data Collector （ JVM データ収集）</block>
+  <block id="1df30fc376f79b28898758816aee8108" category="paragraph">Cloud Insights は、このデータコレクタを使用して JVM からメトリックを収集します。</block>
+  <block id="2f646a2871ea4aa3befe55d29f178062" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。JVMを選択します。</block>
+  <block id="cfc15582c99f2d93d641ceef808c0dea" category="inline-image-macro">JVMの設定</block>
+  <block id="a1a11aab15942415d5fa3dbff92e14bd" category="paragraph"><block ref="a1a11aab15942415d5fa3dbff92e14bd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d4d54ae01b1b207ad71b19545e065d0" category="inline-link-macro">JVMのドキュメント</block>
+  <block id="a6915e59acb56cb585cb472961b7fcf4" category="paragraph">情報については、を参照してください <block ref="d6ec76238b83ccbfb02cd8a51ed9fed7" category="inline-link-macro-rx"></block>。</block>
+  <block id="18b5a217c4dad25662d3a05edb0e39d7" category="cell">JVM</block>
+  <block id="ba34515ac828f8372a3b624324d6c279" category="cell">ネームスペース
+JVM</block>
+  <block id="803c4a5e4b5f34cadc25972b0c14aa04" category="cell">OSアーキテクチャ
+OS名
+OSバージョン
+ランタイム仕様
+ランタイム仕様ベンダー
+ランタイム仕様バージョン
+アップタイム
+ランタイムVM名
+ランタイムVMベンダー
+ランタイムVMバージョン
+ノード名
+ノードIP</block>
+  <block id="a53a32f48009c614f61507a6499dfbf6" category="cell">クラスが読み込まれました
+クラスロード合計
+クラスがアンロードされました
+メモリヒープがコミットされました
+メモリヒープ初期化
+使用メモリヒープの最大値
+使用されているメモリヒープ
+メモリのヒープがコミットされていません
+メモリ非ヒープ初期化
+メモリ非ヒープ最大
+メモリのヒープが使用されていません
+Memory Objects Pending Finalizationの略
+OSプロセッサが使用可能です
+OS Committed Virtual Memory Sizeの略
+OS Free Physical Memory Sizeの略
+OS Free Swap Space Size（OS空きスワップスペースサイズ）
+OS最大ファイル記述子数
+OS Open File Descriptors Count（OSオープンファイル記述子数）
+OSプロセッサCPU負荷
+OSプロセッサCPU時間
+OSシステムCPU負荷
+OSシステム負荷平均
+OS合計物理メモリサイズ
+[OS Total Swap Space Size]をクリックします
+スレッドデーモン数
+スレッドのピーク数
+スレッド数
+スレッド合計開始数
+ガベージコレクタコピーコレクション数
+ガベージコレクタのコピー収集時間
+ガベージコレクタマーク-スイープ収集数
+ガベージコレクタマークスイープ収集時間
+ガベージコレクタG1旧世代コレクション数
+ガベージコレクタG1旧世代の収集時間
+ガベージコレクタG1 Young Generation Collection Countの略
+ガベージコレクタG1 Young Generation Collection Timeの略
+ガベージコレクタの同時マークスイープ収集数
+ガベージコレクタの同時マークスイープ収集時間
+ガベージコレクタ並列コレクション数
+ガベージコレクタの並列収集時間
+ガベージコレクタ並列スカベンジマーク-スイープコレクションカウント
+ガベージコレクタ並列スカベンジマーク-スイープ収集時間
+ガベージコレクタ並列スカベンジコレクション数
+ガベージコレクタ並列スカベンジ収集時間</block>
+  <block id="ccb06b64aa7e8cb6a869d22deb1de8bd" category="summary">Kubernetes のデータコレクタの設定</block>
+  <block id="5c7f848c8021f50b6420b0c983ceafd0" category="doc">Kubernetes Data Collector を実行します</block>
+  <block id="e93e9e1daf8e7243cd54ae6878bcbd91" category="paragraph">Cloud Insights は、このデータコレクタを使用して Kubernetes ポッド、ノード、コンテナの指標を収集します。</block>
+  <block id="9a3185d3dd699a74f8c315584250a80c" category="inline-link-macro">エージェントのインストール</block>
+  <block id="853a529a2cb031ba8c442d361b80f74e" category="paragraph">Kubernetes のインストール手順については、を参照してください <block ref="83baed86820f9347147bd19d20167e7d" category="inline-link-macro-rx"></block> ページ</block>
+  <block id="9202ccff1bbfb1125df09b7eb605eb6c" category="admonition">kube-state-metrics * に関する情報がに移動されました <block ref="83baed86820f9347147bd19d20167e7d" category="inline-link-macro-rx"></block> ページ</block>
+  <block id="2c1099d2eb2a8a08bba13169800b9ecb" category="cell">Kubernetes コンテナ</block>
+  <block id="5415e066c63454268882855520be8f45" category="cell">ネームスペース
+ポッド
+コンテナ
+クラスタ</block>
+  <block id="7bc7c32edd5f6378984b7385ffc0ed80" category="cell">Kubernetes ノード
+ノード名
+ノードOS
+ノード UUID
+ノードIP</block>
+  <block id="5ef967423ece776ba4ee9c6e0f94650f" category="cell">CPUナノ秒
+CPU使用量Nanocores
+Memory Major Page Faults.
+メモリ常駐セットサイズ（RSS）
+Memory Working Setの略
+メモリページ障害
+メモリ使用量
+使用可能なルートファイルシステム
+ルートファイルシステムの容量
+使用されているルートファイルシステム</block>
+  <block id="201aa8b6df1bf9b6d3e7978dd379f568" category="cell">Kubernetes ノード</block>
+  <block id="58c8faf6f85ccaa7fc8d2d01063a95b9" category="cell">Kubernetes ノード
+クラスタ</block>
+  <block id="484a187381025ea8b53e38a49719005d" category="cell">ノード名
+ノードOS
+ノード UUID
+ノードIP</block>
+  <block id="67505af3915f51555c02bfad9febc3b5" category="cell">CPU使用量Nanocores
+CPU使用率（ナノ秒）
+ファイルシステムが使用可能です
+ファイルシステム合計
+使用されるファイルシステム
+使用可能なメモリ
+メモリ使用量
+Memory Major Page Faults.
+メモリページ障害
+メモリ常駐セットサイズ（RSS）
+Memory Working Setの略
+ネットワーク受信エラー数（1秒あたり）
+ネットワーク受信バイト数（1秒あたり）
+ネットワーク送信エラー数（1秒あたり）
+ネットワーク送信バイト数（1秒あたり）
+ランタイムイメージファイルシステムが使用可能です
+使用されるランタイムイメージファイルシステム
+ランタイムイメージファイルシステム容量</block>
+  <block id="d34c4d1c2c5e1fd5027617805f18d578" category="cell">Kubernetes ポッド</block>
+  <block id="b93534eac0ffef15e4bc6e622b649edb" category="cell">ネームスペース
+ポッド
+クラスタ</block>
+  <block id="9fa53e6369971b13a4de86d77930fa7d" category="cell">Kubernetes ノード
+ノード名
+ノードIP
+ノードOS
+ノード UUID</block>
+  <block id="d5da5a0488eed8f6bd2a7b8ff56baa7d" category="cell">ネットワーク送信バイト数（1秒あたり）
+ネットワーク送信エラー数（1秒あたり）
+ネットワーク受信バイト数（1秒あたり）
+ネットワーク受信エラー数（1秒あたり）</block>
+  <block id="71c7112b40180e67cc433b17314c1e5a" category="cell">Kubernetes ポッドボリューム</block>
+  <block id="95177894fca839bb4f125dc82e11bcd5" category="cell">ボリューム
+ポッド
+クラスタ
+ネームスペース</block>
+  <block id="23be9b4dfda51095be8d72ec54e75785" category="cell">Kubernetes ノード
+ノード名
+ノード UUID
+ノードIP
+ノードOS</block>
+  <block id="872a1fa9654389ef8254b1ea3c159c67" category="cell">利用可能
+容量
+使用済み</block>
+  <block id="31b831445602d4355cb2a53eb882ccb0" category="cell">Kubernetes システムコンテナ</block>
+  <block id="bba6b40acdcc344bcea91f489658ca7f" category="cell">システムコンテナ
+Kubernetes ノード
+クラスタ</block>
+  <block id="a5ebe27628fe912bf017622a96de6fe3" category="cell">ノード名
+ノードIP
+ノードOS
+ノード UUID</block>
+  <block id="963d5703dfad66d7b08aef8039584b0f" category="cell">CPU使用量Nanocores
+CPU使用率コアナノ秒
+Memory Major Page Faults.
+メモリページ障害
+メモリ常駐セットサイズ（RSS）
+メモリ使用量
+Memory Working Setの略
+使用可能なルートファイルシステム
+ルートファイルシステムの容量
+使用可能なログファイルシステム
+ログファイルシステム容量</block>
+  <block id="79617508491cde046161eba3cfb5fd1e" category="cell">Kubernetesエージェントインストーラコマンドを実行しましたが、次の方法で実行されているTelegrafエージェントポッドが表示されません。
+
+ sudo kubectl -- namespace ci-monitoringポッドを取得する</block>
+  <block id="da2a3d7c97da2247d78d19b6b5451992" category="cell">DaemonSetの展開中にエラーが発生していないかどうかを確認します。
+
+ sudo kubectl -- namespace ci-monitoring ds telegraf-dsを記述する
+
+SecurityContextConstraintsに関連するエラーがある場合は、次の手順を実行します。
+
+1. TelegrafデーモンセットYAMLを生成します
+
+ sudo kubectl --namespace ci-monitoring ds telegraf-ds-o yaml&gt;/tmp/telegraf-ds.yamlを取得します
+
+2. Telegrafサービスを停止します
+
+ sudo kubectl -- namespace ci-monitoring delete ds telegraf-ds
+
+3.必要なSecurityContextConstraintを作成します(「データを収集するためのエージェントの設定」セクションを参照)。
+
+4. Telegrafデーモンセットを再作成します</block>
+  <block id="fd2109b8b8dd431e9abcb1057799aa87" category="cell">Telegraf を設定して Kubernetes クラスタに関する情報を取得しましたが、 Cloud Insights には何も表示されません。設定した Kubernetes 入力プラグインに関連する Telegraf ログファイルに「 Invalid header field value 」というエラーが表示されます。</block>
+  <block id="4fcad48adea3c25275399dda7aa9b491" category="cell">参照先の bearer_token ファイルに末尾の改行がないことを確認してください。確認するには、次のコマンドを実行し、0が返されることを確認します。
+
+ Tail-c1 &lt;bearer_token_file&gt;の略</block>
+  <block id="689738a624a7f72a8b98c8ed8f1ab58b" category="summary">Apache Zookeeper データコレクタの設定</block>
+  <block id="b640a79fa52794aecc8878f82be8c28e" category="doc">Zookeeper データコレクタ</block>
+  <block id="7c19206117ce83d65989db0a25c382ee" category="paragraph">Cloud Insights では、このデータコレクタを使用して Apache Zookeeper から指標を収集します。</block>
+  <block id="6f449010e727da85fc5dba4dc0566129" category="list-text">[*Admin] &gt; [Data Collectors] で、 [*+[Data Collectors] をクリックします。[Apache Zookeeper]を選択します。</block>
+  <block id="8429b9b7552e9131928dae7613de806c" category="inline-image-macro">Zookeeper 構成</block>
+  <block id="95e6ebb37419864b276c313f8f6c3cbb" category="paragraph"><block ref="95e6ebb37419864b276c313f8f6c3cbb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fb4ac192a5f039c2e2c335ba5ced3583" category="inline-link-macro">Zookeeper の追加</block>
+  <block id="c3a641e09298ba4de1409a1510576930" category="paragraph">少なくとも、 Zookeeper に 4 文字のサーバコマンド _Mntr_,_srvr_,_stat_ を許可する必要があります。
+これらのコマンドは、 _4lw.commands.whitelist=mntr 、 srvr 、 stat_in the _zoo .cfg file の形式で有効にできます。
+他にも、 4 文字のコマンドが必要になる場合があります。を参照してください <block ref="228947e8a732f5af21701eca589dabd2" category="inline-link-macro-rx"></block> 詳細については、ドキュメントを参照してください。</block>
+  <block id="acbfb3e07bc6528e76ff58b9441ce7e6" category="cell">Zookeeper の追加</block>
+  <block id="30cda581f57d507b5c4e7230009bb6ff" category="cell">状態
+ノードIP
+ノード名
+ポート</block>
+  <block id="263026a1c82c98e0f26e5963c3c57811" category="cell">概算データサイズ
+平均レイテンシ
+エフェメラルズ伯爵
+ファイル記述子の最大数
+最大レイテンシ
+最小レイテンシ
+アライブ接続の数
+Open File Descriptor Count（ファイル記述子カウントを開く
+未処理の要求
+ウォッチカウント
+Zノード数</block>
+  <block id="dc1e65eec84ecdddd9d944665f004c81" category="summary">Kafka データコレクタの設定</block>
+  <block id="20c91ea30ac10f88575658fade0888da" category="doc">Kafka Data Collector の利用</block>
+  <block id="2f36f64899c7519b8c8cd9277f2bb502" category="paragraph">Cloud Insights では、このデータコレクタを使用して Kafka から指標を収集します。</block>
+  <block id="e71ca37de84258d54f5428c43e7d7278" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。Kafkaを選択します。</block>
+  <block id="a57380b3846ffa1f0e4bfb5181cdd4cc" category="inline-image-macro">Kafka の構成です</block>
+  <block id="581191fc8057a11baa82fdf0c8a4684d" category="paragraph"><block ref="581191fc8057a11baa82fdf0c8a4684d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="13369c33358db64680a157cf34f27d9c" category="paragraph">Kafka プラグインは、テレグラムの Jolokia プラグインに基づいています。すべての Kafka ブローカーから情報を収集する必要があるため、 JMX はすべてのコンポーネントで Jolokia 経由で設定および公開する必要があります。</block>
+  <block id="df9c715f20aaf58fb3926cc02b08ec53" category="section-title">互換性</block>
+  <block id="85d4881f2910a8efd14957d8ea3ad22f" category="paragraph">Kafka バージョン 0.11.0.2 の構成向けに開発されました。</block>
+  <block id="c550ee824967bc436f44d06626836b46" category="section-title">セットアップ中です</block>
+  <block id="842dbc10bf2936a69101c9ada487cfb9" category="paragraph">以下の手順はすべて、 Kafka のインストール場所が「 /opt/Kafka 」であることを前提としています。以下の手順を使用して、設置場所を変更できます。</block>
+  <block id="74f1c760151734cb26fb8795538faefc" category="section-title">Jolokia エージェント JAR</block>
+  <block id="56f18825a76309ae6391073aeb14f1b3" category="inline-link-macro">ダウンロードしました</block>
+  <block id="b4492a410e1a2bd30cdf9f247f446872" category="paragraph">Jolokia エージェント jar ファイルのバージョン <block ref="03eda4c0436e65ce27568c6a2dfc2a07" category="inline-link-macro-rx"></block>。テスト対象のバージョンは Jolokia エージェント 1.6.0 でした。</block>
+  <block id="9494328c2f532a3a7698d443b58084c9" category="paragraph">以下の手順では、ダウンロードした jar ファイル（ jolokia-jvm-1.6.0-agent.jar ）が「 /opt/Kafka/libs/' 」の下に配置されると想定しています。</block>
+  <block id="c85a72d841365870905b8d39edf7008f" category="section-title">Kafka Brokers のようになります</block>
+  <block id="952eb44621cfe8be5bf3ffac42243da9" category="paragraph">Kafka Brokers で Jolokia API を公開するように設定するには、「 Kafka -run-class.sh 」コールの直前に、 &lt;Kafka_home&gt;/bin/Kafka-server-start.sh に次の項目を追加します。</block>
+  <block id="c7a51c522cf686cccad4634633637a98" category="paragraph">上記の例では 'hostname-i' を使用して 'RMI_HOSTNAME' 環境変数を設定しています。複数の IP マシンでは、 RMI 接続に使用する IP を収集するために、これを調整する必要があります。</block>
+  <block id="a2ca14d29d006aa3bc52960c80f3ec10" category="paragraph">JMX (9999 以上 ) とジョロキア (8778) には別のポートを選択できますJolokia をロックする内部 IP を持っている場合は、「 catch all 」 0.0.0.0 を自分の IP で置き換えることができます。この IP には、テレグラムプラグインからアクセスできる必要があります。認証を行わない場合は、オプション「 -Dcom.sun.management.jmxremote.authenticate=false' 」を使用できます。自己責任で使用してください。</block>
+  <block id="edea81abf1b2e3f44366dbd2866631eb" category="cell">Kafka Broker</block>
+  <block id="80d610f6ec2e0d70bb310ea6b21d8e09" category="cell">クラスタ
+ネームスペース
+ブローカー</block>
+  <block id="344d982f50f03dc86d09f356f5f05441" category="cell">レプリカマネージャフェッチャー最大遅延
+Zookeeperクライアント接続
+ZooKeeperクライアント接続（15mレート）
+ZooKeeperクライアント接続（5mレート）
+ZooKeeperクライアント接続（平均速度）
+ZooKeeperクライアント接続（1mレート）
+レプリカマネージャのパーティション数
+スレッドカウントデーモン
+スレッド数のピーク
+現在のスレッド数
+スレッド数合計が開始されました
+オフラインパーティション
+Produce Requests Total Time（50パーセンタイル値）
+Produce Requests Total Time（75パーセンタイル値）
+Produce Requests Total Time（95パーセンタイル値）
+Produce Requests Total Time（98パーセンタイル値）
+Produce Requests Total Time（999パーセンタイル値）
+Produce Requests Total Time（99パーセンタイル値）
+Produce Requests Total Timeの略
+Produce Requests Total Time Max
+Produce Requests Total Time Meanの略
+Produce Requests Total Time Min
+Produce Requests Total Time stddev
+レプリカマネージャISRが縮小されます
+レプリカ・マネージャのISRが縮小（15mレート）
+レプリカ・マネージャのISRが縮小（5mレート）
+レプリカ・マネージャのISRが縮小（平均レート）
+レプリカ・マネージャのISRが縮小（1mレート）
+リクエストハンドラの平均アイドル時間
+リクエストハンドラの平均アイドル時間（15mレート）
+リクエストハンドラの平均アイドル時間（5 m）
+リクエストハンドラの平均アイドル（平均レート）
+リクエストハンドラの平均アイドル時間（1 m）
+ガベージコレクションG1旧世代カウント
+ガベージコレクションG1旧世代時間
+ガベージコレクションG1若い世代数
+ガベージコレクションG1 Young Generation Timeの略
+Zookeeper読み取り専用接続
+ZooKeeper読み取り専用接続（15mレート）
+ZooKeeper読み取り専用接続（5mレート）
+ZooKeeper読み取り専用接続（平均速度）
+ZooKeeper読み取り専用接続（1mレート）
+ネットワークプロセッサの平均アイドル時間
+リクエストフェッチフォロワー合計時間（50パーセンタイル）
+リクエストフェッチフォロワー合計時間（75パーセンタイル）
+リクエストフェッチフォロワー合計時間(95パーセンタイル値)
+リクエストフェッチフォロワー合計時間（98パーセンタイル）
+リクエストフェッチフォロワー合計時間（999パーセンタイル）
+リクエストフェッチフォロワー合計時間（99パーセンタイル）
+フェッチフォロワー合計時間を要求します
+要求フェッチフォロワー合計時間最大
+リクエストフェッチフォロワー合計時間平均
+要求フェッチフォロワー合計時間最小
+フェッチフォロワー合計時間stddevを要求します
+Produce Purgatoryで待機中のリクエスト
+Network Requests Fetch Consumerの略
+Network Requests Fetch Consumer（5mレート）
+ネットワーク要求フェッチコンシューマ（15mレート）
+Network Requests Fetch Consumer（平均レート）
+ネットワーク要求フェッチコンシューマ（1mレート）
+不潔な指導者選挙
+不正なリーダーの選出（15mレート）
+不正なリーダー選挙（5mレート）
+Unclean Leader Elections（平均レート）
+不正なリーダーの選出（1mレート）
+アクティブコントローラ
+ヒープメモリがコミットされました
+ヒープメモリの初期化
+ヒープメモリ最大
+ヒープメモリ使用済み
+Zookeeperセッションが期限切れになります
+ZooKeeperセッションの期限切れ（15mレート）
+ZooKeeperセッションの期限切れ（5mレート）
+ZooKeeperセッションの期限切れ(平均レート)
+ZooKeeperセッションの有効期限（1 mレート）
+ZooKeeper認証エラー
+ZooKeeper認証エラー（15mレート）
+ZooKeeper認証エラー（5mレート）
+ZooKeeper認証エラー（平均レート）
+ZooKeeper認証エラー（1mレート）
+リーダー選出時間（50パーセンタイル）
+リーダー選挙時間（75パーセンタイル）
+リーダー選挙時間（95パーセンタイル）
+リーダー選挙時間（98パーセンタイル）
+リーダー選挙時間（999パーセンタイル）
+リーダー選挙時間（99パーセンタイル）
+リーダー選挙数
+リーダー選出時間（15mレート）
+リーダー選出時間（5mレート）
+引出線選択時間最大
+リーダー選挙時間平均
+リーダー選出時間（平均レート）
+リーダー選出時間（分
+リーダー選出時間（1 mレート）
+リーダーの選出時間（stddev）
+Network Requests Fetch Followerの略
+ネットワーク要求フェッチフォロワー（15mレート）
+ネットワーク要求フェッチフォロワー（5mレート）
+Network Requests Fetch Follower（平均レート）
+ネットワーク要求フェッチフォロワー（1 mレート）
+ブローカートピックメッセージ
+ブローカートピックメッセージ（15mレート）
+ブローカートピックメッセージ（5mレート）
+ブローカートピックメッセージ（平均レート）
+ブローカートピックメッセージ（1mレート）
+ブローカートピックのバイト数
+Broker Topic Bytes in（15mレート）
+Broker Topic Bytes in（5mレート）
+Broker Topic Bytes in（平均レート）
+ブローカートピックバイト数（1mレート）
+Zookeeper Disconnects Count
+ZooKeeper切断（15mレート）
+ZooKeeper切断（5mレート）
+ZooKeeper切断（平均速度）
+ZooKeeper切断（1 mレート）
+Network Requests Fetch Consumer Total Time（50パーセンタイル）
+Network Requests Fetch Consumer Total Time（75パーセンタイル）
+Network Requests Fetch Consumer Total Time（95パーセンタイル）
+Network Requests Fetch Consumer Total Time（98パーセンタイル）
+Network Requests Fetch Consumer Total Time（999パーセンタイル）
+Network Requests Fetch Consumer Total Time（99パーセンタイル）
+Network Requests Fetch Consumer Total Timeの略
+Network Requests Fetch Consumer合計時間最大
+Network Requests Fetch Consumer Total Time Meanの略
+Network Requests Fetch Consumer Total Time Min
+Network Requests Fetch Consumer Total Time stddev
+リーダーカウント
+Purgatoryフェッチで待機中のリクエスト
+ブローカートピックバイトアウト
+Broker Topic Bytes Out（15mレート）
+Broker Topic Bytes Out（5mレート）
+Broker Topic Bytes Out（平均レート）
+Broker Topic Bytes Out（1mレート）
+Zookeeper認証
+ZooKeeper認証（15mレート）
+ZooKeeper認証（5mレート）
+ZooKeeper認証（平均レート）
+ZooKeeper認証（1mレート）
+要求生産数
+要求生産（15mレート）
+要求生産（5mレート）
+要求生産（平均レート）
+要求生産（1mレート）
+レプリカマネージャISRが拡張されます
+レプリカマネージャISRの拡張（15mレート）
+レプリカマネージャISRの拡張（5mレート）
+レプリカマネージャISRの拡張(平均速度)
+レプリカマネージャISRの拡張（1mレート）
+Replica Managerの下のReplicated Partitions（レプリケーションパーティション）</block>
+  <block id="d1f2d0eb68a6b45c8dc6a6dba792539e" category="summary">DCOS コンフィギュレーション</block>
+  <block id="072a17ceb11d2f7027c8a1539261d0b0" category="doc">DC/OS データコレクタ</block>
+  <block id="54005140701b4d1ac4638683a951ef68" category="paragraph">Cloud Insights は、このデータコレクタを使用して DC/OS からのメトリックを収集します。</block>
+  <block id="ada6106f548a6369154652d4ea69d9a1" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[*DC/OS*]を選択します。</block>
+  <block id="906f9dd57fb2872473e89e09bf5bf50e" category="list-text">データコレクタを設定するには、 [DC/OS Configuration] 画面の指示に従います。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。</block>
+  <block id="169d74d7790e089aeca58cb836db2fcc" category="inline-link">DC/OS のドキュメント</block>
+  <block id="b0f77e8918eef13e0142c8675b792231" category="paragraph">セットアップ情報は、で確認できます<block ref="bcf6b27a44ba394f1a86a682cd050dc1" category="inline-link-rx"></block>。</block>
+  <block id="90fd43f146814c9c0cb1e9040b914fa0" category="cell">「 dataPoints 」：</block>
+  <block id="c43575a6656a31d36fd3cee9520b5838" category="cell">DCOS_node</block>
+  <block id="a675bd36bf3917644534c43b4ba2e55f" category="cell">dcos_containerです
+DCOS_APP</block>
+  <block id="022435a7e2f917aa3bce64222061f83d" category="cell">クラスタ
+ホスト名
+パス（ファイルシステムフィールドのみ）
+インターフェイス（ネットワークフィールドのみ）
+container_id
+task_name（タスク名）</block>
+  <block id="2cf0eab79c0db36a5df9e2deeba2b2c2" category="cell">system_uptime（float）
+cpu_cores（float）
+cpu_total（float）
+cpu_user（float）
+cpu_system（float）
+cpu_idle（float）
+cpu_wait（float）
+LOAD_1min（浮動小数点数）
+LOAD_5min（浮動小数点数）
+LOAD_15min（浮動小数点数）
+filesystem_capacity_total_bytes（int）
+filesystem_capacity_used_bytes（int）
+filesystem_capacity_free_bytes（int）
+filesystem_inode_total（float）
+filesystem_inode_used（float）
+filesystem_inode_free（float）
+memory_total_bytes（int）
+memory_free_bytes（int）
+memory_buffers_bytes（int）
+memory_cached_bytes（int）
+swap_total_bytes（int）
+swap_free_bytes（int）
+swap_used_bytes（int）
+network_in_bytes（int）
+network_out_bytes（int）
+network_in_packets（float）
+network_out_packets（float）
+network_in_dropped（float）
+network_out_dropped（float）
+network_in_errors（float）
+NETWORK_OUT_ERRORS（float）
+process_count（float）</block>
+  <block id="bc9c01f26c422a397298e3d733c43cb5" category="paragraph">追加情報は、にあります <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> ページ</block>
+  <block id="3dc395f34d5747fa5d58e08302ab67fd" category="summary">nginx のデータコレクタ設定</block>
+  <block id="21a6c8824057335f8e9dc232584c6ea0" category="doc">nginx データコレクタ</block>
+  <block id="a04ac927bc32d4712f954795733890da" category="paragraph">Cloud Insights は、このデータコレクタを使用して Nginx からメトリックを収集します。</block>
+  <block id="993b018a6d59665db1ee4e45e62026f4" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[Nginx]を選択します。</block>
+  <block id="e7e86cae130886a78274ae9b77db6f35" category="inline-image-macro">Linux Nginx の構成</block>
+  <block id="de93697b48f7103f9289abf65ca587b4" category="paragraph"><block ref="f310f9809260b458b5b99732eb2d720e" category="inline-image-macro-rx" type="image"></block>
+<block ref="884ba5b9c64ace436091d4a7d4619c6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ed8b6bdc341556c944fb012aca6b84d4" category="inline-link-macro">HTTP_STUB_STATE_MODULE</block>
+  <block id="6d1ee9bcac1552cb3e77bfff99ff625e" category="paragraph">nginx メトリックの収集では、 Nginx が必要です <block ref="9b25bbc6607a95e9c0486769f8ad1d09" category="inline-link-macro-rx"></block> を有効にします。</block>
+  <block id="3cbf4d6ad75e10ca79741aee2213bd64" category="inline-link-macro">nginx のドキュメント</block>
+  <block id="55c28d13135e5d996f9471516e4d7523" category="paragraph">追加情報は、にあります <block ref="f61e491fe5dc644cc25aa0f3a87b7491" category="inline-link-macro-rx"></block>。</block>
+  <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="cell">nginx</block>
+  <block id="b5044973d8a3d9239bbbeaeeee9db4a5" category="cell">ノードIP
+ノード名
+ポート</block>
+  <block id="359d1921d88a2e1a27105eb5a262c103" category="cell">受け入れます
+アクティブ
+処理されます
+読書
+リクエスト
+待機中です
+書くこと</block>
+  <block id="4bfbaf73f806e0f2e37658d94bd02b1d" category="summary">Puppet データコレクタの設定</block>
+  <block id="4f3343312b305965c29f8f14046d895c" category="doc">Puppet Agent データコレクタ</block>
+  <block id="3fb67cc5cc9f9143457c24db7b7dd502" category="paragraph">Cloud Insights では、このデータコレクタを使用して Puppet Agent から指標を収集します。</block>
+  <block id="8a8e72cdfe9e0062f257b6b3af0a66fc" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[Puppet]を選択します。</block>
+  <block id="f28ce6829aadfe8650a22f9c6a697a20" category="inline-image-macro">Puppet の設定</block>
+  <block id="f02b842ccd15155934dc65921239d4f0" category="paragraph"><block ref="f02b842ccd15155934dc65921239d4f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4c6265f8b688769e31b9b757f9e54749" category="inline-link">Puppet のドキュメント</block>
+  <block id="1554b3e5df91d78952d35aa9c0ee325f" category="paragraph">情報は、に記載されています<block ref="114b9d35c3c72b635a83707f2087ecd5" category="inline-link-rx"></block></block>
+  <block id="774594156e74c09914941ef11ed2caa5" category="cell">Puppet Agent</block>
+  <block id="ff5f20e069b5c2643ec78dffe736ccad" category="cell">ネームスペース
+ノード UUID</block>
+  <block id="2d6d04c4d20bee58922505cce875cd62" category="cell">ノード名
+場所
+ノードIP
+バージョン設定文字列
+バージョンPuppet</block>
+  <block id="61bb9c3d200381413da5b615c1c8f827" category="cell">合計を変更します
+イベント失敗
+イベント成功
+イベント合計
+リソースが変更されました
+リソースに失敗しました
+リソースを再起動できませんでした
+リソースOutofsync
+リソースが再起動しました
+リソースがスケジュールされました
+リソースがスキップされました
+リソース合計
+タイムアンカー
+Time Configretrievalの略
+タイムcron
+タイム・エグゼクティブ
+時間ファイル（Time File）
+Time Filebucketの略
+タイムラストラン
+タイムパッケージ
+タイムスケジュール
+タイムサービス
+時間Sshauthorizedキー
+合計時間
+タイムユーザー</block>
+  <block id="1d292eb6751a0db171502dec84f9f7c0" category="summary">NetApp Kubernetes Monitoring Operatorには、設定可能なオプションが多数あります。</block>
+  <block id="57e4cf9437210e6248eb8a2137609c4e" category="doc">NetApp Kubernetes Monitoring Operatorの設定オプション</block>
+  <block id="92631a8aee2d30caecb661301eccee48" category="inline-link-macro">NetApp Kubernetes Monitoring Operator</block>
+  <block id="c35a33c9875991494585fbfbed175784" category="paragraph">。 <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> インストールと設定はカスタマイズできます。</block>
+  <block id="7753286779cc80ff196972ced13aef62" category="paragraph">次の表に、AgentConfigurationファイルで使用できるオプションを示します。</block>
+  <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">エージェント</block>
+  <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">オペレータがインストールできるすべてのコンポーネントに共通の設定オプション。これらは「グローバル」オプションと見なすことができます。</block>
+  <block id="286bec770910c4da609323e21222e283" category="cell">dockerrepo</block>
+  <block id="73a46ab7157abd31c3ea3ef600cb7798" category="cell">Cloud Insights Dockerリポジトリと比較して、お客様のプライベートDockerリポジトリからイメージをプルするためのdockerRepoオーバーライド。デフォルトはCloud Insights Dockerリポジトリです</block>
+  <block id="994be3a18bf7e0a16ab2be2d5c1643ae" category="cell">dockerImagePullSecretの略</block>
+  <block id="9f033a5b208feb9ef67ab1def3051525" category="cell">オプション:顧客のプライベートリポジトリのシークレット</block>
+  <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="cell">クラスタ名</block>
+  <block id="c21207144818cb50a67a3aa45ad90cc1" category="cell">すべてのお客様のクラスタ間でクラスタを一意に識別するフリーテキストフィールド。これは、Cloud Insights テナント全体で一意である必要があります。デフォルトでは、UIで[Cluster Name]フィールドに入力します</block>
+  <block id="b5249bb082b669e275606cdef10879b6" category="cell">プロキシ
+の形式で入力し
+プロキシ：
+  サーバ：
+  ポート：
+  ユーザ名：
+  パスワード：
+  NoProxy：
+  isTelegrafProxyEnabled：
+  isAuProxyEnabled：
+  isFluentbitProxyEnabled：
+  isCollectorProxyEnabled：</block>
+  <block id="f430d84b3603b6c921d2a45741baab1e" category="cell">顧客がプロキシを設定する場合はオプションです。これは通常、顧客の法人代理店です。</block>
+  <block id="aa3a0177193f5479812eadbbb3e6c303" category="cell">テレグラフ</block>
+  <block id="0c8011c6947aae43789eb8972c306e85" category="cell">オペレータのTelegrafインストールをカスタマイズできる設定オプション</block>
+  <block id="fe071453b5b9af9d9a481afb504f78cb" category="cell">collectionInterval</block>
+  <block id="43087b2e6dfc2a4eecd03be4305fb0cb" category="cell">指標収集間隔（秒）（最大=60秒）</block>
+  <block id="2129471bf14899d19206e2b1aa6c00ca" category="cell">dsCpuLimit</block>
+  <block id="718918f6bff9fdd2a6292afbe4549d0b" category="cell">Telegraf DSのCPU制限</block>
+  <block id="5eeea2f6351dff2df3a80bcff5cdd5be" category="cell">dsMemLimit</block>
+  <block id="bf35f5b9d6933443b78e7cd6b5b24039" category="cell">Telegraf DSのメモリ制限</block>
+  <block id="32baad7599efdd63fc7dd0ebd6fb0462" category="cell">dsCpuRequest</block>
+  <block id="fb50fe579fe2186737910f4faafbfae2" category="cell">Telegraf DSのCPU要求</block>
+  <block id="4fd630053ba42e53bf847444b5857abf" category="cell">dsMemRequest</block>
+  <block id="03a9d404d5e9073d007d6e38a710ebb1" category="cell">Telegraf DSのメモリ要求</block>
+  <block id="00edda16a430ed1a43f73b6b6f8e5230" category="cell">rsCpuLimit</block>
+  <block id="be5f478627c9d3676f638d423c9b320b" category="cell">Telegraf RSのCPU制限</block>
+  <block id="19db0dd97225788d8cd2ac82554de9d3" category="cell">rsMemLimit</block>
+  <block id="7ad3bdf2f332902d109247d0c3970fb4" category="cell">Telegraf RSのメモリ制限</block>
+  <block id="1be922c4a70261e6656d70f9cc86dde2" category="cell">rsCpuRequest</block>
+  <block id="76b9e3aaffb44c3c4a7084bd7430088d" category="cell">Telegraf RSのCPU要求</block>
+  <block id="b3e9404f7fb1acb7c3d66e587a4c411b" category="cell">rsMemRequest</block>
+  <block id="dce1fa2cb47347aa09d7dceac624c5f7" category="cell">テレグラフRSのメモリ要求</block>
+  <block id="04808c0fd1505eb55198b91e2910694e" category="cell">DockerMountPointの略</block>
+  <block id="8b4f648381c209aa11d7baaf654c5f90" category="cell">dockerMountPointパスのオーバーライド。これは、クラウドファウンドリなどのKubernetesプラットフォームでの非標準のDockerインストール用です</block>
+  <block id="986b967d4a19de83ed59389872e2eb46" category="cell">DockerUnixSocketの略</block>
+  <block id="4dccb3941fc9760d547f9ae348685ad3" category="cell">dockerUnixSocketパスのオーバーライド。これは、クラウドファウンドリなどのKubernetesプラットフォームでの非標準のDockerインストール用です。</block>
+  <block id="6ae45dc429d1f96b8c63fba54419b0f7" category="cell">crioSockPath</block>
+  <block id="eeec0978474a40f056df3ffd9acfa360" category="cell">crioSockPathパスのオーバーライド。これは、クラウドファウンドリなどのKubernetesプラットフォームでの非標準のDockerインストール用です。</block>
+  <block id="6fd605953233d5564943f85815683d62" category="cell">runPrivileged</block>
+  <block id="06b131db41fa22ef6ac7de5a7eae4aef" category="cell">特権モードでTelegrafコンテナを実行します。KubernetesノードでSELinuxが有効になっている場合は、このをtrueに設定します</block>
+  <block id="986b07451fa1766c43f2eead1470731c" category="cell">バッチサイズ</block>
+  <block id="f73038607dbfd988c8ed06aa707b67b6" category="inline-link-macro">Telegraf設定ドキュメント</block>
+  <block id="4a686d41d5d06d7af488bce13a4b6b1c" category="cell">を参照してください <block ref="1220f98ff4e67fb30a54b092e87489e7" category="inline-link-macro-rx"></block></block>
+  <block id="977c5d665ca82fa3d9d007ab47991cab" category="cell">BufferLimit</block>
+  <block id="3d5beabcc75357b9f0517b37a51d848b" category="cell">RoundIntervalの略</block>
+  <block id="0457354b493031778121a8634e49db5e" category="cell">collectionJitter</block>
+  <block id="e2794d8f12719281eff5601251c8a680" category="cell">精度</block>
+  <block id="43a58acb58cbbbfc1abb27f189ec375c" category="cell">flushInterval（フラッシュ間隔）</block>
+  <block id="e177bfc26cdd2bb790365e538eef32a6" category="cell">FlushJitter（フラッシュジッタ</block>
+  <block id="8bdbcdcecbcc5e3e45877e3a15ebe124" category="cell">outputTimeout</block>
+  <block id="a3f0ee128de7eabdc5dbd73136882ab6" category="cell">dockerMetricCollectionEnabled</block>
+  <block id="0710c2522c29e39ba719becf4972a9aa" category="cell">Dockerの指標を収集する。デフォルトでは、この値はtrueに設定されており、オンプレミスのDockerベースのKubernetes環境でDocker指標が収集されます。Dockerのメトリック収集を無効にするには、falseに設定します。</block>
+  <block id="bb0a12c3834207119851374142a76ac0" category="cell">dsTolerations</block>
+  <block id="77e9ea38d66b01840eaf712dab598ce0" category="cell">Telegraf-DS追加の許容値。</block>
+  <block id="569d3e422e1e57a8d8f17b102bb10bfc" category="cell">rsTolerations</block>
+  <block id="0a1cb9f6e7c89d89c765fdd1efa6183b" category="cell">Telegraf-RS追加許容値。</block>
+  <block id="58af01fce51ad07206150454f8b829be" category="cell">kube-state-metricsの略</block>
+  <block id="81beb48dd63a014bf8c446eeeb319a2e" category="cell">Operatorのkube状態メトリックのインストールをカスタマイズできる設定オプション</block>
+  <block id="8804d25db5f16b9db006116b6edf45bc" category="cell">cpuLimit</block>
+  <block id="8b673d5f702e58efd947465ead5c9647" category="cell">kube-state-metricsデプロイメントのCPU制限</block>
+  <block id="65a010afe1e2186ecb5c9ef8cf978e2d" category="cell">memLimit</block>
+  <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">kube-state-metrics展開のメモリ制限</block>
+  <block id="664e65ce2a5a996437f898217e74c9dd" category="cell">cpuRequest</block>
+  <block id="3237c3bd0df775b78c9dafaf3c9bf9e6" category="cell">kube state metrics deploymentのCPU要求</block>
+  <block id="c8f947b6b972e9866cc682a82d5ec34a" category="cell">MemRequestの略</block>
+  <block id="03dd8511b379b0b92595299b980d36e4" category="cell">KUBE状態メトリクス展開のためのMEM要求</block>
+  <block id="55b558c7ef820e6e00e5993b9e55d93b" category="cell">リソース</block>
+  <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">キャプチャするリソースをカンマで区切ったリスト。
+例：cronjobs、デーモンセット、配置、入力、ジョブ、ネームスペース、ノード、persistentvolumeclaims、
+persistentvolumes、pods、ReplicaSets、resourcequotas、services、statefulsets</block>
+  <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">許容範囲</block>
+  <block id="c511c601aee805f46f3767063104cdd8" category="cell">kube-state-metrics追加の許容値。</block>
+  <block id="42cecfeff00cc916fef4f64e7b921079" category="cell">ラベル</block>
+  <block id="cea61529c4fbcfd86c0a3459bc229a87" category="cell">kube-state-metricsでキャプチャするリソースをカンマで区切ったリスト
+
++++
+例：cronjobs=[*]、daemonsets=[*]、deployments=[*]、ingresses=[*]、jobs=[*]、namespaces=[*]、nodes=[*]、
+persistentvolumeclaims=[*]、persistentvolumes=[*]、pods=[*]、ReplicaSets=[*]、resourcequotas=[*]、services=[*]、statefulsets=[*]
++++</block>
+  <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">オペレータのログ収集とインストールをカスタマイズできる設定オプション</block>
+  <block id="031104420a282e1bdb63e280c40a4938" category="cell">readFromHead</block>
+  <block id="d7ff51440723c6bba696ef19f757a8af" category="cell">true / false。fluentビットがheadからログを読み取る必要があります</block>
+  <block id="90272dda245ae1fb3cf197e91a8689dc" category="cell">タイムアウト</block>
+  <block id="6136e8e4f59c6ebf3a47733e15cd8f8f" category="cell">タイムアウト（秒）</block>
+  <block id="a28f540659f42fa52be34b45558bb6c6" category="cell">DNSMode（DNSMode）</block>
+  <block id="5c0864cc25dbf397d47948de9ac342f1" category="cell">TCP / UDP、DNSのモード</block>
+  <block id="7e7b391c65060e4613a7fb96bfd2ef31" category="cell">Fluent-bit-tolerationsの略</block>
+  <block id="035bf5f67349238f72eae5d508efac99" category="cell">FLUENT-BIT-DSの追加許容値。</block>
+  <block id="8776d1f0ee4232b1c2ff5bc38e4b2603" category="cell">event-exporter-tolerationsの略</block>
+  <block id="bac5ce71f32beb834c27a988cad33543" category="cell">イベントエクスポータの追加許容値。</block>
+  <block id="6f70b1b29646b4f3864aa8abbbca1c59" category="cell">ワークロードマップ</block>
+  <block id="061016eea4bb256a8b08c9190fbefeec" category="cell">作業負荷マップの収集とオペレータのインストールをカスタマイズできる設定オプション</block>
+  <block id="3a8e375aaa03d4b48cdd1a1758a69d81" category="cell">ネットオブザーバーDSのCPU制限</block>
+  <block id="3803b93f400a67f6fef5fecdec95cb8c" category="cell">ネットオブザーバDSのメモリ制限</block>
+  <block id="967cc12aa2f5f95e9e26d28fae3bd7b3" category="cell">ネットオブザーバーDSのCPU要求</block>
+  <block id="0ae1bca85ce414d0f1862e84b9f66acc" category="cell">ネットオブザーバーDSのMEM要求</block>
+  <block id="1de805c2687b2c30b46a937270519488" category="cell">metricAggregationInterval</block>
+  <block id="8d5efaeb90931394d0afdcc8d00b6b90" category="cell">メトリック集約間隔（秒単位）</block>
+  <block id="c561450e999b4dfedfdbbc8b48e36db7" category="cell">bpfPollIntervalの略</block>
+  <block id="a75c6546b06d6f58867213c5349a5f15" category="cell">BPFポーリング間隔（秒単位）</block>
+  <block id="3b7c5615013c6b42362845591653e503" category="cell">enableDNSLookup</block>
+  <block id="1d2b775d8b166dda0a22ca0ffa3f537c" category="cell">trueまたはfalse、DNSルックアップを有効にします</block>
+  <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">L4 -公差</block>
+  <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">NET-OBSERVER-L4-DS追加許容値。</block>
+  <block id="349a396fe021418ac0edbee3b447f4d5" category="section-title">サンプルのAgentConfigurationファイル</block>
+  <block id="fc8a8119975d70c9ea4470d26aa4640b" category="paragraph">次に、AgentConfigurationファイルの例を示します。ここでは、すべてのオプションがキャプチャされるわけではありません。</block>
+  <block id="170ac79db4abf3af53c36b5ba23d297a" category="summary">CouchDB データコレクタの設定</block>
+  <block id="1aa7fb61fdaf60c81a318c790c7e545e" category="doc">CouchDB データコレクタ</block>
+  <block id="2aa655c0610f5e45884f5257e54d539e" category="paragraph">Cloud Insights では、このデータコレクタを使用して CouchDB から指標を収集します。</block>
+  <block id="c3dba9c80e9fa5a82c71abb7fa5cf37f" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[CouchDB]を選択します。</block>
+  <block id="9d3601e78c51a4b184d2fe86128539e4" category="inline-image-macro">CouchDB の設定</block>
+  <block id="61d7e3da551b2e4c1549750fbb518e22" category="paragraph"><block ref="61d7e3da551b2e4c1549750fbb518e22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a7006055e2291f0b9e46ee915f0ad0c" category="inline-link-macro">CouchDB のドキュメント</block>
+  <block id="bc781ab763b71df7b975bbfe7c860bba" category="paragraph">情報は、に記載されています <block ref="3147fac008aa304c440ef0d367c93828" category="inline-link-macro-rx"></block>。</block>
+  <block id="dea8b0c01ac3c8f22d85423d187ec3d2" category="cell">CouchDB</block>
+  <block id="64f2993184c14c565d6ba3100a20ca05" category="cell">認証キャッシュヒット
+認証キャッシュミス
+データベースの読み取り
+データベースへの書き込み
+データベースが開きます
+OSファイルを開きます
+最大要求時間
+最小要求時間
+httpdリクエストメソッドコピー
+httpdリクエストメソッド削除
+httpdリクエストメソッドGET
+httpdリクエストメソッドヘッド
+httpdリクエストメソッドPost
+httpdリクエストメソッドPUT
+ステータスコード200
+ステータスコード201
+ステータスコード202
+ステータスコード301
+ステータスコード304.
+ステータスコード400
+ステータスコード401
+ステータスコード403
+ステータスコード404
+ステータスコード405
+ステータスコード409
+ステータスコード412
+ステータスコード500</block>
+  <block id="13b9b5c6c0fb1445ca79a2155f4dc602" category="summary">Hadoop のデータコレクタの設定</block>
+  <block id="38af629ca8cce22e7b7e641b96f8197b" category="doc">Hadoop Data Collector</block>
+  <block id="20bacb7d7672e3432126a809496c0ace" category="paragraph">Cloud Insights は、このデータコレクタを使用して Hadoop からの指標を収集します。</block>
+  <block id="65f4403a1570898156c13c0053e0d957" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。Hadoopを選択します。</block>
+  <block id="e844ff1ebc3eef465aed7960b58160c3" category="inline-image-macro">Hadoop 構成</block>
+  <block id="026b451ea6f45b0c92de7f54611efaf2" category="paragraph"><block ref="47353d83abd9981302d8e2ae7057d5b3" category="inline-image-macro-rx" type="image"></block>
+<block ref="7afda35c9e63e32c054b3ad27f5a4ccb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f420dce044ac00b84abcfafd6e9f994a" category="paragraph">Hadoop を完全に導入するには、次のコンポーネントが必要です。</block>
+  <block id="d713d040466c91cefd2167bcebd60062" category="list-text">NameNode ： Hadoop 分散型ファイルシステム（ HDFS ）プライマリシステム。一連の DataNode を調整します。</block>
+  <block id="da8ea8d009db4b0c889dc3686a8d9638" category="list-text">セカンダリ NameNode ：メイン NameNode のウォームフェイルオーバー。Hadoop では、 NameNode への昇格は自動的には行われません。セカンダリ NameNode は、必要に応じてプロモート可能な状態にするために、 NameNode から情報を収集します。</block>
+  <block id="a4c57bdec853ab95919855b4747bfa32" category="list-text">DataNode ：データの実際の所有者。</block>
+  <block id="9c600745fb11557034d343ea8107d75a" category="list-text">ResourceManager ：コンピューティングのプライマリシステム（ yarn ）。一連の NodeManager を調整します。</block>
+  <block id="39f4bb6feff48cfe7b9520c7318f9767" category="list-text">NodeManager ：コンピューティング用のリソース。アプリケーションを実行するための実際の場所。</block>
+  <block id="f95e602d74c2ca81c1416dbb467a0df7" category="list-text">JobHistoryServer ：ジョブ履歴に関連するすべての要求の処理を担当します。</block>
+  <block id="c1917bdd072d470e050bd2c06f83e344" category="paragraph">Hadoop プラグインは、テレグラムの Jolokia プラグインに基づいています。すべての Hadoop コンポーネントから情報を収集するための要件など、 JMX はすべてのコンポーネントで Jolokia 経由で設定および公開する必要があります。</block>
+  <block id="0f37fe3dfe5894ca54f816b3a822ab75" category="paragraph">構成は Hadoop バージョン 2.9.2 に対して開発されました。</block>
+  <block id="0eb08f5b635663822078f16d3fc578db" category="section-title">セットアップ中です</block>
+  <block id="788386447f3336a53e1c2ce1bfe69253" category="inline-link-macro">Jolokia 代理店 1.6.0</block>
+  <block id="12b5a09ab5184ab662baeccbd4410892" category="paragraph">個々のコンポーネントについては、 Jolokia エージェント jar ファイルのバージョンをダウンロードする必要があります。テスト対象のバージョンは、でした <block ref="adb2184741946d946bb10cd791c6089f" category="inline-link-macro-rx"></block>。</block>
+  <block id="cdd86f53b4b8b0d623b6a8ee7a48c7bc" category="paragraph">以下の手順では、ダウンロードした jar ファイル（ jolokia-jvm-1.6.0-agent.jar ）が「 /opt/hadoop /lib/' 」の下に配置されると想定しています。</block>
+  <block id="32b6eea89ffa772d5a299a3fa2ae0f4e" category="section-title">NameNode</block>
+  <block id="232e93d6785b24d7d392240ca50f3ae2" category="paragraph">Jolokia API が公開されるように NameNode を設定するには、 &lt;hadoop home&gt;/etc/hadoop /hadoop -env.sh で次のセットアップを行います。</block>
+  <block id="9bc82d5913c313160e8e66d24078bba0" category="section-title">セカンダリ NameNode</block>
+  <block id="f18509f1fb2f9a71f232159773b2fd87" category="paragraph">セカンダリ NameNode で Jolokia API を公開するように設定するには、 &lt;hadoop home&gt;/etc/hadoop /hadoop -env.sh で次のように設定します。</block>
+  <block id="315104928eaa5842590c6ce58545354d" category="section-title">DataNode</block>
+  <block id="45fef23823b56451d4fe53fc6c8d98c7" category="paragraph">Jolokia API が公開されるように DataNode を設定するには、 &lt;hopp_home&gt;/etc/hadoop /hadoop -env.sh に以下のセットアップを行います。</block>
+  <block id="ed760e01ef8cb789b502ad1c9a3829a2" category="section-title">ResourceManager の略</block>
+  <block id="b475783ddb9124cc9510e5e42cf8e80f" category="paragraph">ResourceManager で Jolokia API を公開するように設定するには、 &lt;hadoop HOME&gt;//etc/hadoop /hadoop -env.sh で次の設定を行うことができます。</block>
+  <block id="1acfb853dd9d284090a1f6804f68d238" category="section-title">NodeManager</block>
+  <block id="08dc29be4fde03fbd2b992b1227f2990" category="paragraph">Jolokia API を公開するように NodeManager を設定するには、 &lt;hadoop home&gt;/etc/hadoop /hadoop -env.sh で次の設定を行うことができます。</block>
+  <block id="ff3d03ec141ab7e4f5faa0c83687126c" category="section-title">JobHistoryServer</block>
+  <block id="4087664a919c61abae79b6d518148613" category="paragraph">JobHistoryServer で Jolokia API を公開するように設定するには、 &lt;hadoop home&gt;/etc/hadoop /hadoop -env.sh で次の設定を行うことができます。</block>
+  <block id="bfa0ceac01bc6e1226697171b0d5b352" category="cell">Hadoop セカンダリ NameNode</block>
+  <block id="cc4f08bdf048f36eae4a37c7b9b75ba1" category="cell">クラスタ
+ネームスペース
+サーバ</block>
+  <block id="fe1a99e660c022ae82cc4f285f9c1fae" category="cell">ノード名
+ノードIP
+コンパイル情報
+バージョン</block>
+  <block id="ec47af2c19dd80097f2d69a8d2df39de" category="cell">GCカウント
+GCコピー数
+GCマークスイープコンパクトカウント
+GC番号情報のしきい値を超えました
+GC番号警告しきい値を超えました
+GC時間
+GCコピー時間
+GCマークスイープコンパクト時間
+GC合計エクストラスリープ時間
+エラー数をログに記録します
+ログ致命的数
+ログ情報数
+警告数をログに記録します
+メモリヒープがコミットされました
+メモリヒープ最大
+使用されているメモリヒープ
+メモリ最大
+メモリのヒープがコミットされていません
+メモリ非ヒープ最大
+メモリのヒープが使用されていません
+ブロックされたスレッド
+スレッド新規
+スレッド実行可能
+スレッドが終了しました
+スレッドの待機時間
+待機中のスレッド</block>
+  <block id="7c1a0861b825b536f9d829a1bb1e2d51" category="cell">Hadoop ノードマネージャ</block>
+  <block id="42c247c7d7aab3cc05a61467ea1c6d4b" category="cell">割り当て済みのコンテナ
+メモリ割り当て
+Memory Allocated Oportunisticの略
+仮想コア割り当てオポチュニスティック
+仮想コアが割り当てられました
+使用可能なメモリ
+使用可能な仮想コア
+ディレクトリがローカルではありません
+ディレクトリの不正なログ
+クリーニング前のキャッシュサイズ
+コンテナ起動時間平均時間
+Container Launch Duration Number of Operations（コンテナ起動時間）
+コンテナが完了しました
+コンテナが失敗しました
+コンテナの初期化
+コンテナを強制終了します
+コンテナをリリース
+コンテナの再構築
+障害発生時にコンテナがロールバックされました
+実行中のコンテナ
+ディスク使用率が良好なローカルディレクトリ
+Disk Utilization Good Log Directoriesの略
+バイトがプライベート削除されました
+Bytes Deleted Public
+コンテナはOpportunityを実行しています
+削除されたバイト数の合計
+接続をシャッフルします
+出力バイトをシャッフルします
+出力のシャッフルに失敗しました
+シャッフル出力OK
+GCカウント
+GCコピー数
+GCマークスイープコンパクトカウント
+GC番号情報のしきい値を超えました
+GC番号警告しきい値を超えました
+GC時間
+GCコピー時間
+GCマークスイープコンパクト時間
+GC合計エクストラスリープ時間
+エラー数をログに記録します
+ログ致命的数
+ログ情報数
+警告数をログに記録します
+メモリヒープがコミットされました
+メモリヒープ最大
+使用されているメモリヒープ
+メモリ最大
+メモリのヒープがコミットされていません
+メモリ非ヒープ最大
+メモリのヒープが使用されていません
+ブロックされたスレッド
+スレッド新規
+スレッド実行可能
+スレッドが終了しました
+スレッドの待機時間
+待機中のスレッド</block>
+  <block id="df6174495390f87b029379629c6f2b33" category="cell">Hadoop ResourceManager</block>
+  <block id="df7b62f4d6c4d5682ffa7d976584d4d4" category="cell">ApplicationMaster起動遅延平均
+ApplicationMaster起動遅延番号
+ApplicationMaster登録遅延平均
+ApplicationMaster Register Delay Numberの略
+NodeManagerアクティブ番号
+NodeManagerの運用停止番号
+NodeManagerの運用停止番号
+NodeManagerの番号が失われました
+NodeManagerがリブートしました
+NodeManagerシャットダウン番号
+NodeManagerの正常な番号
+NodeManagerのメモリ制限
+NodeManager仮想コア数の制限
+使用済み容量
+アクティブアプリケーション
+アクティブユーザー
+割り当て済みアグリゲートコンテナ
+アグリゲートコンテナがプリエンプトされました
+アグリゲートコンテナが解放されました
+アグリゲートメモリの秒数がプリエンプトされました
+割り当て済みアグリゲートノードのローカルコンテナ
+アグリゲートオフスイッチコンテナの割り当て済み
+アグリゲートのAckローカルコンテナの割り当て済み容量
+アグリゲート仮想コア（秒）がプリエンプトされました
+割り当て済みのコンテナ
+割り当てられたメモリ
+仮想コアが割り当てられました
+アプリケーション試行の最初のコンテナ割り当て遅延平均時間
+Application Attempt First Container Allocation Delay Numberの略
+アプリケーションが完了しました
+アプリケーションに失敗しました
+アプリケーションが停止しました
+アプリケーションが保留中です
+実行中のアプリケーション
+提出された申請書
+使用可能なメモリ
+使用可能な仮想コア
+保留中のコンテナ
+メモリが保留中です
+仮想コアが保留中です
+Containers Reserved.
+メモリ予約済み
+仮想コア予約済み
+使用されているMemory ApplicationMaster
+Virtual Cores ApplicationMasterが使用されています
+使用済み容量
+GCカウント
+GCコピー数
+GCマークスイープコンパクトカウント
+GC番号情報のしきい値を超えました
+GC番号警告しきい値を超えました
+GC時間
+GCコピー時間
+GCマークスイープコンパクト時間
+GC合計エクストラスリープ時間
+エラー数をログに記録します
+ログ致命的数
+ログ情報数
+警告数をログに記録します
+メモリヒープがコミットされました
+メモリヒープ最大
+使用されているメモリヒープ
+メモリ最大
+メモリのヒープがコミットされていません
+メモリ非ヒープ最大
+メモリのヒープが使用されていません
+ブロックされたスレッド
+スレッド新規
+スレッド実行可能
+スレッドが終了しました
+スレッドの待機時間
+待機中のスレッド</block>
+  <block id="569b69985a3ba9860b112ed47851e6f3" category="cell">Hadoop DataNode</block>
+  <block id="8751de48b6635b7a5598ab69137093dc" category="cell">ノード名
+ノードIP
+クラスタID
+バージョン</block>
+  <block id="5f3d32367ec5caecbbe837295ddebebb" category="cell">トランシーバ数
+送信が進行中です
+キャッシュ容量
+使用されているキャッシュ
+容量
+使用されるDFS
+推定損失合計容量
+前回のボリューム障害率
+キャッシュされた番号をブロックする
+ブロック番号のキャッシュに失敗しました
+ブロック番号のキャッシュ解除に失敗しました
+ボリューム番号に失敗しました
+残り容量
+GCカウント
+GCコピー数
+GCマークスイープコンパクトカウント
+GC番号情報のしきい値を超えました
+GC番号警告しきい値を超えました
+GC時間
+GCコピー時間
+GCマークスイープコンパクト時間
+GC合計エクストラスリープ時間
+エラー数をログに記録します
+ログ致命的数
+ログ情報数
+警告数をログに記録します
+メモリヒープがコミットされました
+メモリヒープ最大
+使用されているメモリヒープ
+メモリ最大
+メモリのヒープがコミットされていません
+メモリ非ヒープ最大
+メモリのヒープが使用されていません
+ブロックされたスレッド
+スレッド新規
+スレッド実行可能
+スレッドが終了しました
+スレッドの待機時間
+待機中のスレッド</block>
+  <block id="5a0c1fdf2f2b483f386886e066dfae1b" category="cell">Hadoop NameNode</block>
+  <block id="637b504f65b25d54361a662bf71a4164" category="cell">ノード名
+ノードIP
+最後に書き込まれたトランザクションID
+最後にロードされた編集からの時間
+HAの状態
+File System Stateの略
+ブロックプールID
+クラスタID
+コンパイル情報
+個別のバージョン数
+バージョン</block>
+  <block id="551ce6b2e6cc4e5633e4ebd59fde4056" category="cell">ブロック容量
+合計ブロック数
+合計容量
+使用済み容量
+Capacity Used Non DFSの略
+ブロックが壊れています
+推定損失合計容量
+超過をブロックします
+ハートビートの期限が切れました
+ファイル合計
+File System Lock Queue Lengthの略
+ブロックが見つかりません
+第1因子のレプリケーションが欠落しているブロック
+クライアントがアクティブです
+データノードが故障しています
+稼働を停止しているデータノードが故障しています
+ライブを運用停止するデータノード
+データノードの運用停止
+暗号化ゾーン番号
+データノードがメンテナンスに移行しています
+作成中のファイル
+メンテナンス中のデータノードが停止しました
+データノードはメンテナンス中です
+Data Nodes Liveの略
+ストレージが古い
+レプリケーション保留タイムアウト
+データノードメッセージが保留中です
+削除を保留中のブロック
+レプリケーションを保留中のブロック
+ミスレプリケートされたブロックが延期されました
+スケジュールされたレプリケーションをブロックします
+Snapshot
+スナップショット可能なディレクトリ
+データノードが古い
+ファイル合計
+合計ロード
+同期カウント合計
+最後のチェックポイント以降のトランザクション
+最後のログロール以降のトランザクション
+Underreplicatedのブロック
+ボリューム障害の合計
+同期時間の合計
+オブジェクト最大
+操作ブロック追加
+処理でSnapshotが許可されます
+オペレーションブロックがバッチ処理されました
+処理ブロックがキューに登録されました
+操作ブロック受信および削除
+処理レポートの平均時間
+Operations Block Report Numberの略
+キャッシュレポート平均時間
+キャッシュレポート番号
+操作ファイルを作成します
+処理Snapshotを作成します
+[操作][シンボリックリンクの作成
+操作ファイル削除
+処理Snapshotの削除
+操作スナップショットを許可しない
+オペレーションファイルイン/アウト
+追加されたファイル
+作成されたファイル
+ファイルを削除しました
+ファイルリスト
+ファイルの名前変更
+ファイルが切り捨てられました
+File System Load Timeの略
+処理EDEK平均時間の生成
+オペレーションEDEKを生成します
+処理：追加のデータノードを取得します
+ブロックは場所を取得します
+編集平均時間の取得
+編集番号を取得します
+イメージ平均時間の取得
+画像番号を取得します
+処理がリンクターゲットを取得します
+処理が一覧表示されます
+処理リストにSnapshotテーブルのディレクトリが表示されます
+Replication Not Scheduled Numberの略
+PUTイメージの平均時間
+PUTイメージ番号
+処理Snapshotの名前変更
+資源チェック時間平均時間
+リソースチェック時間番号
+セーフモード時間
+処理スナップショット差異レポート
+Operations Storage Block Reportの略
+レプリケーションに成功しました
+同期平均時間
+Operations Sync Numberの略
+レプリケーションタイムアウト
+処理の合計
+トランザクション平均時間
+トランザクションBatchd in Sync（同期中のトランザクションBatchd
+トランザクション番号
+EDEKウォームアップ時間平均
+EDEKウォームアップ番号
+Block Pool Used Spaceの略
+キャッシュ容量
+使用されているキャッシュ
+空き容量
+ブロックプールの使用率
+残りの割合
+使用率
+スレッド
+GCカウント
+GCコピー数
+GCマークスイープコンパクトカウント
+GC番号情報のしきい値を超えました
+GC番号警告しきい値を超えました
+GC時間
+GCコピー時間
+GCマークスイープコンパクト時間
+GC合計エクストラスリープ時間
+エラー数をログに記録します
+ログ致命的数
+ログ情報数
+警告数をログに記録します
+メモリヒープがコミットされました
+メモリヒープ最大
+使用されているメモリヒープ
+メモリ最大
+メモリのヒープがコミットされていません
+メモリ非ヒープ最大
+メモリのヒープが使用されていません
+ブロックされたスレッド
+スレッド新規
+スレッド実行可能
+スレッドが終了しました
+スレッドの待機時間
+待機中のスレッド</block>
+  <block id="0460c951ea9c38503a35b138121da86c" category="cell">Hadoop ジョブ履歴サーバ</block>
+  <block id="0982f7ddf38c72531e91321d3b4e198e" category="summary">Docker データコレクタの設定</block>
+  <block id="d80788e8d22d139775039533ead6bae8" category="doc">Docker Data Collector</block>
+  <block id="6e48769f92efb7218705b56e64b2cc22" category="paragraph">Cloud Insights は、このデータコレクタを使用して Docker から指標を収集します。</block>
+  <block id="9ee6c12aac4505f529c285b136202ce5" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[Docker]を選択します。</block>
+  <block id="0f4a5a5b8072d8e43816253b9197d0f1" category="list-text">Docker Configuration 画面の指示に従って、データコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。</block>
+  <block id="4ed4e51db0aa02d2ed7e8fb292cc39c8" category="inline-image-macro">Docker 構成</block>
+  <block id="ee96e45eed0143814810825fc37d2fa8" category="paragraph"><block ref="ee96e45eed0143814810825fc37d2fa8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2622d06a8a5a13f122149c79381978f8" category="paragraph">Telegraf Docker 用入力プラグインは、指定された UNIX ソケットまたは TCP エンドポイントを介してメトリックを収集します。</block>
+  <block id="047938f8b934d1717dddfdf0dbb9f6bc" category="paragraph">Docker バージョン 1.12.6 に対して構成が開発されました。</block>
+  <block id="43d4b6a220eea649b1a53bac845809d2" category="section-title">UNIX ソケット経由で Docker にアクセスする</block>
+  <block id="ce07d3c38928e864e20e82c242ae0f98" category="paragraph">Tegraf エージェントが BareMetal 上で実行されている場合は、次のコマンドを実行して、テレグラフ UNIX ユーザを Docker UNIX グループに追加します。</block>
+  <block id="0c38156add26ac675264862ed09bc25d" category="paragraph">Telegraf エージェントが Kubernetes ポッド内で実行されている場合は、ソケットをポッドにボリュームとしてマッピングし、そのボリュームを /var/run/docker.sock にマウントすることで、 Docker Unix ソケットを公開します。  たとえば、 PodSpec に次の情報を追加します。</block>
+  <block id="69821e3ecac0b5542b2dfa0b6083a7be" category="paragraph">次に、次の項目をコンテナに追加します。</block>
+  <block id="b9aa3f7cd738fe521730a211a77f68d6" category="paragraph">Kubernetes プラットフォーム用に提供されている Cloud Insights インストーラは、このマッピングを自動的に処理します。</block>
+  <block id="73553149828f2c198e9e7df4807e33bf" category="section-title">TCP エンドポイントを介して Docker にアクセスする</block>
+  <block id="b4f5dd84e7c731654efa53663ef21180" category="paragraph">デフォルトでは、 Docker は暗号化されていないアクセスにポート 2375 を使用し、暗号化されたアクセスにポート 2376 を使用します。</block>
+  <block id="681992b8581f6d4247af5523a14d0ce4" category="cell">Docker Engine の略</block>
+  <block id="f4a3b0c461a1d83562753ce679c373cc" category="cell">ネームスペース
+Docker Engine の略</block>
+  <block id="8ab71e8b7ccb8786b890c85e686d1dbf" category="cell">ノード名
+ノードIP
+ノード UUID
+ノードOS
+Kubernetesクラスタ
+Dockerバージョン
+単位</block>
+  <block id="efb21860adb0899b80a09ed3d53daca5" category="cell">メモリ
+コンテナ
+コンテナが一時停止しました
+実行中のコンテナ
+コンテナが停止しました
+CPU
+ルーチンを実行します
+イメージ
+リスナーイベント
+使用されているファイル記述子
+使用可能なデータ
+データ合計
+使用済みデータ
+メタデータが使用可能です
+メタデータ合計
+使用されているメタデータ
+プールのブロックサイズ</block>
+  <block id="c4d05fe785e9118926263f1d8d731968" category="cell">Docker コンテナ</block>
+  <block id="ef6673f2b613d194f98744f7a7d34b5d" category="cell">ネームスペース
+コンテナ名
+Docker Engine の略</block>
+  <block id="85251df3c314f73ff378bbb53d0cbb1f" category="cell">Kubernetesコンテナハッシュ
+Kubernetesコンテナポート
+Kubernetesコンテナの再起動数
+Kubernetes Container Termination Message Pathの略
+Kubernetes Container Termination Message Policyの略
+Kubernetesポッド終了の猶予期間
+コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+Kubernetesコンテナログパス
+Kubernetesコンテナ名
+Kubernetes Dockerタイプ
+Kubernetesポッド名
+Kubernetesポッドネームスペース
+KubernetesポッドUID
+KubernetesサンドボックスID
+ノードIP
+ノード UUID
+Dockerバージョン
+Kubernetes IO設定を確認しました
+Kubernetes IO構成ソース
+OpenShift IO SCC
+Kubernetes概要の略
+Kubernetesの表示名
+OpenShiftタグ
+Komposeサービス
+ポッドテンプレートハッシュ
+コントローラリビジョンハッシュ
+ポッドテンプレート生成
+使用許諾
+スキーマビルド日
+スキーマライセンス
+スキーマ名
+スキーマURL
+スキーマVCS URL
+スキーマベンダー
+スキーマバージョン
+スキーマスキーマバージョン
+メンテナ
+顧客ポッド
+Kubernetes StatefulSetポッド名
+テナント
+WebConsoleの略
+アーキテクチャ
+信頼できるソースURL
+ビルド日
+RHビルドホスト
+RHコンポーネント
+配布範囲
+をインストールします
+リリース。
+を実行します
+まとめ
+をアンインストールします
+VCS参照
+VCSタイプ
+ベンダー
+バージョン
+正常性ステータス
+コンテナID</block>
+  <block id="5ff8370214b985307753a0ff9465c15b" category="cell">Memory Active Anonymousの略
+メモリアクティブファイル
+メモリキャッシュ
+メモリ階層の制限
+メモリ非アクティブ匿名
+メモリ非アクティブファイル
+メモリ制限
+Memory Mapped Fileの略
+Memory Max Usageの略
+メモリページ障害
+メモリページの重大な障害
+メモリがページインされました
+メモリがページアウトされました
+メモリ常駐設定サイズ
+メモリ常駐セットサイズが大きすぎます
+Memory Total Active Anonymousの略
+Memory Total Active Fileの略
+メモリ合計キャッシュ
+Memory Total Inactive Anonymousの略
+Memory Total Inactive Fileの略
+Memory Total Mapped Fileの略
+Memory Total Page Faultの略
+Memory Total Page Major Faultの略
+ページインされたメモリの合計
+ページアウトされたメモリの合計
+Memory Total Resident Set Sizeの略
+メモリ合計常駐セットサイズが大きすぎます
+Memory Total Unevictableの略
+Memory Unevictable（アクセス不能メモリ）の略
+メモリ使用量
+メモリ使用率
+終了コード
+ウームは殺された
+ピッド
+で開始しました
+ストリークに失敗しました</block>
+  <block id="213eaa882abd038ecefb94d1c9ad53dd" category="cell">Docker コンテナブロック IO</block>
+  <block id="b6c8eb0e1f3a075790a46177f5f664a9" category="cell">ネームスペース
+コンテナ名
+デバイス
+Docker Engine の略</block>
+  <block id="a8ca9934ba37964ab75dc00b1fa3e8fe" category="cell">Kubernetesコンテナハッシュ
+Kubernetesコンテナポート
+Kubernetesコンテナの再起動数
+Kubernetes Container Termination Message Pathの略
+Kubernetes Container Termination Message Policyの略
+Kubernetesポッド終了の猶予期間
+コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+Kubernetesコンテナログパス
+Kubernetesコンテナ名
+Kubernetes Dockerタイプ
+Kubernetesポッド名
+Kubernetesポッドネームスペース
+KubernetesポッドUID
+KubernetesサンドボックスID
+ノードIP
+ノード UUID
+Dockerバージョン
+Kubernetes Configを確認
+Kubernetes構成ソース
+OpenShift SCC
+Kubernetes概要の略
+Kubernetesの表示名
+OpenShiftタグ
+スキーマスキーマバージョン
+ポッドテンプレートハッシュ
+コントローラリビジョンハッシュ
+ポッドテンプレート生成
+Komposeサービス
+スキーマビルド日
+スキーマライセンス
+スキーマ名
+スキーマベンダー
+顧客ポッド
+Kubernetes StatefulSetポッド名
+テナント
+WebConsoleの略
+ビルド日
+使用許諾
+ベンダー
+アーキテクチャ
+信頼できるソースURL
+RHビルドホスト
+RHコンポーネント
+配布範囲
+をインストールします
+メンテナ
+リリース。
+を実行します
+まとめ
+をアンインストールします
+VCS参照
+VCSタイプ
+バージョン
+スキーマURL
+スキーマVCS URL
+スキーマバージョン
+コンテナID</block>
+  <block id="34792b46d5f4d118993b97dc65a3ed9b" category="cell">IO Service Bytes Recursive Asyncの略
+IO Service Bytes Recursive Readの略
+IO Service Bytes Recursive Syncの略
+IOサービスバイト数の再帰的合計
+IO Service Bytes Recursive Writeの略
+IO Serviced Recursive Asyncの略
+IO Serviced Recursive Readの略
+IO Serviced Recursive Syncの略
+IOサービス再帰合計
+IO Serviced Recursive Writeの略</block>
+  <block id="c19b7a0868fcc8b657cf119904c8f4ee" category="cell">Docker コンテナネットワーク</block>
+  <block id="831c5d0c57dec418323ed2d160458d81" category="cell">ネームスペース
+コンテナ名
+ネットワーク
+Docker Engine の略</block>
+  <block id="6fcf9c483cfa3017433456584bcd7f8f" category="cell">コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+ノードIP
+ノード UUID
+ノードOS
+Kubernetesクラスタ
+Dockerバージョン
+コンテナID</block>
+  <block id="3fcbd1f352221dab310964db15bbae4d" category="cell">RXがドロップされました
+Rxバイト
+Rxエラー
+Rxパケット
+送信がドロップされました
+送信バイト数
+TXエラー
+送信パケット数</block>
+  <block id="e11e2314917505f9b82d06bdd3c6e4b2" category="cell">Docker コンテナの CPU</block>
+  <block id="722c21d9c801a7b062bf40cd7bd5ae06" category="cell">ネームスペース
+コンテナ名
+CPU
+Docker Engine の略</block>
+  <block id="51accef59e0d9b09555ad4a6b152e847" category="cell">Kubernetesコンテナハッシュ
+Kubernetesコンテナポート
+Kubernetesコンテナの再起動数
+Kubernetes Container Termination Message Pathの略
+Kubernetes Container Termination Message Policyの略
+Kubernetesポッド終了の猶予期間
+Kubernetes Configを確認
+Kubernetes構成ソース
+OpenShift SCC
+コンテナイメージ
+コンテナのステータス
+コンテナバージョン
+ノード名
+Kubernetesコンテナログパス
+Kubernetesコンテナの名前
+Kubernetes Dockerタイプ
+Kubernetesポッド名
+Kubernetesポッドネームスペース
+KubernetesポッドUID
+KubernetesサンドボックスID
+ノードIP
+ノード UUID
+ノードOS
+Kubernetesクラスタ
+Dockerバージョン
+Kubernetes概要の略
+Kubernetesの表示名
+OpenShiftタグ
+スキーマバージョン
+ポッドテンプレートハッシュ
+コントローラリビジョンハッシュ
+ポッドテンプレート生成
+Komposeサービス
+スキーマビルド日
+スキーマライセンス
+スキーマ名
+スキーマベンダー
+顧客ポッド
+Kubernetes StatefulSetポッド名
+テナント
+WebConsoleの略
+ビルド日
+使用許諾
+ベンダー
+アーキテクチャ
+信頼できるソースURL
+RHビルドホスト
+RHコンポーネント
+配布範囲
+をインストールします
+メンテナ
+リリース。
+を実行します
+まとめ
+をアンインストールします
+VCS参照
+VCSタイプ
+バージョン
+スキーマURL
+スキーマVCS URL
+スキーマバージョン
+コンテナID</block>
+  <block id="01515237e5a51a70ac5f1a57ab2c74a5" category="cell">スロットリング期間
+調整された期間の調整
+スロットル調整時間
+カーネルモードでの使用
+ユーザーモードでの使用方法
+使用率
+使用システム
+使用量の合計</block>
+  <block id="be43542983d169babaee275ec60ecb75" category="cell">設定ページの手順に従っても、 Cloud Insights に Docker 指標が表示されない。</block>
+  <block id="905bf4f9d8189256f8247dcef263d5cb" category="cell">Telegrafエージェントログで、次のエラーが報告されているかどうかを確認します。
+
+ 来い! プラグイン[inputs.docker]のエラー：Dockerデーモンソケットに接続しようとしているときに権限が拒否されました
+
+もしそうなら、上記のようにTelegrafエージェントがDocker Unixソケットにアクセスできるようにするために必要な手順を実行します。</block>
+  <block id="c75d4b042f6604bc016e5b15ff4dea18" category="summary">Cloud Insights は、 Kubernetes で統合データを収集するエージェントとして Telegraf をサポートしています。</block>
+  <block id="562442a302f1457c8c9df7cbde80c0b4" category="doc">NetApp Kubernetes Monitoring Operatorの設定</block>
+  <block id="b9f54c4d152facdb82c18e1719662b9f" category="paragraph">Cloud Insights では、Kubernetesコレクション向けにNetApp Kubernetes Monitoring Operator *（NKMO）を提供しています。データコレクタを追加するときは、「Kubernetes」タイルを選択するだけです。</block>
+  <block id="4f39aea7decea72af93c7cb4ba3fe487" category="admonition">Cloud Insightsフェデラルエディションを使用している場合は、インストールと設定の手順がこのページの手順と異なる場合があります。Cloud Insightsの指示に従って、NetApp Kubernetes監視オペレータをインストールします。</block>
+  <block id="f34adaf8e760e7cb58ba333e44c4dc52" category="inline-image-macro">Kubernetes Data Collectorのタイル</block>
+  <block id="a0eda368f17db54a54c6f0246fd5c816" category="paragraph"><block ref="a0eda368f17db54a54c6f0246fd5c816" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eaee203e2e728070e3c454936f257fdf" category="paragraph">Operatorとデータコレクタは、Cloud Insights Dockerレジストリからダウンロードされます。インストールが完了すると、NKMOはKubernetesクラスタノードに導入されたOperator互換コレクタを管理してデータを取得します。これには、コレクタのライフサイクルの管理も含まれます。このチェーンに続いて、データがコレクタから取得され、Cloud Insights に送信されます。</block>
+  <block id="6a65175f7f76169aeeaf32acdda0d82f" category="section-title">NetApp Kubernetes Monitoring Operatorをインストールする前に</block>
+  <block id="3e4299c002d64ba4e1a384acbdafad4c" category="inline-link-macro">*インストールまたはアップグレードの前に*</block>
+  <block id="449735a59883598ca6b4afe7cb57336a" category="admonition">を参照してください <block ref="98b00674e05edc386cc19257d013cae8" category="inline-link-macro-rx"></block> NetApp Kubernetes Monitoring Operatorをインストールまたはアップグレードする前のドキュメント。</block>
+  <block id="143bc427903e01a7afe2d41b83643f5e" category="section-title">NetApp Kubernetes Monitoring Operatorをインストールします</block>
+  <block id="e6955fda6db57ce036906d2f15519731" category="paragraph"><block ref="0ac387629bcb7a9ba3f6f8e72a2f2cd7" category="inline-image-macro-rx" type="image"></block>
+<block ref="6ba665c891b77a3a5dfb5c061b6e2ba3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7591998776b8f5daf9acfbbe7be1312b" category="list-title">NetApp Kubernetes Monitoring Operator Agent を Kubernetes にインストールする手順：</block>
+  <block id="b1709369b19b51deac976f5fc9dce527" category="inline-xref">をアップグレードして</block>
+  <block id="c22968bfe7941ac13825abafc2a7f5b1" category="list-text">一意のクラスタ名およびネームスペースを入力してください。実行中の場合 <block ref="0aef99036de6ea3b65be8c21025bb151" category="inline-xref-macro-rx"></block> 以前のKubernetes Operatorで、同じクラスタ名とネームスペースを使用します。</block>
+  <block id="14acb12fc5baee38469b462494a56a68" category="list-text">これらを入力すると、ダウンロードコマンドスニペットをクリップボードにコピーできます。</block>
+  <block id="492eb11b2ab5e4b044176b40a2eebeac" category="list-text">スニペットを a_bash_window に貼り付け、実行します。Operatorインストールファイルがダウンロードされます。スニペットには固有のキーがあり、24時間有効です。</block>
+  <block id="aa976aff83a7c1132e171f3598f5502c" category="list-text">カスタムリポジトリまたはプライベートリポジトリがある場合は、オプションのImage Pullスニペットをコピーし、a_bash_shellに貼り付けて実行します。画像がプルされたら、プライベートリポジトリにコピーします。必ず同じタグとフォルダ構造を維持してください。_operator-deployment.yaml_のパスと_operator-config.yaml_のDockerリポジトリ設定を更新します。</block>
+  <block id="cae73b6a00921ef48cee176b0d4336fe" category="inline-link-macro">設定オプション</block>
+  <block id="ca9e0cae80a67833d83894f2324f8945" category="list-text">必要に応じて、プロキシやプライベートリポジトリの設定など、使用可能な設定オプションを確認します。あなたはについてもっと読むことができます <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>。</block>
+  <block id="2d9b30e80afc5eb380c508d14b4f0676" category="list-text">準備ができたら、kubectl Applyスニペットをコピーしてダウンロードし、実行してOperatorをデプロイします。</block>
+  <block id="cc56bec82b2c1d802e942018b5923042" category="list-text">インストールが自動的に開始されます。完了したら、[_Next_]ボタンをクリックします。</block>
+  <block id="512795526de87931c50ae79cb1cb0a2b" category="list-text">インストールが完了したら、[_Next_]ボタンをクリックします。また、_operator-secrets.yaml_fileを削除するか、安全に保存してください。</block>
+  <block id="faaf8961a729f548e51c3b9f1af0f7e8" category="inline-xref">プロキシを設定します</block>
+  <block id="038f6519626a44bf13147d0f6bf585c1" category="paragraph">詳細については、をご覧ください <block ref="1a6ccc12a618fccf7330b5bee5bca7b7" category="inline-xref-macro-rx"></block>。</block>
+  <block id="c149af672528f58d22f99809653add8a" category="inline-xref">カスタム/プライベートDockerリポジトリを使用する</block>
+  <block id="868b132e8ef5a6adb3f9c30cc2596dfc" category="paragraph">詳細については、をご覧ください <block ref="5616d0aefbf2e33b5f6c94a93c02e259" category="inline-xref-macro-rx"></block>。</block>
+  <block id="d815ee1e41746ef06fd66b3b30d2bc78" category="paragraph">NetApp Kubernetes Monitoring Operatorをインストールすると、Kubernetes EMSログ収集がデフォルトで有効になります。インストール後にこの収集を無効にするには、Kubernetesクラスタの詳細ページの上部にある* Modify Deployment *ボタンをクリックし、[Log collection]の選択を解除します。</block>
+  <block id="88b2095fc7879662ec05b3f703681a11" category="inline-image-macro">[Modify Deployment]画面に[Log Collection]のチェックボックスが表示されている。</block>
+  <block id="5afc0f33a3c779dc228b788e5b0cae22" category="paragraph"><block ref="5afc0f33a3c779dc228b788e5b0cae22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f9f142ab6222e3ae7de290d8287b2920" category="paragraph">この画面には、現在のログ収集ステータスも表示されます。次の状態が考えられます。</block>
+  <block id="b9f5c797ebbf55adccdd8539a65a0241" category="list-text">無効</block>
+  <block id="00d23a76e43b46dae9ec7aa9dcbebb32" category="list-text">有効</block>
+  <block id="5e7360afad9787a415b6f706e486423c" category="list-text">Enabled -インストールを実行中です</block>
+  <block id="d5461aa4ef1df0b08d1c023caca59a6e" category="list-text">Enabled -オフライン</block>
+  <block id="3a7ceac4689e5c9ea84be781707cd148" category="list-text">有効-オンライン</block>
+  <block id="be85cefb4673c1f486c73de818be2056" category="list-text">エラー- APIキーに十分な権限がありません</block>
+  <block id="edcc6d64ff09289fd7b549c0265f3ea6" category="section-title">をアップグレードして</block>
+  <block id="20e38ff1d741d05cb351043049612af2" category="section-title">最新のNetApp Kubernetes Monitoring Operatorにアップグレードします</block>
+  <block id="59f9e8b92a6bc55e991031f0b5fea324" category="paragraph">既存のOperatorにAgentConfigurationが存在するかどうかを確認します（ネームスペースがdefault_netapp-monitoring_でない場合は、適切なネームスペースに置き換えてください）。</block>
+  <block id="bb5c0afa0b80550de02b1ac19c1226b4" category="paragraph">AgentConfigurationが存在する場合：</block>
+  <block id="349838fb1d851d3e2014b9fe39203275" category="inline-xref">をインストールします</block>
+  <block id="7f7436ae77d35f1d44077fc6a514e554" category="list-text"><block ref="1fa08d04c08db5225793f360e12d623f" category="inline-xref-macro-rx"></block> 既存の演算子の上にある最新の演算子。</block>
+  <block id="f60428f53f8ec06db7eeb3c6dc8a3ec1" category="inline-xref">最新のコンテナイメージを取得します</block>
+  <block id="727021f9728a61f5f57027c22e99ed17" category="list-text">確認してください <block ref="70886476cda3a9669d1d2ba99218e076" category="inline-xref-macro-rx"></block> カスタムリポジトリを使用している場合。</block>
+  <block id="a7e8df3295c386ff0d7a33ebd0ce4762" category="paragraph">AgentConfigurationが存在しない場合は、次の手順を実行します。</block>
+  <block id="62648df30f88e4c53ea40e1b390e145a" category="list-text">クラスタ名がCloud Insights で認識される名前であることをメモします（ネームスペースがデフォルトのネットアップ監視機能でない場合は、該当するネームスペースで置き換えてください）。</block>
+  <block id="af43624bdc80303ec074448a745b7a3c" category="list-text">既存のOperatorのバックアップを作成します（ネームスペースがデフォルトのネットアップ監視機能になっていない場合は、適切なネームスペースで置き換えてください）。</block>
+  <block id="a27dfe771799a09fd55fea73286eb6ab" category="inline-xref">をアンインストールします</block>
+  <block id="9fc345bef178837fdc05e65957ebec12" category="list-text"><block ref="202bdd2c16e54d75fc99028d87bc1bc6" category="inline-xref-macro-rx"></block> 既存の演算子。</block>
+  <block id="98dc8e0a1ca4088c0cc75feb9c6a5560" category="list-text"><block ref="1fa08d04c08db5225793f360e12d623f" category="inline-xref-macro-rx"></block> 最新の演算子。</block>
+  <block id="4c42e83b5a46ef16402aa2bea7ab525e" category="list-text">同じクラスタ名を使用してください。</block>
+  <block id="9e274d61eab1c1a3b088854ed50639ff" category="list-text">最新のOperator YAMLファイルをダウンロードしたら、展開する前に、agent_backup.yamlにあるカスタマイズをダウンロードしたoperator-config.yamlに移植します。</block>
+  <block id="447ede71efbff97ddd4418212a6b52c9" category="section-title">NetApp Kubernetes Monitoring Operatorを停止および開始します</block>
+  <block id="450670e2626f71fbb9a492373158ed02" category="paragraph">NetApp Kubernetes Monitoring Operatorを停止するには、次の手順を実行します</block>
+  <block id="c1bdaebddc4968d3e08193cf297db84b" category="paragraph">NetApp Kubernetes Monitoring Operatorを開始するには、次の手順を実行します</block>
+  <block id="c2aaea4dacecce78b34302e41fcef75e" category="section-title">アンインストール中です</block>
+  <block id="f9d83bcd2ea0c04a50e5e1cd5bc469ac" category="section-title">をクリックして、NetApp Kubernetes Monitoring Operatorを削除します</block>
+  <block id="7a8d7f509007f2970254571be4a339db" category="paragraph">NetApp Kubernetes Monitoring Operatorのデフォルトのネームスペースは、「NetApp Monitoring」です。  独自のネームスペースを設定した場合は、それらのネームスペースと、以降のすべてのコマンドおよびファイルを置き換えます。</block>
+  <block id="12deeaac5f633c54b730f8c247dbf7e0" category="paragraph">新しいバージョンの監視オペレータは、次のコマンドを使用してアンインストールできます。</block>
+  <block id="aee5f180cc531b30ec6cf8dcf509d9b8" category="paragraph">監視オペレータが専用のネームスペースに配置されている場合は、ネームスペースを削除します。</block>
+  <block id="97e76f0c81cc1c26b3d8ffe0d972c5af" category="paragraph">最初のコマンドが「リソースが見つかりません」を返した場合は、次の手順に従って古いバージョンの監視オペレータをアンインストールします。</block>
+  <block id="0b14d0fbc4256c7ec7c3bb39b2c28854" category="paragraph">次の各コマンドを順番に実行します。現在のインストール状況によっては、これらのコマンドの一部で「オブジェクトが見つかりません」というメッセージが返される場合があります。これらのメッセージは無視してかまいません。</block>
+  <block id="82a8cca794947463478c2f08445a8ff4" category="paragraph">セキュリティコンテキスト制約が事前に作成されている場合は、次の手順を実行します。</block>
+  <block id="a945216a5c61e628c867b8948c797454" category="section-title">Kubeステートメトリックについて</block>
+  <block id="bacf6d7427784a1658e1d5fb278300f8" category="paragraph">NetApp Kubernetes Monitoring Operatorは、kube-state-metricsを自動的にインストールします。ユーザによる操作は必要ありません。</block>
+  <block id="8f5d4322bbada1e271bc144d48fbd530" category="section-title">kube-state-metrics カウンタ</block>
+  <block id="0868aed0151117af81e4d8a3bf48f5d1" category="paragraph">これらのkubbeステートメトリックカウンタの情報にアクセスするには、次のリンクを使用します。</block>
+  <block id="dcd18b6a9c1c857332184b4ab6b6b876" category="inline-link">ConfigMap メトリック</block>
+  <block id="43c0e039eb7d522a6d4d124fdff7e06f" category="list-text"><block ref="43c0e039eb7d522a6d4d124fdff7e06f" category="inline-link-rx"></block></block>
+  <block id="8369bd4693cb273c71ad92f42fb3e791" category="inline-link">DemonSet メトリック</block>
+  <block id="9c6d0e0120fcf6c4d873e186cc9739bf" category="list-text"><block ref="9c6d0e0120fcf6c4d873e186cc9739bf" category="inline-link-rx"></block></block>
+  <block id="b1a7a1cd05f9351c6bef8223f686cd0b" category="inline-link">導入メトリック</block>
+  <block id="aa7c0000dea1ded472606bf83241d554" category="list-text"><block ref="aa7c0000dea1ded472606bf83241d554" category="inline-link-rx"></block></block>
+  <block id="3743b47b26a692a03362afc5a67c0463" category="inline-link">入力メトリック</block>
+  <block id="4cb7ce0b5790952cc6bda2997a7dabc9" category="list-text"><block ref="4cb7ce0b5790952cc6bda2997a7dabc9" category="inline-link-rx"></block></block>
+  <block id="e1f5942f12d62c7e887c901f5f6c7e30" category="inline-link">ネームスペース指標</block>
+  <block id="5fdc0df1bae486ee24716c612b24ca02" category="list-text"><block ref="5fdc0df1bae486ee24716c612b24ca02" category="inline-link-rx"></block></block>
+  <block id="1e8f3ee4ce1dbb00442a7fb041fa09e7" category="inline-link">ノードのメトリックス</block>
+  <block id="8b04a06b05700061d42a433c93746a63" category="list-text"><block ref="8b04a06b05700061d42a433c93746a63" category="inline-link-rx"></block></block>
+  <block id="551df464e5bd2444d259057c7eacc9f7" category="inline-link">永続的ボリューム指標</block>
+  <block id="69207fca599a65027f8a0597b95b093d" category="list-text"><block ref="69207fca599a65027f8a0597b95b093d" category="inline-link-rx"></block></block>
+  <block id="ea541521b7c5e710af931c8e4f58eb87" category="inline-link">永続的ボリューム要求の指標</block>
+  <block id="628462d67f17543dc95a839333690c0e" category="list-text"><block ref="628462d67f17543dc95a839333690c0e" category="inline-link-rx"></block></block>
+  <block id="7fc93683f45a50f207241b90641f402b" category="inline-link">ポッドのメトリック</block>
+  <block id="3962a47d5b09f2b1246c86d8bc272414" category="list-text"><block ref="3962a47d5b09f2b1246c86d8bc272414" category="inline-link-rx"></block></block>
+  <block id="0017245fe792a61975ebc02c48b109c5" category="inline-link">ReplicaSet メトリック</block>
+  <block id="5df76f1cf3ae3096632fd05036cd39a0" category="list-text"><block ref="5df76f1cf3ae3096632fd05036cd39a0" category="inline-link-rx"></block></block>
+  <block id="8f9fbab4275b3c6156f4a1e2bd589d5e" category="inline-link">シークレットメトリック</block>
+  <block id="94500053c0d8262e7a0caa0908ba6f8d" category="list-text"><block ref="94500053c0d8262e7a0caa0908ba6f8d" category="inline-link-rx"></block></block>
+  <block id="de3e236a6c33c06117bf9ae35e2b9bb0" category="inline-link">サービスメトリック</block>
+  <block id="4e3e0b949c1506c4eb21f3ebfc141e3b" category="list-text"><block ref="4e3e0b949c1506c4eb21f3ebfc141e3b" category="inline-link-rx"></block></block>
+  <block id="e0c0cc3c69b0271b0179dc71d1e9bfa7" category="inline-link">Stat助け Set メトリック</block>
+  <block id="3a41cf72ebe7dd71e2b8cb6f1a7e14ff" category="list-text"><block ref="3a41cf72ebe7dd71e2b8cb6f1a7e14ff" category="inline-link-rx"></block></block>
+  <block id="cac54dc379f23a7aed8745bde8386662" category="inline-link-macro">使用可能な設定</block>
+  <block id="cfda62a17e54042dffdf6eb6a74c7977" category="paragraph">新しいバージョンの演算子では、最も一般的に変更される設定は_AgentConfiguration_customリソースで構成できます。オペレータを配備する前に、_operator-config.yaml_fileを編集して、このリソースを編集できます。このファイルには、一部の設定例がコメントアウトされています。のリストを参照してください <block ref="d0a687c4569dc784e63f3960b33ab7c7" category="inline-link-macro-rx"></block> 演算子の最新バージョン。</block>
+  <block id="342414165099895140bbfbd3ffb613ca" category="paragraph">次のコマンドを使用してオペレータを配置した後で、このリソースを編集することもできます。</block>
+  <block id="3ab04e244a91c8a73c48633c62ac613a" category="paragraph">展開したオペレータのバージョンがAgentConfigurationをサポートしているかどうかを確認するには、次のコマンドを実行します。</block>
+  <block id="51ba9262aad7e83aa5f74ed6dc93a039" category="paragraph">「Error from server (NotFound)」というメッセージが表示された場合は、AgentConfigurationを使用する前にオペレータをアップグレードする必要があります。</block>
+  <block id="b33361bde0bcb58125ffdc8fc36d8b99" category="section-title">プロキシサポートを設定しています</block>
+  <block id="4ce29774235b5ad70135520aad0c4a92" category="paragraph">環境にプロキシを使用してNetApp Kubernetes Monitoring Operatorをインストールする方法は2つあります。同じプロキシシステムでも、別のプロキシシステムでもかまいません。</block>
+  <block id="b30dfc4554e987d8435414f85e0afc5c" category="list-text">プロキシは、インストールコードスニペット（「curl」を使用）の実行中に、スニペットが実行されるシステムをCloud Insights 環境に接続するために必要です</block>
+  <block id="58b692b7f72614bb3545960fa7db5fde" category="list-text">ターゲットのKubernetesクラスタがCloud Insights 環境と通信するために必要なプロキシ</block>
+  <block id="7a9065c97476c0400d1ffaaa20c4bbe5" category="paragraph">これらのいずれか、または両方にプロキシを使用する場合は、NetApp Kubernetes Operating Monitorをインストールするために、まずCloud Insights 環境との良好な通信を可能にするようにプロキシが設定されていることを確認する必要があります。プロキシがあり、オペレータをインストールするサーバ/VMからCloud Insights にアクセスできる場合は、プロキシが適切に設定されている可能性があります。</block>
+  <block id="73689eeba538dc0b4e24b0c08682858c" category="paragraph">NetApp Kubernetes Operating Monitorのインストールに使用するプロキシとして、オペレータをインストールする前に、_http_proxy/https_proxy_environment変数を設定します。一部のプロキシ環境では'_no_proxy環境変数も設定する必要があります</block>
+  <block id="05de88b1f0962d418af51426b2e42b5c" category="paragraph">変数を設定するには、NetApp Kubernetes Monitoring Operatorをインストールする前に、システムで次の手順を実行します。</block>
+  <block id="601e2f4bdb8c8d256c0862eb39ab26dd" category="list-text">セットアップするプロキシに認証（ユーザ名/パスワード）がない場合は、次のコマンドを実行します。</block>
+  <block id="aec78dde754edc4769d775d718da8408" category="list-text">セットアップするプロキシに認証（ユーザ名/パスワード）が設定されている場合は、次のコマンドを実行します。</block>
+  <block id="a4e1e6009cd02048a3c4c625810efdde" category="paragraph">KubernetesクラスタがCloud Insights 環境と通信するために使用するプロキシについては、以下の手順をすべて読み、NetApp Kubernetes Monitoring Operatorをインストールします。</block>
+  <block id="6a487db38d52ee4c14d91f1b1ddd2fac" category="paragraph">NetApp Kubernetes Monitoring Operatorを導入する前に、operator-config.yamlでAgentConfigurationのプロキシセクションを設定します。</block>
+  <block id="ba5a4399ff89e39d6d73b55b320d32dc" category="section-title">カスタムまたはプライベートのDockerリポジトリを使用する</block>
+  <block id="496310011786854d1bf0863b20b159b3" category="paragraph">デフォルトでは、NetApp Kubernetes Monitoring OperatorはCloud Insights リポジトリからコンテナイメージを取得します。監視のターゲットとして使用されているKubernetesクラスタがあり、カスタムまたはプライベートのDockerリポジトリまたはコンテナレジストリからのみコンテナイメージを取得するようにそのクラスタが設定されている場合は、NetApp Kubernetes Monitoring Operatorで必要なコンテナへのアクセスを設定する必要があります。</block>
+  <block id="664cfa316d48b417a500c0e898f37409" category="paragraph">NetApp Monitoring Operatorのインストールタイルから[Image Pull Snippet]を実行します。このコマンドは、Cloud Insights リポジトリにログインし、オペレータのすべてのイメージ依存関係をプルして、Cloud Insights リポジトリからログアウトします。プロンプトが表示されたら、指定したリポジトリの一時パスワードを入力します。このコマンドは、オプション機能を含む、オペレータが使用するすべてのイメージをダウンロードします。これらの画像がどの機能に使用されるかについては、以下を参照してください。</block>
+  <block id="e353fb1c241718a57c3f1ebea2f2eda2" category="paragraph">Core Operator Functionality and Kubernetes Monitoringの略</block>
+  <block id="aadb900c6eaeed8ade58660fe972acec" category="list-text">ネットアップによる監視</block>
+  <block id="4a3ecd51c30dc55cebd7ed9babbb7931" category="list-text">kube-rbac-proxyの略</block>
+  <block id="7b1808ad616c2f87f5c28aa1d89f75f7" category="list-text">distroless-root-user</block>
+  <block id="f8dcd7540ab5947fed469158330013cc" category="paragraph">イベントログ</block>
+  <block id="bb84790255aac66744320e4417143dd8" category="list-text">Fluent-bit</block>
+  <block id="2941fa605b5a46d4cf07aade64af8b6e" category="list-text">kubernetes-event-exporterの略</block>
+  <block id="e081b29a739e8831bbe1f8ad1c2a2859" category="paragraph">ネットワークのパフォーマンスとマップ</block>
+  <block id="a050c9f3e338616510e46bf6d9714f64" category="list-text">ci-net-observerの略</block>
+  <block id="a3cdf80b89a5235481aa9bc21b5857e9" category="paragraph">社内のポリシーに従って、オペレータ用の Docker イメージをプライベート / ローカル / エンタープライズ Docker リポジトリにプッシュします。リポジトリ内のこれらのイメージへのイメージタグとディレクトリパスが、Cloud Insights リポジトリ内のイメージタグとディレクトリパスと一致していることを確認します。</block>
+  <block id="8b4599b5810466dc4e8956fc5bc3c54c" category="paragraph">operator-deployment.yamlでmonitoring-operatorデプロイメントを編集し、プライベートDockerリポジトリを使用するようにすべてのイメージ参照を変更します。</block>
+  <block id="49174c164a8c6cc17236236504f05c4e" category="paragraph">operator-config.yamlのAgentConfigurationを編集して、新しいDockerリポジトリの場所を反映します。プライベートリポジトリ用に新しいimagePullSecretを作成します。詳細については、_ https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_を参照してください</block>
+  <block id="90e3576ed0e73e03c00705419f3411a3" category="section-title">OpenShift の手順</block>
+  <block id="ed8127bf6d6013cbef18d300d151a78a" category="paragraph">OpenShift 4.6以降で実行している場合は、_runPrivileged_settingを有効にするには、_operator-config.yaml_でAgentConfigurationを編集する必要があります。</block>
+  <block id="493c4ff608e06cc5a02d0561f6bb02a3" category="paragraph">OpenShiftは、一部のKubernetesコンポーネントへのアクセスをブロックする可能性のある追加のセキュリティレベルを実装する場合があります。</block>
+  <block id="d8c9294ea12d1c7d12e34008f3ecee39" category="section-title">秘密に関する注意事項</block>
+  <block id="1169bc31edb2122ab9876b9b0289225c" category="paragraph">クラスタ全体のシークレットを表示するNetApp Kubernetes Monitoring Operatorの権限を削除するには、インストール前に_operator-setup.yaml_fileから次のリソースを削除します。</block>
+  <block id="1790cdbccc4ddd4389eb90d73e043f4b" category="paragraph">アップグレードの場合は、クラスタからリソースも削除します。</block>
+  <block id="a66e68a20b3b94a700f3a3b9baa06764" category="paragraph">変更分析が有効になっている場合は、_AgentConfiguration_or_operator -config.yaml_を変更して、変更管理セクションのコメントを解除し、変更管理セクションの下に_kindsToIgnoreFromWatch：'"secrets"'_を含めます。この行の一重引用符と二重引用符の存在と位置に注意してください。</block>
+  <block id="342761835c95d3618833ced82b6260ac" category="section-title">Kubernetes のチェックサムの検証</block>
+  <block id="06da10bf5b15bdaae23d623ecea6b7f6" category="paragraph">Cloud Insights エージェントのインストーラで整合性チェックが実行されますが、ダウンロードしたアーティファクトのインストールまたは適用前に独自の検証を実行したいユーザもいます。デフォルトのダウンロードおよびインストールではなく、ダウンロードのみの操作を実行するには、 UI から取得したエージェントインストールコマンドを編集し、末尾の「インストール」オプションを削除します。</block>
+  <block id="8ff498fedef16be83cafa8d00c04dd6d" category="list-text">コマンドから末尾の「--install」を削除します。</block>
+  <block id="9f38037f1d71ce0a3fe1ba3e1c8aa8e1" category="paragraph">download-only コマンドを使用すると、必要なアーティファクトがすべて Cloud Insights から作業ディレクトリにダウンロードされます。  アーティファクトには次のものがありますが、これらに限定することはできません。</block>
+  <block id="700459827d4941a6a127bc7de7938d5d" category="list-text">署名済みチェックサムファイル（ SHA256 署名）</block>
+  <block id="e1f4fa985535cfb2dd4b3f50c918b7eb" category="list-text">署名の検証に使用する PEM ファイル（ NetApp_cert.pem ）</block>
+  <block id="7c9f5399bb10652ab7e06778c4de02e1" category="paragraph">PEM ファイルは、フィンガープリントが次のようになっていることを確認することで検証できます。</block>
+  <block id="7a2babd4fa48c9b0c07e4b865ff53efa" category="paragraph">具体的には、</block>
+  <block id="76dfc651463ab4e67ce2140b8aadb473" category="paragraph">署名済みチェックサムファイルは、 PEM ファイルを使用して確認できます。</block>
+  <block id="72e6fd543a67010efd03f7fdc1a1e1bc" category="paragraph">NetApp Kubernetes Monitoring Operatorのセットアップで問題が発生した場合の対処方法を次に示します。</block>
+  <block id="3dcf0a51075fbcf98f9e53d661506adf" category="cell">Kubernetes 永続ボリュームと対応するバックエンドストレージデバイスの間にハイパーリンク / 接続がありません。My Kubernetes Persistent Volume がストレージサーバのホスト名を使用して設定されます。</block>
+  <block id="31374f026fd34f38c1768e8bcae58183" category="cell">手順に従って既存の Tegraf エージェントをアンインストールし、最新の Tegraf エージェントを再インストールします。Tegrafバージョン2.0以降を使用していて、KubernetesクラスタストレージがCloud Insights によってアクティブに監視されている必要があります。</block>
+  <block id="a603e86bb87b54e9b7acc7e242269514" category="cell">ログに次のようなメッセージが表示されます。
+
+E0901 15:21:39.962145 1 reflector.go:178]k8s.io/kube-state-metrics/internal/store/builder.go:352:リストに失敗しました*v1.MutatingWebhookConfiguration:サーバーは要求されたリソースを見つけることができませんでした
+E0901 15:21:43.168161 1 reflector.go:178]k8s.io/kube-state-metrics/internal/store/builder.go:352:リストに失敗しました*v1 Lease:サーバーは要求されたリソースを見つけることができませんでした(GET leases.coordination.k8s.io)
+など</block>
+  <block id="0428b79968fc5aa0a5b6d427e6815d82" category="cell">これらのメッセージは、1.20より前のバージョンのKubernetesでkube-state-metricsバージョン2.0.0以上を実行している場合に発生する可能性があります。
+
+
+Kubernetesのバージョンを取得するには：
+
+ _kubectlバージョン_
+
+kube-state-metricsバージョンを取得するには、次の手順を実行します。
+
+ _kubectl get deploy/kube-state-metrics -o jsonpath='｛..image｝'_
+
+これらのメッセージが発生しないように、ユーザはkube-state-metrics展開を変更して、次のリースを無効にすることができます。
+
+_mutatingwebhookconfigurations_
+検証webhookconfigurations_
+_volumeattachmentsリソース_
+
+具体的には、次のCLI引数を使用できます。
+
+resources=certificatesigningrequests, configmaps, cronjobs, daemonsets, deployments, endpoints, horizontalpodautoscalers, ingresses, jobs, limitranges, namespaces, networkpolicies, poddisruptionbudgets, pods, ReplicaSets, replicationcontrollasses, resourcequotases, secrets, resourcequotases, secrets, services, storage, storefuls.
+
+デフォルトのリソースリストは次のとおりです。
+
+certificatesigningrequests, configmaps, cronjobs, daemonsets, deployments, endpoints, horizontalpododautoscalers, ingresses, jobs, leases, limitranges, mutatingwebhookconfiguration, namespaces, networkpersistentvolumes, poddisruptionbudgets, pers, persistentresets, pondsets, podsets, postresets, replicassess, replicastess, replicatess, replicastorets, replicast 検証Webhook構成'ボリューム添付ファイル"\y"ケンショウ:Webhookコウセイ'ボリュームアタッチメント</block>
+  <block id="b8ce784188c470b3c8ff0c7cc1a403e1" category="cell">Telegrafから次のようなエラーメッセージが表示されますが、Telegrafは起動して実行されます。
+
+10月11日14:23:41 IP-172-31-39-47 systemd[1]: InfluxDBにメトリックを報告するプラグイン駆動のサーバーエージェントを起動しました。
+10 月 11 日 14 ： 23 ： 41 IP-172-41-39-47 テレグラム [1827] ： time="2021 - 10-11T14 ： 23 ： 41Z" level= error msg=" キャッシュディレクトリの作成に失敗しました。/etc/telegraf/.cache/snowflake、err:mkdir /etc/telegraf/.ca
+CHE：権限が拒否されました。無視\n" func="gosnowflake.(*defaultLogger).Errorf" file="log.go:120"
+10月11日14：23：41 IP-172-31-39-47 telegraf [1827]：time="2021-10-11T14：23：41Z" level=error msg="failed to open.無視されます。/etc/telegraf/.cache/snowflake/ocsp_response_cache.jsonを開きます。no such
+ファイルまたはディレクトリ\n" func="gosnowflake.(*defaultLogger).Errorf" file="log.go:120"
+10月11日14:23:41 IP-172-31-39-47 telegraf [1827]: 2021-10-11T14:23:41Z I! Telegraf 1.19.3 を起動しています</block>
+  <block id="0ccd64b2e6202fbb544d22cd48a872b2" category="inline-link-macro">この GitHub の記事</block>
+  <block id="8f176f657f418586c2a4828045ab0c37" category="cell">これは問題と呼ばれています。  を参照してください <block ref="23bd9a1f0b26414ad35f4299a95464f0" category="inline-link-macro-rx"></block> 詳細：Tegraf が起動して動作している限り、ユーザはこのエラーメッセージを無視できます。</block>
+  <block id="9aab00e938cede2932654042bc507309" category="cell">Kubernetesで、Telegrafポッドが次のエラーを報告しています。
+"mountstats情報の処理中にエラーが発生しました：mountstatsファイルを開けませんでした：/hostfs/proc/1/mountstats、エラー：open/hostfs/proc/1/mountstats：権限が拒否されました"</block>
+  <block id="cf0c5ed1e47d7431af16b71ad06bfcba" category="cell">SELinuxを有効にして強制すると、TelegrafポッドがKubernetesノードの/proc/1/mountstatsファイルにアクセスできなくなる可能性があります。この制限を克服するには、agentconfigurationを編集し、runPrivileged設定を有効にします。詳細については、以下を参照してください。<block ref="b799c83c0330c0824f3118282f39ee9e" category="inline-link-rx"></block>。</block>
+  <block id="f997e79142f159c33823b9deeab809eb" category="cell">Kubernetesで、Telegraf ReplicaSetポッドが次のエラーを報告しています。
+
+ [プラグインのinputs.prometheus]エラー：keypair /etc/kubernetes/pki/etcd/server.crtをロードできませんでした：/etc/kubernetes/pki/etcd/server.key：open /etc/kubernetes/pki/etcd/server.crt：該当するファイルまたはディレクトリはありません</block>
+  <block id="9df12d675c4f61381132e45173ef90d0" category="cell">Telegraf ReplicaSet ポッドは、マスターまたは etcd 用に指定されたノード上で実行することを目的としています。これらのノードのいずれかで ReplicaSet ポッドが実行されていない場合は、これらのエラーが発生します。マスター / etcd ノードに汚染があるかどうかを確認します。その場合は、 Telegraf ReplicaSet 、テレグラム af-RS に必要な忍容を追加します。
+
+たとえば、ReplicaSet...
+
+ kubectl edit rs telegraf-rs
+
+仕様に適切な公差を追加します。次に、 ReplicaSet ポッドを再起動します。</block>
+  <block id="7f213685ee85ff84e10c6c9b9c633789" category="cell">PSP/PSA環境があります。これはモニタリングオペレータに影響しますか？</block>
+  <block id="180998c51dd0da936f3ebbeb1b922f6b" category="cell">ポッドセキュリティポリシー（PSP）またはポッドセキュリティアドミッション（PSA）を適用してKubernetesクラスタを実行している場合は、最新のNetApp Kubernetes Monitoring Operatorにアップグレードする必要があります。PSP/PSAをサポートする現在のNKMOにアップグレードするには、次の手順に従います。
+
+1. <block ref="a7177598d8f3c4f7d3503ecefe58c480" category="inline-xref-macro-rx"></block> 以前の監視オペレータ：
+
+ kubectl delete agent agent-monitoring-netapp-n netapp-monitoring
+ kubectlによってネットアップによる監視が削除されます
+ kubectlはCRD agents.monitoring.netapp.comを削除します
+ kubectl delete clusterrole agent-manager-role agent-proxy-role agent-metrics-reader
+ kubectl delete clusterrolebinding agent-manager-rolebinding agent-proxy-rolebinding agent-cluster-admin-rolebinding
+
+2. <block ref="8e5c51a62ab45f504ec71f39c03c1633" category="inline-xref-macro-rx"></block> モニタリングオペレータの最新バージョン。</block>
+  <block id="6ae137903bc328659928ed818d9ee78a" category="cell">NKMOを導入する際に問題が発生し、PSP/PSAを使用しました。</block>
+  <block id="63c5c26973f4cb2983185abedde31f4b" category="cell">1.次のコマンドを使用してエージェントを編集します。
+
+kubectl -n &lt;name-space&gt;編集エージェント
+
+2.「security-policy-enabled」を「false」に設定します。これにより、ポッドセキュリティポリシーとポッドセキュリティアドミッションが無効になり、NKMOが展開できるようになります。次のコマンドを使用して確認します。
+
+kubectl get psp（Pod Security Policy removedを表示する必要があります）
+kubectl get all -n &lt;namespace&gt;| grep -i psp (should show that nothing is found)</block>
+  <block id="59e3026f71d01a624108642cdb778ebd" category="cell">「ImagePullBackoff」エラーが発生しました</block>
+  <block id="43340e6cc4e88197d57f8d6d5ea50a46" category="inline-xref">詳細はこちら</block>
+  <block id="d18743173cd6691e1637fd7bb6299057" category="cell">このエラーは、カスタムまたはプライベートのDockerリポジトリがあり、NetApp Kubernetes Monitoring Operatorで正しく認識されるように設定していない場合に表示されることがあります。  <block ref="64c2e35c96e92fc99426098fae703fff" category="inline-xref-macro-rx"></block> カスタム/プライベートリポジトリの設定について</block>
+  <block id="6da3e5f4ef4407262c741e8325a8249d" category="cell">監視オペレータの配置に問題 を使用していますが、現在のドキュメントでは解決できません。</block>
+  <block id="368fbe1d48012e8e4f24249e2b27a8dd" category="paragraph">次のコマンドの出力をキャプチャまたはメモし、テクニカルサポートチームに連絡します。</block>
+  <block id="0538684ab7c9197cd8966c3859e59c6a" category="cell">NKMOネームスペース内のNet-Observer（ワークロードマップ）ポッドはCrashLoopBackOffにあります</block>
+  <block id="b1dd812a8bc65d5769e88b945f591999" category="cell">これらのポッドは、Network ObservabilityのWorkload Mapデータコレクタに対応しています。以下をお試しください。
+•いずれかのポッドのログをチェックして、カーネルの最小バージョンを確認します。例：
+
+-----
+｛"ci-tenant-id"："your-tenant-id"、"collector-cluster"："your-k8s-cluster-name"、"environment"："prod"、"level"："error"、"msg"："検証に失敗しました。理由：カーネルバージョン3.10.0が最小カーネルバージョン4.18.0よりも小さい、"time"："2022-11-09T08:23:08Z"｝
+-----
+
+•Net-Observerポッドを使用するには、Linuxカーネルのバージョンが4.18.0以上である必要があります。「uname -r」コマンドを使用してカーネルのバージョンを確認し、4.18.0以上であることを確認します</block>
+  <block id="c37dcb848a7244594adc1af67cc44fb5" category="cell">ポッドはNKMOネームスペース（デフォルト：netapp-monitoring）で実行されていますが、[Queries]のワークロードマップまたはKubernetes指標のデータがUIに表示されません</block>
+  <block id="b301a7b156c241fb466de1bca776811c" category="cell">K8Sクラスタのノードの時間設定を確認します。監査およびデータレポートを正確に作成するには、Network Time Protocol（NTP；ネットワークタイムプロトコル）またはSimple Network Time Protocol（SNTP；簡易ネットワークタイムプロトコル）を使用してAgentマシンの時刻を同期することを強く推奨します。</block>
+  <block id="4ded7a1a9e117c3e40fb8fd746b0652d" category="cell">NKMOネームスペース内の一部のnet-observerポッドが保留状態になっています</block>
+  <block id="c55a7a21faf06d9f162882100bc46e42" category="cell">net-observerはデーモンセットであり、Kubernetesクラスタの各ノードでポッドを実行します。
+•保留状態のポッドをメモし、CPUまたはメモリのリソース問題が発生しているかどうかを確認します。必要なメモリとCPUがノードにあることを確認します。</block>
+  <block id="04e7b6395fd3a2be3a25869ea1196f3d" category="cell">NetApp Kubernetes Monitoring Operatorをインストールした直後に、ログに次のようなメッセージが表示されます。
+
+[プラグインのinputs.prometheus]エラー：へのHTTP要求の実行中にエラーが発生しました<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> ゲット<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> dial tcp：lookup kube-state-metrics.&lt;namespace&gt; .svc.cluster.local：該当するホストがありません</block>
+  <block id="d232f49a9877a99204dde54474c23ce6" category="cell">このメッセージが表示されるのは、通常、_KSM_PODが起動する前に、新しいオペレータがインストールされ、_テレ グラム-RS_PODが稼働している場合のみです。これらのメッセージは、すべてのポッドが実行されると停止します。</block>
+  <block id="02230bab9788e4843408e124331bb1ca" category="cell">クラスタに存在するKubernetes CronJobsについて収集された指標が表示されません。</block>
+  <block id="81467098050f12a1f4ece9dea82405f0" category="cell">Kubernetesのバージョンを確認します（<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>）。  v1.20.x以下の場合、これは想定される制限です。  NetApp Kubernetes Monitoring Operatorで導入されたkube-state-metricsリリースでは、v1.cronjobのみがサポートされます。  Kubernetes 1.20.x以前では、cronjobリソースはv1beta.cronjobにあります。  その結果、kube-state-metricsはcronjobリソースを見つけることができません。</block>
+  <block id="45698e13b1c2f7241751839133834506" category="cell">オペレータのインストール後、telegraf-DSポッドがCrashLoopBackOffに入り、PODログに「su：Authentication failure」と表示されます。</block>
+  <block id="856e2dfd00ab497c6f91560e87be666f" category="cell">_AgentConfiguration_のnetapp-monitoring-configurationセクションを編集し、_dockerMetricCollectionEnabled_をfalseに設定します。詳細については、オペレータのを参照してください <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>。
+
+注： Cloud Insightsフェデラルエディションを使用している場合、_su_の使用が制限されているユーザーはDockerメトリクスを収集できません。Dockerソケットにアクセスするには、telegrafコンテナをrootとして実行するか、_su_を使用してtelegrafユーザーをDockerグループに追加する必要があるためです。Dockerメトリック収集と_su_の使用はデフォルトで有効になっています。両方を無効にするには、_AgentConfiguration_fileの_telegraf.docker_entryを削除します。
+
+な...何だ?
+仕様：
+な...何だ?
+テレグラフ：
+    な...何だ?
+     -名前：Docker
+            実行モード：
+              -デーモンセット
+            置換：
+              -key：docker_unix_sock_placeholder
+                値：unix：//run/docker.sock
+    な...何だ?
+な...何だ?</block>
+  <block id="9de497f607f8a73311408d3d7b337399" category="cell">Telegrafログに次のようなエラーメッセージが繰り返し表示されます。
+
+ 来い! [agent]出力への書き込み中にエラーが発生しました。http：Post <block ref="95209f65da8fece27c962b4b503ef61a" category="inline-link-rx"></block> コンテキストの期限を超過しました（ヘッダー待機中にClient.Timeoutが超過しました）</block>
+  <block id="34e1dafcca7166ebef6820ec79ddd7cf" category="cell">各Telegraf設定ファイル（/etc/telegraf/telegraf.d/*.confなど）を編集し、Telegraf出力プラグインのタイムアウトを増やします。  たとえば、各.confファイルで、...のすべてのインスタンスを置き換えます。
+
+[[outputs.http]]
+な...何だ?
+タイムアウト="5s"
+...
+
+
+...で次の操作を行います。
+
+[[outputs.http]]
+な...何だ?
+タイムアウト="10s"
+...
+
+次にTelegrafを再起動します。</block>
+  <block id="4f05106cca363b0f3c492314ab777534" category="cell">一部のイベントログの_involvedobject_dataが見つかりません。</block>
+  <block id="67ee92e19812baa7cedb346320ca0182" category="cell">次の手順を実行していることを確認してください： <block ref="d9283cdb1b027ed2a61fa92c8dc3e314" category="inline-link-macro-rx"></block> 上記のセクション。</block>
+  <block id="5e77ada1a807785ef1b03c3f1b96779c" category="cell">2つの監視オペレータポッド（netapp-ci-monitoring-operator-pod &lt;pod&gt;とmonitoring-operator-pod）が実行されているのはなぜ&lt;pod&gt;ですか？</block>
+  <block id="1c1bebc9155c93bfe8263d7dd59e4d97" category="inline-xref">古いオペレータを削除します。</block>
+  <block id="3aadd91c93bca2d335851fd692f310be" category="inline-xref">新しいものを取り付ける</block>
+  <block id="e7d6cf6485500824df0535ac307eb301" category="cell">2023年10月12日現在、Cloud Insightsはユーザーにより良いサービスを提供するためにオペレータをリファクタリングしています。これらの変更を完全に適用するには、 <block ref="860504374016936ed59489a365e20672" category="inline-xref-macro-rx"></block> および <block ref="d0e6f11bd593aa32efc140a3c31c51b6" category="inline-xref-macro-rx"></block>。</block>
+  <block id="23cda888e57eaac9d48f4167127da1b8" category="cell">Kubernetesイベントが予期せずCloud Insightsへの報告を停止しました。</block>
+  <block id="0f21fa822dc46792cc163d7e77fe6c2c" category="paragraph">event-exporterポッドの名前を取得します。</block>
+  <block id="9df5220f9f1e94f2849e58be10655af5" category="paragraph">「netapp-ci-event-exporter」または「event-exporter」のいずれかにする必要があります。  次に、監視エージェントを編集します。<block ref="254deec50834604297ddd3caab0d8ce7" prefix=" " category="inline-code"></block>をクリックし、log_fileの値を設定して、前の手順で見つけた適切なイベントエクスポータポッド名を反映します。  具体的には、log_fileは「/var/log/containers/netapp-ci-event-exporter.log」または「/var/log/containers/event-exporter *。log」のいずれかに設定する必要があります。</block>
+  <block id="fe98497efedbe156ecc4b953aea77e07" category="inline-xref">をアンインストールします</block>
+  <block id="7b4d917229221f1292dd0dc7b693cccf" category="inline-xref">再インストール</block>
+  <block id="8878dc3c5cd3e696f38ddc994eba9593" category="paragraph">別の方法として、 <block ref="eb03b2f692ebf826fa07016cc9fa15a6" category="inline-xref-macro-rx"></block> および <block ref="2be7be71447d2c340aab35ab29970e30" category="inline-xref-macro-rx"></block> エージェント。</block>
+  <block id="5be7a9b90aa61d46f99cd06715e40a54" category="cell">リソースが不足しているため、NetApp Kubernetes Monitoring Operatorによってデプロイされたポッドがクラッシュしています。</block>
+  <block id="740cd109d583d1b28a1ebd66338906b7" category="cell">『NetApp Kubernetes Monitoring Operator』を参照してください。 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block> 必要に応じてCPUやメモリの制限を増やします。</block>
+  <block id="8250aff5bf291c0fd6c60d86a94af326" category="summary">Couchbase データコレクタの設定</block>
+  <block id="c85700224d4de4029d47e8f7419f121a" category="doc">Couchbase Data Collector</block>
+  <block id="2cc7a39d9220b0a6ca309f2f84801606" category="paragraph">Cloud Insights では、このデータコレクタを使用して Couchbase から指標を収集します。</block>
+  <block id="80502f098bcf776c1d9ceec1ba9d636a" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[Couchbase]を選択します。</block>
+  <block id="d7712cfab308e47f5bb1445e9fbcb070" category="inline-image-macro">Couchbase 構成</block>
+  <block id="64fffda04d6b10150c8c8726100e6239" category="paragraph"><block ref="64fffda04d6b10150c8c8726100e6239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="41bdcd289793051395a360769595211c" category="inline-link-macro">Couchbase ドキュメント</block>
+  <block id="f2b2ffbd53b392b14604a492426ea7ac" category="paragraph">情報は、に記載されています <block ref="6a0d18e0abc795e5bc07d2ebcfb2d123" category="inline-link-macro-rx"></block>。</block>
+  <block id="c3a20296fdda109e5a387244bb33fbf6" category="cell">Couchbase Node</block>
+  <block id="e4ef366ae6be226c757b37e27fcb263c" category="cell">ネームスペース
+クラスタ
+Couchbaseノードのホスト名</block>
+  <block id="5c89437098c8abb0c4893d4e1c655f2c" category="cell">メモリ空き
+メモリ合計</block>
+  <block id="a852fa80ca1bc5024319d7b5d7d84b6d" category="cell">Couchbase バケット</block>
+  <block id="d62c713a51121af573c0ef402ab3a282" category="cell">ネームスペース
+バケット
+クラスタ</block>
+  <block id="4e6556682c31b5913aa78d687bb53082" category="cell">使用済みデータ
+データフェッチ
+使用されているディスク
+アイテム数
+使用されているメモリ
+1秒あたりの処理数
+使用済みクォータ</block>
+  <block id="760f80f90fb384d40bb66a9f0b4823fd" category="doc">Flink Data Collector の使用</block>
+  <block id="54387b91997cebc2b9f94c02572ea7c8" category="paragraph">Cloud Insights では、このデータコレクタを使用してフロークからメトリックを収集します。</block>
+  <block id="b9edb2d8cbff35711b7021f32a2692dd" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[Flink]を選択します。</block>
+  <block id="c1a584a645c5a21efa505b7deca25b2b" category="inline-image-macro">FLINK 構成</block>
+  <block id="2462dee15f2229ca8b824af60aa5037f" category="paragraph"><block ref="2462dee15f2229ca8b824af60aa5037f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="88f3c1a97fbc332ad9adb7ff5179d0f5" category="paragraph">フルリンク展開では、次のコンポーネントが使用されます。</block>
+  <block id="5ec659a1960f3ec4bb0ed146c2fe29e8" category="paragraph">JobManager ： Flink プライマリシステム。一連の TaskManager を調整しますハイアベイラビリティ設定では、システムに複数の JobManager が存在します。
+TaskManager ： Flink 演算子が実行される場所です。
+Flink プラグインは、テレグラムの Jolokia プラグインに基づいています。すべての Flink コンポーネントから情報を収集するための要件など、 JMX はすべてのコンポーネントで Jolokia を介して設定および公開する必要があります。</block>
+  <block id="56b6a44368589d2180398c17050693ba" category="paragraph">Flink バージョン 1.7.0 に対して設定が開発されました。</block>
+  <block id="0fafe075396c21ab32ba5bed2f6b04cb" category="paragraph">以下の手順では、ダウンロードした jar ファイル（ jolokia-jvm-1.6.0-agent.jar ）が「 /opt/Flink/lib/' 」の下に配置されると想定しています。</block>
+  <block id="d6625a003ca97117da4294ef2332bec8" category="section-title">JobManager</block>
+  <block id="ac48db67fd50d761b0cc801e21516f81" category="paragraph">JobManager で Jolokia API を公開するように設定するには、ノードで次の環境変数を設定して JobManager を再起動します。</block>
+  <block id="be858081216aea340977594f6274fe6e" category="paragraph">Jolokia （ 8778 ）には別のポートを選択できます。Jolokia をロックする内部 IP を持っている場合は、「 catch all 」 0.0.0.0 を自分の IP で置き換えることができます。この IP には、テレグラムプラグインからアクセスできる必要があります。</block>
+  <block id="dad4668bc0b8e79cd460bf9f0e0a9700" category="section-title">TaskManager の略</block>
+  <block id="239187f7984607b4dbabb4a154679050" category="paragraph">Jolokia API を公開するように TaskManager を設定するには ' ノードに次の環境変数を設定し 'TaskManager を再起動します</block>
+  <block id="fed9c829468f01ad78cb54dd7cce7c1e" category="cell">Flink タスクマネージャ</block>
+  <block id="4a6c9bd53c6d064a543027eaa563c583" category="cell">ノード名
+タスクマネージャID
+ノードIP</block>
+  <block id="4fd8a1981a5b46d96897012d9e9b9168" category="cell">Network Available Memory Segmentsの略
+Network Total Memory Segmentsの略
+ガベージコレクションPS MarkSweep数
+ガベージコレクションPS MarkSweep Timeの略
+ガベージコレクションPSスカベンジ数
+ガベージコレクションPSスカベンジ時間
+ヒープメモリがコミットされました
+ヒープメモリの初期化
+ヒープメモリ最大
+ヒープメモリ使用済み
+スレッドカウントデーモン
+スレッド数のピーク
+スレッド数
+スレッド数合計が開始されました</block>
+  <block id="e5bcf79e43b1cb79fa38d8773f5c9876" category="cell">フリンクジョブ</block>
+  <block id="846a72770c317ead4062aedae5f893c8" category="cell">クラスタ
+ネームスペース
+サーバ
+ジョブ ID</block>
+  <block id="6a2c2989b258eae68f76754fa5d41c6f" category="cell">ノード名
+ジョブ名
+ノードIP
+Last Checkpoint External Pathの略
+再起動時間</block>
+  <block id="5cada8907c93eaad28b0ddd4ec957602" category="cell">ダウンタイム
+完全に再起動します
+前回のチェックポイントアライメントがバッファリングされました
+前回のチェックポイント期間
+前回のチェックポイントサイズ
+完了したチェックポイントの数
+失敗したチェックポイントの数
+進行中のチェックポイントの数
+チェックポイントの数
+アップタイム</block>
+  <block id="3d7a81a763fb0e456c06be07d13566ea" category="cell">Flink ジョブマネージャー</block>
+  <block id="97f03473b1053f9ddc2ebac96e570fbf" category="cell">ガベージコレクションPS MarkSweep数
+ガベージコレクションPS MarkSweep Timeの略
+ガベージコレクションPSスカベンジ数
+ガベージコレクションPSスカベンジ時間
+ヒープメモリがコミットされました
+ヒープメモリの初期化
+ヒープメモリ最大
+ヒープメモリ使用済み
+登録されているタスクマネージャの数
+実行中のジョブの数
+使用可能なタスクスロット
+タスクスロットの合計
+スレッドカウントデーモン
+スレッド数のピーク
+スレッド数
+スレッド数合計が開始されました</block>
+  <block id="4c6db84f5a8ecb130c48fbe482bd0407" category="cell">Flink タスク</block>
+  <block id="d14c367e94317a3e6e27568781bb8c3c" category="cell">クラスタ
+ネームスペース
+ジョブ ID
+タスク ID</block>
+  <block id="5843feb1d224110026d8762d7faffc66" category="cell">サーバ
+ノード名
+ジョブ名
+サブタスクインデックス
+タスク試行ID
+タスク試行番号
+タスク名
+タスクマネージャID
+ノードIP
+Current Input Watermarkの略</block>
+  <block id="fd3f7cc527e3ec659d722c45c30e0117" category="cell">Pool Usageのバッファ
+Buffers in Queue Lengthの略
+Buffers Out Pool Usageの略
+バッファアウトキュー長
+ローカルのバッファ数
+Number Buffers in Local Per Secondカウント
+ローカル/秒レートのバッファ数
+リモートのNumber Buffers（バッファ数）
+Number Buffers in Remote Per Second（リモート/秒）カウント
+Number Buffers in Remote Per Second Rate（リモート/秒レート）
+Number Buffers Outの略
+Number Buffers Out Per Secondカウント
+Number Buffers Out Per Second Rateの略
+ローカルのバイト数
+1秒あたりのローカルバイト数
+ローカル/秒レートのバイト数
+リモートのバイト数
+1秒あたりのリモートバイト数
+Remote Per Second Rateのバイト数
+送信されたバイト数
+Number Bytes Out Per Second Count（1秒
+1秒あたりの送信バイト数レート
+のレコード数
+1秒あたりのレコード数
+1秒あたりのレコード数
+レコード数が出ている
+Number Records Out Per Second Countの略
+Number Records Out Per Second Rateの略</block>
+  <block id="612f6074a0c92f40ddbce389e1bcf2fc" category="cell">Flink タスクオペレータ</block>
+  <block id="efa07c862dd433cfd3278ef665cd62bf" category="cell">クラスタ
+ネームスペース
+ジョブ ID
+オペレータID
+タスク ID</block>
+  <block id="2aa96940f26ed9cf171b1aba30346ffa" category="cell">サーバ
+ノード名
+ジョブ名
+演算子名
+サブタスクインデックス
+タスク試行ID
+タスク試行番号
+タスク名
+タスクマネージャID
+ノードIP</block>
+  <block id="36492bf47ea19332301e1b80a8878538" category="cell">Current Input Watermarkの略
+Current Output Watermarkの略
+のレコード数
+1秒あたりのレコード数
+1秒あたりのレコード数
+レコード数が出ている
+Number Records Out Per Second Countの略
+Number Records Out Per Second Rateの略
+遅延レコード数がドロップされました
+割り当て済みパーティション
+Bytes Consumed Rate
+コミットレイテンシの平均
+コミットレイテンシ最大
+コミット率
+コミットに失敗しました
+コミットに成功しました
+接続完了率
+接続数
+接続作成レート
+カウント
+フェッチレイテンシの平均
+フェッチレイテンシの最大値
+フェッチレート
+取得サイズ平均
+フェッチサイズ最大
+フェッチスロットル時間平均
+フェッチスロットル時間最大
+ハートビートレート
+受信バイトレート
+IO比率
+IO時間の平均（ns）
+IO待機比率
+IO待機時間の平均（ns）
+参加率
+ジョイン時間平均
+前回のハートビート前
+Network IO Rateの略
+Outgoing Byte Rateの略
+レコード消費率
+最大遅延レコード
+リクエストあたりのレコード平均
+リクエスト率
+リクエストサイズ平均
+要求サイズ最大
+応答速度
+レートを選択します
+同期レート
+同期時間平均
+ハートビート応答時間最大
+結合時間の最大値
+同期時間最大</block>
+  <block id="4c35289465431b7541002dd365bad198" category="summary">MySQL データコレクタの設定</block>
+  <block id="d1f43c925400e37adcd15285deaac430" category="doc">MySQL データコレクタ</block>
+  <block id="5d1d986fa74eaeda0a328a24da34dc8f" category="paragraph">Cloud Insights は、このデータコレクタを使用して MySQL からのメトリックを収集します。</block>
+  <block id="53a22ff7bf05343afd43baa85e5c7883" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。MySQLを選択します。</block>
+  <block id="cfe3b09f39613d05db4ca7532b374386" category="inline-image-macro">MySQL の設定</block>
+  <block id="acd86359b435b0d32d73a66fa03be887" category="paragraph"><block ref="acd86359b435b0d32d73a66fa03be887" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0281cf739776a9c6b7c6cb01c1accf40" category="inline-link-macro">MySQL のドキュメント</block>
+  <block id="6292388c6e8693ea6c73e72a49ab4655" category="paragraph">情報は、に記載されています <block ref="4319c63c14adb8b966feb7239cf0a2bb" category="inline-link-macro-rx"></block>。</block>
+  <block id="7b13a5e1284d961b045ce256aaf8121b" category="cell">ネームスペース
+MySQLサーバ</block>
+  <block id="aa0de5a29cbb206ae9a2819913271064" category="cell">中止されたクライアント数（1秒あたり）
+中断された接続数（1秒あたり）
+受信バイト数（1秒あたり）
+転送バイト数（1秒あたり）
+管理コマンド数（1秒あたり）
+コマンドはイベントを変更します
+コマンドは機能を変更します
+コマンドはインスタンスを変更します
+コマンドは手順を変更します
+コマンドはサーバーを変更します
+コマンドはテーブルを変更します
+コマンドはテーブルスペースを変更します
+コマンドはユーザーを変更します
+コマンド解析（Commands Analyze
+コマンドはキーキャッシュに割り当てます
+コマンドが開始されます
+コマンドBinlog
+コマンド手順を呼び出します
+コマンド変更DB
+コマンドマスターを変更します
+[コマンド][リプレゼンテーションフィルタを変更]
+コマンドチェック
+コマンドチェックサム
+コマンドCommit
+コマンドCreate DB
+コマンドイベントを作成します
+コマンド機能を作成します
+コマンドインデックスを作成します
+コマンドCreate手順
+コマンドサーバーを作成します
+コマンドテーブルを作成します
+コマンドCreate Trigger
+コマンドUDFを作成します
+コマンドCreate User
+コマンドビューを作成します
+コマンドdealloc SQL
+接続エラーが許可されました
+tmpディスクテーブルを作成しました
+遅延エラー
+フラッシュコマンド
+ハンドラコミット
+InnoDBバッファプールバイトデータ
+キーブロックはフラッシュされませんでした
+キー読み取り要求
+キー書き込み要求
+キー書き込み
+最大実行時間を超過しました
+最大使用接続数
+ファイルを開きます
+パフォーマンススキーマアカウントが失われました
+準備済みStmt数
+Qcache空きブロック
+クエリ
+質問
+[Full Join]を選択します
+[Full Range Join]を選択します
+範囲チェックを選択します
+スキャンを選択します
+テーブルがすぐにロックされます</block>
+  <block id="f675ac1ea34754aba3279d7f93746721" category="summary">Kibana データコレクタの設定</block>
+  <block id="d6678652208f4e26109690d4ab6151e5" category="doc">Kibana データコレクタ</block>
+  <block id="75ac4fff844290c8b306aced90a6ad0d" category="paragraph">Cloud Insights は、このデータコレクタを使用して Kibana から指標を収集します。</block>
+  <block id="710ec696cccefe4c3faa1d7ebf8fca87" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。「きばな」を選択します。</block>
+  <block id="ed9f8d76b0ccacc02aa67a13d6c1e9a8" category="inline-image-macro">Kibana の構成</block>
+  <block id="18785da9c6be5397773e5c495dcc23f4" category="paragraph"><block ref="18785da9c6be5397773e5c495dcc23f4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3c84e442bbf213b7d0e5047d09d7aef4" category="inline-link-macro">Kibana のドキュメンテーション</block>
+  <block id="a8bdbad6177ca64d397d863b68fe3fe9" category="paragraph">情報は、に記載されています <block ref="07c833901243190735d960ff17f32792" category="inline-link-macro-rx"></block>。</block>
+  <block id="5228fdd6f613af63fc73ee7c02ef8fb5" category="cell">キバナ</block>
+  <block id="22591bcc5e32570096ba46abc2143b90" category="cell">ネームスペース
+住所</block>
+  <block id="a78ce0ccaaa47b18906f1de5d019d817" category="cell">ノードIP
+ノード名
+バージョン
+ステータス</block>
+  <block id="159dbe63e44af239ee60fabff2752f0e" category="cell">同時接続
+ヒープ最大
+ヒープが使用されました
+1秒あたりの要求数
+応答時間平均
+最大応答時間
+アップタイム</block>
+  <block id="3e647ef93d862cebdd7fa80573f126aa" category="summary">MongoDB データコレクタの設定</block>
+  <block id="53e70a8dd3a918a24f705909a168c35c" category="doc">MongoDB データコレクタ</block>
+  <block id="5365ec2fc489501ed613b8ad5b954e9c" category="paragraph">Cloud Insights は、このデータコレクタを使用して MongoDB からの指標を収集します。</block>
+  <block id="c71f6654a45927e285ab22a697438b43" category="list-text">[Observability]&gt;[Collectors]*で、*+ Data Collector *をクリックします。[MongoDB]を選択します。</block>
+  <block id="06dc92e8ae707ce9c6046e102df5a214" category="inline-image-macro">MongoDB の設定</block>
+  <block id="0f54e55841a24b143c2104aab4935f7b" category="paragraph"><block ref="0f54e55841a24b143c2104aab4935f7b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="38d4b2dc2b4a57b1ac9fd3ffb91a1e4e" category="inline-link-macro">MongoDB のドキュメント</block>
+  <block id="6d44425175e1033dd7e44ad93e6c1716" category="paragraph">情報は、に記載されています <block ref="03dc511ffabb03f2ed77b5dbe821f120" category="inline-link-macro-rx"></block>。</block>
+  <block id="206e3718af092fd1d12f80cae771ccac" category="cell">MongoDB</block>
+  <block id="7c33c5b9bc17f5cdef2a6e9af34ec2ba" category="cell">ネームスペース
+ホスト名</block>
+  <block id="03a2f43be2bb9fe29ee41afceec0ffcd" category="cell">MongoDB データベース</block>
+  <block id="53de6191c5a3773a175198e9140b6c2b" category="cell">ネームスペース
+ホスト名
+データベース名</block>
+  <block id="d5712dd84650ff1cb4915da1c121ffbb" category="paragraph">情報はから入手できます <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> ページ</block>
 </blocks>

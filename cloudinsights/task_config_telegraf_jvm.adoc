@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_jvm.html 
+keywords: telegraf, installation, install, jvm 
+summary: JVM データコレクタの設定 
+---
+= JVM Data Collector （ JVM データ収集）
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights は、このデータコレクタを使用して JVM からメトリックを収集します。
+
+
+
+== インストール
+
+. [Observability]>[Collectors]*で、*+ Data Collector *をクリックします。JVMを選択します。
++
+Tegraf エージェントがインストールされているオペレーティングシステムまたはプラットフォームを選択します。
+
+. Agent for Collection をまだインストールしていない場合、または別のオペレーティングシステムまたはプラットフォームに Agent をインストールする場合は、 _Show Instructions_ をクリックしてを展開します link:task_config_telegraf_agent.html["エージェントのインストール"] 手順
+. このデータコレクタで使用するエージェントアクセスキーを選択します。[*+Agent Access Key*] ボタンをクリックすると、新しいエージェントアクセスキーを追加できます。ベストプラクティス：別のエージェントアクセスキーを使用するのは、たとえば OS/ プラットフォーム別にデータコレクタをグループ化する場合だけです。
+. 設定手順に従ってデータコレクタを設定します。手順は、データの収集に使用するオペレーティングシステムまたはプラットフォームのタイプによって異なります。
+
+
+image:JVMDCConfigLinux.png["JVMの設定"]
+
+
+
+== セットアップ（ Setup ）
+
+情報については、を参照してください link:https://docs.oracle.com/javase/specs/jvms/se12/html/index.html["JVMのドキュメント"]。
+
+
+
+== オブジェクトとカウンタ
+
+次のオブジェクトとそのカウンタが収集されます。
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| オブジェクト： | 識別子： | 属性： | 「 dataPoints 」： 
+
+
+| JVM | ネームスペース
+JVM | OSアーキテクチャ
+OS名
+OSバージョン
+ランタイム仕様
+ランタイム仕様ベンダー
+ランタイム仕様バージョン
+アップタイム
+ランタイムVM名
+ランタイムVMベンダー
+ランタイムVMバージョン
+ノード名
+ノードIP | クラスが読み込まれました
+クラスロード合計
+クラスがアンロードされました
+メモリヒープがコミットされました
+メモリヒープ初期化
+使用メモリヒープの最大値
+使用されているメモリヒープ
+メモリのヒープがコミットされていません
+メモリ非ヒープ初期化
+メモリ非ヒープ最大
+メモリのヒープが使用されていません
+Memory Objects Pending Finalizationの略
+OSプロセッサが使用可能です
+OS Committed Virtual Memory Sizeの略
+OS Free Physical Memory Sizeの略
+OS Free Swap Space Size（OS空きスワップスペースサイズ）
+OS最大ファイル記述子数
+OS Open File Descriptors Count（OSオープンファイル記述子数）
+OSプロセッサCPU負荷
+OSプロセッサCPU時間
+OSシステムCPU負荷
+OSシステム負荷平均
+OS合計物理メモリサイズ
+[OS Total Swap Space Size]をクリックします
+スレッドデーモン数
+スレッドのピーク数
+スレッド数
+スレッド合計開始数
+ガベージコレクタコピーコレクション数
+ガベージコレクタのコピー収集時間
+ガベージコレクタマーク-スイープ収集数
+ガベージコレクタマークスイープ収集時間
+ガベージコレクタG1旧世代コレクション数
+ガベージコレクタG1旧世代の収集時間
+ガベージコレクタG1 Young Generation Collection Countの略
+ガベージコレクタG1 Young Generation Collection Timeの略
+ガベージコレクタの同時マークスイープ収集数
+ガベージコレクタの同時マークスイープ収集時間
+ガベージコレクタ並列コレクション数
+ガベージコレクタの並列収集時間
+ガベージコレクタ並列スカベンジマーク-スイープコレクションカウント
+ガベージコレクタ並列スカベンジマーク-スイープ収集時間
+ガベージコレクタ並列スカベンジコレクション数
+ガベージコレクタ並列スカベンジ収集時間 
+|===
+
+
+== トラブルシューティング
+
+追加情報はから入手できます link:concept_requesting_support.html["サポート"] ページ
