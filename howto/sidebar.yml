@@ -208,16 +208,6 @@ entries:
     url: "/howto/processing-cloud-cost-data-in-insight.html"
   - title: クラウドコストのデータをInsightでレポート
     url: "/howto/reporting-on-cloud-cost-data-task.html"
-- title: ServiceNowとの統合
-  url: "/howto/integrating-with-servicenow.html"
-  entries:
-  - title: Service Now統合の準備と前提条件
-    url: "/howto/preparation-and-prerequisites-for-servicenow-integration.html"
-    entries:
-    - title: ServiceNow Pythonコネクタをダウンロードしています
-      url: "/howto/downloading-the-servicenow-connector.html"
-  - title: 統合のためにServiceNowを設定しています
-    url: "/howto/configuring-servicenow-for-integration.html"
     entries:
     - title: ロールを昇格します
       url: "/howto/servicenow-integration-elevate-role.html"
