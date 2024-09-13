@@ -7849,4 +7849,8 @@
   <block id="bcc7ff777637bae2501eae2f8ccdf7d1" category="paragraph">「セカンダリETL」とは、OnCommand Insightデータウェアハウスにデータを取り込むために、取得したデータの追加抽出、変換、読み込み（ETL）を呼び出すために使用される、開発されたプロフェッショナルサービスの実装を指します。</block>
   <block id="85dd174d18eb0c4d3fd90177f2a31485" category="paragraph">OCIの成功には、サードパーティのCMDB、課金、オーケストレーションテクノロジとの統合機能が重要な価値であり、WFAも例外ではありません。ネットアップのプロフェッショナルサービスは、現在WFAワークフローとOCIを使用して成功を収めている数多くの統合を実施してきました。</block>
   <block id="b220d44db6780bcb3edb81b057ad8db8" category="paragraph">はい。OCIには複数のレポートが用意されています。また、ユースケースに基づいて、ネットアップのプロフェッショナルサービスカタログで提供されているレポートも多数用意されています。Data Warehouseモジュールには、ユーザが独自のレポートを作成できるCognosのレポートオーサリングツールも付属しています。</block>
+  <block id="082d4fc1b30e86ee41f3aee683450d1e" category="summary">Data Collector（データソース）サポートマトリックスには、サポートされているデータコレクタに関する情報が記載されています。</block>
+  <block id="2fcf0efc6b86f1c82038c0503c617ffb" category="doc">OnCommand Insightデータコレクタサポートマトリックス</block>
+  <block id="0509ce941df7b1b926535ae26a759985" category="paragraph">『Data Collector Support Matrix』には、ベンダーやモデルの情報など、OCIでサポートされるデータコレクタのリファレンスが記載されています。</block>
+  <block id="929760a91ec2d785d90375c3e050830f" category="paragraph">このページはプレースホルダです。</block>
 </blocks>

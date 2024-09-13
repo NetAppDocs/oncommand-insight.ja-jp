@@ -1,0 +1,16 @@
+---
+permalink: config-admin/reference_data_collector_support_matrix.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Collector（データソース）サポートマトリックスには、サポートされているデータコレクタに関する情報が記載されています。 
+---
+= OnCommand Insightデータコレクタサポートマトリックス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+『Data Collector Support Matrix』には、ベンダーやモデルの情報など、OCIでサポートされるデータコレクタのリファレンスが記載されています。
+
+このページはプレースホルダです。
