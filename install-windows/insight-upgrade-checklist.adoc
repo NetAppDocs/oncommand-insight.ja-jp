@@ -17,6 +17,13 @@ summary: 提供されるチェックリストを使用して、アップグレ�
 
 == アップグレード準備のチェックリスト（必須）
 
+[NOTE]
+====
+* OnCommand Insightをアップグレードする前に、ボルト*をバックアップする必要があります。
+
+詳細については、手順を参照してlink:../config-admin\/security-management.html["securityadminツール"]ください。
+
+====
 |===
 
 

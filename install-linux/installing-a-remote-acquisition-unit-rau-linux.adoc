@@ -55,3 +55,24 @@ Acquisitionのデフォルトポートは443ですが、サーバのインスト
 すべてのプロンプトを回答 にすると、インストールが開始されます。所要時間は約10分です（インストールされているアプリケーションによって異なります）。
 
 
+
+データの取得が開始されたら、設定は完了です。以下に示すように、サーバとRAUを同期する必要はありません。
+
+
+
+== サーバとRAUの同期
+
+
+IMPORTANT: Remote Acquisition Unitのインストール後にデータの取得が開始されない場合は、OnCommand InsightサーバとRAUを同期します。次の手順を実行します。
+
+. OnCommand Insightサーバーシステムで、* SecurityAdmin*ツールをインタラクティブモードで起動します。
++
+ securityadmin -i
+. Insight Serverの_acquisition_userのパスワードを任意のパスワードに変更します。*以下で必要となるため、このパスワードをメモしておいてください*。
+. サーバ/LAUを再起動します。
+. Remote Acquisition Unit（RAU）システムで、* SecurityAdmin *ツールを対話型モードで起動します。上記の手順2でメモしたパスワードが必要になります。
++
+ securityadmin -i
+. _acquisition_userのパスワードを手順2で使用したパスワードに変更します。
+. RAUを再起動します。
+

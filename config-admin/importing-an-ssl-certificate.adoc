@@ -25,7 +25,9 @@ SSL証明書を追加して強化された認証と暗号化を有効にする�
 
 [NOTE]
 ====
-この手順 を実行する前に、既存のをバックアップしておく必要があります `server.keystore` をクリックし、バックアップに名前を付けます `server.keystore.old`。の破損または損傷 `server.keystore` ファイルを使用すると、Insight Serverの再起動後にInsight Serverが動作しなくなることがあります。バックアップを作成した場合、問題が発生したときに古いファイルに戻すことができます。
+アップグレードの前にボルトをバックアップすることを強くお勧めします。
+
+ボルトとパスワードの管理の詳細については、手順を参照してくださいlink:../config-admin\/security-management.html["securityadminツール"]。
 
 ====
 
@@ -34,10 +36,6 @@ SSL証明書を追加して強化された認証と暗号化を有効にする�
 
 . 元のキーストアファイルのコピーを作成します。 `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
 . キーストアの内容を表示します。 `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
-+
-.. パスワードの入力を求められたら、と入力します `changeit`。
-
-
 +
 キーストアの内容が表示されます。キーストアには少なくとも1つの証明書が必要です。 `"ssl certificate"`。
 

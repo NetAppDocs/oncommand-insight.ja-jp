@@ -99,8 +99,6 @@ entries:
       entries:
       - title: Data Warehouseのアップグレード時にカスタムのCognos設定を保持
         url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
-    - title: セキュリティ設定をバックアップしています
-      url: "/install-windows/back-up-the-security-configuration.html"
     - title: Remote Acquisition Unitサーバをアップグレードします
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
   - title: アップグレード後の手順の実行

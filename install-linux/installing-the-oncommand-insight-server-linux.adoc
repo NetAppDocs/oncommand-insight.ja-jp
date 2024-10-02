@@ -39,6 +39,14 @@ OnCommand Insight サーバは、コマンドラインを使用してインス�
 +
 `sudo ./oci-<version>-linux-x86_64/oci-install.sh`
 
++
+Insight ServerをCentOS 9 Stream、Red Hat Enterprise Linux 9.4、またはOracle Linux 9.4にインストールする場合は、まずインストーラファイルが格納されているディレクトリに変更してから、コマンドラインオプション「--install-mysql-dependencies」を使用してインストールコマンドを実行する必要があります。
+
++
+....
+cd /tmp/oci-7.3.16.1.297-linux-x86_64
+sudo ./oci-install.sh --install-mysql-dependencies
+....
 . ライセンス契約を読み、同意して、画面の指示に従います。
 . Insightの消費ライセンスモデルを使用している場合は、使用状況の情報をネットアップに送信することを有効にする必要があります。入力するコマンド `Y` をクリックします。
 
@@ -48,3 +56,24 @@ OnCommand Insight サーバは、コマンドラインを使用してインス�
 == 結果
 
 すべてのプロンプトを回答 にすると、インストールが開始されます。所要時間は約10分です（インストールされているアプリケーションによって異なります）。
+
+. Remote Acquisition Unit（RAU）をインストールする場合は、SecurityAdmin Toolを実行して_acquisition_userのパスワードを作成する必要があります。このパスワードは、RAUのインストール時に必要になります。
++
+注:このパスワードを作成した場合は、以下に示すようにサーバーとRAUを同期する必要はありません。
+
+
+
+
+
+== サーバをDWHおよびRAUと同期
+
+
+IMPORTANT: Remote Acquisition UnitやData Warehouseのインストールが完了したら、OnCommand InsightサーバとRAU / DWHを同期する必要があります*。以下の手順に従います。
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["サーバとRAUの同期（Windows）"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["サーバとDWHの同期（Windows）"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["サーバとRAUの同期（Linux）"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["サーバとDWHの同期（Linux）"]

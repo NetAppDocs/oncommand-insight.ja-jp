@@ -13,6 +13,13 @@ summary: アップグレードする前に、Data Warehouseソフトウェアを
 [role="lead"]
 アップグレードする前に、Data Warehouseソフトウェアをアンインストールする必要があります。
 
+[NOTE]
+====
+* OnCommand Insightをアンインストールする前に、ボルト*をバックアップすることを強くお勧めします。* OnCommand Insightをアップグレードする場合は、ボルトをバックアップする必要があります*。
+
+詳細については、手順を参照してlink:../config-admin\/security-management.html["securityadminツール"]ください。
+
+====
 
 
 == 作業を開始する前に

@@ -13,6 +13,13 @@ summary: Remote Acquisition Unitソフトウェアを新しいバージョンに
 [role="lead"]
 Remote Acquisition Unitソフトウェアを新しいバージョンにアップグレードする前に、既存のバージョンをアンインストールする必要があります。このタスクは、環境内のすべてのRemote Acquisition Unitサーバで実行する必要があります。
 
+[NOTE]
+====
+* OnCommand Insightをアンインストールする前に、ボルト*をバックアップすることを強くお勧めします。* OnCommand Insightをアップグレードする場合は、ボルトをバックアップする必要があります*。
+
+詳細については、手順を参照してlink:../config-admin\/security-management.html["securityadminツール"]ください。
+
+====
 
 
 == 手順

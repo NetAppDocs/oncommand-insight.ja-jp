@@ -20,6 +20,9 @@ OnCommand Insight サーバは、OnCommand Insight セットアップウィザ�
 インストールの前提条件をすべて満たしておく必要があります。
 
 
+NOTE: OnCommand Insightをアップグレードする場合は、現在のバージョンをアンインストールまたはアップグレードする前に*ボルトをバックアップする必要があります。
+
+
 
 == 手順
 
@@ -32,6 +35,7 @@ OnCommand Insight サーバは、OnCommand Insight セットアップウィザ�
 +
 *ベストプラクティス：*サイトのプレフィックスとしてお客様名を使用します（例：NetApp）。
 
+. 管理者パスワードを入力します。パスワードを確認します。
 . [お客様情報：NetApp ASUPの設定]*ウィンドウで、次の手順を実行します。
 +
 .. 次のいずれかのオプションを選択して、ASUPにアップロードするデータが格納されているデータベースを選択します。
@@ -90,4 +94,23 @@ OnCommand Insight サーバが実行されているPCによって内部的に使
 インストールには約20分かかります（インストールされているアプリケーションによって異なります）。
 
 . [ 完了 ] をクリックします。
+. Remote Acquisition Unit（RAU）をインストールする場合は、SecurityAdmin Toolを実行して_acquisition_userのパスワードを作成する必要があります。このパスワードは、RAUのインストール時に必要になります。
++
+注:このパスワードを作成した場合は、以下に示すようにサーバーとRAUを同期する必要はありません。
 
+
+
+
+
+== サーバをDWHおよびRAUと同期
+
+
+IMPORTANT: Remote Acquisition UnitやData Warehouseのインストールが完了したら、RAU / DWHをOnCommand Insightサーバと同期する必要があります。以下の手順に従います。
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["サーバとRAUの同期（Windows）"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["サーバとDWHの同期（Windows）"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["サーバとRAUの同期（Linux）"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["サーバとDWHの同期（Linux）"]

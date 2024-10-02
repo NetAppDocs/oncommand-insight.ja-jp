@@ -13,6 +13,13 @@ summary: Insightのアップグレードを開始する前に、アップグレ�
 [role="lead"]
 Insightのアップグレードを開始する前に、アップグレードプロセスについて理解しておくことが重要です。アップグレードプロセスは、Insightのほとんどのバージョンで同じです。
 
+[NOTE]
+====
+* OnCommand Insightをアップグレードする前に、ボルト*をバックアップする必要があります。
+
+詳細については、手順を参照してlink:../config-admin\/security-management.html["securityadminツール"]ください。
+
+====
 Insightのアップグレードプロセスで実行する作業の概要は次のとおりです。
 
 * インストールパッケージをダウンロードしています

@@ -22,7 +22,7 @@ summary: ファイアウォールの背後、リモートサイト、プライ�
  a| 
 オペレーティングシステム
  a| 
-64ビットのMicrosoft Windows Server 2016、2019、または2022（最新のサービスパックを適用）を実行しているコンピュータ。
+64ビットのMicrosoft Windows Server 2016、2019、または2022（最新のサービスパックを適用）を実行しているコンピュータ。OnCommand Insightをインストールする前に、Windows .NET Frameworkバージョン3.5をインストールする必要があります。
 
 
 

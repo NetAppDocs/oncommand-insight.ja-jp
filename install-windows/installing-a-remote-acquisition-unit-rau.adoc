@@ -41,6 +41,7 @@ Acquisitionのデフォルトポートは443ですが、サーバのインスト
 ** * OnCommand Insight **サーバー名またはアドレス*- OnCommand Insight サーバーを識別するホスト名またはIPアドレス。RAUはこの名前/ IPを使用してサーバとの通信リンクを開きます。ホスト名を指定する場合は、DNSで解決できることを確認してください。
 ** * Acquisition Unit Name *- RAUを識別する一意の名前。
 ** * OnCommand Insight Secured Remote Acquisition Port（HTTPS）*- Remote Acquisition Unitが環境の変更情報をOnCommand Insight サーバに送信するために使用するポート。この設定は、OnCommand Insight サーバのインストール時に入力した値と一致し、すべてのRAUで同じである必要があります。
+** _acquisition_userパスワードを入力します。
 
 
 . 選択内容を確認します。前に戻って変更を行うには、*[戻る]*をクリックします。「 * 次へ * 」をクリックします。
@@ -55,3 +56,24 @@ Acquisitionのデフォルトポートは443ですが、サーバのインスト
 == 完了後
 
 インストールが完了すると、最後のウィンドウが表示されます。[Start Remote Acquisition Service]*ボックスをクリックしてRAUを開始し、[Finish]*をクリックしてこの処理を終了します。
+
+データの取得が開始されたら、設定は完了です。以下に示すように、サーバとRAUを同期する必要はありません。
+
+
+
+== サーバとRAUの同期
+
+
+IMPORTANT: Remote Acquisition Unitのインストール後にデータの取得が開始されない場合は、OnCommand InsightサーバとRAUを同期します。次の手順を実行します。
+
+. OnCommand Insightサーバーシステムで、* SecurityAdmin*ツールをインタラクティブモードで起動します。
++
+ securityadmin -i
+. Insight Serverの_acquisition_userのパスワードを任意のパスワードに変更します。*以下で必要となるため、このパスワードをメモしておいてください*。
+. サーバ/LAUを再起動します。
+. Remote Acquisition Unit（RAU）システムで、* SecurityAdmin *ツールを対話型モードで起動します。上記の手順2でメモしたパスワードが必要になります。
++
+ securityadmin -i
+. _acquisition_userのパスワードを手順2で使用したパスワードに変更します。
+. RAUを再起動します。
+

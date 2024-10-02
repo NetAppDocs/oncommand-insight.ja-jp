@@ -15,6 +15,17 @@ Insight Serverソフトウェアをアップグレードしたら、Data Warehou
 
 
 
+== このタスクについて
+
+[NOTE]
+====
+DWHをアップグレードする前に、バックアップとデータベースをバックアップすることを強く推奨します。
+
+ボルトの詳細については、手順を参照してくださいlink:../config-admin\/security-management.html["securityadminツール"]。
+
+====
+
+
 == 手順
 
 . sudo権限があるアカウントでData Warehouse（DWH）サーバにログインします。

@@ -13,6 +13,13 @@ summary: OnCommand Insight サーバの更新は、サーバにログインし�
 [role="lead"]
 OnCommand Insight サーバの更新は、サーバにログインしたあとに確認できます。
 
+[NOTE]
+====
+OnCommand Insightをアップグレードする前に、ボルトとデータベースをバックアップすることを強く推奨します。
+
+ボルトの詳細については、手順を参照してくださいlink:../config-admin\/security-management.html["securityadminツール"]。
+
+====
 
 
 == 手順

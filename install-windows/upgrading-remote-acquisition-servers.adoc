@@ -21,11 +21,19 @@ summary: 必要な準備作業がすべて完了したら、Remote Acquisition U
 * OnCommand Insight インストールパッケージは、サーバ上に配置する必要があります。
 
 
+[NOTE]
+====
+アップグレードの前にボルトをバックアップする必要があります。
+
+ボルトの詳細については、手順を参照してくださいlink:../config-admin\/security-management.html["securityadminツール"]。
+
+====
 
 
 == 手順
 
 . Windowsのローカル管理者権限を持つアカウントでRemote Acquisition Unitサーバにログインします。
+. ヴォールトをバックアップします。
 . Insightのインストールパッケージを探します (`RAU-x64-version_number-build_number.msi`）Windowsエクスプローラを使用してダブルクリックします。
 +
 OnCommand Insight セットアップウィザードが表示されます。

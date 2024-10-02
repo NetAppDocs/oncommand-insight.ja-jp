@@ -51,7 +51,7 @@ Linuxの場合は、を変更します `clientAuth` のパラメータ `/opt/net
 . Data Warehouse TrustoreにCertificate Authority（CA；認証局）を追加します。
 +
 .. コマンドウィンドウで、に進みます `..\SANscreen\wildfly\standalone\configuration`。
-.. を使用します `keytool` 信頼されたCAをリスト表示するユーティリティ： `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
+.. ユーティリティを使用し `keytool`て、信頼できるCAのリストを表示します `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass <password>`。+ server_trustoreのパスワードの設定または変更の詳細については、ドキュメントを参照してくださいlink:../config-admin/securityadmin-tool.html["securityadmin"]。
 +
 各行の最初の単語はCAエイリアスを示します。
 

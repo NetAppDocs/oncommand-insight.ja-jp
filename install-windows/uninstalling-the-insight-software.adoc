@@ -12,3 +12,11 @@ summary: Data WarehouseおよびRemote Acquisitionソフトウェアの新しい
 
 [role="lead"]
 Data WarehouseおよびRemote Acquisitionソフトウェアの新しいバージョンをインストールするには、古いバージョンをアンインストールする必要があります。この処理は、これらのコンポーネントをアップグレードする前に実行する必要があります。Insight Serverのソフトウェアは、インプレースアップグレード時にアンインストールされます。
+
+[NOTE]
+====
+* OnCommand Insightをアンインストールする前に、ボルト*をバックアップすることを強くお勧めします。* OnCommand Insightをアップグレードする場合は、ボルトをバックアップする必要があります*。
+
+詳細については、手順を参照してlink:../config-admin\/security-management.html["securityadminツール"]ください。
+
+====

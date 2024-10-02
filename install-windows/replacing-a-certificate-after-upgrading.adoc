@@ -31,7 +31,7 @@ summary: アップグレード後にOnCommand Insight Web UIを開くと、証�
 
 . キーストアの内容を表示します。 `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
 +
-パスワードの入力を求められたら、と入力します `changeit`。
+キーストアのパスワードの設定または変更の詳細については、ドキュメントを参照してくださいlink:../config-admin/securityadmin-tool.html["securityadmin"]。
 
 +
 キーストアには少なくとも1つの証明書が必要です。 `ssl certificate`。

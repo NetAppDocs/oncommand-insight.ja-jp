@@ -38,17 +38,20 @@ CACおよび証明書に関する最新の手順については、次の技術�
 . Cognos TrustoreにCertificate Authority（CA；認証局）を追加します。
 +
 .. コマンドウィンドウで、に進みます `..\SANscreen\cognos\analytics\configuration\certs\`
-.. を使用します `keytool` 信頼されたCAをリスト表示するユーティリティ： `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
+.. ユーティリティを使用し `keytool`て、信頼できるCAのリストを表示します。'..\..\IBM-JRE\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass <password>
+
+
 +
 各行の最初の単語はCAエイリアスを示します。
 
++
 .. 適切なファイルが存在しない場合は、CA証明書ファイル（通常は）を指定します `.pem` ファイル。
 .. OnCommand Insight の信頼済みCAに顧客のCAを含めるには、に進みます `..\SANscreen\cognos\analytics\configuration\certs\`。
 .. を使用します `keytool` をインポートするユーティリティ `.pem` ファイル： `..\..\ibm-jre\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
 +
-`my_alias` は通常、でCAを簡単に識別できるエイリアスです``keytool -list`` 操作。
+`my_alias`は通常、操作でCAを簡単に識別できるエイリアスです``keytool -list``。
 
-.. パスワードの入力を求められたら、と入力します `NoPassWordSet`。
+.. パスワードの入力を求められたら、_/ SANscreen /bin/cognos_info.dat_ファイルからパスワードを入力します。
 .. 回答 `yes` 証明書を信頼するように求められたら、
 
 

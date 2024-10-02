@@ -1,5 +1,8 @@
 ---
 indexpage:
+  title: OnCommand Insightのドキュメント
+  summary: OnCommand Insight は、オンプレミス環境、パブリッククラウド、プライベートクラウドのハイブリッドITインフラの運用管理を簡易化します。
+  keywords: oci, insight
   lead: OnCommand Insight は、オンプレミス環境、パブリッククラウド、プライベートクラウドのハイブリッドITインフラの運用管理を簡易化します。
   tiles:
   - title: はじめに

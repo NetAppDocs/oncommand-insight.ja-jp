@@ -19,6 +19,13 @@ summary: 必要な準備作業をすべて完了したら、Insight Serverにロ
 
 Insightのインストールパッケージは、サーバに配置する必要があります。
 
+[NOTE]
+====
+* OnCommand Insightをアップグレードする前に、ボルト*をバックアップする必要があります。
+
+詳細については、手順を参照してlink:../config-admin\/security-management.html["securityadminツール"]ください。
+
+====
 
 
 == 手順
