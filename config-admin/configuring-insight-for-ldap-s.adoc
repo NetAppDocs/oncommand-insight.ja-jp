@@ -17,6 +17,9 @@ LDAPまたはSecure LDAP（LDAPS）で使用するようにInsightを設定す�
 
 すべてのSecure Active Directory（LDAPS）ユーザに対して、ADサーバ名は証明書で定義されているとおりに正確に使用する必要があります。セキュアADログインにIPアドレスを使用することはできません。
 
+
+NOTE: を使用して_server.keystore_and/or_server.trustore_passwordsを変更した場合はlink:../config-admin/security-management.html["securityadmin"]、SANscreen証明書をインポートする前に_ldap_serviceを再起動してください。
+
 [NOTE]
 ====
 OnCommand Insight は、Microsoft Active DirectoryサーバまたはAzure AD経由でLDAPとLDAPSをサポートしています。その他のLDAP実装でも動作する可能性がありますが、Insightでは確認されていません。これらのマニュアルの手順は、Microsoft Active Directoryバージョン2または3 LDAP（Lightweight Directory Access Protocol）を使用していることを前提としています。

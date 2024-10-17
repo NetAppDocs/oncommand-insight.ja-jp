@@ -25,6 +25,9 @@ summary: ユーザアカウント、ユーザ認証、およびユーザ許可�
 * 正しいユーザロールを割り当てます。
 
 
+
+NOTE: LDAP証明書をインポートする際に、を使用して_server.keystore_and/or_server.trustore_passwordsを変更した場合はlink:../config-admin/security-management.html["securityadmin"]、SANscreen証明書をインポートする前に_ldap_serviceを再起動してください。
+
 [NOTE]
 ====
 セキュリティのベストプラクティスでは、管理者がホストオペレーティングシステムを設定して、管理者以外のユーザや標準ユーザが対話的にログインできないようにすることを推奨しています。

@@ -8697,4 +8697,8 @@
   <block id="90264ebb70e49e99bceb1035bdcc8307" category="sidebar">OnCommand Insightのドキュメント</block>
   <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="sidebar">Data Collector サポートマトリックス</block>
   <block id="b0430548e2edafebde6bfdf10cf93cc6" category="sidebar">Insight Security（SecurityAdminツール）</block>
+  <block id="4924cdf1992856713a11ebac184ceb81" category="inline-link-macro">securityadmin</block>
+  <block id="280dd41aa1500bfa7ef3a8678e713080" category="admonition">を使用して_server.keystore_and/or_server.trustore_passwordsを変更した場合は<block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>、SANscreen証明書をインポートする前に_ldap_serviceを再起動してください。</block>
+  <block id="ec4ef90f124e4475455cd66560c26fde" category="admonition">を使用して_server.keystore_and/or_server.trustore_passwordsを変更した場合は<block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>、SANscreen証明書をインポートする前に_ldap_serviceを再起動してください。</block>
+  <block id="a10389a2280f5287a5b5a38c80d3521f" category="admonition">LDAP証明書をインポートする際に、を使用して_server.keystore_and/or_server.trustore_passwordsを変更した場合は<block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>、SANscreen証明書をインポートする前に_ldap_serviceを再起動してください。</block>
 </blocks>

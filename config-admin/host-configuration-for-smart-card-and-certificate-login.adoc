@@ -21,6 +21,9 @@ summary: スマートカード（CAC\）および証明書によるログイン�
 * LDAP `User principal account name` 属性は、ユーザのIDを含むLDAPフィールドと一致する必要があります。
 
 
+
+NOTE: を使用して_server.keystore_and/or_server.trustore_passwordsを変更した場合はlink:../config-admin/security-management.html["securityadmin"]、SANscreen証明書をインポートする前に_ldap_serviceを再起動してください。
+
 [NOTE]
 ====
 CACおよび証明書に関する最新の手順については、次の技術情報アーティクル（サポートへのログインが必要）を参照してください。

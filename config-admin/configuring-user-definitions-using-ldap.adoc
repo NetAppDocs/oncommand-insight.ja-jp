@@ -23,6 +23,9 @@ LDAPドメインでInsight用に設定されているユーザとグループの
 すべてのSecure Active Directory（LDAPS）ユーザに対して、ADサーバ名は証明書で定義されているとおりに正確に使用する必要があります。セキュアADログインにIPアドレスを使用することはできません。
 
 
+NOTE: を使用して_server.keystore_and/or_server.trustore_passwordsを変更した場合はlink:../config-admin/security-management.html["securityadmin"]、SANscreen証明書をインポートする前に_ldap_serviceを再起動してください。
+
+
 
 == このタスクについて
 
