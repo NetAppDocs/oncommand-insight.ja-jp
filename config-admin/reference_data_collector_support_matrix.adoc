@@ -5,12 +5,8 @@ summary: Data Collector サポートマトリックスには、サポートさ�
 keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei, OpenStack 
 ---
 = OCI Data Collectorのサポートマトリックス
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -19,13 +15,10 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 :author: [.lead]
 :authorinitials: [
 :authors: [.lead]
-:toc-position: content
 
 
 『Data Collector Support Matrix』には、ベンダーやモデルの情報など、OCIでサポートされるデータコレクタのリファレンスが記載されています。
 
-
-toc::[]
 
 
 == HP Enterprise 3PAR/Alletra 9000/Primera StoreServストレージ
@@ -492,8 +485,6 @@ toc::[]
 
 | 3Par CLI | SSH | SSH | 22 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Amazon AWS EC2
@@ -686,8 +677,6 @@ APIバージョン：
 
 | EC2 API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Brocade ファイバチャネルスイッチ
@@ -1010,8 +999,6 @@ APIバージョン：
 
 | データソースウィザードの設定 | 手動入力 |  |  |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Brocade Network Advisor HTTP
@@ -1129,8 +1116,6 @@ APIバージョン：
 
 | Brocade Network Advisor REST API | HTTP / HTTPS | HTTP / HTTPS | 80 / 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Cisco MDS / Nexusファブリックスイッチ
@@ -1426,8 +1411,6 @@ APIバージョン：
 
 | Cisco SNMP | SNMP | SNMPv1（インベントリのみ）、SNMPv2、SNMPv3 | 161 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC Celerra（SSH）
@@ -1684,8 +1667,6 @@ APIバージョン：
 
 | Celerra CLIの場合 | SSH | SSH |  |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC CLARiX（NaviCLI）
@@ -2158,8 +2139,6 @@ APIバージョン：
 
 | Navi CLIの場合 | CLI |  | 6389、2162、2163、443（HTTPS）/ 80（HTTP） |  | 正しい | 正しい | 正しい | 正しくない 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC Data Domain（SSH）
@@ -2452,8 +2431,6 @@ APIバージョン：
 
 | Data Domain CLIの略 | SSH | SSH | 22 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC ECS
@@ -2656,8 +2633,6 @@ APIバージョン：
 
 | EMC ECS REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Dell EMC Isilon / PowerScale（CLI）
@@ -3058,8 +3033,6 @@ APIバージョン：
 
 | Isilon SSH | SSH | SSH | 22 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC PowerStore REST
@@ -3352,8 +3325,6 @@ APIバージョン：
 
 | EMC PowerStore REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC RecoverPoint（HTTP）
@@ -3481,8 +3452,6 @@ APIバージョン：
 
 | RecoverPoint REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC Symmetrix CLI
@@ -4027,8 +3996,6 @@ APIバージョン：
 
 | Symmetrix SMI-S | SMI-Sの使用 | HTTP / HTTPS | 5988/5989 |  | 正しい | 正しくない | 正しくない | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Dell Unisphere REST
@@ -4357,8 +4324,6 @@ APIバージョン：
 
 | Dell Unisphere API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC VNX（SSH）
@@ -4747,8 +4712,6 @@ APIバージョン：
 
 | VNX SSHおよびCLI | SSH | SSH | 22 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC VNXeおよびUnity Unisphere（CLI）
@@ -5167,8 +5130,6 @@ APIバージョン：
 
 | VNXeとUnisphere CLI | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC VPLEX
@@ -5422,8 +5383,6 @@ APIバージョン：
 
 | EMC VPLEX API | HTTP / HTTPS | HTTP / HTTPS | 80 / 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == EMC XtremIO（HTTP）
@@ -5797,8 +5756,6 @@ APIバージョン：
 
 | EMC XtremIO REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == NetApp Eシリーズ
@@ -6196,8 +6153,6 @@ APIバージョン：
 
 | SANtricity APIの略 | RMI | TCP |  |  | 正しい | 正しい | 正しくない | 正しくない 
 |===
-<<top,トップに戻る>>
-
 
 
 == HDS HCP（HTTPS）
@@ -6382,8 +6337,6 @@ APIバージョン：
 
 | HDS HCP REST API | HTTPS | HTTPS | 9090 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == HiCommand Device Managerの略
@@ -6787,8 +6740,6 @@ APIバージョン：
 
 | HiCommand Device Manager XML API | HDS XML API | HTTP / HTTPS | 2001 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == HDS HNAS（CLI）
@@ -7048,8 +6999,6 @@ APIバージョン：
 
 | HDS HNAS CLI | SSH | SSH | 22 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == HPE Nimble / Alletra 6000ストレージ
@@ -7372,8 +7321,6 @@ APIバージョン：
 
 | HP Nimble REST API | HTTPS | HTTPS | 5392 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == HUAWEI OceanStor（REST / HTTPS）
@@ -7591,8 +7538,6 @@ APIバージョン：
 
 | Huawei OceanStorパフォーマンスREST API | HTTPS | HTTPS | 8088 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == IBM SVC（CLI）
@@ -8038,8 +7983,6 @@ APIバージョン：
 
 | IBM SVC CLI | SSH | SSH | 22 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Infinidat Infinibox（HTTP）
@@ -8335,8 +8278,6 @@ APIバージョン：
 
 | Infinidat REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Microsoft Hyper-V
@@ -8593,8 +8534,6 @@ APIバージョン：
 
 | WMI | WMI | WMI | 135 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == NetApp 7-Mode
@@ -9241,8 +9180,6 @@ APIバージョン：
 
 | NetApp 7-Mode ZAPI | ZAPI | ZAPI |  |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == NetApp clustered Data ONTAP 8.1.1+
@@ -10234,8 +10171,6 @@ APIバージョン：
 
 | NetApp ONTAP API | HTTP / HTTPS | HTTP / HTTPS | 80 / 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == NetApp SolidFire 8.1+
@@ -10720,8 +10655,6 @@ APIバージョン：
 
 | SolidFire REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == NetApp StorageGRID（HTTPS）
@@ -11008,8 +10941,6 @@ APIバージョン：
 
 | StorageGRID REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しくない | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Nutanixストレージ（REST）
@@ -11437,8 +11368,6 @@ APIバージョン：
 
 | Nutanix REST API | HTTPS | HTTPS | 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Oracle ZFS（HTTPS）
@@ -11821,8 +11750,6 @@ APIバージョン：
 
 | Oracle ZFS REST API | HTTP / HTTPS | HTTP / HTTPS | 215 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == Pure Storage FlashArray（HTTP）
@@ -12190,20 +12117,66 @@ APIバージョン：
 
 | Pure Storage REST API | HTTP / HTTPS | HTTP / HTTPS | 80 / 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
-
 
 
 == VMware vSphere（Webサービス）
 
 このデータコレクタでサポートされるモデルとバージョン：
 
-|===
-| APIバージョン： | APIバージョン： 
+APIバージョン：
+
+* VMware vCenter Server 5.5.0ビルド1750787
+* VMware vCenter Server 5.5.0ビルド3252642
+* VMware vCenter Server 5.5.0ビルド4180647
+* VMware vCenter Server 5.5.0ビルド-9911218
+* VMware vCenter Server 6.0.0ビルド13638472
+* VMware vCenter Server 6.0.0ビルド14510545
+* VMware vCenter Server 6.0.0ビルド-4541947
+* VMware vCenter Server 6.0.0ビルド-5318200
+* VMware vCenter Server 6.0.0ビルド9313458
+* VMware vCenter Server 6.5.0ビルド10964411
+* VMware vCenter Server 6.5.0ビルド17994927
+* VMware vCenter Server 6.5.0ビルド18499837
+* VMware vCenter Server 6.5.0ビルド-18711281
+* VMware vCenter Server 6.5.0ビルド-19757181
+* VMware vCenter Server 6.5.0ビルド-22499743
+* VMware vCenter Server 6.5.0ビルド-7515524
+* VMware vCenter Server 6.5.0ビルド-9451637
+* VMware vCenter Server 6.7.0ビルド-16046713
+* VMware vCenter Server 6.7.0ビルド18485185
+* VMware vCenter Server 6.7.0ビルド19299595
+* VMware vCenter Server 6.7.0ビルド-19832280
+* VMware vCenter Server 6.7.0ビルド20504362
+* VMware vCenter Server 6.7.0ビルド-22509732
+* VMware vCenter Server 6.7.0ビルド-22509751
+* VMware vCenter Server 7.0.1ビルド17491160
+* VMware vCenter Server 7.0.3ビルド19234570
+* VMware vCenter Server 7.0.3ビルド-19717403
+* VMware vCenter Server 7.0.3ビルド- 20051473
+* VMware vCenter Server 7.0.3ビルド- 20150588
+* VMware vCenter Server 7.0.3ビルド-20395099
+* VMware vCenter Server 7.0.3ビルド20845200
+* VMware vCenter Server 7.0.3ビルド-20990077
+* VMware vCenter Server 7.0.3ビルド-21290409
+* VMware vCenter Server 7.0.3ビルド-21477706
+* VMware vCenter Server 7.0.3ビルド-21784236
+* VMware vCenter Server 7.0.3ビルド-22357613
+* VMware vCenter Server 7.0.3ビルド-22837322
+* VMware vCenter Server 7.0.3ビルド-23788036
+* VMware vCenter Server 7.0.3ビルド-24026615
+* VMware vCenter Server 8.0.1ビルド-22368047
+* VMware vCenter Server 8.0.1ビルド-22742005
+* VMware vCenter Server 8.0.1ビルド-23525738
+* VMware vCenter Server 8.0.1ビルド-24005165
+* VMware vCenter Server 8.0.2ビルド-22385739
+* VMware vCenter Server 8.0.2ビルド-22617221
+* VMware vCenter Server 8.0.2ビルド-23319993
+* VMware vCenter Server 8.0.2ビルド-23504390
+* VMware vCenter Server 8.0.2ビルド-23929136
+* VMware vCenter Server 8.0.3ビルド-24022515
+* VMware vCenter Server 8.0.3ビルド-24091160
 
 
-| VMware vCenter Server 5.5.0 build-1750787 VMware vCenter Server 5.5.0 build-3252642 VMware vCenter Server 5.5.0 build-4180647 VMware vCenter Server 5.5.0 build-9911218 VMware vCenter Server 6.0.0 build-13638472 VMware vCenter Server 6.0.0 build-14510545 | VMware vCenter Server 7.0.3ビルド-19234570 VMware vCenter Server 7.0.3ビルド-19717403 VMware vCenter Server 7.0.3ビルド-20051473 VMware vCenter Server 7.0.3ビルド-20150588 VMware vCenter Server 7.0.3ビルド-20395099 VMware vCenter Server 7.0.3ビルド-20845200 VMware vCenter Server 7.0.3ビルド2990077 VMware vCenter Server 7.0.3ビルド4127.90409 
-|===
 このデータコレクタでサポートされる製品：
 
 |===
@@ -12487,4 +12460,3 @@ APIバージョン：
 
 | VMware REST API | Webサービス | HTTP / HTTPS | 80 / 443 |  | 正しい | 正しい | 正しい | 正しい 
 |===
-<<top,トップに戻る>>
